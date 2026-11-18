@@ -1,22 +1,126 @@
 {
   "service": "udong",
   "area": "서울 성동구 성수동 (시범)",
-  "generated_at_kst": "2026-11-18 13:19 KST",
-  "generated_at": "2026-11-18T13:19:59.784395+09:00",
+  "generated_at_kst": "2026-11-18 13:32 KST",
+  "generated_at": "2026-11-18T13:32:51.028511+09:00",
   "sources": [
+    {
+      "source": "seongdong_rss",
+      "status": "ok_via_browser",
+      "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
+      "note": "2026-11-18 13:30 KST에 브라우저로 성동구청 새소식(bbsNo=183)을 직접 확인했다. 이 서버에서 직접 가져오면 연결이 끊겨서, 이번 data.json은 브라우저 확인 결과를 그대로 옮겼다."
+    },
+    {
+      "source": "seongdong_welfare",
+      "status": "ok_via_browser",
+      "url": "https://www.sd.go.kr/main/contents.do?key=5213",
+      "note": "복지 공지는 새소식 안에 별도 분류가 없고 제목 검색으로 찾는다. 부모급여·복지로 안내는 공지 게시판이 아니라 분야별정보 > 복지 안내 페이지에 있다."
+    },
+    {
+      "source": "seongdong_rss",
+      "status": "fetch_failed:RemoteDisconnected",
+      "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
+      "note": "이 서버에서 직접 가져오기가 끊겼다. 브라우저로는 읽힌다. 기존 소식을 유지한다."
+    },
     {
       "source": "seoul_reservation",
       "status": "missing_key",
-      "note": "SEOUL_API_KEY 환경변수가 없어서 예약 정보를 가져오지 않았다. 키는 data.seoul.go.kr에서 발급받아 GitHub Secrets에 넣는다."
-    },
-    {
-      "source": "seongdong_notice",
-      "status": "no_rss_found",
-      "note": "성동구청(sd.go.kr) 공지사항의 공개 RSS/XML 주소를 찾지 못했다. RSS 주소가 확인되면 sources.yaml에 추가한 뒤 수집한다. 게시판 무단 크롤링은 하지 않는다.",
-      "url": "https://www.sd.go.kr/"
+      "note": "SEOUL_API_KEY가 없어서 예약 정보를 가져오지 않았다."
     }
   ],
-  "notices": [],
+  "notices": [
+    {
+      "title": "2026년 제26차 성동구 건축 전문위원회(굴토, 해체) 개최 알림",
+      "category": "work",
+      "date": "2026-11-18",
+      "source": "성동구청 새소식",
+      "url": "https://www.sd.go.kr/main/selectBbsNttView.do?key=1472&bbsNo=183&nttNo=363209"
+    },
+    {
+      "title": "제3회 중랑천 버드페스티벌, 2026년 성동원앙축제 개최 안내",
+      "category": "event",
+      "date": "2026-11-18",
+      "source": "성동구청 새소식",
+      "url": "https://www.sd.go.kr/main/selectBbsNttView.do?key=1472&bbsNo=183&nttNo=363208"
+    },
+    {
+      "title": "2026년 성동구 화학안전관리 보고서",
+      "category": "life",
+      "date": "2026-11-18",
+      "source": "성동구청 새소식",
+      "url": "https://www.sd.go.kr/main/selectBbsNttView.do?key=1472&bbsNo=183&nttNo=363207"
+    },
+    {
+      "title": "[마장 글로벌 체험센터] 12월 프로그램 수강생 모집",
+      "category": "event",
+      "date": "2026-11-18",
+      "source": "성동구청 새소식",
+      "url": "https://www.sd.go.kr/main/selectBbsNttView.do?key=1472&bbsNo=183&nttNo=363206"
+    },
+    {
+      "title": "화학물질 취급 사고 예방을 위한 안전관리 수칙",
+      "category": "life",
+      "date": "2026-11-18",
+      "source": "성동구청 새소식",
+      "url": "https://www.sd.go.kr/main/selectBbsNttView.do?key=1472&bbsNo=183&nttNo=363205"
+    },
+    {
+      "title": "2027년 상반기 성동문화재단 전시실 정기대관 모집 공고",
+      "category": "event",
+      "date": "2026-11-18",
+      "source": "성동구청 새소식",
+      "url": "https://www.sd.go.kr/main/selectBbsNttView.do?key=1472&bbsNo=183&nttNo=363196"
+    },
+    {
+      "title": "2026년 하반기 성동사랑상품권 부정유통 일제단속",
+      "category": "life",
+      "date": "2026-11-17",
+      "source": "성동구청 새소식",
+      "url": "https://www.sd.go.kr/main/selectBbsNttView.do?key=1472&bbsNo=183&nttNo=363158"
+    },
+    {
+      "title": "한파 영향예보 직접전달 서비스 홍보 안내",
+      "category": "urgent",
+      "date": "2026-11-16",
+      "source": "성동구청 새소식",
+      "url": "https://www.sd.go.kr/main/selectBbsNttView.do?key=1472&bbsNo=183&nttNo=363128"
+    },
+    {
+      "title": "[성동구청년지원센터] 성동 웰컴 이사 지원 신청 안내",
+      "category": "welfare",
+      "date": "2026-11-16",
+      "source": "성동구청 새소식",
+      "url": "https://www.sd.go.kr/main/selectBbsNttView.do?key=1472&bbsNo=183&nttNo=363123"
+    },
+    {
+      "title": "「통쾌한 한끼」 시민참여 이벤트 안내",
+      "category": "event",
+      "date": "2026-11-16",
+      "source": "성동구청 새소식",
+      "url": "https://www.sd.go.kr/main/selectBbsNttView.do?key=1472&bbsNo=183&nttNo=363099"
+    },
+    {
+      "title": "2026년 성범죄 경력자 취업제한 점검 확인결과 공개(성동구 종합사회복지관)",
+      "category": "welfare",
+      "date": "2026-11-04",
+      "source": "성동구청 새소식",
+      "url": "https://www.sd.go.kr/main/selectBbsNttView.do?key=1472&bbsNo=183&nttNo=362802"
+    },
+    {
+      "title": "성동종합사회복지관 9988 서울 활력충전소 '우리동네 책이음' 도서 기증 안내",
+      "category": "welfare",
+      "date": "2026-10-26",
+      "source": "성동구청 새소식",
+      "url": "https://www.sd.go.kr/main/selectBbsNttView.do?key=1472&bbsNo=183&nttNo=362451"
+    },
+    {
+      "title": "2026년 성동노인종합복지관 「낭만 잇는 내-일」 일자리 박람회",
+      "category": "welfare",
+      "date": "2026-10-22",
+      "source": "성동구청 새소식",
+      "url": "https://www.sd.go.kr/main/selectBbsNttView.do?key=1472&bbsNo=183&nttNo=362419"
+    }
+  ],
   "spots": [],
-  "note": "이 파일은 자동 수집 결과이다. 실제 공지가 0건이면 샘플이 아니라 0건 그대로 기록한다. spots의 실시간 남은 자리 수는 API가 제공하지 않아 이 버전에서는 비워둔다."
+  "note": "동네 소식 중심이다. 제목·날짜·원문 링크만 저장하고 본문은 복사하지 않는다. RSS 가져오기가 실패하면 기존 소식을 유지한다."
 }

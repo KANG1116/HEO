@@ -26,7 +26,9 @@ SEOUL_API_KEY=... python3 scripts/fetch.py
 
 서울 열린데이터광장 인증키는 https://data.seoul.go.kr/ 에서 발급받습니다. GitHub에서는 저장소 Settings → Secrets → `SEOUL_API_KEY`로 넣습니다. 키를 코드나 채팅에 넣지 않습니다.
 
-성동구청 공지사항은 공개 RSS/XML 주소를 찾지 못해서 이 버전에서는 자동 수집 대상이 아닙니다. RSS 주소가 확인되면 `sources.yaml`에 추가합니다.
+성동구청 새소식 RSS를 2026-11-18에 확인했다. `https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=` (최신 10개). `data.json`에는 2026-11-18 기준 실제 공지 13개가 들어 있다. 단, 이 서버에서 직접 가져오면 연결이 끊기는 경우가 있어, `scripts/fetch.py`는 가져오기가 실패하면 기존 소식을 유지하고 실패를 기록한다. 정기 작업에서는 브라우저로 RSS를 확인하는 방식을 같이 쓴다.
+
+복지 공지는 새소식 안에 별도 분류가 없고 제목 검색으로 찾는다. 부모급여·복지로 안내는 분야별정보 > 복지 안내 페이지에 있다.
 
 ## 샘플 데이터 안내
 

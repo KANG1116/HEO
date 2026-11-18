@@ -5,15 +5,15 @@
 area: 서울 성동구 성수동
 
 notices:
-  # 성동구청 공지사항: 공개 RSS/XML 주소를 찾지 못했다.
-  # 주소가 확인되면 아래에 추가한다.
-  # - name: 성동구청 공지사항
-  #   type: rss
-  #   url: https://...
-  - name: 성동구청 홈페이지
+  - name: 성동구청 새소식
+    type: rss
+    url: https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=
+    list_url: https://www.sd.go.kr/main/selectBbsNttList.do?bbsNo=183&key=1472
+    note: 2026-11-18 브라우저로 확인. RSS 2.0, 최신 10개. 이 서버에서 직접 가져오면 연결이 끊기는 경우가 있어 브라우저 확인을 같이 쓴다.
+  - name: 성동구 복지 안내 (분야별정보 > 복지)
     type: manual_check
-    url: https://www.sd.go.kr/
-    note: 공개 RSS 없음. 자동 수집 대상이 아님.
+    url: https://www.sd.go.kr/main/contents.do?key=5213
+    note: 복지 공지는 새소식 안에 별도 분류가 없고 제목 검색으로 찾는다. 부모급여 안내: https://www.sd.go.kr/main/contents.do?key=4510, 복지로(www.bokjiro.go.kr)는 신청처로 안내된다. 성동복지종합상담센터: https://www.sd.go.kr/main/contents.do?key=5326, 02-2286-7942.
 
 reservations:
   - name: 서울시 공공서비스예약 정보

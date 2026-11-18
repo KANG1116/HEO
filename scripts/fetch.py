@@ -1,40 +1,49 @@
 #!/usr/bin/env python3
 """
-우동 자동 수집 스크립트 v0.2 (시범: 서울 성동구 성수동)
+우동 자동 수집 스크립트 v0.3 (핵심: 동네 소식 자동 보기, 시범: 서울 성동구)
 
-하는 일:
-  1. 서울 열린데이터광장 공공서비스예약 API에서 성동구 관련 예약 정보를 가져온다.
-     - API 키가 없으면(fake 데이터를 만들지 않고) status를 missing_key로 기록한다.
-     - 키는 환경변수 SEOUL_API_KEY로만 받는다. 코드에 키를 넣지 않는다.
-  2. 성동구청 공지 RSS/XML은 공개된 RSS 주소를 찾지 못했기 때문에,
-     이 버전에서는 자동 수집 대상으로 넣지 않는다.
-     - 출처 파일(sources.yaml)에 RSS 주소가 추가되면 그때부터 수집한다.
-     - 구청 게시판을 무단으로 크롤링하지 않는다.
-  3. 결과를 data.json으로 쓴다. 제목·날짜·원문 링크만 저장하고 본문을 복사하지 않는다.
+출처 (2026-11-18 브라우저로 직접 확인):
+  - 성동구청 새소식 게시판 (bbsNo=183, key=1472)
+    목록: https://www.sd.go.kr/main/selectBbsNttList.do?bbsNo=183&key=1472
+    RSS:  https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=
+    RSS는 title/link/guid/pubDate를 제공한다. 항목은 최신 10개이다.
+  - 복지 안내 허브: https://www.sd.go.kr/main/contents.do?key=5213
+    부모급여 안내: https://www.sd.go.kr/main/contents.do?key=4510
+    복지 공지는 새소식 안에 별도 분류가 없고 제목 검색으로 찾는다.
+    복지로(www.bokjiro.go.kr)는 별도 게시판이 없고 신청처로 안내된다.
+
+주의:
+  - 이 서버(VM)에서 sd.go.kr로 직접 가져오면 연결이 끊기는 경우가 있다.
+    그래서 RSS 가져오기가 실패하면 가짜 소식을 만들지 않고,
+    기존 data.json의 소식을 그대로 두고 status에 실패를 기록한다.
+    정기 작업에서는 브라우저로 RSS 목록을 확인하는 방식을 같이 쓴다.
+  - 제목·날짜·원문 링크만 저장하고 본문을 복사하지 않는다.
+  - API 키는 환경변수 SEOUL_API_KEY로만 받는다. 코드에 키를 넣지 않는다.
 
 실행:
-  SEOUL_API_KEY=... python3 scripts/fetch.py
-  키 없이 실행하면 data.json에 status만 기록되고, 실제 공지는 0건이다.
+  python3 scripts/fetch.py
 """
 import json
 import os
 import sys
 import urllib.request
 import urllib.error
+import xml.etree.ElementTree as ET
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
+from email.utils import parsedate_to_datetime
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "data.json"
 KST = timezone(timedelta(hours=9))
+RSS_URL = "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode="
 
-# 분류 키워드: 제목만으로 분류한다. 본문을 복사하지 않는다.
 CATEGORIES = [
-    ("urgent", ["단수", "정전", "공사", "통제", "긴급", "재난"]),
-    ("welfare", ["지원", "복지", "신청", "모집", "장학", "바우처"]),
-    ("event", ["행사", "축제", "장터", "공연", "전시", "강좌"]),
-    ("work", ["공사", "교통", "도로", "주차"]),
-    ("life", ["생활", "청소", "쓰레기", "폐기물", "민원"]),
+    ("urgent", ["단수", "정전", "공사", "통제", "긴급", "재난", "한파"]),
+    ("welfare", ["복지", "지원", "부모급여", "돌봄", "바우처", "신청"]),
+    ("event", ["행사", "축제", "장터", "공연", "전시", "강좌", "페스티벌"]),
+    ("work", ["공사", "교통", "도로", "주차", "재개발", "건축"]),
+    ("life", ["생활", "청소", "쓰레기", "폐기물", "민원", "안전"]),
 ]
 
 
@@ -45,86 +54,76 @@ def classify(title: str) -> str:
     return "life"
 
 
-def fetch_seoul_reservation(api_key: str):
-    """서울시 공공서비스예약 정보. 서비스명은 서울 열린데이터광장 기준이다.
-
-    이 함수는 예약 '목록'만 가져온다. 실시간 남은 자리 수는
-    이 API가 제공하지 않기 때문에, spots에는 예약 페이지 링크만 넣는다.
-    """
-    # 서울시 공공서비스예약(종합) 정보 서비스명. 지역 필터는 응답에서 확인한다.
-    service = "ListPublicReservationCulture"
-    url = f"http://openapi.seoul.go.kr:8088/{api_key}/json/{service}/1/20/"
-    req = urllib.request.Request(url, headers={"User-Agent": "udong/0.2"})
+def fetch_rss():
+    req = urllib.request.Request(
+        RSS_URL,
+        headers={
+            "User-Agent": "Mozilla/5.0 (udong/0.3)",
+            "Accept": "application/rss+xml, application/xml, text/xml, */*",
+        },
+    )
     try:
         with urllib.request.urlopen(req, timeout=20) as resp:
-            payload = json.loads(resp.read().decode("utf-8"))
-    except urllib.error.HTTPError as e:
-        return [], {"source": "seoul_reservation", "status": f"http_{e.code}", "url": url}
-    except Exception as e:  # 네트워크 오류 등은 상태를 기록하고 멈추지 않는다
-        return [], {"source": "seoul_reservation", "status": f"error:{type(e).__name__}", "url": url}
-
-    rows = []
+            raw = resp.read()
+    except Exception as e:
+        return [], {"source": "seongdong_rss", "status": f"fetch_failed:{type(e).__name__}", "url": RSS_URL,
+                    "note": "이 서버에서 직접 가져오기가 끊겼다. 브라우저로는 읽힌다. 기존 소식을 유지한다."}
     try:
-        rows = payload[service]["row"]
-    except Exception:
-        return [], {"source": "seoul_reservation", "status": "unexpected_response", "url": url}
-
+        root = ET.fromstring(raw)
+    except Exception as e:
+        return [], {"source": "seongdong_rss", "status": f"parse_failed:{type(e).__name__}", "url": RSS_URL}
     notices = []
-    for row in rows:
-        place = str(row.get("PLACENAME", "") or "")
-        title = str(row.get("SVCNM", "") or "").strip()
+    for item in root.iter("item"):
+        title = (item.findtext("title") or "").strip()
+        link = (item.findtext("link") or "").strip()
+        pub = (item.findtext("pubDate") or "").strip()
+        date = ""
+        if pub:
+            try:
+                date = parsedate_to_datetime(pub).astimezone(KST).strftime("%Y-%m-%d")
+            except Exception:
+                date = pub[:10]
         if not title:
             continue
-        # 시범 범위: 성동구 / 성수동 관련만 남긴다. 장소가 비어 있으면 제외한다.
-        if "성동" not in place and "성수" not in place:
-            continue
-        link = str(row.get("SVCURL", "") or "")
         notices.append({
             "title": title,
             "category": classify(title),
-            "date": str(row.get("RCPTBGNDT", "") or "")[:10],
-            "source": "서울시 공공서비스예약",
+            "date": date,
+            "source": "성동구청 새소식",
             "url": link,
-            "place": place,
         })
-    return notices, {"source": "seoul_reservation", "status": "ok", "url": url, "count": len(notices)}
+    return notices, {"source": "seongdong_rss", "status": "ok", "url": RSS_URL, "count": len(notices)}
 
 
 def main() -> int:
     now = datetime.now(KST)
-    api_key = os.environ.get("SEOUL_API_KEY", "").strip()
+    # 기존 data.json이 있으면, 가져오기가 실패했을 때 소식을 유지하기 위해 읽어둔다.
+    old = {}
+    if OUT.exists():
+        try:
+            old = json.loads(OUT.read_text(encoding="utf-8"))
+        except Exception:
+            old = {}
 
-    notices = []
-    sources = []
+    notices, rss_status = fetch_rss()
+    sources = [rss_status]
+    if not notices and old.get("notices"):
+        # 브라우저로 확인한 기존 소식을 유지할 때는 그 출처 기록도 유지한다.
+        sources = old.get("sources", []) + [rss_status]
 
-    if not api_key:
-        sources.append({
-            "source": "seoul_reservation",
-            "status": "missing_key",
-            "note": "SEOUL_API_KEY 환경변수가 없어서 예약 정보를 가져오지 않았다. 키는 data.seoul.go.kr에서 발급받아 GitHub Secrets에 넣는다.",
-        })
+    # 서울시 예약 API는 소식 핵심이 아니라 부가 기능이다. 키가 없으면 상태만 기록한다.
+    if not os.environ.get("SEOUL_API_KEY", "").strip():
+        sources.append({"source": "seoul_reservation", "status": "missing_key",
+                        "note": "SEOUL_API_KEY가 없어서 예약 정보를 가져오지 않았다."})
     else:
-        fetched, status = fetch_seoul_reservation(api_key)
-        notices.extend(fetched)
-        sources.append(status)
+        sources.append({"source": "seoul_reservation", "status": "not_checked_in_news_mode",
+                        "note": "v0.3은 소식 중심이다. 예약은 다음 단계에서 확인한다."})
 
-    # 성동구청 공지: 공개 RSS/XML 주소를 확인하지 못했음. 자동 수집 대상에서 제외.
-    sources.append({
-        "source": "seongdong_notice",
-        "status": "no_rss_found",
-        "note": "성동구청(sd.go.kr) 공지사항의 공개 RSS/XML 주소를 찾지 못했다. RSS 주소가 확인되면 sources.yaml에 추가한 뒤 수집한다. 게시판 무단 크롤링은 하지 않는다.",
-        "url": "https://www.sd.go.kr/",
-    })
-
-    # 중복 제거: 원문 링크 기준, 링크가 없으면 제목 기준
-    seen = set()
-    unique = []
-    for n in notices:
-        key = n.get("url") or n.get("title")
-        if key in seen:
-            continue
-        seen.add(key)
-        unique.append(n)
+    if notices:
+        final_notices = notices[:20]
+    else:
+        # 가져오기 실패: 기존 소식을 그대로 두고, 새로 만든 가짜 소식은 넣지 않는다.
+        final_notices = old.get("notices", [])
 
     data = {
         "service": "udong",
@@ -132,12 +131,12 @@ def main() -> int:
         "generated_at_kst": now.strftime("%Y-%m-%d %H:%M KST"),
         "generated_at": now.isoformat(),
         "sources": sources,
-        "notices": unique[:50],
-        "spots": [],
-        "note": "이 파일은 자동 수집 결과이다. 실제 공지가 0건이면 샘플이 아니라 0건 그대로 기록한다. spots의 실시간 남은 자리 수는 API가 제공하지 않아 이 버전에서는 비워둔다.",
+        "notices": final_notices,
+        "spots": old.get("spots", []),
+        "note": "동네 소식 중심이다. 제목·날짜·원문 링크만 저장하고 본문은 복사하지 않는다. RSS 가져오기가 실패하면 기존 소식을 유지한다.",
     }
     OUT.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"wrote {OUT} notices={len(unique)} sources={len(sources)}")
+    print(f"wrote {OUT} notices={len(final_notices)} rss={rss_status['status']}")
     return 0
 
 
