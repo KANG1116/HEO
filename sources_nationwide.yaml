@@ -1,0 +1,242 @@
+# 우동 전국 출처 레지스트리 (초안, 2026-11-18)
+# 규칙: 확인된 RSS/목록 URL만 'verified'로 넣는다. 추측한 URL은 넣지 않는다.
+# 상태: verified / unchecked / no_rss
+# 시범: 서울 성동구 (verified)
+
+version: 0.1
+updated: 2026-11-18
+note: 전국 229개 시군구를 하나씩 확인하는 중이다. 서울 25개 구는 서울시 자치구 주요뉴스 집계 페이지가 있다.
+
+aggregated_sources:
+  - name: 서울시 자치구 주요뉴스
+    url: https://www.seoul.go.kr/news/rssboard/list.do
+    coverage: 서울 25개 구
+    status: verified
+    note: 2026-11-18 기준 최신. 제목을 누르면 각 구청 홈페이지로 연결된다. 구별 RSS를 대신하지는 못하지만 서울 전체를 한 번에 보는 통로이다.
+
+regions:
+  - province: 서울특별시
+    districts:
+      - name: 성동구
+        homepage: https://www.sd.go.kr/
+        notice_list: https://www.sd.go.kr/main/selectBbsNttList.do?bbsNo=183&key=1472
+        rss: https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=
+        status: verified
+        checked_at: 2026-11-18
+      - name: 금천구
+        homepage: https://www.geumcheon.go.kr/
+        notice_list: https://www.geumcheon.go.kr/portal/selectBbsNttList.do?bbsNo=8&key=297
+        rss: https://www.geumcheon.go.kr/portal/rssBbsNtt.do??key=297&id=&bbsNo=8&searchCtgry=&pageUnit=10&searchCnd=all&searchKrwd=&integrDeptCode=&searchDeptCode=&pageIndex=292
+        status: verified_via_search
+        checked_at: 2026-11-18
+        note: 검색 결과에서 RSS 본문이 확인됐다. bbsNo=8은 보도자료 게시판이다. 공지 게시판 bbsNo는 별도 확인이 필요하다. '?'가 두 개인 형태가 검색에서 반복 확인됐다.
+      - name: 강남구
+        notice_list: http://www.gangnam.go.kr/board/B_000001/list.do?mid=ID05_040101
+        rss: https://www.gangnam.go.kr/portal/bbs/rss.do?bbsId=B_000001
+        status: verified_via_search
+        checked_at: 2026-11-18
+      - name: 서초구
+        notice_list: https://www.seocho.go.kr/site/seocho/ex/bbs/List.do?cbIdx=57
+        rss: https://www.seocho.go.kr/rss/notice.jsp
+        status: verified_via_search
+        checked_at: 2026-11-18
+        note: RSS 안내 페이지에 공지사항 RSS로 명시됐다. 직접 열람은 429로 재확인 못했다.
+      - name: 노원구
+        rss: https://www.nowon.kr/www/user/bbs/ND_selectRssList.do?q_bbsCode=1001&q_estnColumn1=11
+        status: verified_via_search
+        checked_at: 2026-11-18
+      - name: 구로구
+        notice_list: http://www.guro.go.kr/www/sub.do?key=1790
+        rss: https://www.guro.go.kr/rssBbsNtt.do?bbsNo=662&integrDeptCode=
+        status: verified_via_search
+        checked_at: 2026-11-18
+        note: 새소식 상세는 bbsNo=665를 써서 RSS(bbsNo=662)와 동일 게시판인지 미확인이다.
+      - name: 도봉구
+        rss: https://www.dobong.go.kr/WDB_common/rss/bbs.asp?code=10009682
+        status: partial_verified
+        checked_at: 2026-11-18
+        note: 동 게시판 RSS만 확인됐다. 본청 공지 code=10008769의 RSS는 미확인이다.
+      - name: 송파구
+        notice_list: http://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=92&&pageUnit=10&key=2775&pageIndex=1
+        rss_status: unchecked
+      - name: 영등포구
+        notice_list: https://www.ydp.go.kr/www/selectBbsNttList.do?bbsNo=40&key=2848
+        rss_status: unchecked
+      - name: 마포구
+        notice_list: https://www.mapo.go.kr/site/main/board/notice/list
+        rss_status: none_on_page
+      - name: 용산구
+        notice_list: http://yongsan.go.kr/portal/bbs/B0000041/list.do?menuNo=200228&pageUnit=10&pageIndex=241
+        rss_status: unchecked
+      - name: 종로구
+        notice_list: http://jongno.go.kr/portal/bbs/selectBoardList.do?bbsId=BBSMSTR_000000000201&menuId=1752&menuNo=1752
+        rss_status: unchecked
+      - name: 중구
+        notice_list: https://www.junggu.seoul.kr/content.do?cmsid=14231
+        rss_status: none_on_page
+      # 나머지 서울 24개 구는 확인 중이다.
+  - province: 경기도 (2026-11-18 확인, RSS 확정 0곳)
+    note: 김포시·양주시는 RSS 버튼 존재만 확인됐고 정확한 RSS 주소는 429로 미확인이다. selectBbsNttList.do를 쓰는 곳이 많다.
+    districts:
+      - name: 김포시
+        notice_list: https://gimpo.go.kr/portal/selectBbsNttList.do?key=3309&bbsNo=56
+        rss_status: button_exists_url_unconfirmed
+      - name: 양주시
+        notice_list: https://www.yangju.go.kr/www/selectBbsNttList.do?bbsNo=13&key=202
+        rss_status: button_exists_url_unconfirmed
+      - name: 군포시
+        notice_list: https://www.gunpo.go.kr/www/selectBbsNttList.do?key=3890&bbsNo=675
+        rss_status: not_found_on_list_page
+      - name: 하남시
+        notice_list: https://www.hanam.go.kr/www/selectBbsNttList.do?key=170&bbsNo=30
+        rss_status: not_found_on_list_page
+      - name: 가평군
+        notice_list: https://www.gp.go.kr/portal/selectBbsNttList.do?key=501&bbsNo=150
+        rss_status: not_found_on_list_page
+      - name: 연천군
+        notice_list: https://www.yeoncheon.go.kr/www/selectBbsNttList.do?key=4799&bbsNo=220
+        rss_status: unchecked
+      - name: 남양주시
+        notice_detail: https://nyj.go.kr/www/selectBbsNttView.do?key=2481&bbsNo=62&nttNo=525991
+        rss_status: unchecked
+      - name: 파주시
+        notice_list: https://www.paju.go.kr/user/plan_news/board/BD_board.list.do?seq=20171219114930714&bbsCd=2001
+        rss_status: unchecked
+      - name: 이천시
+        notice_list: https://www.icheon.go.kr/portal/board/post/list.do?bcIdx=698&mid=0401010000
+        rss_status: unchecked
+      - name: 안성시
+        notice_list: https://www.anseong.go.kr/portal/bbs/list.do?ptIdx=16&mId=0501010000
+        rss_status: unchecked
+  - province: 인천광역시 (2026-11-18 확인, RSS 확정 0곳)
+    note: 인천은 rssBbsNtt/selectBbsNtt 패턴이 0곳이고 bbsMsgList.do 계열이 많다. 2026-07-01 개편: 중구+동구→제물포구, 서구→서해구+검단구.
+    districts:
+      - name: 연수구
+        notice_list: https://www.yeonsu.go.kr/main/community/notify/notice.asp
+        rss_status: none_on_page
+      - name: 강화군
+        notice_list: https://www.ganghwa.go.kr/open_content/clinic/bbs/bbsMsgList.do?bcd=notice&pgno=5
+        rss_status: none_on_page
+      - name: 옹진군
+        notice_list: https://www.ongjin.go.kr/open_content/dong/bbs/bbsMsgList.do?bcd=notice&dong=daecheong&pgno=13
+        rss_status: unchecked
+      # 나머지 경기·인천 지역은 확인 중이다.
+  - province: 경상북도 (2026-11-18 확인)
+    districts:
+      - name: 구미시
+        rss: https://www.gumi.go.kr/portal/rssservice/RssServiceDetail.do?rssId=00000000000000000001
+        status: verified_via_guide_page
+        checked_at: 2026-11-18
+        note: 공식 안내 페이지에서 확인한 주소. 직접 열어 XML 응답까지 검증하지는 못했다.
+  - province: 전라남도 (2026-11-18 확인)
+    districts:
+      - name: 순천시
+        rss_status: atom_hint_only
+        note: '순천은 지금' 페이지에 RSS atom 표시가 있으나 정확한 피드 주소는 미확인이다.
+      - name: 전라남도청
+        notice_list: https://www.jeonnam.go.kr/M7124/boardList.do?infoReturn=&displayHeader=&menuId=jeonnam0201000000&searchType=&searchText=&pageIndex=222
+        rss_status: unchecked
+  - province: 경상남도 (2026-11-18 확인)
+    districts:
+      - name: 경상남도청
+        notice_list: http://www.gyeongnam.go.kr/board/list.gyeong?boardId=BBS_0000057&menuCd=DOM_000000135001001000&paging=ok&startPage=1
+        rss_status: unchecked
+  - province: 충청북도 (2026-11-18 확인, RSS 0곳)
+    note: 도청·청주·충주 모두 selectBbsNttList/View.do 계열을 쓴다. 충북 data.go.kr 오픈 API 308개가 2026-11-16부로 중단 공지됐다.
+    districts:
+      - name: 청주시
+        notice_list: https://cheongju.go.kr/sangdang/selectBbsNttList.do?key=1018&bbsNo=510
+        rss_status: unchecked
+  - province: 강원특별자치도 (2026-11-18 확인, RSS 0곳)
+    districts:
+      - name: 강원특별자치도청
+        notice_list: https://state.gwd.go.kr/portal/bulletin/notification
+        rss_status: unchecked
+  - province: 충청남도 (2026-11-18 확인, RSS 0곳)
+    note: data.go.kr에 '충청남도_대표홈페이지 공통게시판' LINK형 API가 있다. https://www.data.go.kr/en/data/15060266/openapi.do — 실제 호출 엔드포인트는 미확인이다.
+    districts:
+      - name: 아산시
+        notice_list: https://www.asan.go.kr/main/cms/?m_mode=list&tb_nm=city_news_notice
+        rss_status: unchecked
+  - province: 대구광역시 (2026-11-18 확인)
+    districts:
+      - name: 대구광역시
+        notice_list: https://www.daegu.go.kr/index.do?menu_id=00000854&menu_link=/icms/bbs/selectBoardList.do?bbsId=BBS_00029
+        rss: http://www.daegu.go.kr/icms/rss/feed.do?id=BBS_00029
+        status: verified_via_guide_page
+        checked_at: 2026-11-18
+      - name: 군위군
+        rss: http://gunwi.go.kr/programs/board/rss.do?mnu_uid=101
+        status: verified_via_guide_page
+        checked_at: 2026-11-18
+        note: '알립니다' 피드. 군정새소식은 mnu_uid=100.
+  - province: 부산광역시 (2026-11-18 확인, RSS 확정 0곳)
+    note: 부산시 nbnews 페이지에 RSS 표시가 있으나 링크 주소는 미확인이다. 정부24 지자체 소식이 대체 경로 후보이다.
+    districts:
+      - name: 부산광역시
+        notice_list: https://www.busan.go.kr/nbnews?curPage=1
+        rss_status: hint_only
+  - province: 대전광역시 (2026-11-18 확인, RSS 확정 0곳)
+    districts:
+      - name: 대전 동구
+        notice_list: https://donggu.go.kr/dg/kor/article/newsNotice
+        rss_status: none_on_page
+      - name: 대전 중구
+        notice_list: https://djjunggu.go.kr/bbs/BBSMSTR_000000000136/list.do?pageIndex=266
+        rss_status: none_on_page
+      - name: 대전 유성구
+        notice_list: https://www.yuseong.go.kr/bbs/BBSMSTR_000000000099/list.do?pageIndex=33
+        rss_status: none_on_page
+  - province: 세종특별자치시 (2026-11-18 확인)
+    districts:
+      - name: 세종특별자치시
+        notice_list: https://www.sejong.go.kr/bbs/R0071/list.do
+        rss_status: none_on_page
+  - province: 제주특별자치도 (2026-11-18 확인, RSS 0곳)
+    note: 홈페이지 직접 열기가 웹방화벽에 차단돼 확인 불가. 제주시 오픈 API는 폐기 안내 상태이다.
+      - name: 강남구
+        status: unchecked
+      - name: 강동구
+        status: unchecked
+      - name: 강북구
+        status: unchecked
+      - name: 강서구
+        status: unchecked
+      - name: 관악구
+        status: unchecked
+      - name: 광진구
+        status: unchecked
+      - name: 구로구
+        status: unchecked
+      - name: 노원구
+        status: unchecked
+      - name: 도봉구
+        status: unchecked
+      - name: 동대문구
+        status: unchecked
+      - name: 동작구
+        status: unchecked
+      - name: 마포구
+        status: unchecked
+      - name: 서대문구
+        status: unchecked
+      - name: 서초구
+        status: unchecked
+      - name: 성북구
+        status: unchecked
+      - name: 송파구
+        status: unchecked
+      - name: 양천구
+        status: unchecked
+      - name: 영등포구
+        status: unchecked
+      - name: 용산구
+        status: unchecked
+      - name: 은평구
+        status: unchecked
+      - name: 종로구
+        status: unchecked
+      - name: 중구
+        status: unchecked
+      - name: 중랑구
+        status: unchecked
