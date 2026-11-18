@@ -12,7 +12,21 @@
 
 ## 파일
 
-- `index.html` — 우동 웹 첫 버전(v0.1). 서버 없이 브라우저로 바로 열 수 있습니다.
+- `index.html` — 우동 웹 첫 버전. 서버 없이 브라우저로 바로 열 수 있습니다. `data.json`이 있으면 자동으로 가져온 공지를 먼저 보여줍니다.
+- `data.json` — 자동 수집 결과. `scripts/fetch.py`가 만듭니다.
+- `scripts/fetch.py` — 자동 수집 스크립트. 서울 열린데이터광장 API를 쓰고, API 키가 없으면 가짜 데이터를 만들지 않고 상태를 기록합니다.
+- `sources.yaml` — 출처 목록. RSS/XML 주소가 확인된 출처만 추가합니다.
+- `.github/workflows/update.yml` — 매일 07:00, 18:00 KST에 자동 수집하고 바뀐 `data.json`만 커밋합니다.
+
+## 자동 수집
+
+```bash
+SEOUL_API_KEY=... python3 scripts/fetch.py
+```
+
+서울 열린데이터광장 인증키는 https://data.seoul.go.kr/ 에서 발급받습니다. GitHub에서는 저장소 Settings → Secrets → `SEOUL_API_KEY`로 넣습니다. 키를 코드나 채팅에 넣지 않습니다.
+
+성동구청 공지사항은 공개 RSS/XML 주소를 찾지 못해서 이 버전에서는 자동 수집 대상이 아닙니다. RSS 주소가 확인되면 `sources.yaml`에 추가합니다.
 
 ## 샘플 데이터 안내
 

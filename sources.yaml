@@ -1,0 +1,23 @@
+# 우동 출처 목록 (시범: 서울 성동구 성수동)
+# RSS/XML 주소가 확인된 출처만 여기에 추가한다. 확인되지 않은 출처는
+# 크롤링으로 가져오지 않는다.
+
+area: 서울 성동구 성수동
+
+notices:
+  # 성동구청 공지사항: 공개 RSS/XML 주소를 찾지 못했다.
+  # 주소가 확인되면 아래에 추가한다.
+  # - name: 성동구청 공지사항
+  #   type: rss
+  #   url: https://...
+  - name: 성동구청 홈페이지
+    type: manual_check
+    url: https://www.sd.go.kr/
+    note: 공개 RSS 없음. 자동 수집 대상이 아님.
+
+reservations:
+  - name: 서울시 공공서비스예약 정보
+    type: seoul_open_api
+    service: ListPublicReservationCulture
+    note: 서울 열린데이터광장 인증키(SEOUL_API_KEY)가 필요하다. 키는 GitHub Secrets에 넣는다.
+    url: https://data.seoul.go.kr/

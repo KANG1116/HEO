@@ -1,0 +1,22 @@
+{
+  "service": "udong",
+  "area": "서울 성동구 성수동 (시범)",
+  "generated_at_kst": "2026-11-18 13:19 KST",
+  "generated_at": "2026-11-18T13:19:59.784395+09:00",
+  "sources": [
+    {
+      "source": "seoul_reservation",
+      "status": "missing_key",
+      "note": "SEOUL_API_KEY 환경변수가 없어서 예약 정보를 가져오지 않았다. 키는 data.seoul.go.kr에서 발급받아 GitHub Secrets에 넣는다."
+    },
+    {
+      "source": "seongdong_notice",
+      "status": "no_rss_found",
+      "note": "성동구청(sd.go.kr) 공지사항의 공개 RSS/XML 주소를 찾지 못했다. RSS 주소가 확인되면 sources.yaml에 추가한 뒤 수집한다. 게시판 무단 크롤링은 하지 않는다.",
+      "url": "https://www.sd.go.kr/"
+    }
+  ],
+  "notices": [],
+  "spots": [],
+  "note": "이 파일은 자동 수집 결과이다. 실제 공지가 0건이면 샘플이 아니라 0건 그대로 기록한다. spots의 실시간 남은 자리 수는 API가 제공하지 않아 이 버전에서는 비워둔다."
+}
