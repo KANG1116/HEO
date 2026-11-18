@@ -57,8 +57,13 @@
       <label for="dong" style="position:absolute;left:-9999px">동네 선택</label>
       <select id="dong">
         <option>성수동</option>
-        <option>연남동</option>
-        <option>망원동</option>
+        <option>강남구</option>
+        <option>서초구</option>
+        <option>노원구</option>
+        <option>구로구</option>
+        <option>금천구</option>
+        <option>대구광역시</option>
+        <option>군위군</option>
         <option>우리 동네 직접 고르기</option>
       </select>
       <button class="btn secondary" type="button" onclick="refreshTime()">새로고침</button>
@@ -87,6 +92,13 @@
       <h2 id="auto-title">자동으로 가져온 공지</h2>
       <div class="card" id="auto-status"><p class="desc">자동 수집 결과를 불러오는 중이에요…</p></div>
       <div id="auto-notices"></div>
+    </section>
+
+    <section aria-labelledby="nationwide-title">
+      <h2 id="nationwide-title">전국 동네 소식 (자동 수집)</h2>
+      <div class="card" id="nw-status"><p class="desc">전국 소식을 불러오는 중이에요…</p></div>
+      <div class="controls"><label for="region" style="position:absolute;left:-9999px">지역 선택</label><select id="region"></select></div>
+      <div id="nw-notices"></div>
     </section>
 
     <section id="notices" aria-labelledby="notice-title">
@@ -149,7 +161,7 @@
         <strong>샘플 데이터 안내</strong>
         <p style="margin:6px 0 0">이 첫 버전은 화면 구조를 확인하기 위한 샘플이에요. 공지와 빈자리 내용은 실제 공공기관 데이터가 아니라 예시이고, 실제 연동은 다음 단계에서 출처를 달고 붙일 예정이에요.</p>
       </div>
-      <p>우동 · 오늘 우리 동네 한눈에 · 웹 첫 버전 v0.1</p>
+      <p>우동 · 오늘 우리 동네 한눈에 · 웹 v0.4 (전국 7개 지역 자동 수집, 성동구 포함 8개 지역)</p>
     </footer>
   </main>
 </div>
@@ -195,6 +207,24 @@
     box.querySelectorAll('article').forEach((el, i) => { el.querySelector('.title').textContent = data.notices[i].title; });
   }).catch(() => {
     document.getElementById('auto-status').innerHTML = '<p class="desc">자동 수집 파일(data.json)을 불러오지 못했어요. 아래 샘플 공지를 보여줍니다.</p>';
+  });
+  fetch('data_nationwide.json').then(r => r.json()).then(data => {
+    const status = document.getElementById('nw-status');
+    const sel = document.getElementById('region');
+    const box = document.getElementById('nw-notices');
+    const regions = data.regions || [];
+    status.innerHTML = '<p class="desc">마지막 자동 수집: ' + (data.generated_at_kst || '-') + ' · 지역 ' + regions.length + '곳, 소식 ' + (data.total_notices || 0) + '개 · 구미시는 RSS가 HTML 포털이라 제외됐어요.</p>';
+    sel.innerHTML = regions.map(r => '<option value="' + r.region + '">' + r.region + ' (' + r.count + '개)</option>').join('');
+    function render() {
+      const reg = regions.find(r => r.region === sel.value) || regions[0];
+      if (!reg || !reg.notices || reg.notices.length === 0) { box.innerHTML = '<div class="card"><p class="desc">이 지역 소식이 아직 없어요.</p></div>'; return; }
+      box.innerHTML = reg.notices.map(n => '<article class="card"><span class="badge">' + (n.category || '') + '</span><p class="title"></p><p class="desc">' + (n.date || '') + '</p><p class="meta"><a href="' + (n.url || '#') + '" target="_blank" rel="noopener">원문 보기</a> · ' + (n.source || '') + '</p></article>').join('');
+      box.querySelectorAll('article').forEach((el, i) => { el.querySelector('.title').textContent = reg.notices[i].title; });
+    }
+    sel.addEventListener('change', render);
+    render();
+  }).catch(() => {
+    document.getElementById('nw-status').innerHTML = '<p class="desc">전국 수집 파일(data_nationwide.json)을 불러오지 못했어요.</p>';
   });
 </script>
 </body>

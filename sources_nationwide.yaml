@@ -3,8 +3,9 @@
 # 상태: verified / unchecked / no_rss
 # 시범: 서울 성동구 (verified)
 
-version: 0.1
+version: 0.2
 updated: 2026-11-18
+checked: 2026-11-18 14:00 KST, RSS 8곳(성동 포함) 직접 확인됨. 구미시는 RSS가 아닌 HTML이라 제외.
 note: 전국 229개 시군구를 하나씩 확인하는 중이다. 서울 25개 구는 서울시 자치구 주요뉴스 집계 페이지가 있다.
 
 aggregated_sources:
@@ -21,36 +22,40 @@ regions:
         homepage: https://www.sd.go.kr/
         notice_list: https://www.sd.go.kr/main/selectBbsNttList.do?bbsNo=183&key=1472
         rss: https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=
-        status: verified
+        status: verified_direct
         checked_at: 2026-11-18
+        note: 2026-11-18 브라우저로 직접 확인해 data.json에 13개 저장. 이 서버에서 직접 가져오면 연결이 끊긴다.
       - name: 금천구
         homepage: https://www.geumcheon.go.kr/
         notice_list: https://www.geumcheon.go.kr/portal/selectBbsNttList.do?bbsNo=8&key=297
-        rss: https://www.geumcheon.go.kr/portal/rssBbsNtt.do??key=297&id=&bbsNo=8&searchCtgry=&pageUnit=10&searchCnd=all&searchKrwd=&integrDeptCode=&searchDeptCode=&pageIndex=292
-        status: verified_via_search
+        rss: https://www.geumcheon.go.kr/portal/rssBbsNtt.do?key=297&bbsNo=8
+        status: verified_direct
         checked_at: 2026-11-18
-        note: 검색 결과에서 RSS 본문이 확인됐다. bbsNo=8은 보도자료 게시판이다. 공지 게시판 bbsNo는 별도 확인이 필요하다. '?'가 두 개인 형태가 검색에서 반복 확인됐다.
+        note: 2026-11-18 서버 직접 가져오기로 최신 10개 확인(최신 2026.11.18). bbsNo=8은 보도자료 게시판이다. 공지 게시판 bbsNo는 별도 확인이 필요하다. 기존 '??' 형태 URL은 정리된 주소로 교체했다.
       - name: 강남구
         notice_list: http://www.gangnam.go.kr/board/B_000001/list.do?mid=ID05_040101
         rss: https://www.gangnam.go.kr/portal/bbs/rss.do?bbsId=B_000001
-        status: verified_via_search
+        status: verified_direct
+        note: 2026-11-18 서버 직접 가져오기로 최신 10개 확인(최신 2026-11-18).
         checked_at: 2026-11-18
       - name: 서초구
         notice_list: https://www.seocho.go.kr/site/seocho/ex/bbs/List.do?cbIdx=57
         rss: https://www.seocho.go.kr/rss/notice.jsp
-        status: verified_via_search
+        status: verified_direct
+        note: 2026-11-18 서버 직접 가져오기로 최신 20개 확인(최신 2026-11-18 13:23).
         checked_at: 2026-11-18
         note: RSS 안내 페이지에 공지사항 RSS로 명시됐다. 직접 열람은 429로 재확인 못했다.
       - name: 노원구
         rss: https://www.nowon.kr/www/user/bbs/ND_selectRssList.do?q_bbsCode=1001&q_estnColumn1=11
-        status: verified_via_search
+        status: verified_direct
+        note: 2026-11-18 서버 직접 가져오기로 100개 확인(최신 2026-11-18).
         checked_at: 2026-11-18
       - name: 구로구
         notice_list: http://www.guro.go.kr/www/sub.do?key=1790
         rss: https://www.guro.go.kr/rssBbsNtt.do?bbsNo=662&integrDeptCode=
-        status: verified_via_search
+        status: verified_direct
+        note: 2026-11-18 서버 직접 가져오기로 최신 10개 확인(최신 2026-11-18 14:00). 상세 링크도 bbsNo=662를 써서 동일 게시판으로 확인됐다.
         checked_at: 2026-11-18
-        note: 새소식 상세는 bbsNo=665를 써서 RSS(bbsNo=662)와 동일 게시판인지 미확인이다.
       - name: 도봉구
         rss: https://www.dobong.go.kr/WDB_common/rss/bbs.asp?code=10009682
         status: partial_verified
@@ -75,6 +80,43 @@ regions:
         notice_list: https://www.junggu.seoul.kr/content.do?cmsid=14231
         rss_status: none_on_page
       # 나머지 서울 24개 구는 확인 중이다.
+    remaining_unchecked_seoul:
+      - name: 강동구
+        status: unchecked
+      - name: 강북구
+        status: unchecked
+      - name: 강서구
+        status: unchecked
+      - name: 관악구
+        status: unchecked
+      - name: 광진구
+        status: unchecked
+      - name: 동대문구
+        status: unchecked
+      - name: 동작구
+        status: unchecked
+      - name: 마포구
+        status: unchecked
+      - name: 서대문구
+        status: unchecked
+      - name: 성북구
+        status: unchecked
+      - name: 송파구
+        status: unchecked
+      - name: 양천구
+        status: unchecked
+      - name: 영등포구
+        status: unchecked
+      - name: 용산구
+        status: unchecked
+      - name: 은평구
+        status: unchecked
+      - name: 종로구
+        status: unchecked
+      - name: 중구
+        status: unchecked
+      - name: 중랑구
+        status: unchecked
   - province: 경기도 (2026-11-18 확인, RSS 확정 0곳)
     note: 김포시·양주시는 RSS 버튼 존재만 확인됐고 정확한 RSS 주소는 429로 미확인이다. selectBbsNttList.do를 쓰는 곳이 많다.
     districts:
@@ -109,7 +151,7 @@ regions:
         notice_list: https://www.anseong.go.kr/portal/bbs/list.do?ptIdx=16&mId=0501010000
         rss_status: unchecked
   - province: 인천광역시 (2026-11-18 확인, RSS 확정 0곳)
-    note: 인천은 rssBbsNtt/selectBbsNtt 패턴이 0곳이고 bbsMsgList.do 계열이 많다. 2026-07-01 개편: 중구+동구→제물포구, 서구→서해구+검단구.
+    note: '인천은 rssBbsNtt/selectBbsNtt 패턴이 0곳이고 bbsMsgList.do 계열이 많다. 2026-07-01 개편: 중구+동구→제물포구, 서구→서해구+검단구.'
     districts:
       - name: 연수구
         notice_list: https://www.yeonsu.go.kr/main/community/notify/notice.asp
@@ -125,14 +167,14 @@ regions:
     districts:
       - name: 구미시
         rss: https://www.gumi.go.kr/portal/rssservice/RssServiceDetail.do?rssId=00000000000000000001
-        status: verified_via_guide_page
+        status: excluded_not_a_feed
         checked_at: 2026-11-18
-        note: 공식 안내 페이지에서 확인한 주소. 직접 열어 XML 응답까지 검증하지는 못했다.
+        note: 브라우저(2026-11-18 14:07 KST)와 서버 직접 가져오기 둘 다, 이 주소로 열면 구미시청 HTML 포털이 나오고 RSS 항목이 없다. 자동 수집 대상에서 제외한다.
   - province: 전라남도 (2026-11-18 확인)
     districts:
       - name: 순천시
         rss_status: atom_hint_only
-        note: '순천은 지금' 페이지에 RSS atom 표시가 있으나 정확한 피드 주소는 미확인이다.
+        note: "순천은 지금 페이지에 RSS atom 표시가 있으나 정확한 피드 주소는 미확인이다."
       - name: 전라남도청
         notice_list: https://www.jeonnam.go.kr/M7124/boardList.do?infoReturn=&displayHeader=&menuId=jeonnam0201000000&searchType=&searchText=&pageIndex=222
         rss_status: unchecked
@@ -163,13 +205,15 @@ regions:
       - name: 대구광역시
         notice_list: https://www.daegu.go.kr/index.do?menu_id=00000854&menu_link=/icms/bbs/selectBoardList.do?bbsId=BBS_00029
         rss: http://www.daegu.go.kr/icms/rss/feed.do?id=BBS_00029
-        status: verified_via_guide_page
+        status: verified_direct
+        note: 2026-11-18 서버 직접 가져오기로 최신 20개 확인(최신 2026-11-18).
         checked_at: 2026-11-18
       - name: 군위군
         rss: http://gunwi.go.kr/programs/board/rss.do?mnu_uid=101
-        status: verified_via_guide_page
+        status: verified_direct
+        note: 2026-11-18 서버 직접 가져오기로 최신 10개 확인(최신 2026-11-17). 브라우저 캐시는 2024-09-22본이라 낡았으니 서버 확인을 기준으로 한다.
         checked_at: 2026-11-18
-        note: '알립니다' 피드. 군정새소식은 mnu_uid=100.
+        note: "알립니다 피드. 군정새소식은 mnu_uid=100."
   - province: 부산광역시 (2026-11-18 확인, RSS 확정 0곳)
     note: 부산시 nbnews 페이지에 RSS 표시가 있으나 링크 주소는 미확인이다. 정부24 지자체 소식이 대체 경로 후보이다.
     districts:
@@ -194,49 +238,4 @@ regions:
         rss_status: none_on_page
   - province: 제주특별자치도 (2026-11-18 확인, RSS 0곳)
     note: 홈페이지 직접 열기가 웹방화벽에 차단돼 확인 불가. 제주시 오픈 API는 폐기 안내 상태이다.
-      - name: 강남구
-        status: unchecked
-      - name: 강동구
-        status: unchecked
-      - name: 강북구
-        status: unchecked
-      - name: 강서구
-        status: unchecked
-      - name: 관악구
-        status: unchecked
-      - name: 광진구
-        status: unchecked
-      - name: 구로구
-        status: unchecked
-      - name: 노원구
-        status: unchecked
-      - name: 도봉구
-        status: unchecked
-      - name: 동대문구
-        status: unchecked
-      - name: 동작구
-        status: unchecked
-      - name: 마포구
-        status: unchecked
-      - name: 서대문구
-        status: unchecked
-      - name: 서초구
-        status: unchecked
-      - name: 성북구
-        status: unchecked
-      - name: 송파구
-        status: unchecked
-      - name: 양천구
-        status: unchecked
-      - name: 영등포구
-        status: unchecked
-      - name: 용산구
-        status: unchecked
-      - name: 은평구
-        status: unchecked
-      - name: 종로구
-        status: unchecked
-      - name: 중구
-        status: unchecked
-      - name: 중랑구
-        status: unchecked
+    districts: []

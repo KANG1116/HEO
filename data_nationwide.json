@@ -1,0 +1,646 @@
+{
+  "service": "udong",
+  "generated_at_kst": "2026-11-18 17:58 KST",
+  "generated_at": "2026-11-18T17:58:36.168029+09:00",
+  "regions": [
+    {
+      "region": "서울 강남구",
+      "board": "강남구청 공지사항",
+      "rss": "https://www.gangnam.go.kr/portal/bbs/rss.do?bbsId=B_000001",
+      "list_url": "http://www.gangnam.go.kr/board/B_000001/list.do?mid=ID05_040101",
+      "status": "ok",
+      "count": 10,
+      "notices": [
+        {
+          "title": "수능 당일 위급재난문자 발송 안내",
+          "category": "urgent",
+          "date": "2026-11-18",
+          "region": "서울 강남구",
+          "source": "강남구청 공지사항",
+          "url": "https://www.gangnam.go.kr/board/B_000001/1076735/view.do"
+        },
+        {
+          "title": "강남구 시간선택제임기제공무원 나급(도시계획분야) 1차 서류심사 합격자 발표 및 2차 면접심사 안내 공고",
+          "category": "life",
+          "date": "2026-11-18",
+          "region": "서울 강남구",
+          "source": "강남구청 공지사항",
+          "url": "https://www.gangnam.go.kr/board/B_000001/1076734/view.do"
+        },
+        {
+          "title": "마음상담소(비대면 온라인상담) 안내[당신의 고민을 들어드립니다.]",
+          "category": "life",
+          "date": "2026-11-17",
+          "region": "서울 강남구",
+          "source": "강남구청 공지사항",
+          "url": "https://www.gangnam.go.kr/board/B_000001/1076733/view.do"
+        },
+        {
+          "title": "2026. 4분기 휴직자 복무점검 관련 서식",
+          "category": "life",
+          "date": "2026-11-17",
+          "region": "서울 강남구",
+          "source": "강남구청 공지사항",
+          "url": "https://www.gangnam.go.kr/board/B_000001/1076732/view.do"
+        },
+        {
+          "title": "2027 희망온돌 따뜻한 겨울나기 캠페인 안내",
+          "category": "life",
+          "date": "2026-11-16",
+          "region": "서울 강남구",
+          "source": "강남구청 공지사항",
+          "url": "https://www.gangnam.go.kr/board/B_000001/1076731/view.do"
+        },
+        {
+          "title": "세로수길 서울 달빛야장 시범운영",
+          "category": "life",
+          "date": "2026-11-13",
+          "region": "서울 강남구",
+          "source": "강남구청 공지사항",
+          "url": "https://www.gangnam.go.kr/board/B_000001/1076729/view.do"
+        },
+        {
+          "title": "2027년 강남구 아동복지교사(기간제근로자) 1차 서류심사 합격자 발표 및 2차 면접심사 안내 공고",
+          "category": "welfare",
+          "date": "2026-11-12",
+          "region": "서울 강남구",
+          "source": "강남구청 공지사항",
+          "url": "https://www.gangnam.go.kr/board/B_000001/1076728/view.do"
+        },
+        {
+          "title": "2027학년도 대학수학능력시험 소음대책 안내",
+          "category": "life",
+          "date": "2026-11-12",
+          "region": "서울 강남구",
+          "source": "강남구청 공지사항",
+          "url": "https://www.gangnam.go.kr/board/B_000001/1076727/view.do"
+        },
+        {
+          "title": "털진드기 발생밀도 폭증! 야외활동시 진드기 물림에 주의하세요~!!",
+          "category": "life",
+          "date": "2026-11-11",
+          "region": "서울 강남구",
+          "source": "강남구청 공지사항",
+          "url": "https://www.gangnam.go.kr/board/B_000001/1076726/view.do"
+        },
+        {
+          "title": "2027학년도 대학수학능력시험 교통대책 안내",
+          "category": "work",
+          "date": "2026-11-11",
+          "region": "서울 강남구",
+          "source": "강남구청 공지사항",
+          "url": "https://www.gangnam.go.kr/board/B_000001/1076725/view.do"
+        }
+      ]
+    },
+    {
+      "region": "서울 서초구",
+      "board": "서초구청 공지사항",
+      "rss": "https://www.seocho.go.kr/rss/notice.jsp",
+      "list_url": "https://www.seocho.go.kr/site/seocho/ex/bbs/List.do?cbIdx=57",
+      "status": "ok",
+      "count": 10,
+      "notices": [
+        {
+          "title": "주민등록 무단전출자 최고공고",
+          "category": "life",
+          "date": "2026-11-18",
+          "region": "서울 서초구",
+          "source": "서초구청 공지사항",
+          "url": "https://www.seocho.go.kr/site/seocho/ex/bbs/View.do?cbIdx=57&bcIdx=412740"
+        },
+        {
+          "title": "가로변 버스정류소 온돌의자 가동 일정 및 운영 시간 조정 안내",
+          "category": "life",
+          "date": "2026-11-18",
+          "region": "서울 서초구",
+          "source": "서초구청 공지사항",
+          "url": "https://www.seocho.go.kr/site/seocho/ex/bbs/View.do?cbIdx=57&bcIdx=412739"
+        },
+        {
+          "title": "2027년 상반기 서울시 동행일자리 '디지털 안내사' 모집 공고",
+          "category": "life",
+          "date": "2026-11-18",
+          "region": "서울 서초구",
+          "source": "서초구청 공지사항",
+          "url": "https://www.seocho.go.kr/site/seocho/ex/bbs/View.do?cbIdx=57&bcIdx=412738"
+        },
+        {
+          "title": "2026년 서초구보건소 모자보건팀 기간제근로자 채용 공고-변경",
+          "category": "life",
+          "date": "2026-11-18",
+          "region": "서울 서초구",
+          "source": "서초구청 공지사항",
+          "url": "https://www.seocho.go.kr/site/seocho/ex/bbs/View.do?cbIdx=57&bcIdx=412735"
+        },
+        {
+          "title": "2026년 성범죄 경력자 취업 점검 확인 결과 공개",
+          "category": "life",
+          "date": "2026-11-18",
+          "region": "서울 서초구",
+          "source": "서초구청 공지사항",
+          "url": "https://www.seocho.go.kr/site/seocho/ex/bbs/View.do?cbIdx=57&bcIdx=412729"
+        },
+        {
+          "title": "2026년 제1회 서초구 분양가심사위원회 심사위원 명단 공개",
+          "category": "life",
+          "date": "2026-11-18",
+          "region": "서울 서초구",
+          "source": "서초구청 공지사항",
+          "url": "https://www.seocho.go.kr/site/seocho/ex/bbs/View.do?cbIdx=57&bcIdx=412726"
+        },
+        {
+          "title": "가축(오리) 등에 대한 일시 이동중지(Standstill) 명령 알림",
+          "category": "life",
+          "date": "2026-11-17",
+          "region": "서울 서초구",
+          "source": "서초구청 공지사항",
+          "url": "https://www.seocho.go.kr/site/seocho/ex/bbs/View.do?cbIdx=57&bcIdx=412714"
+        },
+        {
+          "title": "2026년 성범죄 경력자 취업 점검․확인결과 공개(어린이집)",
+          "category": "life",
+          "date": "2026-11-17",
+          "region": "서울 서초구",
+          "source": "서초구청 공지사항",
+          "url": "https://www.seocho.go.kr/site/seocho/ex/bbs/View.do?cbIdx=57&bcIdx=412711"
+        },
+        {
+          "title": "가축(메추리) 등에 대한 일시 이동중지(Standstill) 명령 알림",
+          "category": "life",
+          "date": "2026-11-17",
+          "region": "서울 서초구",
+          "source": "서초구청 공지사항",
+          "url": "https://www.seocho.go.kr/site/seocho/ex/bbs/View.do?cbIdx=57&bcIdx=412710"
+        },
+        {
+          "title": "2026년도 서초구 먹는물 공동시설(약수터)3/4분기 (9월) 수질검사 결과",
+          "category": "life",
+          "date": "2026-11-17",
+          "region": "서울 서초구",
+          "source": "서초구청 공지사항",
+          "url": "https://www.seocho.go.kr/site/seocho/ex/bbs/View.do?cbIdx=57&bcIdx=412705"
+        }
+      ]
+    },
+    {
+      "region": "서울 노원구",
+      "board": "노원구청 공지사항",
+      "rss": "https://www.nowon.kr/www/user/bbs/ND_selectRssList.do?q_bbsCode=1001&q_estnColumn1=11",
+      "list_url": "",
+      "status": "ok",
+      "count": 10,
+      "notices": [
+        {
+          "title": "옥외광고물법 위반 과태료 체납 독촉고지서 및 압류통지서 반송 공시 송달 공고",
+          "category": "life",
+          "date": "2026-11-18",
+          "region": "서울 노원구",
+          "source": "노원구청 공지사항",
+          "url": "https://www.nowon.kr/www/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_estnColumn1=11&q_bbscttSn=20261118100654517"
+        },
+        {
+          "title": "하계청솔아파트 재건축사업 공공지원 추진위원회 구성 정비사업전문관리용역 제안서 평가위원(후보자) 모집 안내",
+          "category": "welfare",
+          "date": "2026-11-18",
+          "region": "서울 노원구",
+          "source": "노원구청 공지사항",
+          "url": "https://www.nowon.kr/www/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_estnColumn1=11&q_bbscttSn=20261118091235954"
+        },
+        {
+          "title": "[2026 건강도시 이벤트] 우리는 함께 한다:식생활편 이벤트 당첨자 발표",
+          "category": "life",
+          "date": "2026-11-17",
+          "region": "서울 노원구",
+          "source": "노원구청 공지사항",
+          "url": "https://www.nowon.kr/www/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_estnColumn1=11&q_bbscttSn=20261117154327497"
+        },
+        {
+          "title": "불암산아트포레 갤러리   「파란:마음으로 그리고, 예술로 꿈꾸다」개최 안내",
+          "category": "life",
+          "date": "2026-11-16",
+          "region": "서울 노원구",
+          "source": "노원구청 공지사항",
+          "url": "https://www.nowon.kr/www/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_estnColumn1=11&q_bbscttSn=20261116221010713"
+        },
+        {
+          "title": "2026년 성범죄 경력자 취업 점검 확인결과 공개(영화상영관, 멀티방, PC방, 오락실, 노래연습장, 대중문화예술기획업소)",
+          "category": "life",
+          "date": "2026-11-16",
+          "region": "서울 노원구",
+          "source": "노원구청 공지사항",
+          "url": "https://www.nowon.kr/www/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_estnColumn1=11&q_bbscttSn=20261116193902096"
+        },
+        {
+          "title": "2026년 성범죄 경력자 취업 점검·확인결과 공개(지방문화원)",
+          "category": "life",
+          "date": "2026-11-16",
+          "region": "서울 노원구",
+          "source": "노원구청 공지사항",
+          "url": "https://www.nowon.kr/www/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_estnColumn1=11&q_bbscttSn=20261116175722853"
+        },
+        {
+          "title": "2027 희망온돌 따뜻한 겨울나기 성금·품 모금 안내",
+          "category": "life",
+          "date": "2026-11-16",
+          "region": "서울 노원구",
+          "source": "노원구청 공지사항",
+          "url": "https://www.nowon.kr/www/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_estnColumn1=11&q_bbscttSn=20261116143214593"
+        },
+        {
+          "title": "협동조합형 민간건설임대주택 (10년임대) 가입주의",
+          "category": "life",
+          "date": "2026-11-16",
+          "region": "서울 노원구",
+          "source": "노원구청 공지사항",
+          "url": "https://www.nowon.kr/www/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_estnColumn1=11&q_bbscttSn=20261116132318774"
+        },
+        {
+          "title": "2026년 노원구 구민상 부문별 후보자 공적 공개",
+          "category": "life",
+          "date": "2026-11-13",
+          "region": "서울 노원구",
+          "source": "노원구청 공지사항",
+          "url": "https://www.nowon.kr/www/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_estnColumn1=11&q_bbscttSn=20261113171316080"
+        },
+        {
+          "title": "민간임대주택 협동조합형 회원모집 관련 유의사항 안내",
+          "category": "life",
+          "date": "2026-11-12",
+          "region": "서울 노원구",
+          "source": "노원구청 공지사항",
+          "url": "https://www.nowon.kr/www/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_estnColumn1=11&q_bbscttSn=20261112141438446"
+        }
+      ]
+    },
+    {
+      "region": "서울 구로구",
+      "board": "구로구청 새소식",
+      "rss": "https://www.guro.go.kr/rssBbsNtt.do?bbsNo=662&integrDeptCode=",
+      "list_url": "http://www.guro.go.kr/www/sub.do?key=1790",
+      "status": "ok",
+      "count": 10,
+      "notices": [
+        {
+          "title": "2027년도 대학수학능력시험 관련 공공와이파이 일시 중단 안내",
+          "category": "life",
+          "date": "2026-11-18",
+          "region": "서울 구로구",
+          "source": "구로구청 새소식",
+          "url": "http://www.guro.go.kr/www/selectBbsNttView.do?key=1790&bbsNo=662&nttNo=242233"
+        },
+        {
+          "title": "2026년 성범죄 경력자 취업 점검 확인결과 공개",
+          "category": "life",
+          "date": "2026-11-18",
+          "region": "서울 구로구",
+          "source": "구로구청 새소식",
+          "url": "http://www.guro.go.kr/www/selectBbsNttView.do?key=1790&bbsNo=662&nttNo=242232"
+        },
+        {
+          "title": "문화공간 다락 11월 프로그램(다락방 콘서트, 체험 프로그램) 안내",
+          "category": "life",
+          "date": "2026-11-18",
+          "region": "서울 구로구",
+          "source": "구로구청 새소식",
+          "url": "http://www.guro.go.kr/www/selectBbsNttView.do?key=1790&bbsNo=662&nttNo=242227"
+        },
+        {
+          "title": "2026년 어린이집 성범죄 경력자 취업제한 점검 결과 공개",
+          "category": "life",
+          "date": "2026-11-17",
+          "region": "서울 구로구",
+          "source": "구로구청 새소식",
+          "url": "http://www.guro.go.kr/www/selectBbsNttView.do?key=1790&bbsNo=662&nttNo=242190"
+        },
+        {
+          "title": "＇2026년의  마지막을 특별한 배움과 성장으로 채울＇ 구로창의융합교육장 12월 특강 안내",
+          "category": "life",
+          "date": "2026-11-17",
+          "region": "서울 구로구",
+          "source": "구로구청 새소식",
+          "url": "http://www.guro.go.kr/www/selectBbsNttView.do?key=1790&bbsNo=662&nttNo=242189"
+        },
+        {
+          "title": "철도지하화 통합개발 종합계획 대국민 설문조사",
+          "category": "life",
+          "date": "2026-11-17",
+          "region": "서울 구로구",
+          "source": "구로구청 새소식",
+          "url": "http://www.guro.go.kr/www/selectBbsNttView.do?key=1790&bbsNo=662&nttNo=242181"
+        },
+        {
+          "title": "2027년 상반기 구로4동 자치회관 프로그램 프리랜서 강사 공개모집 공고",
+          "category": "life",
+          "date": "2026-11-16",
+          "region": "서울 구로구",
+          "source": "구로구청 새소식",
+          "url": "http://www.guro.go.kr/www/selectBbsNttView.do?key=1790&bbsNo=662&nttNo=242172"
+        },
+        {
+          "title": "[구로구가족센터] 2026년 가족탄생 축하 프로젝트 홍보★",
+          "category": "life",
+          "date": "2026-11-16",
+          "region": "서울 구로구",
+          "source": "구로구청 새소식",
+          "url": "http://www.guro.go.kr/www/selectBbsNttView.do?key=1790&bbsNo=662&nttNo=242169"
+        },
+        {
+          "title": "[오류동 81번지 일대] 주택재개발사업 추진을 위한 동의서 번호부여 요청 구역 공개",
+          "category": "work",
+          "date": "2026-11-16",
+          "region": "서울 구로구",
+          "source": "구로구청 새소식",
+          "url": "http://www.guro.go.kr/www/selectBbsNttView.do?key=1790&bbsNo=662&nttNo=242150"
+        },
+        {
+          "title": "제4경인고속화도로 민간투자사업 전략환경영향평가서(초안) 공람 및 설명회 개최 공고",
+          "category": "work",
+          "date": "2026-11-16",
+          "region": "서울 구로구",
+          "source": "구로구청 새소식",
+          "url": "http://www.guro.go.kr/www/selectBbsNttView.do?key=1790&bbsNo=662&nttNo=242149"
+        }
+      ]
+    },
+    {
+      "region": "서울 금천구",
+      "board": "금천구청 보도자료",
+      "rss": "https://www.geumcheon.go.kr/portal/rssBbsNtt.do?key=297&bbsNo=8",
+      "list_url": "https://www.geumcheon.go.kr/portal/selectBbsNttList.do?bbsNo=8&key=297",
+      "status": "ok",
+      "count": 10,
+      "notices": [
+        {
+          "title": "최기찬 금천구청장, 신천～하안～독산～신림선 촉구 릴레이 챌린지 동참",
+          "category": "life",
+          "date": "2026-11-18",
+          "region": "서울 금천구",
+          "source": "금천구청 보도자료",
+          "url": "https://www.geumcheon.go.kr/portal/selectBbsNttView.do?key=297&amp;bbsNo=8&amp;nttNo=271804"
+        },
+        {
+          "title": "금천 청소년 과학탐험대… 기상청으로 과학 여정 떠난다",
+          "category": "life",
+          "date": "2026-11-18",
+          "region": "서울 금천구",
+          "source": "금천구청 보도자료",
+          "url": "https://www.geumcheon.go.kr/portal/selectBbsNttView.do?key=297&amp;bbsNo=8&amp;nttNo=271803"
+        },
+        {
+          "title": "금천구, 민선 9기 첫 본예산 8,406억 원 편성… 구민과의 약속에 중점 투자",
+          "category": "life",
+          "date": "2026-11-18",
+          "region": "서울 금천구",
+          "source": "금천구청 보도자료",
+          "url": "https://www.geumcheon.go.kr/portal/selectBbsNttView.do?key=297&amp;bbsNo=8&amp;nttNo=271802"
+        },
+        {
+          "title": "금천에서 즐기는 두 가지 음악의 매력… 청년 취향 저격 콘서트 개최",
+          "category": "life",
+          "date": "2026-11-18",
+          "region": "서울 금천구",
+          "source": "금천구청 보도자료",
+          "url": "https://www.geumcheon.go.kr/portal/selectBbsNttView.do?key=297&amp;bbsNo=8&amp;nttNo=271800"
+        },
+        {
+          "title": "정신건강 관리도 으뜸… 금천구정신건강복지센터 ‘S등급’",
+          "category": "welfare",
+          "date": "2026-11-17",
+          "region": "서울 금천구",
+          "source": "금천구청 보도자료",
+          "url": "https://www.geumcheon.go.kr/portal/selectBbsNttView.do?key=297&amp;bbsNo=8&amp;nttNo=271790"
+        },
+        {
+          "title": "우리들의 첫 번째 선율… ‘꿈의 오케스트라 금천’ 첫 공연",
+          "category": "event",
+          "date": "2026-11-17",
+          "region": "서울 금천구",
+          "source": "금천구청 보도자료",
+          "url": "https://www.geumcheon.go.kr/portal/selectBbsNttView.do?key=297&amp;bbsNo=8&amp;nttNo=271789"
+        },
+        {
+          "title": "“기후재난 생존 원정대”… 금천구, 보드게임 개발",
+          "category": "urgent",
+          "date": "2026-11-17",
+          "region": "서울 금천구",
+          "source": "금천구청 보도자료",
+          "url": "https://www.geumcheon.go.kr/portal/selectBbsNttView.do?key=297&amp;bbsNo=8&amp;nttNo=271788"
+        },
+        {
+          "title": "석수역 일대 새로운 변화… 중앙철재종합상가 정비사업 탄력",
+          "category": "life",
+          "date": "2026-11-17",
+          "region": "서울 금천구",
+          "source": "금천구청 보도자료",
+          "url": "https://www.geumcheon.go.kr/portal/selectBbsNttView.do?key=297&amp;bbsNo=8&amp;nttNo=271780"
+        },
+        {
+          "title": "금천구, 지역사회와 함께 취약계층 아동에게 쾌적한 학습공간 제공",
+          "category": "life",
+          "date": "2026-11-17",
+          "region": "서울 금천구",
+          "source": "금천구청 보도자료",
+          "url": "https://www.geumcheon.go.kr/portal/selectBbsNttView.do?key=297&amp;bbsNo=8&amp;nttNo=271779"
+        },
+        {
+          "title": "금천구 ‘주민 달인’ 강사로 다양한 재능 및 노하우 이웃과 나눈다",
+          "category": "life",
+          "date": "2026-11-16",
+          "region": "서울 금천구",
+          "source": "금천구청 보도자료",
+          "url": "https://www.geumcheon.go.kr/portal/selectBbsNttView.do?key=297&amp;bbsNo=8&amp;nttNo=271774"
+        }
+      ]
+    },
+    {
+      "region": "대구광역시",
+      "board": "대구시 공지사항",
+      "rss": "http://www.daegu.go.kr/icms/rss/feed.do?id=BBS_00029",
+      "list_url": "https://www.daegu.go.kr/index.do?menu_id=00000854&menu_link=/icms/bbs/selectBoardList.do?bbsId=BBS_00029",
+      "status": "ok",
+      "count": 10,
+      "notices": [
+        {
+          "title": "2027학년도 수능 당일 위급재난문자 발송 안내",
+          "category": "urgent",
+          "date": "2026-11-18",
+          "region": "대구광역시",
+          "source": "대구시 공지사항",
+          "url": "https://www.daegu.go.kr/index.do?menu_id=00000854&menu_link=/icms/bbs/selectBoardArticle.do&bbsId=BBS_00029&nttId=832380"
+        },
+        {
+          "title": "2026 대구 미래놀이포럼 개최",
+          "category": "life",
+          "date": "2026-11-18",
+          "region": "대구광역시",
+          "source": "대구시 공지사항",
+          "url": "https://www.daegu.go.kr/index.do?menu_id=00000854&menu_link=/icms/bbs/selectBoardArticle.do&bbsId=BBS_00029&nttId=832235"
+        },
+        {
+          "title": "일일재난종합상황(11.17.)",
+          "category": "urgent",
+          "date": "2026-11-18",
+          "region": "대구광역시",
+          "source": "대구시 공지사항",
+          "url": "https://www.daegu.go.kr/index.do?menu_id=00000854&menu_link=/icms/bbs/selectBoardArticle.do&bbsId=BBS_00029&nttId=832377"
+        },
+        {
+          "title": "시 대표 홈페이지 서비스 일시 중단 안내(2026.11.17.(화) 18:00~23:00)",
+          "category": "life",
+          "date": "2026-11-18",
+          "region": "대구광역시",
+          "source": "대구시 공지사항",
+          "url": "https://www.daegu.go.kr/index.do?menu_id=00000854&menu_link=/icms/bbs/selectBoardArticle.do&bbsId=BBS_00029&nttId=832309"
+        },
+        {
+          "title": "2027년 지역대표예술단체 지원사업 공모(대구시 자체 공모) 알림",
+          "category": "welfare",
+          "date": "2026-11-18",
+          "region": "대구광역시",
+          "source": "대구시 공지사항",
+          "url": "https://www.daegu.go.kr/index.do?menu_id=00000854&menu_link=/icms/bbs/selectBoardArticle.do&bbsId=BBS_00029&nttId=832296"
+        },
+        {
+          "title": "2026년 제2회 대구시 정책제안 공모 심사 온라인 시민투표 안내",
+          "category": "life",
+          "date": "2026-11-18",
+          "region": "대구광역시",
+          "source": "대구시 공지사항",
+          "url": "https://www.daegu.go.kr/index.do?menu_id=00000854&menu_link=/icms/bbs/selectBoardArticle.do&bbsId=BBS_00029&nttId=832038"
+        },
+        {
+          "title": "「2026 대구 창의도시재생위크」 행사 안내",
+          "category": "event",
+          "date": "2026-11-18",
+          "region": "대구광역시",
+          "source": "대구시 공지사항",
+          "url": "https://www.daegu.go.kr/index.do?menu_id=00000854&menu_link=/icms/bbs/selectBoardArticle.do&bbsId=BBS_00029&nttId=831934"
+        },
+        {
+          "title": "「민원의 날」(11.24.) 기념 온라인 이벤트 안내",
+          "category": "life",
+          "date": "2026-11-18",
+          "region": "대구광역시",
+          "source": "대구시 공지사항",
+          "url": "https://www.daegu.go.kr/index.do?menu_id=00000854&menu_link=/icms/bbs/selectBoardArticle.do&bbsId=BBS_00029&nttId=831979"
+        },
+        {
+          "title": "2026년 AI 활용 청년기술 창업 지원사업 안내",
+          "category": "welfare",
+          "date": "2026-11-18",
+          "region": "대구광역시",
+          "source": "대구시 공지사항",
+          "url": "https://www.daegu.go.kr/index.do?menu_id=00000854&menu_link=/icms/bbs/selectBoardArticle.do&bbsId=BBS_00029&nttId=831656"
+        },
+        {
+          "title": "서대구복합지식산업센터(임대) 입주자 추가(선착순) 모집 및 판촉방안 시행 안내",
+          "category": "life",
+          "date": "2026-11-18",
+          "region": "대구광역시",
+          "source": "대구시 공지사항",
+          "url": "https://www.daegu.go.kr/index.do?menu_id=00000854&menu_link=/icms/bbs/selectBoardArticle.do&bbsId=BBS_00029&nttId=831568"
+        }
+      ]
+    },
+    {
+      "region": "대구 군위군",
+      "board": "군위군 알립니다",
+      "rss": "http://gunwi.go.kr/programs/board/rss.do?mnu_uid=101",
+      "list_url": "",
+      "status": "ok",
+      "count": 10,
+      "notices": [
+        {
+          "title": "군위군 먹거리사업단 직원 채용 공고 알림",
+          "category": "life",
+          "date": "2026-11-18",
+          "region": "대구 군위군",
+          "source": "군위군 알립니다",
+          "url": "https://www.gunwi.go.kr/ko/page.do?mnu_uid=101&bod_uid=142539&cmd=2"
+        },
+        {
+          "title": "제8차 미세먼지 계절관리제 기간 5등급 차량 운행제한 알림",
+          "category": "life",
+          "date": "2026-11-17",
+          "region": "대구 군위군",
+          "source": "군위군 알립니다",
+          "url": "https://www.gunwi.go.kr/ko/page.do?mnu_uid=101&bod_uid=142534&cmd=2"
+        },
+        {
+          "title": "6·25참전 유공자회 유족회원 모집 알림",
+          "category": "life",
+          "date": "2026-11-16",
+          "region": "대구 군위군",
+          "source": "군위군 알립니다",
+          "url": "https://www.gunwi.go.kr/ko/page.do?mnu_uid=101&bod_uid=142513&cmd=2"
+        },
+        {
+          "title": "군위군 몰입영어교실 영어 창의 캠프 참가자 모집 공고",
+          "category": "life",
+          "date": "2026-11-13",
+          "region": "대구 군위군",
+          "source": "군위군 알립니다",
+          "url": "https://www.gunwi.go.kr/ko/page.do?mnu_uid=101&bod_uid=142491&cmd=2"
+        },
+        {
+          "title": "2027-2028 군위인재양성원 위탁운영자 모집 공고 알림",
+          "category": "life",
+          "date": "2026-11-11",
+          "region": "대구 군위군",
+          "source": "군위군 알립니다",
+          "url": "https://www.gunwi.go.kr/ko/page.do?mnu_uid=101&bod_uid=142454&cmd=2"
+        },
+        {
+          "title": "2027-2028 군위인재양성원 위탁운영 제안서 평가위원(후보자) 모집 알림",
+          "category": "life",
+          "date": "2026-11-11",
+          "region": "대구 군위군",
+          "source": "군위군 알립니다",
+          "url": "https://www.gunwi.go.kr/ko/page.do?mnu_uid=101&bod_uid=142453&cmd=2"
+        },
+        {
+          "title": "군위 관내 학교 캠퍼스 개편 및 통합 계획 행정 예고 알림",
+          "category": "life",
+          "date": "2026-11-10",
+          "region": "대구 군위군",
+          "source": "군위군 알립니다",
+          "url": "https://www.gunwi.go.kr/ko/page.do?mnu_uid=101&bod_uid=142450&cmd=2"
+        },
+        {
+          "title": "2026년 우기 급경사지 안전점검결과 알림",
+          "category": "life",
+          "date": "2026-11-10",
+          "region": "대구 군위군",
+          "source": "군위군 알립니다",
+          "url": "https://www.gunwi.go.kr/ko/page.do?mnu_uid=101&bod_uid=142433&cmd=2"
+        },
+        {
+          "title": "2026년 하반기 정부포상(모범공무원) 추천대상자 공개 검증 알림(2차)",
+          "category": "life",
+          "date": "2026-11-05",
+          "region": "대구 군위군",
+          "source": "군위군 알립니다",
+          "url": "https://www.gunwi.go.kr/ko/page.do?mnu_uid=101&bod_uid=142374&cmd=2"
+        },
+        {
+          "title": "위탁선거 공정선거지원단 모집 재공고 알림",
+          "category": "welfare",
+          "date": "2026-11-04",
+          "region": "대구 군위군",
+          "source": "군위군 알립니다",
+          "url": "https://www.gunwi.go.kr/ko/page.do?mnu_uid=101&bod_uid=142365&cmd=2"
+        }
+      ]
+    }
+  ],
+  "total_notices": 70,
+  "excluded": [
+    {
+      "region": "경북 구미시",
+      "rss": "https://www.gumi.go.kr/portal/rssservice/RssServiceDetail.do?rssId=00000000000000000001",
+      "reason": "RSS 주소로 열면 구미시청 HTML 포털이 나오고 RSS 항목이 없다. 브라우저(2026-11-18 14:07 KST)와 서버 직접 가져오기 둘 다 확인했다."
+    }
+  ],
+  "note": "동네 소식 중심이다. 제목·날짜·원문 링크만 저장하고 본문은 복사하지 않는다. 한 지역 가져오기가 실패하면 그 지역의 기존 소식을 유지한다. 성동구는 data.json에 따로 있다."
+}

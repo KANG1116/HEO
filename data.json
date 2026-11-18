@@ -1,8 +1,8 @@
 {
   "service": "udong",
   "area": "서울 성동구 성수동 (시범)",
-  "generated_at_kst": "2026-11-18 13:32 KST",
-  "generated_at": "2026-11-18T13:32:51.028511+09:00",
+  "generated_at_kst": "2026-11-18 18:00 KST",
+  "generated_at": "2026-11-18T18:00:35.376271+09:00",
   "sources": [
     {
       "source": "seongdong_rss",
@@ -26,9 +26,61 @@
       "source": "seoul_reservation",
       "status": "missing_key",
       "note": "SEOUL_API_KEY가 없어서 예약 정보를 가져오지 않았다."
+    },
+    {
+      "source": "seongdong_rss",
+      "status": "fetch_failed:RemoteDisconnected",
+      "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
+      "note": "이 서버에서 직접 가져오기가 끊겼다. 브라우저로는 읽힌다. 기존 소식을 유지한다."
+    },
+    {
+      "source": "seoul_reservation",
+      "status": "missing_key",
+      "note": "SEOUL_API_KEY가 없어서 예약 정보를 가져오지 않았다."
+    },
+    {
+      "source": "seongdong_rss",
+      "status": "fetch_failed:RemoteDisconnected",
+      "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
+      "note": "이 서버에서 직접 가져오기가 끊겼다. 브라우저로는 읽힌다. 기존 소식을 유지한다."
+    },
+    {
+      "source": "seoul_reservation",
+      "status": "missing_key",
+      "note": "SEOUL_API_KEY가 없어서 예약 정보를 가져오지 않았다."
+    },
+    {
+      "source": "seongdong_rss",
+      "status": "ok_via_browser",
+      "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
+      "note": "2026-11-18 18:00 KST에 브라우저로 성동구청 새소식(bbsNo=183)을 직접 확인했다. 새 공지 3건을 추가했다(유가보조금 서면신청, 풍수해보험, 공공와이파이 일시 중단). 복지 관련 새 제목은 없었다."
     }
   ],
   "notices": [
+    {
+      "title": "2026년 4분기 화물자동차 유가보조금 서면신청 안내",
+      "category": "welfare",
+      "date": "2026-11-18",
+      "region": "서울 성동구",
+      "source": "성동구청 새소식",
+      "url": "https://sd.go.kr/main/selectBbsNttView.do?key=1472&bbsNo=183&nttNo=363228"
+    },
+    {
+      "title": "풍수해보험으로 재난에 대비하세요!",
+      "category": "urgent",
+      "date": "2026-11-18",
+      "region": "서울 성동구",
+      "source": "성동구청 새소식",
+      "url": "https://sd.go.kr/main/selectBbsNttView.do?key=1472&bbsNo=183&nttNo=363227"
+    },
+    {
+      "title": "공공와이파이 서비스 일시 중단 안내",
+      "category": "life",
+      "date": "2026-11-18",
+      "region": "서울 성동구",
+      "source": "성동구청 새소식",
+      "url": "https://sd.go.kr/main/selectBbsNttView.do?key=1472&bbsNo=183&nttNo=363226"
+    },
     {
       "title": "2026년 제26차 성동구 건축 전문위원회(굴토, 해체) 개최 알림",
       "category": "work",

@@ -18,7 +18,14 @@
 - `sources.yaml` — 출처 목록. RSS/XML 주소가 확인된 출처만 추가합니다.
 - `.github/workflows/update.yml` — 매일 07:00, 18:00 KST에 자동 수집하고 바뀐 `data.json`만 커밋합니다.
 
-## 자동 수집
+## 자동 수집 v0.4 — 전국 8개 지역
+
+```bash
+python3 scripts/fetch.py
+# -> data.json (성동구 13개), data_nationwide.json (강남·서초·노원·구로·금천·대구·군위, 각 10개씩 총 70개)
+```
+
+RSS가 직접 가져오기로 확인된 지역만 넣었다. 구미시는 RSS 주소로 열면 HTML 포털이 나와서 제외했다. 성동구는 이 서버에서 직접 가져오면 연결이 끊겨, 실패하면 기존 소식을 유지하고 정기 작업에서 브라우저로 확인한다. RSS가 없는 지역은 `sources_nationwide.yaml`에 목록 URL을 모아두고, 목록 HTML 읽기 / 정부24 지자체 소식 집계로 연결하는 게 다음 단계이다.
 
 ```bash
 SEOUL_API_KEY=... python3 scripts/fetch.py
