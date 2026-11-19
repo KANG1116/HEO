@@ -1,11 +1,11 @@
 # 우동 전국 출처 레지스트리 (초안, 2026-11-18)
 # 규칙: 확인된 RSS/목록 URL만 'verified'로 넣는다. 추측한 URL은 넣지 않는다.
-# 상태: verified / unchecked / no_rss
+# 상태: verified / verified_direct / verified_list / partial_verified / unchecked / no_rss / failed_direct / excluded_not_a_feed
 # 시범: 서울 성동구 (verified)
 
-version: 0.2
+version: 0.3
 updated: 2026-11-18
-checked: 2026-11-18 14:00 KST, RSS 8곳(성동 포함) 직접 확인됨. 구미시는 RSS가 아닌 HTML이라 제외.
+checked: 2026-11-18 23:30 KST, RSS 8곳 + 목록 파싱 13곳 직접 확인됨. 구미시는 RSS가 아닌 HTML이라 제외.
 note: 전국 229개 시군구를 하나씩 확인하는 중이다. 서울 25개 구는 서울시 자치구 주요뉴스 집계 페이지가 있다.
 
 aggregated_sources:
@@ -14,6 +14,11 @@ aggregated_sources:
     coverage: 서울 25개 구
     status: verified
     note: 2026-11-18 기준 최신. 제목을 누르면 각 구청 홈페이지로 연결된다. 구별 RSS를 대신하지는 못하지만 서울 전체를 한 번에 보는 통로이다.
+  - name: 정부24 지자체 소식
+    url: https://www.gov.kr/portal/locgovNews
+    coverage: 전국 지자체
+    status: partial_verified
+    note: '2026-11-18 23:31 KST 확인, 총 19,785건, 당일 갱신. 지역 필터가 실제로 있다(srchArea=행정기관코드 10자리, 예: 성동구 1120000000은 218건, 하남시 4145000000은 45건 검증됨). 원문보기는 각 지자체 홈페이지로 간다. 단, 내용은 공고·고시·행정예고 위주라 동네 새소식의 대체재가 아니고, 반복 호출 시 대기 페이지가 뜰 수 있어 보조용으로만 쓴다. Mcode는 지역 코드가 아니다.'
 
 regions:
   - province: 서울특별시
@@ -58,28 +63,39 @@ regions:
         checked_at: 2026-11-18
       - name: 도봉구
         rss: https://www.dobong.go.kr/WDB_common/rss/bbs.asp?code=10009682
-        status: partial_verified
+        status: verified_direct
         checked_at: 2026-11-18
-        note: 동 게시판 RSS만 확인됐다. 본청 공지 code=10008769의 RSS는 미확인이다.
+        note: 2026-11-18 서버 직접 가져오기로 RSS 2.0, 200건 확인(최신 2026-11-12). 단, 동 게시판(code=10009682, 방학1동 위주)이라 본청 공지가 아니다. 본청 공지 code=10008769의 RSS는 미확인이다.
       - name: 송파구
-        notice_list: http://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=92&&pageUnit=10&key=2775&pageIndex=1
-        rss_status: unchecked
+        notice_list: https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=92&pageUnit=10&key=2775&pageIndex=1
+        status: verified_list
+        checked_at: 2026-11-18
+        note: 2026-11-18 서버 직접 가져오기로 최신 10개 확인(최신 2026-11-17). http는 리다이렉트 페이지만 반환하므로 https로 가져온다.
       - name: 영등포구
         notice_list: https://www.ydp.go.kr/www/selectBbsNttList.do?bbsNo=40&key=2848
-        rss_status: unchecked
-      - name: 마포구
-        notice_list: https://www.mapo.go.kr/site/main/board/notice/list
-        rss_status: none_on_page
-      - name: 용산구
-        notice_list: http://yongsan.go.kr/portal/bbs/B0000041/list.do?menuNo=200228&pageUnit=10&pageIndex=241
-        rss_status: unchecked
+        status: verified_list
+        checked_at: 2026-11-18
+        note: 2026-11-18 서버 직접 가져오기로 최신 10개 확인(최신 2026-11-18).
       - name: 종로구
         notice_list: http://jongno.go.kr/portal/bbs/selectBoardList.do?bbsId=BBSMSTR_000000000201&menuId=1752&menuNo=1752
-        rss_status: unchecked
+        status: verified_list
+        checked_at: 2026-11-18
+        note: 2026-11-18 서버 직접 가져오기로 최신 10개 확인(최신 2026-11-18). 상세 링크는 javascript:viewMove(nttId)라 페이지 내 JS에서 확인한 패턴으로 재구성한다. 상세 1건 직접 가져와 검증했다.
+      - name: 마포구
+        notice_list: https://www.mapo.go.kr/site/main/board/notice/list
+        status: verified_list
+        checked_at: 2026-11-18
+        note: 2026-11-18 서버 직접 가져오기로 최신 10개 확인(일반 최신 2026-11-13, 고정공지 최신 2026-11-17). 상단 고정공지(순번 빈칸)는 제외하고 일반 목록만 쓴다. 일반 목록 첫 행이 2026-08-24로 순서가 어긋나 있어 날짜 내림차순으로 정리한다.
+      - name: 용산구
+        notice_list: http://yongsan.go.kr/portal/bbs/B0000041/list.do?menuNo=200228&pageUnit=10&pageIndex=241
+        status: failed_direct
+        checked_at: 2026-11-18
+        note: 서버 직접 가져오기가 끊기고, 확인된 스냅샷은 66일 전(2026-09-13)이라 최신 목록을 알 수 없다. 주어진 URL은 pageIndex=241이라 2021년 구간을 가리킨다.
       - name: 중구
         notice_list: https://www.junggu.seoul.kr/content.do?cmsid=14231
-        rss_status: none_on_page
-      # 나머지 서울 24개 구는 확인 중이다.
+        status: partial_verified
+        checked_at: 2026-11-18
+        note: 서버 직접 가져오기가 끊기고, browser.open 스냅샷(51분 전)으로는 제목·날짜만 보이고 개별 글의 cid가 노출되지 않아 원문 URL을 확정할 수 없다.
     remaining_unchecked_seoul:
       - name: 강동구
         status: unchecked
@@ -95,61 +111,67 @@ regions:
         status: unchecked
       - name: 동작구
         status: unchecked
-      - name: 마포구
-        status: unchecked
       - name: 서대문구
         status: unchecked
       - name: 성북구
         status: unchecked
-      - name: 송파구
-        status: unchecked
       - name: 양천구
-        status: unchecked
-      - name: 영등포구
-        status: unchecked
-      - name: 용산구
         status: unchecked
       - name: 은평구
         status: unchecked
-      - name: 종로구
-        status: unchecked
-      - name: 중구
-        status: unchecked
       - name: 중랑구
         status: unchecked
-  - province: 경기도 (2026-11-18 확인, RSS 확정 0곳)
-    note: 김포시·양주시는 RSS 버튼 존재만 확인됐고 정확한 RSS 주소는 429로 미확인이다. selectBbsNttList.do를 쓰는 곳이 많다.
+  - province: 경기도 (2026-11-18 확인, RSS 확정 0곳, 목록 파싱 7곳 추가 확인)
+    note: 김포시·양주시는 RSS 버튼 존재만 확인됐고 정확한 RSS 주소는 429로 미확인이다. selectBbsNttList.do를 쓰는 곳이 많다. 하남·가평·군포·양주·파주·이천·김포는 목록 파싱으로 2026-11-18 추가 확인됐다. 안성시는 상세 링크가 POST 방식이라 미검증, 연천은 가져오기 실패.
     districts:
       - name: 김포시
         notice_list: https://gimpo.go.kr/portal/selectBbsNttList.do?key=3309&bbsNo=56
-        rss_status: button_exists_url_unconfirmed
+        status: verified_list
+        checked_at: 2026-11-18
+        note: 2026-11-18 서버 직접 가져오기로 최신 10개 확인(최신 2026-11-06). 최근 글이 하성면 위주라 시 전체 게시판인지 추후 재확인 필요. RSS 버튼은 있으나 피드가 404이다.
       - name: 양주시
         notice_list: https://www.yangju.go.kr/www/selectBbsNttList.do?bbsNo=13&key=202
-        rss_status: button_exists_url_unconfirmed
+        status: verified_list
+        checked_at: 2026-11-18
+        note: 2026-11-18 서버 직접 가져오기로 최신 10개 확인(최신 2026-11-18). 상단 고정공지(번호란 '공지')는 제외한다.
       - name: 군포시
         notice_list: https://www.gunpo.go.kr/www/selectBbsNttList.do?key=3890&bbsNo=675
-        rss_status: not_found_on_list_page
+        status: verified_list
+        checked_at: 2026-11-18
+        note: 2026-11-18 서버 직접 가져오기로 최신 10개 확인(최신 2026-11-18). 날짜는 YYYY.MM.DD 형식이다.
       - name: 하남시
         notice_list: https://www.hanam.go.kr/www/selectBbsNttList.do?key=170&bbsNo=30
-        rss_status: not_found_on_list_page
+        status: verified_list
+        checked_at: 2026-11-18
+        note: 2026-11-18 서버 직접 가져오기로 최신 10개 확인(최신 2026-11-17). 제목 뒤 새글/핫이슈 배지를 제거한다.
       - name: 가평군
         notice_list: https://www.gp.go.kr/portal/selectBbsNttList.do?key=501&bbsNo=150
-        rss_status: not_found_on_list_page
+        status: verified_list
+        checked_at: 2026-11-18
+        note: 2026-11-18 서버 직접 가져오기로 최신 10개 확인(최신 2026-11-18). 한 페이지 20행이다. 사이드바 구인·구직 위젯 링크(bbsNo=110)는 제외하고 bbsNo=150인 행만 쓴다.
       - name: 연천군
         notice_list: https://www.yeoncheon.go.kr/www/selectBbsNttList.do?key=4799&bbsNo=220
-        rss_status: unchecked
+        status: failed_direct
+        checked_at: 2026-11-18
+        note: 서버 직접 가져오기가 끊기고(RemoteDisconnected) browser.open도 가져오기 실패였다.
       - name: 남양주시
         notice_detail: https://nyj.go.kr/www/selectBbsNttView.do?key=2481&bbsNo=62&nttNo=525991
         rss_status: unchecked
       - name: 파주시
         notice_list: https://www.paju.go.kr/user/plan_news/board/BD_board.list.do?seq=20171219114930714&bbsCd=2001
-        rss_status: unchecked
+        status: verified_list
+        checked_at: 2026-11-18
+        note: 2026-11-18 서버 직접 가져오기로 최신 8개 확인(최신 2026-11-18, 페이지당 8건). 제목 링크는 onclick jsView('2001', seq)라 사이트 JS에서 확인한 패턴으로 상세 URL을 구성한다.
       - name: 이천시
         notice_list: https://www.icheon.go.kr/portal/board/post/list.do?bcIdx=698&mid=0401010000
-        rss_status: unchecked
+        status: verified_list
+        checked_at: 2026-11-18
+        note: 2026-11-18 서버 직접 가져오기로 최신 10개 확인(최신 2026-11-18). 제목 링크의 data-req-get-p-idx로 상세 URL(view.do?idx=...)을 구성하고 GET으로 검증했다. 상단 고정공지(번호 빈칸)는 제외한다.
       - name: 안성시
         notice_list: https://www.anseong.go.kr/portal/bbs/list.do?ptIdx=16&mId=0501010000
-        rss_status: unchecked
+        status: partial_verified
+        checked_at: 2026-11-18
+        note: 목록은 파싱되나 상세 링크가 POST 폼 제출 방식이라 GET 주소가 미검증이다. idx GET은 '게시판이 삭제되었거나 존재하지 않습니다' 알림만 반환하고, bIdx GET은 타임아웃됐다.
   - province: 인천광역시 (2026-11-18 확인, RSS 확정 0곳)
     note: '인천은 rssBbsNtt/selectBbsNtt 패턴이 0곳이고 bbsMsgList.do 계열이 많다. 2026-07-01 개편: 중구+동구→제물포구, 서구→서해구+검단구.'
     districts:
@@ -224,7 +246,9 @@ regions:
     districts:
       - name: 대전 동구
         notice_list: https://donggu.go.kr/dg/kor/article/newsNotice
-        rss_status: none_on_page
+        status: verified_list
+        checked_at: 2026-11-18
+        note: 2026-11-18 서버 직접 가져오기로 최신 10개 확인(최신 2026-11-18). 제목 링크의 href는 '#'이고 onclick article.view(seq)라 사이트 JS에서 확인한 패턴으로 상세 URL을 구성한다. 간헐적으로 연결이 끊겨 실패하면 기존 소식을 유지한다.
       - name: 대전 중구
         notice_list: https://djjunggu.go.kr/bbs/BBSMSTR_000000000136/list.do?pageIndex=266
         rss_status: none_on_page
@@ -235,7 +259,9 @@ regions:
     districts:
       - name: 세종특별자치시
         notice_list: https://www.sejong.go.kr/bbs/R0071/list.do
-        rss_status: none_on_page
+        status: verified_list
+        checked_at: 2026-11-18
+        note: 2026-11-18 서버 직접 가져오기로 최신 10개 확인(최신 2026-11-18). 상세 ID(nttId)가 불투명 문자열이라 목록 HTML의 href를 그대로 추출해야 한다. 고정글과 일반글이 nttId 기준으로 중복되므로 중복 제거가 필요하다.
   - province: 제주특별자치도 (2026-11-18 확인, RSS 0곳)
     note: 홈페이지 직접 열기가 웹방화벽에 차단돼 확인 불가. 제주시 오픈 API는 폐기 안내 상태이다.
     districts: []
