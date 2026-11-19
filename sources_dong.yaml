@@ -1,0 +1,424 @@
+version: '0.1'
+updated: '2026-11-19'
+note: 동 행정복지센터 '우리동 소식' 레지스트리. fetch.py v0.6이 이 파일을 읽는 것이 아니라 같은 내용을 코드에 갖고 있다. 이
+  파일은 확인된 출처 기록이다. 성동구는 이 서버에서 직접 가져오기가 끊겨 브라우저 경유가 필요하고, 크롤 복사본이 수일 낡을 수 있다. 송파구는
+  서버 직접 가져오기가 된다(HTTP 200). 송파구는 26개가 아니라 27개 동이다(위례동 포함. 잠실1동·잠실5동은 없음). 동 소식은 주민등록
+  공시송달·최고공고·직권조치 비중이 높아 선별이 필요할 수 있다.
+gus:
+- gu: 서울 성동구
+  board: 우리동 소식
+  direct_fetch: blocked
+  direct_fetch_note: 이 서버에서 sd.go.kr로 직접 가져오면 연결이 끊긴다. 브라우저 경유가 필요하다.
+  dongs:
+  - dong: 금호1가동
+    slug: geumho1ga
+    bbs_no: 277
+    key: 2570
+    list_url: https://www.sd.go.kr/geumho1ga/selectBbsNttList.do?bbsNo=277&key=2570
+    page_unit: 10
+    board: 우리동 소식
+    total_posts: 822
+    verified_latest:
+      title: 2026년 민방위 집합교육(보충2차) 교육 통지서 반송에 따른 공시송달 공고
+      date: '2026-11-06'
+  - dong: 금호2.3가동
+    slug: geumho23ga
+    bbs_no: 280
+    key: 2594
+    list_url: https://www.sd.go.kr/geumho23ga/selectBbsNttList.do?bbsNo=280&key=2594
+    page_unit: 10
+    board: 우리동 소식
+    total_posts: 1205
+    verified_latest:
+      title: 주민등록 무단전출 직권조치 결과 공고
+      date: '2026-11-10'
+  - dong: 금호4가동
+    slug: geumho4ga
+    bbs_no: 283
+    key: 2618
+    list_url: https://www.sd.go.kr/geumho4ga/selectBbsNttList.do?bbsNo=283&key=2618
+    page_unit: 10
+    board: 우리동 소식
+    total_posts: 829
+    verified_latest:
+      title: 금호4가동 제5통장 모집공고(4차)
+      date: '2026-11-06'
+  - dong: 마장동
+    slug: majang
+    bbs_no: 292
+    key: 2690
+    list_url: https://www.sd.go.kr/majang/selectBbsNttList.do?bbsNo=292&key=2690
+    page_unit: 8
+    board: 우리동 소식
+    total_posts: 922
+    note: 최신 일반글 미확인. 게시판 자체는 확인됨. pageUnit=8(나머지 동은 10).
+  - dong: 사근동
+    slug: sageun
+    bbs_no: 298
+    key: 2738
+    list_url: https://www.sd.go.kr/sageun/selectBbsNttList.do?bbsNo=298&key=2738
+    page_unit: 10
+    board: 우리동 소식
+    total_posts: 844
+    verified_latest:
+      title: 2026년 주민등록 사실조사 장기 거주불명자 최고 공고
+      date: '2026-11-04'
+  - dong: 성수1가제1동
+    slug: seongsu1ga1
+    bbs_no: 301
+    key: 2762
+    list_url: https://www.sd.go.kr/seongsu1ga1/selectBbsNttList.do?bbsNo=301&key=2762
+    page_unit: 10
+    board: 우리동 소식
+    total_posts: 717
+    verified_latest:
+      title: 2026년 민방위 집합교육(보충2차) 훈련 통지서 반송에 따른 공시송달 공고
+      date: '2026-11-10'
+  - dong: 성수1가제2동
+    slug: seongsu1ga2
+    bbs_no: 304
+    key: 2786
+    list_url: https://www.sd.go.kr/seongsu1ga2/selectBbsNttList.do?bbsNo=304&key=2786
+    page_unit: 10
+    board: 우리동 소식
+    total_posts: 1258
+    verified_latest:
+      title: ＜문예창작을 돕는 AI 활용실습＞ 수강자 모집
+      date: '2026-10-29'
+    note: 2026-11-10 크롤 기준. 2026-11-19 조사에서는 1페이지 미재조사.
+  - dong: 성수2가제1동
+    slug: seongsu2ga1
+    bbs_no: 307
+    key: 2810
+    list_url: https://www.sd.go.kr/seongsu2ga1/selectBbsNttList.do?bbsNo=307&key=2810
+    page_unit: 10
+    board: 우리동 소식
+    total_posts: 886
+    verified_latest:
+      title: 2026년 민방위 집합교육(보충2차) 공시송달 공고
+      date: '2026-11-04'
+  - dong: 성수2가제3동
+    slug: seongsu2ga3
+    bbs_no: 310
+    key: 2834
+    list_url: https://www.sd.go.kr/seongsu2ga3/selectBbsNttList.do?bbsNo=310&key=2834
+    page_unit: 10
+    board: 우리동 소식
+    total_posts: 879
+    verified_latest:
+      title: 2026년 민방위 집합교육(보충2차) 교육 통지서 반송에 따른 공시송달 공고
+      date: '2026-11-05'
+    note: 최신 공지로 '성수2가제3동 통장 공개모집(제9통)' 2026-11-17도 확인됨.
+  - dong: 송정동
+    slug: songjeong
+    bbs_no: 313
+    key: 2858
+    list_url: https://www.sd.go.kr/songjeong/selectBbsNttList.do?bbsNo=313&key=2858
+    page_unit: 10
+    board: 우리동 소식
+    total_posts: 1271
+    verified_latest:
+      title: 성동 푸르미 재활용정거장 예비 자원관리사 모집 공고
+      date: '2026-11-06'
+  - dong: 옥수동
+    slug: oksu
+    bbs_no: 295
+    key: 2714
+    list_url: https://www.sd.go.kr/oksu/selectBbsNttList.do?bbsNo=295&key=2714
+    page_unit: 10
+    board: 우리동 소식
+    total_posts: 1017
+    verified_latest:
+      title: 거주불명등록자 행정상 관리주소 이전 2차 공고
+      date: '2026-11-05'
+  - dong: 왕십리도선동
+    slug: wangsimnidoseon
+    bbs_no: 319
+    key: 2906
+    list_url: https://www.sd.go.kr/wangsimnidoseon/selectBbsNttList.do?bbsNo=319&key=2906
+    page_unit: 10
+    board: 우리동 소식
+    total_posts: 1076
+    verified_latest:
+      title: 2026년 민방위 집합교육(보충2차) 공시송달 공고
+      date: '2026-11-10'
+  - dong: 왕십리제2동
+    slug: wangsimni2
+    bbs_no: 316
+    key: 2882
+    list_url: https://www.sd.go.kr/wangsimni2/selectBbsNttList.do?bbsNo=316&key=2882
+    page_unit: 10
+    board: 우리동 소식
+    total_posts: 1015
+    verified_latest:
+      title: 2026년 민방위 집합교육(보충2차) 공시송달 공고
+      date: '2026-11-03'
+  - dong: 용답동
+    slug: yongdap
+    bbs_no: 322
+    key: 2930
+    list_url: https://www.sd.go.kr/yongdap/selectBbsNttList.do?bbsNo=322&key=2930
+    page_unit: 10
+    board: 우리동 소식
+    total_posts: 842
+    verified_latest:
+      title: 2026년 민방위 집합교육(보충2차) 공시송달 공고
+      date: '2026-11-06'
+  - dong: 응봉동
+    slug: eungbong
+    bbs_no: 274
+    key: 2546
+    list_url: https://www.sd.go.kr/eungbong/selectBbsNttList.do?bbsNo=274&key=2546
+    page_unit: 10
+    board: 우리동 소식
+    total_posts: 1151
+    verified_latest:
+      title: 2026년 민방위 집합교육(보충2차) 훈련 통지서 반송에 따른 공시송달 공고
+      date: '2026-11-06'
+  - dong: 행당제1동
+    slug: haengdang1
+    bbs_no: 286
+    key: 2642
+    list_url: https://www.sd.go.kr/haengdang1/selectBbsNttList.do?bbsNo=286&key=2642
+    page_unit: 10
+    board: 우리동 소식
+    total_posts: 729
+    verified_latest:
+      title: 2026년 성동구 일자리박람회 개최
+      date: '2026-11-04'
+  - dong: 행당제2동
+    slug: haengdang2
+    bbs_no: 289
+    key: 2666
+    list_url: https://www.sd.go.kr/haengdang2/selectBbsNttList.do?bbsNo=289&key=2666
+    page_unit: 10
+    board: 우리동 소식
+    total_posts: 931
+    verified_latest:
+      title: 2026년 민방위 집합교육(보충2차) 공시송달 공고
+      date: '2026-11-03'
+- gu: 서울 송파구
+  board: 동 소식(공유 게시판 bbsNo=36, key=2619)
+  direct_fetch: ok
+  direct_fetch_note: 서버 직접 가져오기 HTTP 200. 27개 동 연속 요청 시 0.5초 간격을 둔다.
+  dongs:
+  - dong: 가락1동
+    search_ctgry: '%EA%B0%80%EB%9D%BD1%EB%8F%99'
+    list_url: https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=36&key=2619&searchCtgry=%EA%B0%80%EB%9D%BD1%EB%8F%99
+    board: 동 소식(공유 게시판)
+    total_posts: 89
+    verified_latest:
+      title: 주민등록 장기 거주불명자(5년 이상) 공고
+      date: '2026-11-18'
+  - dong: 가락2동
+    search_ctgry: '%EA%B0%80%EB%9D%BD2%EB%8F%99'
+    list_url: https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=36&key=2619&searchCtgry=%EA%B0%80%EB%9D%BD2%EB%8F%99
+    board: 동 소식(공유 게시판)
+    total_posts: 96
+    verified_latest:
+      title: 가락2동 자치회관 프로그램 강사 모집 공고
+      date: '2026-11-16'
+  - dong: 가락본동
+    search_ctgry: '%EA%B0%80%EB%9D%BD%EB%B3%B8%EB%8F%99'
+    list_url: https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=36&key=2619&searchCtgry=%EA%B0%80%EB%9D%BD%EB%B3%B8%EB%8F%99
+    board: 동 소식(공유 게시판)
+    total_posts: 61
+    verified_latest:
+      title: 주민등록 신고의무 지연자에 대한 최고 공고
+      date: '2026-11-17'
+  - dong: 거여1동
+    search_ctgry: '%EA%B1%B0%EC%97%AC1%EB%8F%99'
+    list_url: https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=36&key=2619&searchCtgry=%EA%B1%B0%EC%97%AC1%EB%8F%99
+    board: 동 소식(공유 게시판)
+    total_posts: 15
+    verified_latest:
+      title: 2026년 주민등록 장기거주불명등록자 최고공고
+      date: '2026-11-19'
+  - dong: 거여2동
+    search_ctgry: '%EA%B1%B0%EC%97%AC2%EB%8F%99'
+    list_url: https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=36&key=2619&searchCtgry=%EA%B1%B0%EC%97%AC2%EB%8F%99
+    board: 동 소식(공유 게시판)
+    total_posts: 68
+    verified_latest:
+      title: 주민등록 장기 거주불명자 재등록 공고
+      date: '2026-11-17'
+  - dong: 마천1동
+    search_ctgry: '%EB%A7%88%EC%B2%9C1%EB%8F%99'
+    list_url: https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=36&key=2619&searchCtgry=%EB%A7%88%EC%B2%9C1%EB%8F%99
+    board: 동 소식(공유 게시판)
+    total_posts: 76
+    verified_latest:
+      title: 2026년 주민등록 사실조사에 따른 비거주자 최고 공고
+      date: '2026-11-19'
+  - dong: 마천2동
+    search_ctgry: '%EB%A7%88%EC%B2%9C2%EB%8F%99'
+    list_url: https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=36&key=2619&searchCtgry=%EB%A7%88%EC%B2%9C2%EB%8F%99
+    board: 동 소식(공유 게시판)
+    total_posts: 121
+    verified_latest:
+      title: 주민등록 무단전출자 직권조치 결과 공고(김**)
+      date: '2026-11-19'
+  - dong: 문정1동
+    search_ctgry: '%EB%AC%B8%EC%A0%951%EB%8F%99'
+    list_url: https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=36&key=2619&searchCtgry=%EB%AC%B8%EC%A0%951%EB%8F%99
+    board: 동 소식(공유 게시판)
+    total_posts: 75
+    verified_latest:
+      title: 2027년 장애인일자리사업(전일제) 참여자 모집 공고
+      date: '2026-11-16'
+  - dong: 문정2동
+    search_ctgry: '%EB%AC%B8%EC%A0%952%EB%8F%99'
+    list_url: https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=36&key=2619&searchCtgry=%EB%AC%B8%EC%A0%952%EB%8F%99
+    board: 동 소식(공유 게시판)
+    total_posts: 177
+    verified_latest:
+      title: 주민등록 직권조치 결과공고
+      date: '2026-11-16'
+  - dong: 방이1동
+    search_ctgry: '%EB%B0%A9%EC%9D%B41%EB%8F%99'
+    list_url: https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=36&key=2619&searchCtgry=%EB%B0%A9%EC%9D%B41%EB%8F%99
+    board: 동 소식(공유 게시판)
+    total_posts: 91
+    verified_latest:
+      title: 주민등록 직권조치 결과공고
+      date: '2025-12-18'
+    note: 최신 글이 낡았다. 사실상 휴면 게시판에 가깝다.
+  - dong: 방이2동
+    search_ctgry: '%EB%B0%A9%EC%9D%B42%EB%8F%99'
+    list_url: https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=36&key=2619&searchCtgry=%EB%B0%A9%EC%9D%B42%EB%8F%99
+    board: 동 소식(공유 게시판)
+    total_posts: 120
+    verified_latest:
+      title: 주민등록 무단전출자 직권조치 공고 (거주불명등록)
+      date: '2026-11-18'
+  - dong: 삼전동
+    search_ctgry: '%EC%82%BC%EC%A0%84%EB%8F%99'
+    list_url: https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=36&key=2619&searchCtgry=%EC%82%BC%EC%A0%84%EB%8F%99
+    board: 동 소식(공유 게시판)
+    total_posts: 163
+    verified_latest:
+      title: 2026년 주민등록 사실조사에 따른 주민등록 미이행자 최고공고
+      date: '2026-11-18'
+  - dong: 석촌동
+    search_ctgry: '%EC%84%9D%EC%B4%8C%EB%8F%99'
+    list_url: https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=36&key=2619&searchCtgry=%EC%84%9D%EC%B4%8C%EB%8F%99
+    board: 동 소식(공유 게시판)
+    total_posts: 144
+    verified_latest:
+      title: 2026년 주민등록 사실조사에 따른 신고의무 지연자 최고공고
+      date: '2026-11-18'
+  - dong: 송파1동
+    search_ctgry: '%EC%86%A1%ED%8C%8C1%EB%8F%99'
+    list_url: https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=36&key=2619&searchCtgry=%EC%86%A1%ED%8C%8C1%EB%8F%99
+    board: 동 소식(공유 게시판)
+    total_posts: 98
+    verified_latest:
+      title: 2026년 3분기 송파1동 자치회관 수강 신청 접수 안내
+      date: '2026-05-27'
+    note: 최신 글이 낡았다. 사실상 휴면 게시판에 가깝다.
+  - dong: 송파2동
+    search_ctgry: '%EC%86%A1%ED%8C%8C2%EB%8F%99'
+    list_url: https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=36&key=2619&searchCtgry=%EC%86%A1%ED%8C%8C2%EB%8F%99
+    board: 동 소식(공유 게시판)
+    total_posts: 161
+    verified_latest:
+      title: '[공고 제2026-36호]장기 거주불명자 최고공고'
+      date: '2026-11-10'
+  - dong: 오금동
+    search_ctgry: '%EC%98%A4%EA%B8%88%EB%8F%99'
+    list_url: https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=36&key=2619&searchCtgry=%EC%98%A4%EA%B8%88%EB%8F%99
+    board: 동 소식(공유 게시판)
+    total_posts: 125
+    verified_latest:
+      title: 2026년 주민등록 장기거주불명자 최고 공고
+      date: '2026-11-18'
+  - dong: 오륜동
+    search_ctgry: '%EC%98%A4%EB%A5%9C%EB%8F%99'
+    list_url: https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=36&key=2619&searchCtgry=%EC%98%A4%EB%A5%9C%EB%8F%99
+    board: 동 소식(공유 게시판)
+    total_posts: 40
+    verified_latest:
+      title: 2026년 주민등록 사실조사에 따른 장기거주불명자 최고 공고
+      date: '2026-11-17'
+  - dong: 위례동
+    search_ctgry: '%EC%9C%84%EB%A1%80%EB%8F%99'
+    list_url: https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=36&key=2619&searchCtgry=%EC%9C%84%EB%A1%80%EB%8F%99
+    board: 동 소식(공유 게시판)
+    total_posts: 85
+    verified_latest:
+      title: 거주불명등록자 행정상 관리주소 이전 직권조치 결과 공고
+      date: '2026-11-19'
+  - dong: 잠실2동
+    search_ctgry: '%EC%9E%A0%EC%8B%A42%EB%8F%99'
+    list_url: https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=36&key=2619&searchCtgry=%EC%9E%A0%EC%8B%A42%EB%8F%99
+    board: 동 소식(공유 게시판)
+    total_posts: 88
+    verified_latest:
+      title: 2026. 4분기 잠실2동 자치회관 프로그램 수강생 모집
+      date: '2026-08-26'
+    note: 최신 글이 낡았다. 사실상 휴면 게시판에 가깝다.
+  - dong: 잠실3동
+    search_ctgry: '%EC%9E%A0%EC%8B%A43%EB%8F%99'
+    list_url: https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=36&key=2619&searchCtgry=%EC%9E%A0%EC%8B%A43%EB%8F%99
+    board: 동 소식(공유 게시판)
+    total_posts: 93
+    verified_latest:
+      title: 잠실3동 자치회관 프로그램(기초회화 드로잉) 강사 모집
+      date: '2026-11-19'
+  - dong: 잠실4동
+    search_ctgry: '%EC%9E%A0%EC%8B%A44%EB%8F%99'
+    list_url: https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=36&key=2619&searchCtgry=%EC%9E%A0%EC%8B%A44%EB%8F%99
+    board: 동 소식(공유 게시판)
+    total_posts: 38
+    verified_latest:
+      title: 잠실4동 2026년 4분기(10~12월) 자치회관 프로그램 수강생 모집
+      date: '2026-09-01'
+    note: 최신 글이 낡았다. 사실상 휴면 게시판에 가깝다.
+  - dong: 잠실6동
+    search_ctgry: '%EC%9E%A0%EC%8B%A46%EB%8F%99'
+    list_url: https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=36&key=2619&searchCtgry=%EC%9E%A0%EC%8B%A46%EB%8F%99
+    board: 동 소식(공유 게시판)
+    total_posts: 34
+    verified_latest:
+      title: 주민등록 신고의무 지연자 최고공고
+      date: '2026-11-19'
+  - dong: 잠실7동
+    search_ctgry: '%EC%9E%A0%EC%8B%A47%EB%8F%99'
+    list_url: https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=36&key=2619&searchCtgry=%EC%9E%A0%EC%8B%A47%EB%8F%99
+    board: 동 소식(공유 게시판)
+    total_posts: 71
+    verified_latest:
+      title: 주민등록 무단전출자 직권조치 결과 공고
+      date: '2026-11-16'
+  - dong: 잠실본동
+    search_ctgry: '%EC%9E%A0%EC%8B%A4%EB%B3%B8%EB%8F%99'
+    list_url: https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=36&key=2619&searchCtgry=%EC%9E%A0%EC%8B%A4%EB%B3%B8%EB%8F%99
+    board: 동 소식(공유 게시판)
+    total_posts: 181
+    verified_latest:
+      title: 주민등록 신고의무 지연자 최고 공고
+      date: '2026-11-16'
+  - dong: 장지동
+    search_ctgry: '%EC%9E%A5%EC%A7%80%EB%8F%99'
+    list_url: https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=36&key=2619&searchCtgry=%EC%9E%A5%EC%A7%80%EB%8F%99
+    board: 동 소식(공유 게시판)
+    total_posts: 176
+    verified_latest:
+      title: '[공고}장지동 자치회관 프로그램 강사 모집 공고'
+      date: '2026-11-18'
+  - dong: 풍납1동
+    search_ctgry: '%ED%92%8D%EB%82%A91%EB%8F%99'
+    list_url: https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=36&key=2619&searchCtgry=%ED%92%8D%EB%82%A91%EB%8F%99
+    board: 동 소식(공유 게시판)
+    total_posts: 23
+    verified_latest:
+      title: '[ 공고]주민등록 무단전출자 직권조치 결과 공고'
+      date: '2026-11-18'
+  - dong: 풍납2동
+    search_ctgry: '%ED%92%8D%EB%82%A92%EB%8F%99'
+    list_url: https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=36&key=2619&searchCtgry=%ED%92%8D%EB%82%A92%EB%8F%99
+    board: 동 소식(공유 게시판)
+    total_posts: 51
+    verified_latest:
+      title: 2026년 주민등록 장기거주불명자 직권조치 결과 공고
+      date: '2026-11-17'

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-우동 자동 수집 스크립트 v0.5 (핵심: 동네 소식 자동 보기)
+우동 자동 수집 스크립트 v0.6 (핵심: 동네 소식 자동 보기)
 
 시범 1곳 + RSS 확인된 8곳 + 목록 HTML 파싱 확인된 13곳, 총 22개 지역을 돈다.
 (성동구는 data.json에 따로 있다.)
@@ -20,6 +20,13 @@
     중구(직접 가져오기 끊김, 개별 글 cid가 목록에 노출되지 않음).
     정부24 지자체 소식은 보조용으로만 본다(지역 필터 srchArea 확인됨,
     원문보기는 각 지자체 홈페이지로 감. 공고·고시 위주라 주 경로 아님).
+  - 동 행정복지센터 (v0.6, 2026-11-19 확인): 성동구 17개 동 '우리동 소식'
+    게시판(selectBbsNttList.do 계열, v0.5 파서 재사용)과 송파구 27개 동
+    (게시판 1개 bbsNo=36·key=2619 공유, 동 이름 카테고리 필터) -> data_dong.json.
+    송파구는 26개가 아니라 27개 동이다(위례동 포함. 잠실1동·잠실5동은 없음).
+    성동구는 이 서버에서 직접 가져오기가 끊겨 브라우저 경유가 필요하다.
+    동 소식은 주민등록 공시송달·최고공고 비중이 높아 선별이 필요할 수 있다.
+    동별 레지스트리는 sources_dong.yaml에도 기록돼 있다.
 
 출처 (2026-11-18 확인):
   - 성동구청 새소식 RSS: https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=
@@ -56,13 +63,15 @@
 
 실행:
   python3 scripts/fetch.py
-  -> data.json (성동구, 기존과 동일), data_nationwide.json (성동 제외 21곳)
+  -> data.json (성동구, 기존과 동일), data_nationwide.json (성동 제외 21곳),
+     data_dong.json (성동구 17개 동 + 송파구 27개 동)
 """
 import html as html_lib
 import json
 import os
 import re
 import sys
+import time
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -73,6 +82,7 @@ from email.utils import parsedate_to_datetime
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "data.json"
 OUT_NATIONWIDE = ROOT / "data_nationwide.json"
+OUT_DONG = ROOT / "data_dong.json"
 KST = timezone(timedelta(hours=9))
 RSS_URL = "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode="
 
@@ -149,6 +159,65 @@ LIST_SOURCES = [
     {"region": "대전 동구", "board": "대전 동구청 공지사항", "kind": "donggu",
      "list_url": "https://donggu.go.kr/dg/kor/article/newsNotice"},
 ]
+
+# ---------------------------------------------------------------------------
+# 동 행정복지센터 '우리동 소식' (v0.6)
+# ---------------------------------------------------------------------------
+# 성동구 17개 동: 동별 서브사이트 + 동별 게시판(selectBbsNttList.do 계열).
+#   2026-11-19 확인. 마장동만 pageUnit=8, 나머지는 10. 직접 가져오기는 끊긴다.
+# 송파구 27개 동: 게시판 1개(bbsNo=36, key=2619) 공유, 동 이름 카테고리 필터.
+#   2026-11-19 전수 확인. 서버 직접 가져오기 HTTP 200. 26개가 아니라 27개(위례동 포함).
+#   동별 레지스트리는 sources_dong.yaml에도 기록돼 있다.
+SEONGDONG_DONGS = [
+    ("금호1가동", "geumho1ga", 277, 2570),
+    ("금호2.3가동", "geumho23ga", 280, 2594),
+    ("금호4가동", "geumho4ga", 283, 2618),
+    ("마장동", "majang", 292, 2690),
+    ("사근동", "sageun", 298, 2738),
+    ("성수1가제1동", "seongsu1ga1", 301, 2762),
+    ("성수1가제2동", "seongsu1ga2", 304, 2786),
+    ("성수2가제1동", "seongsu2ga1", 307, 2810),
+    ("성수2가제3동", "seongsu2ga3", 310, 2834),
+    ("송정동", "songjeong", 313, 2858),
+    ("옥수동", "oksu", 295, 2714),
+    ("왕십리도선동", "wangsimnidoseon", 319, 2906),
+    ("왕십리제2동", "wangsimni2", 316, 2882),
+    ("용답동", "yongdap", 322, 2930),
+    ("응봉동", "eungbong", 274, 2546),
+    ("행당제1동", "haengdang1", 286, 2642),
+    ("행당제2동", "haengdang2", 289, 2666),
+]
+
+SONGPA_DONGS = [
+    "가락1동", "가락2동", "가락본동", "거여1동", "거여2동",
+    "마천1동", "마천2동", "문정1동", "문정2동", "방이1동", "방이2동",
+    "삼전동", "석촌동", "송파1동", "송파2동", "오금동", "오륜동",
+    "위례동", "잠실2동", "잠실3동", "잠실4동", "잠실6동", "잠실7동",
+    "잠실본동", "장지동", "풍납1동", "풍납2동",
+]
+
+
+def dong_sources():
+    srcs = []
+    for dong, slug, bbs, key in SEONGDONG_DONGS:
+        srcs.append({
+            "gu": "서울 성동구", "dong": dong, "slug": slug,
+            "region": f"서울 성동구 {dong}", "board": "우리동 소식",
+            "kind": "bbs", "bbs_no": bbs, "key": key,
+            "list_url": f"https://www.sd.go.kr/{slug}/selectBbsNttList.do?bbsNo={bbs}&key={key}",
+            "timeout": 10,
+        })
+    for dong in SONGPA_DONGS:
+        srcs.append({
+            "gu": "서울 송파구", "dong": dong,
+            "region": f"서울 송파구 {dong}", "board": "송파구 동 소식",
+            "kind": "bbs", "bbs_no": 36,
+            "list_url": ("https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=36&key=2619"
+                         f"&searchCtgry={urllib.parse.quote(dong)}"),
+            "timeout": 25, "sleep_before": 0.5,
+        })
+    return srcs
+
 
 CATEGORIES = [
     ("urgent", ["단수", "정전", "공사", "통제", "긴급", "재난", "한파"]),
@@ -570,8 +639,8 @@ LIST_PARSERS = {
 }
 
 
-def fetch_list(src: dict):
-    html_text, status = fetch_html(src["list_url"])
+def fetch_list(src: dict, timeout: int = 25):
+    html_text, status = fetch_html(src["list_url"], timeout=timeout)
     if html_text is None:
         return [], {"region": src["region"], "source": src["board"],
                     "status": status, "url": src["list_url"],
@@ -706,6 +775,65 @@ def main() -> int:
     }
     OUT_NATIONWIDE.write_text(json.dumps(nw, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"wrote {OUT_NATIONWIDE} regions={len(regions)} total_notices={total}")
+
+    # --- 동 행정복지센터 (data_dong.json, v0.6) ---
+    old_dong = {}
+    if OUT_DONG.exists():
+        try:
+            old_dong = json.loads(OUT_DONG.read_text(encoding="utf-8"))
+        except Exception:
+            old_dong = {}
+    old_dongs = {}
+    for gu in old_dong.get("gus", []):
+        for d in gu.get("dongs", []):
+            old_dongs[(gu.get("gu"), d.get("dong"))] = d
+
+    gu_map = {}
+    dong_total = 0
+    for src in dong_sources():
+        if src.get("sleep_before"):
+            time.sleep(src["sleep_before"])
+        items, status = fetch_list(src, timeout=src.get("timeout", 25))
+        if items:
+            dong_notices = items[:10]
+        else:
+            # 실패 시 기존 소식을 유지하고, 새로 만든 가짜 소식은 넣지 않는다.
+            dong_notices = old_dongs.get((src["gu"], src["dong"]), {}).get("notices", [])
+        for n in dong_notices:
+            n.setdefault("gu", src["gu"])
+            n.setdefault("dong", src["dong"])
+        dong_total += len(dong_notices)
+        entry = {
+            "dong": src["dong"],
+            "board": src["board"],
+            "list_url": src["list_url"],
+            "method": "html_list",
+            "status": status["status"],
+            "count": len(dong_notices),
+            "notices": dong_notices,
+        }
+        if src.get("slug"):
+            entry["slug"] = src["slug"]
+            entry["bbs_no"] = src["bbs_no"]
+            entry["key"] = src["key"]
+        gu_map.setdefault(src["gu"], []).append(entry)
+        print(f"  {src['region']}: {status['status']} notices={len(dong_notices)}")
+
+    gus = [{"gu": gu, "dongs": dongs} for gu, dongs in gu_map.items()]
+    dong_data = {
+        "service": "udong",
+        "generated_at_kst": now.strftime("%Y-%m-%d %H:%M KST"),
+        "generated_at": now.isoformat(),
+        "gus": gus,
+        "total_dongs": sum(len(g["dongs"]) for g in gus),
+        "total_notices": dong_total,
+        "note": ("동 행정복지센터 소식이다. 제목·날짜·원문 링크만 저장하고 본문은 복사하지 않는다. "
+                 "한 동 가져오기가 실패하면 그 동의 기존 소식을 유지한다. "
+                 "성동구는 이 서버에서 직접 가져오기가 끊겨 브라우저 경유가 필요하다. "
+                 "동 소식은 주민등록 공시송달·최고공고 비중이 높아 선별이 필요할 수 있다."),
+    }
+    OUT_DONG.write_text(json.dumps(dong_data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(f"wrote {OUT_DONG} dongs={dong_data['total_dongs']} total_notices={dong_total}")
     return 0
 
 

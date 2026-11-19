@@ -1,8 +1,8 @@
 {
   "service": "udong",
   "area": "서울 성동구 성수동 (시범)",
-  "generated_at_kst": "2026-11-19 06:57 KST",
-  "generated_at": "2026-11-19T06:57:12.977435+09:00",
+  "generated_at_kst": "2026-11-19 16:28 KST",
+  "generated_at": "2026-11-19T16:28:11.388230+09:00",
   "sources": [
     {
       "source": "seongdong_rss",
@@ -126,6 +126,17 @@
       "status": "ok_via_browser",
       "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
       "note": "2026-11-19 07:00 KST에 브라우저로 성동구청 새소식(bbsNo=183)을 직접 확인했다. 새 공지는 없었다(최신 2026-11-18 16:17 화물자동차 유가보조금 서면신청 안내). 복지 관련 새 제목은 없었다."
+    },
+    {
+      "source": "seongdong_rss",
+      "status": "fetch_failed:RemoteDisconnected",
+      "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
+      "note": "이 서버에서 직접 가져오기가 끊겼다. 브라우저로는 읽힌다. 기존 소식을 유지한다."
+    },
+    {
+      "source": "seoul_reservation",
+      "status": "missing_key",
+      "note": "SEOUL_API_KEY가 없어서 예약 정보를 가져오지 않았다."
     }
   ],
   "notices": [

@@ -1,0 +1,3194 @@
+{
+  "service": "udong",
+  "generated_at_kst": "2026-11-19 16:28 KST",
+  "generated_at": "2026-11-19T16:28:11.388230+09:00",
+  "gus": [
+    {
+      "gu": "서울 성동구",
+      "dongs": [
+        {
+          "dong": "금호1가동",
+          "board": "우리동 소식",
+          "list_url": "https://www.sd.go.kr/geumho1ga/selectBbsNttList.do?bbsNo=277&key=2570",
+          "method": "html_list",
+          "status": "fetch_failed:RemoteDisconnected",
+          "count": 0,
+          "notices": [],
+          "slug": "geumho1ga",
+          "bbs_no": 277,
+          "key": 2570
+        },
+        {
+          "dong": "금호2.3가동",
+          "board": "우리동 소식",
+          "list_url": "https://www.sd.go.kr/geumho23ga/selectBbsNttList.do?bbsNo=280&key=2594",
+          "method": "html_list",
+          "status": "fetch_failed:RemoteDisconnected",
+          "count": 0,
+          "notices": [],
+          "slug": "geumho23ga",
+          "bbs_no": 280,
+          "key": 2594
+        },
+        {
+          "dong": "금호4가동",
+          "board": "우리동 소식",
+          "list_url": "https://www.sd.go.kr/geumho4ga/selectBbsNttList.do?bbsNo=283&key=2618",
+          "method": "html_list",
+          "status": "fetch_failed:RemoteDisconnected",
+          "count": 0,
+          "notices": [],
+          "slug": "geumho4ga",
+          "bbs_no": 283,
+          "key": 2618
+        },
+        {
+          "dong": "마장동",
+          "board": "우리동 소식",
+          "list_url": "https://www.sd.go.kr/majang/selectBbsNttList.do?bbsNo=292&key=2690",
+          "method": "html_list",
+          "status": "fetch_failed:RemoteDisconnected",
+          "count": 0,
+          "notices": [],
+          "slug": "majang",
+          "bbs_no": 292,
+          "key": 2690
+        },
+        {
+          "dong": "사근동",
+          "board": "우리동 소식",
+          "list_url": "https://www.sd.go.kr/sageun/selectBbsNttList.do?bbsNo=298&key=2738",
+          "method": "html_list",
+          "status": "fetch_failed:RemoteDisconnected",
+          "count": 0,
+          "notices": [],
+          "slug": "sageun",
+          "bbs_no": 298,
+          "key": 2738
+        },
+        {
+          "dong": "성수1가제1동",
+          "board": "우리동 소식",
+          "list_url": "https://www.sd.go.kr/seongsu1ga1/selectBbsNttList.do?bbsNo=301&key=2762",
+          "method": "html_list",
+          "status": "fetch_failed:RemoteDisconnected",
+          "count": 0,
+          "notices": [],
+          "slug": "seongsu1ga1",
+          "bbs_no": 301,
+          "key": 2762
+        },
+        {
+          "dong": "성수1가제2동",
+          "board": "우리동 소식",
+          "list_url": "https://www.sd.go.kr/seongsu1ga2/selectBbsNttList.do?bbsNo=304&key=2786",
+          "method": "html_list",
+          "status": "fetch_failed:RemoteDisconnected",
+          "count": 0,
+          "notices": [],
+          "slug": "seongsu1ga2",
+          "bbs_no": 304,
+          "key": 2786
+        },
+        {
+          "dong": "성수2가제1동",
+          "board": "우리동 소식",
+          "list_url": "https://www.sd.go.kr/seongsu2ga1/selectBbsNttList.do?bbsNo=307&key=2810",
+          "method": "html_list",
+          "status": "fetch_failed:RemoteDisconnected",
+          "count": 0,
+          "notices": [],
+          "slug": "seongsu2ga1",
+          "bbs_no": 307,
+          "key": 2810
+        },
+        {
+          "dong": "성수2가제3동",
+          "board": "우리동 소식",
+          "list_url": "https://www.sd.go.kr/seongsu2ga3/selectBbsNttList.do?bbsNo=310&key=2834",
+          "method": "html_list",
+          "status": "fetch_failed:RemoteDisconnected",
+          "count": 0,
+          "notices": [],
+          "slug": "seongsu2ga3",
+          "bbs_no": 310,
+          "key": 2834
+        },
+        {
+          "dong": "송정동",
+          "board": "우리동 소식",
+          "list_url": "https://www.sd.go.kr/songjeong/selectBbsNttList.do?bbsNo=313&key=2858",
+          "method": "html_list",
+          "status": "fetch_failed:RemoteDisconnected",
+          "count": 0,
+          "notices": [],
+          "slug": "songjeong",
+          "bbs_no": 313,
+          "key": 2858
+        },
+        {
+          "dong": "옥수동",
+          "board": "우리동 소식",
+          "list_url": "https://www.sd.go.kr/oksu/selectBbsNttList.do?bbsNo=295&key=2714",
+          "method": "html_list",
+          "status": "fetch_failed:RemoteDisconnected",
+          "count": 0,
+          "notices": [],
+          "slug": "oksu",
+          "bbs_no": 295,
+          "key": 2714
+        },
+        {
+          "dong": "왕십리도선동",
+          "board": "우리동 소식",
+          "list_url": "https://www.sd.go.kr/wangsimnidoseon/selectBbsNttList.do?bbsNo=319&key=2906",
+          "method": "html_list",
+          "status": "fetch_failed:RemoteDisconnected",
+          "count": 0,
+          "notices": [],
+          "slug": "wangsimnidoseon",
+          "bbs_no": 319,
+          "key": 2906
+        },
+        {
+          "dong": "왕십리제2동",
+          "board": "우리동 소식",
+          "list_url": "https://www.sd.go.kr/wangsimni2/selectBbsNttList.do?bbsNo=316&key=2882",
+          "method": "html_list",
+          "status": "fetch_failed:RemoteDisconnected",
+          "count": 0,
+          "notices": [],
+          "slug": "wangsimni2",
+          "bbs_no": 316,
+          "key": 2882
+        },
+        {
+          "dong": "용답동",
+          "board": "우리동 소식",
+          "list_url": "https://www.sd.go.kr/yongdap/selectBbsNttList.do?bbsNo=322&key=2930",
+          "method": "html_list",
+          "status": "fetch_failed:RemoteDisconnected",
+          "count": 0,
+          "notices": [],
+          "slug": "yongdap",
+          "bbs_no": 322,
+          "key": 2930
+        },
+        {
+          "dong": "응봉동",
+          "board": "우리동 소식",
+          "list_url": "https://www.sd.go.kr/eungbong/selectBbsNttList.do?bbsNo=274&key=2546",
+          "method": "html_list",
+          "status": "fetch_failed:RemoteDisconnected",
+          "count": 0,
+          "notices": [],
+          "slug": "eungbong",
+          "bbs_no": 274,
+          "key": 2546
+        },
+        {
+          "dong": "행당제1동",
+          "board": "우리동 소식",
+          "list_url": "https://www.sd.go.kr/haengdang1/selectBbsNttList.do?bbsNo=286&key=2642",
+          "method": "html_list",
+          "status": "fetch_failed:RemoteDisconnected",
+          "count": 0,
+          "notices": [],
+          "slug": "haengdang1",
+          "bbs_no": 286,
+          "key": 2642
+        },
+        {
+          "dong": "행당제2동",
+          "board": "우리동 소식",
+          "list_url": "https://www.sd.go.kr/haengdang2/selectBbsNttList.do?bbsNo=289&key=2666",
+          "method": "html_list",
+          "status": "fetch_failed:RemoteDisconnected",
+          "count": 0,
+          "notices": [],
+          "slug": "haengdang2",
+          "bbs_no": 289,
+          "key": 2666
+        }
+      ]
+    },
+    {
+      "gu": "서울 송파구",
+      "dongs": [
+        {
+          "dong": "가락1동",
+          "board": "송파구 동 소식",
+          "list_url": "https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=36&key=2619&searchCtgry=%EA%B0%80%EB%9D%BD1%EB%8F%99",
+          "method": "html_list",
+          "status": "ok",
+          "count": 10,
+          "notices": [
+            {
+              "title": "주민등록 장기 거주불명자(5년 이상) 공고",
+              "category": "life",
+              "date": "2026-11-18",
+              "region": "서울 송파구 가락1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280468&&pageUnit=10&searchCtgry=%EA%B0%80%EB%9D%BD1%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "가락1동"
+            },
+            {
+              "title": "통장 선정결과 공고(제6,18통)",
+              "category": "life",
+              "date": "2026-11-11",
+              "region": "서울 송파구 가락1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280308&&pageUnit=10&searchCtgry=%EA%B0%80%EB%9D%BD1%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "가락1동"
+            },
+            {
+              "title": "통장 모집 공고(제6,18통)",
+              "category": "life",
+              "date": "2026-10-20",
+              "region": "서울 송파구 가락1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19279813&&pageUnit=10&searchCtgry=%EA%B0%80%EB%9D%BD1%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "가락1동"
+            },
+            {
+              "title": "한전 에너지캐시백 한시적 지원 확대 안내",
+              "category": "welfare",
+              "date": "2026-09-13",
+              "region": "서울 송파구 가락1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19279041&&pageUnit=10&searchCtgry=%EA%B0%80%EB%9D%BD1%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "가락1동"
+            },
+            {
+              "title": "통장 선정결과 공고(제19통)",
+              "category": "life",
+              "date": "2026-07-16",
+              "region": "서울 송파구 가락1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19277959&&pageUnit=10&searchCtgry=%EA%B0%80%EB%9D%BD1%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "가락1동"
+            },
+            {
+              "title": "가락1동 자치회관 프로그램 수강료 수입 및 지출 내역 공고",
+              "category": "life",
+              "date": "2026-07-08",
+              "region": "서울 송파구 가락1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19277729&&pageUnit=10&searchCtgry=%EA%B0%80%EB%9D%BD1%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "가락1동"
+            },
+            {
+              "title": "가락1동 주민자치위원회 위원 인적사항 공고",
+              "category": "life",
+              "date": "2026-07-07",
+              "region": "서울 송파구 가락1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19277691&&pageUnit=10&searchCtgry=%EA%B0%80%EB%9D%BD1%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "가락1동"
+            },
+            {
+              "title": "통장 모집 공고(제19통)",
+              "category": "life",
+              "date": "2026-06-24",
+              "region": "서울 송파구 가락1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19277348&&pageUnit=10&searchCtgry=%EA%B0%80%EB%9D%BD1%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "가락1동"
+            },
+            {
+              "title": "국외부재자 신고 안내",
+              "category": "life",
+              "date": "2026-04-09",
+              "region": "서울 송파구 가락1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19275715&&pageUnit=10&searchCtgry=%EA%B0%80%EB%9D%BD1%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "가락1동"
+            },
+            {
+              "title": "통장 선정결과 공고(제13통)",
+              "category": "life",
+              "date": "2026-03-31",
+              "region": "서울 송파구 가락1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19275496&&pageUnit=10&searchCtgry=%EA%B0%80%EB%9D%BD1%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "가락1동"
+            }
+          ]
+        },
+        {
+          "dong": "가락2동",
+          "board": "송파구 동 소식",
+          "list_url": "https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=36&key=2619&searchCtgry=%EA%B0%80%EB%9D%BD2%EB%8F%99",
+          "method": "html_list",
+          "status": "ok",
+          "count": 10,
+          "notices": [
+            {
+              "title": "가락2동 자치회관 프로그램 강사 모집 공고",
+              "category": "life",
+              "date": "2026-11-16",
+              "region": "서울 송파구 가락2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280409&&pageUnit=10&searchCtgry=%EA%B0%80%EB%9D%BD2%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "가락2동"
+            },
+            {
+              "title": "「2027년 상반기 서울 동행일자리 사업(서울시 본청 및 사업소)」참여자 모집 안내",
+              "category": "life",
+              "date": "2026-11-12",
+              "region": "서울 송파구 가락2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280370&&pageUnit=10&searchCtgry=%EA%B0%80%EB%9D%BD2%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "가락2동"
+            },
+            {
+              "title": "「2027년 상반기 서울 동행일자리사업(송파구)」 참여자 모집 안내",
+              "category": "life",
+              "date": "2026-11-12",
+              "region": "서울 송파구 가락2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280367&&pageUnit=10&searchCtgry=%EA%B0%80%EB%9D%BD2%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "가락2동"
+            },
+            {
+              "title": "송파경찰서와 함께하는＇보이스피싱 예방교육＇신청 안내",
+              "category": "welfare",
+              "date": "2026-11-04",
+              "region": "서울 송파구 가락2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280061&&pageUnit=10&searchCtgry=%EA%B0%80%EB%9D%BD2%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "가락2동"
+            },
+            {
+              "title": "주민등록 무단전출자 직권조치결과 공고",
+              "category": "life",
+              "date": "2026-05-19",
+              "region": "서울 송파구 가락2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19276550&&pageUnit=10&searchCtgry=%EA%B0%80%EB%9D%BD2%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "가락2동"
+            },
+            {
+              "title": "주민등록 무단전출자(의무지연자) 최고 공고",
+              "category": "life",
+              "date": "2026-04-24",
+              "region": "서울 송파구 가락2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19276053&&pageUnit=10&searchCtgry=%EA%B0%80%EB%9D%BD2%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "가락2동"
+            },
+            {
+              "title": "주민등록 무단전출자 직권조치결과 공고",
+              "category": "life",
+              "date": "2025-12-22",
+              "region": "서울 송파구 가락2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19271743&&pageUnit=10&searchCtgry=%EA%B0%80%EB%9D%BD2%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "가락2동"
+            },
+            {
+              "title": "주민등록 무단전출자(의무지연자) 최고 공고",
+              "category": "life",
+              "date": "2025-12-09",
+              "region": "서울 송파구 가락2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19271510&&pageUnit=10&searchCtgry=%EA%B0%80%EB%9D%BD2%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "가락2동"
+            },
+            {
+              "title": "2025년 주민등록 장기거주불명자 직권조치 결과 공고",
+              "category": "life",
+              "date": "2025-10-28",
+              "region": "서울 송파구 가락2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19270466&&pageUnit=10&searchCtgry=%EA%B0%80%EB%9D%BD2%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "가락2동"
+            },
+            {
+              "title": "주민등록 무단전출자 직권조치결과 공고",
+              "category": "life",
+              "date": "2025-10-28",
+              "region": "서울 송파구 가락2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19270463&&pageUnit=10&searchCtgry=%EA%B0%80%EB%9D%BD2%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "가락2동"
+            }
+          ]
+        },
+        {
+          "dong": "가락본동",
+          "board": "송파구 동 소식",
+          "list_url": "https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=36&key=2619&searchCtgry=%EA%B0%80%EB%9D%BD%EB%B3%B8%EB%8F%99",
+          "method": "html_list",
+          "status": "ok",
+          "count": 10,
+          "notices": [
+            {
+              "title": "주민등록 신고의무 지연자에 대한 최고 공고",
+              "category": "life",
+              "date": "2026-11-17",
+              "region": "서울 송파구 가락본동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280448&&pageUnit=10&searchCtgry=%EA%B0%80%EB%9D%BD%EB%B3%B8%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "가락본동"
+            },
+            {
+              "title": "2026년 4분기 자치회관 프로그램 수강생 모집",
+              "category": "life",
+              "date": "2026-09-18",
+              "region": "서울 송파구 가락본동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19279216&&pageUnit=10&searchCtgry=%EA%B0%80%EB%9D%BD%EB%B3%B8%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "가락본동"
+            },
+            {
+              "title": "주민등록 신고의무 지연자에 대한 최고 공고",
+              "category": "life",
+              "date": "2023-10-19",
+              "region": "서울 송파구 가락본동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19252180&&pageUnit=10&searchCtgry=%EA%B0%80%EB%9D%BD%EB%B3%B8%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "가락본동"
+            },
+            {
+              "title": "내손으로 뚝딱 만드는 나만의 장난감 수강생 모집",
+              "category": "life",
+              "date": "2022-11-04",
+              "region": "서울 송파구 가락본동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19242745&&pageUnit=10&searchCtgry=%EA%B0%80%EB%9D%BD%EB%B3%B8%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "가락본동"
+            },
+            {
+              "title": "통 장 모 집 공 고 (6,11,20통)",
+              "category": "life",
+              "date": "2022-11-03",
+              "region": "서울 송파구 가락본동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19242717&&pageUnit=10&searchCtgry=%EA%B0%80%EB%9D%BD%EB%B3%B8%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "가락본동"
+            },
+            {
+              "title": "가락본동 주민자치위원회 인적사항 공고(재위촉 사항 반영)",
+              "category": "life",
+              "date": "2022-10-21",
+              "region": "서울 송파구 가락본동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19242370&&pageUnit=10&searchCtgry=%EA%B0%80%EB%9D%BD%EB%B3%B8%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "가락본동"
+            },
+            {
+              "title": "2022년 4분기 자치회관 프로그램 수강생 모집",
+              "category": "life",
+              "date": "2022-09-15",
+              "region": "서울 송파구 가락본동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19241396&&pageUnit=10&searchCtgry=%EA%B0%80%EB%9D%BD%EB%B3%B8%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "가락본동"
+            },
+            {
+              "title": "가락본동 제8통장 모집",
+              "category": "life",
+              "date": "2022-09-13",
+              "region": "서울 송파구 가락본동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19241282&&pageUnit=10&searchCtgry=%EA%B0%80%EB%9D%BD%EB%B3%B8%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "가락본동"
+            },
+            {
+              "title": "가락본동 태극기사랑 운동 추진위원회 위원 모집 공고문",
+              "category": "life",
+              "date": "2022-08-04",
+              "region": "서울 송파구 가락본동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19240437&&pageUnit=10&searchCtgry=%EA%B0%80%EB%9D%BD%EB%B3%B8%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "가락본동"
+            },
+            {
+              "title": "2022년 상반기 가락본동 자치회관 수입지출내역 공고",
+              "category": "life",
+              "date": "2022-07-14",
+              "region": "서울 송파구 가락본동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19239530&&pageUnit=10&searchCtgry=%EA%B0%80%EB%9D%BD%EB%B3%B8%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "가락본동"
+            }
+          ]
+        },
+        {
+          "dong": "거여1동",
+          "board": "송파구 동 소식",
+          "list_url": "https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=36&key=2619&searchCtgry=%EA%B1%B0%EC%97%AC1%EB%8F%99",
+          "method": "html_list",
+          "status": "ok",
+          "count": 10,
+          "notices": [
+            {
+              "title": "2026년 주민등록 장기거주불명등록자 최고공고",
+              "category": "life",
+              "date": "2026-11-19",
+              "region": "서울 송파구 거여1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280479&&pageUnit=10&searchCtgry=%EA%B1%B0%EC%97%AC1%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "거여1동"
+            },
+            {
+              "title": "주민등록 신고 의무 지연자 최고공고",
+              "category": "life",
+              "date": "2026-11-19",
+              "region": "서울 송파구 거여1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280478&&pageUnit=10&searchCtgry=%EA%B1%B0%EC%97%AC1%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "거여1동"
+            },
+            {
+              "title": "거여1동 주민자치위원회 위원 인적사항 공고",
+              "category": "life",
+              "date": "2026-11-12",
+              "region": "서울 송파구 거여1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280368&&pageUnit=10&searchCtgry=%EA%B1%B0%EC%97%AC1%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "거여1동"
+            },
+            {
+              "title": "주택 내 녹에 취약한 급수관 교제 지원사업 안내",
+              "category": "welfare",
+              "date": "2022-11-10",
+              "region": "서울 송파구 거여1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19242922&&pageUnit=10&searchCtgry=%EA%B1%B0%EC%97%AC1%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "거여1동"
+            },
+            {
+              "title": "내손으로 뚝딱 만드는 나만의 장난감 수강생 모집",
+              "category": "life",
+              "date": "2022-11-04",
+              "region": "서울 송파구 거여1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19242746&&pageUnit=10&searchCtgry=%EA%B1%B0%EC%97%AC1%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "거여1동"
+            },
+            {
+              "title": "거여1동 주민자치위원회 위원 인적사항 공고",
+              "category": "life",
+              "date": "2022-08-16",
+              "region": "서울 송파구 거여1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19240650&&pageUnit=10&searchCtgry=%EA%B1%B0%EC%97%AC1%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "거여1동"
+            },
+            {
+              "title": "송파구 새활용센터(구 재활용센터) 운영 안내",
+              "category": "life",
+              "date": "2022-02-25",
+              "region": "서울 송파구 거여1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19235136&&pageUnit=10&searchCtgry=%EA%B1%B0%EC%97%AC1%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "거여1동"
+            },
+            {
+              "title": "11통장 모집",
+              "category": "life",
+              "date": "2021-08-13",
+              "region": "서울 송파구 거여1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19228854&&pageUnit=10&searchCtgry=%EA%B1%B0%EC%97%AC1%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "거여1동"
+            },
+            {
+              "title": "주택 내 녹에취약한 급수관 교체 지원 안내문",
+              "category": "welfare",
+              "date": "2021-07-06",
+              "region": "서울 송파구 거여1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19227758&&pageUnit=10&searchCtgry=%EA%B1%B0%EC%97%AC1%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "거여1동"
+            },
+            {
+              "title": "거여동6번지 일원 지구단위계획구역 및 계획결정(안) 열람공고",
+              "category": "life",
+              "date": "2021-07-05",
+              "region": "서울 송파구 거여1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19227748&&pageUnit=10&searchCtgry=%EA%B1%B0%EC%97%AC1%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "거여1동"
+            }
+          ]
+        },
+        {
+          "dong": "거여2동",
+          "board": "송파구 동 소식",
+          "list_url": "https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=36&key=2619&searchCtgry=%EA%B1%B0%EC%97%AC2%EB%8F%99",
+          "method": "html_list",
+          "status": "ok",
+          "count": 10,
+          "notices": [
+            {
+              "title": "주민등록 장기 거주불명자 재등록 공고",
+              "category": "life",
+              "date": "2026-11-17",
+              "region": "서울 송파구 거여2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280440&&pageUnit=10&searchCtgry=%EA%B1%B0%EC%97%AC2%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "거여2동"
+            },
+            {
+              "title": "주민등록 신고의무 지연자 최고 공고",
+              "category": "life",
+              "date": "2026-11-11",
+              "region": "서울 송파구 거여2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280331&&pageUnit=10&searchCtgry=%EA%B1%B0%EC%97%AC2%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "거여2동"
+            },
+            {
+              "title": "2026년 4분기 자치회관 프로그램 접수 안내",
+              "category": "life",
+              "date": "2026-09-14",
+              "region": "서울 송파구 거여2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19279123&&pageUnit=10&searchCtgry=%EA%B1%B0%EC%97%AC2%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "거여2동"
+            },
+            {
+              "title": "2025년 1분기(1월~3월) 자치회관 수강생을 모집합니다.",
+              "category": "life",
+              "date": "2025-01-08",
+              "region": "서울 송파구 거여2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19263233&&pageUnit=10&searchCtgry=%EA%B1%B0%EC%97%AC2%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "거여2동"
+            },
+            {
+              "title": "우리동네 돌봄단 채용 공고 안내",
+              "category": "welfare",
+              "date": "2025-01-08",
+              "region": "서울 송파구 거여2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19263232&&pageUnit=10&searchCtgry=%EA%B1%B0%EC%97%AC2%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "거여2동"
+            },
+            {
+              "title": "국가보훈등록증 교체 발급 안내 및 홍보(교체기한: ~ 2028.6.4.까지)",
+              "category": "life",
+              "date": "2024-12-02",
+              "region": "서울 송파구 거여2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19262276&&pageUnit=10&searchCtgry=%EA%B1%B0%EC%97%AC2%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "거여2동"
+            },
+            {
+              "title": "내손으로 뚝딱 만드는 나만의 장난감 수강생 모집",
+              "category": "life",
+              "date": "2022-11-04",
+              "region": "서울 송파구 거여2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19242747&&pageUnit=10&searchCtgry=%EA%B1%B0%EC%97%AC2%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "거여2동"
+            },
+            {
+              "title": "거여2동 자치회관 프로그램 강사 모집 공고",
+              "category": "life",
+              "date": "2022-10-13",
+              "region": "서울 송파구 거여2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19242145&&pageUnit=10&searchCtgry=%EA%B1%B0%EC%97%AC2%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "거여2동"
+            },
+            {
+              "title": "주민등록 신고의무 지연자 직권조치 및 공고",
+              "category": "life",
+              "date": "2022-08-05",
+              "region": "서울 송파구 거여2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19240484&&pageUnit=10&searchCtgry=%EA%B1%B0%EC%97%AC2%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "거여2동"
+            },
+            {
+              "title": "통장모집공고(6통)",
+              "category": "life",
+              "date": "2022-07-04",
+              "region": "서울 송파구 거여2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19239037&&pageUnit=10&searchCtgry=%EA%B1%B0%EC%97%AC2%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "거여2동"
+            }
+          ]
+        },
+        {
+          "dong": "마천1동",
+          "board": "송파구 동 소식",
+          "list_url": "https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=36&key=2619&searchCtgry=%EB%A7%88%EC%B2%9C1%EB%8F%99",
+          "method": "html_list",
+          "status": "ok",
+          "count": 10,
+          "notices": [
+            {
+              "title": "2026년 주민등록 사실조사에 따른 비거주자 최고 공고",
+              "category": "life",
+              "date": "2026-11-19",
+              "region": "서울 송파구 마천1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280482&&pageUnit=10&searchCtgry=%EB%A7%88%EC%B2%9C1%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "마천1동"
+            },
+            {
+              "title": "2026년 주민등록 사실조사에 따른 장기거주불명자 최고 공고",
+              "category": "life",
+              "date": "2026-11-11",
+              "region": "서울 송파구 마천1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280327&&pageUnit=10&searchCtgry=%EB%A7%88%EC%B2%9C1%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "마천1동"
+            },
+            {
+              "title": "직권조치 결과 공고문",
+              "category": "life",
+              "date": "2026-11-06",
+              "region": "서울 송파구 마천1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280125&&pageUnit=10&searchCtgry=%EB%A7%88%EC%B2%9C1%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "마천1동"
+            },
+            {
+              "title": "2026년 4분기 자치회관 프로그램 접수 안내",
+              "category": "life",
+              "date": "2026-11-06",
+              "region": "서울 송파구 마천1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280118&&pageUnit=10&searchCtgry=%EB%A7%88%EC%B2%9C1%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "마천1동"
+            },
+            {
+              "title": "2027년 상반기 서울 동행일자리 사업 참여자 모집",
+              "category": "life",
+              "date": "2026-11-06",
+              "region": "서울 송파구 마천1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280116&&pageUnit=10&searchCtgry=%EB%A7%88%EC%B2%9C1%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "마천1동"
+            },
+            {
+              "title": "2027년 상반기 서울 동행일자리사업(송파구) 참여자 모집",
+              "category": "life",
+              "date": "2026-11-06",
+              "region": "서울 송파구 마천1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280115&&pageUnit=10&searchCtgry=%EB%A7%88%EC%B2%9C1%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "마천1동"
+            },
+            {
+              "title": "2026년 7월 1일 기준 개별공시지가 결정·공시 및 이의신청 안내",
+              "category": "welfare",
+              "date": "2026-10-28",
+              "region": "서울 송파구 마천1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19279916&&pageUnit=10&searchCtgry=%EB%A7%88%EC%B2%9C1%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "마천1동"
+            },
+            {
+              "title": "대형생활폐기물 배출 통합관리시스템「스마트클린 송파」운영 중단 안내",
+              "category": "life",
+              "date": "2026-08-21",
+              "region": "서울 송파구 마천1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19278578&&pageUnit=10&searchCtgry=%EB%A7%88%EC%B2%9C1%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "마천1동"
+            },
+            {
+              "title": "마천3 재정비촉진구역 주택재개발사업 사업시행계획인가 고시",
+              "category": "work",
+              "date": "2026-04-01",
+              "region": "서울 송파구 마천1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19275569&&pageUnit=10&searchCtgry=%EB%A7%88%EC%B2%9C1%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "마천1동"
+            },
+            {
+              "title": "주택 내 녹에 취약한 급수관 교체지원 사업 안내",
+              "category": "welfare",
+              "date": "2022-11-11",
+              "region": "서울 송파구 마천1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19242954&&pageUnit=10&searchCtgry=%EB%A7%88%EC%B2%9C1%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "마천1동"
+            }
+          ]
+        },
+        {
+          "dong": "마천2동",
+          "board": "송파구 동 소식",
+          "list_url": "https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=36&key=2619&searchCtgry=%EB%A7%88%EC%B2%9C2%EB%8F%99",
+          "method": "html_list",
+          "status": "ok",
+          "count": 10,
+          "notices": [
+            {
+              "title": "주민등록 무단전출자 직권조치 결과 공고(김**)",
+              "category": "life",
+              "date": "2026-11-19",
+              "region": "서울 송파구 마천2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280474&&pageUnit=10&searchCtgry=%EB%A7%88%EC%B2%9C2%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "마천2동"
+            },
+            {
+              "title": "주민등록 무단전출자 직권조치 결과 공고(김**)",
+              "category": "life",
+              "date": "2026-11-16",
+              "region": "서울 송파구 마천2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280402&&pageUnit=10&searchCtgry=%EB%A7%88%EC%B2%9C2%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "마천2동"
+            },
+            {
+              "title": "거주불명등록자 행정상 관리주소 이전 2차 공고(2025년 3분기)",
+              "category": "life",
+              "date": "2026-11-13",
+              "region": "서울 송파구 마천2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280377&&pageUnit=10&searchCtgry=%EB%A7%88%EC%B2%9C2%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "마천2동"
+            },
+            {
+              "title": "2027년 상반기 서울 동행일자리사업(송파구) 참여자 모집",
+              "category": "life",
+              "date": "2026-11-11",
+              "region": "서울 송파구 마천2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280307&&pageUnit=10&searchCtgry=%EB%A7%88%EC%B2%9C2%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "마천2동"
+            },
+            {
+              "title": "2027년 상반기 서울 동행일자리 사업 참여자 모집",
+              "category": "life",
+              "date": "2026-11-11",
+              "region": "서울 송파구 마천2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280306&&pageUnit=10&searchCtgry=%EB%A7%88%EC%B2%9C2%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "마천2동"
+            },
+            {
+              "title": "[2026년 4분기] 마천2동 자치회관 프로그램 접수 안내",
+              "category": "life",
+              "date": "2026-09-10",
+              "region": "서울 송파구 마천2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19278991&&pageUnit=10&searchCtgry=%EB%A7%88%EC%B2%9C2%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "마천2동"
+            },
+            {
+              "title": "2022년도 사실조사에 의한 주민등록 직권조치 결과공고",
+              "category": "life",
+              "date": "2022-12-28",
+              "region": "서울 송파구 마천2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19244252&&pageUnit=10&searchCtgry=%EB%A7%88%EC%B2%9C2%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "마천2동"
+            },
+            {
+              "title": "내손으로 뚝딱 만드는 나만의 장난감 수강생 모집",
+              "category": "life",
+              "date": "2022-11-04",
+              "region": "서울 송파구 마천2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19242749&&pageUnit=10&searchCtgry=%EB%A7%88%EC%B2%9C2%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "마천2동"
+            },
+            {
+              "title": "주민등록 거주불명 최고공고",
+              "category": "life",
+              "date": "2022-11-03",
+              "region": "서울 송파구 마천2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19242669&&pageUnit=10&searchCtgry=%EB%A7%88%EC%B2%9C2%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "마천2동"
+            },
+            {
+              "title": "주민등록 직권조치 결과공고",
+              "category": "life",
+              "date": "2022-11-01",
+              "region": "서울 송파구 마천2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19242611&&pageUnit=10&searchCtgry=%EB%A7%88%EC%B2%9C2%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "마천2동"
+            }
+          ]
+        },
+        {
+          "dong": "문정1동",
+          "board": "송파구 동 소식",
+          "list_url": "https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=36&key=2619&searchCtgry=%EB%AC%B8%EC%A0%951%EB%8F%99",
+          "method": "html_list",
+          "status": "ok",
+          "count": 10,
+          "notices": [
+            {
+              "title": "2027년 장애인일자리사업(전일제) 참여자 모집 공고",
+              "category": "life",
+              "date": "2026-11-16",
+              "region": "서울 송파구 문정1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280403&&pageUnit=10&searchCtgry=%EB%AC%B8%EC%A0%951%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "문정1동"
+            },
+            {
+              "title": "제4회 문정사랑 어린이 그림대회 심사결과 발표",
+              "category": "life",
+              "date": "2026-10-01",
+              "region": "서울 송파구 문정1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19279449&&pageUnit=10&searchCtgry=%EB%AC%B8%EC%A0%951%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "문정1동"
+            },
+            {
+              "title": "2026년 에코마일리지(건물) 신청 안내",
+              "category": "welfare",
+              "date": "2026-10-01",
+              "region": "서울 송파구 문정1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19279424&&pageUnit=10&searchCtgry=%EB%AC%B8%EC%A0%951%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "문정1동"
+            },
+            {
+              "title": "26년 4분기 자치회관 프로그램 수강생 모집 안내 (9/14~)",
+              "category": "life",
+              "date": "2026-09-10",
+              "region": "서울 송파구 문정1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19278993&&pageUnit=10&searchCtgry=%EB%AC%B8%EC%A0%951%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "문정1동"
+            },
+            {
+              "title": "2026년 에코마일리지(건물) 신청 안내",
+              "category": "welfare",
+              "date": "2026-07-06",
+              "region": "서울 송파구 문정1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19277661&&pageUnit=10&searchCtgry=%EB%AC%B8%EC%A0%951%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "문정1동"
+            },
+            {
+              "title": "2026년 에코마일리지(건물) 신청 안내",
+              "category": "welfare",
+              "date": "2026-04-01",
+              "region": "서울 송파구 문정1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19275559&&pageUnit=10&searchCtgry=%EB%AC%B8%EC%A0%951%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "문정1동"
+            },
+            {
+              "title": "2026년 에코마일리지(건물) 신청 안내",
+              "category": "welfare",
+              "date": "2026-03-11",
+              "region": "서울 송파구 문정1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19275118&&pageUnit=10&searchCtgry=%EB%AC%B8%EC%A0%951%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "문정1동"
+            },
+            {
+              "title": "새마을 단체(문고·부녀회) 회원 모집 안내",
+              "category": "life",
+              "date": "2026-01-15",
+              "region": "서울 송파구 문정1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19272286&&pageUnit=10&searchCtgry=%EB%AC%B8%EC%A0%951%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "문정1동"
+            },
+            {
+              "title": "안전한 문정1동 겨울 함께 만들어 가요",
+              "category": "life",
+              "date": "2025-11-25",
+              "region": "서울 송파구 문정1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19271209&&pageUnit=10&searchCtgry=%EB%AC%B8%EC%A0%951%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "문정1동"
+            },
+            {
+              "title": "주민등록 무단전출자 최고 공고",
+              "category": "life",
+              "date": "2022-11-11",
+              "region": "서울 송파구 문정1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19242966&&pageUnit=10&searchCtgry=%EB%AC%B8%EC%A0%951%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "문정1동"
+            }
+          ]
+        },
+        {
+          "dong": "문정2동",
+          "board": "송파구 동 소식",
+          "list_url": "https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=36&key=2619&searchCtgry=%EB%AC%B8%EC%A0%952%EB%8F%99",
+          "method": "html_list",
+          "status": "ok",
+          "count": 10,
+          "notices": [
+            {
+              "title": "주민등록 직권조치 결과공고",
+              "category": "life",
+              "date": "2026-11-16",
+              "region": "서울 송파구 문정2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280417&&pageUnit=10&searchCtgry=%EB%AC%B8%EC%A0%952%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "문정2동"
+            },
+            {
+              "title": "2027년 상반기 서울 동행일자리 사업(송파구) 참여자 모집 안내",
+              "category": "life",
+              "date": "2026-11-06",
+              "region": "서울 송파구 문정2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280121&&pageUnit=10&searchCtgry=%EB%AC%B8%EC%A0%952%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "문정2동"
+            },
+            {
+              "title": "2027년 상반기 서울 동행일자리 사업(서울시 본청 및 사업소)참여자 모집 안내",
+              "category": "life",
+              "date": "2026-11-06",
+              "region": "서울 송파구 문정2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280120&&pageUnit=10&searchCtgry=%EB%AC%B8%EC%A0%952%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "문정2동"
+            },
+            {
+              "title": "무단전출자 주민등록 최고 공고",
+              "category": "life",
+              "date": "2026-10-22",
+              "region": "서울 송파구 문정2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19279840&&pageUnit=10&searchCtgry=%EB%AC%B8%EC%A0%952%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "문정2동"
+            },
+            {
+              "title": "통장 모집공고(27통)-재공고",
+              "category": "life",
+              "date": "2026-10-19",
+              "region": "서울 송파구 문정2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19279690&&pageUnit=10&searchCtgry=%EB%AC%B8%EC%A0%952%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "문정2동"
+            },
+            {
+              "title": "주민등록 직권조치 결과 공고",
+              "category": "life",
+              "date": "2026-10-06",
+              "region": "서울 송파구 문정2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19279520&&pageUnit=10&searchCtgry=%EB%AC%B8%EC%A0%952%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "문정2동"
+            },
+            {
+              "title": "주민등록 직권조치 결과 공고",
+              "category": "life",
+              "date": "2026-10-06",
+              "region": "서울 송파구 문정2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19279519&&pageUnit=10&searchCtgry=%EB%AC%B8%EC%A0%952%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "문정2동"
+            },
+            {
+              "title": "통장 모집공고(27통)",
+              "category": "life",
+              "date": "2026-09-27",
+              "region": "서울 송파구 문정2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19279320&&pageUnit=10&searchCtgry=%EB%AC%B8%EC%A0%952%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "문정2동"
+            },
+            {
+              "title": "무단전출자 주민등록 최고 공고",
+              "category": "life",
+              "date": "2026-09-18",
+              "region": "서울 송파구 문정2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19279221&&pageUnit=10&searchCtgry=%EB%AC%B8%EC%A0%952%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "문정2동"
+            },
+            {
+              "title": "주민등록 직권조치 결과 공고",
+              "category": "life",
+              "date": "2026-09-18",
+              "region": "서울 송파구 문정2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19279219&&pageUnit=10&searchCtgry=%EB%AC%B8%EC%A0%952%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "문정2동"
+            }
+          ]
+        },
+        {
+          "dong": "방이1동",
+          "board": "송파구 동 소식",
+          "list_url": "https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=36&key=2619&searchCtgry=%EB%B0%A9%EC%9D%B41%EB%8F%99",
+          "method": "html_list",
+          "status": "ok",
+          "count": 10,
+          "notices": [
+            {
+              "title": "주민등록 직권조치 결과공고",
+              "category": "life",
+              "date": "2025-12-18",
+              "region": "서울 송파구 방이1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19271700&&pageUnit=10&searchCtgry=%EB%B0%A9%EC%9D%B41%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "방이1동"
+            },
+            {
+              "title": "행정상 관리주소이전 공고(1차)",
+              "category": "life",
+              "date": "2025-12-16",
+              "region": "서울 송파구 방이1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19271663&&pageUnit=10&searchCtgry=%EB%B0%A9%EC%9D%B41%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "방이1동"
+            },
+            {
+              "title": "주민등록 신고지연자 최고공고",
+              "category": "life",
+              "date": "2025-12-10",
+              "region": "서울 송파구 방이1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19271560&&pageUnit=10&searchCtgry=%EB%B0%A9%EC%9D%B41%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "방이1동"
+            },
+            {
+              "title": "주민등록 직권조치 결과공고",
+              "category": "life",
+              "date": "2025-11-28",
+              "region": "서울 송파구 방이1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19271300&&pageUnit=10&searchCtgry=%EB%B0%A9%EC%9D%B41%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "방이1동"
+            },
+            {
+              "title": "주민등록 신고지연자 최고공고(2차)",
+              "category": "life",
+              "date": "2025-11-21",
+              "region": "서울 송파구 방이1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19271145&&pageUnit=10&searchCtgry=%EB%B0%A9%EC%9D%B41%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "방이1동"
+            },
+            {
+              "title": "주민등록 직권조치 결과공고",
+              "category": "life",
+              "date": "2025-11-19",
+              "region": "서울 송파구 방이1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19271078&&pageUnit=10&searchCtgry=%EB%B0%A9%EC%9D%B41%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "방이1동"
+            },
+            {
+              "title": "주민등록 직권조치 결과공고",
+              "category": "life",
+              "date": "2025-11-19",
+              "region": "서울 송파구 방이1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19271062&&pageUnit=10&searchCtgry=%EB%B0%A9%EC%9D%B41%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "방이1동"
+            },
+            {
+              "title": "주민등록 신고지연자 최고공고",
+              "category": "life",
+              "date": "2025-11-13",
+              "region": "서울 송파구 방이1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19270887&&pageUnit=10&searchCtgry=%EB%B0%A9%EC%9D%B41%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "방이1동"
+            },
+            {
+              "title": "주민등록 신고지연자 최고공고",
+              "category": "life",
+              "date": "2025-11-12",
+              "region": "서울 송파구 방이1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19270853&&pageUnit=10&searchCtgry=%EB%B0%A9%EC%9D%B41%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "방이1동"
+            },
+            {
+              "title": "주민등록 신고지연자 최고공고(2차)",
+              "category": "life",
+              "date": "2025-11-12",
+              "region": "서울 송파구 방이1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19270852&&pageUnit=10&searchCtgry=%EB%B0%A9%EC%9D%B41%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "방이1동"
+            }
+          ]
+        },
+        {
+          "dong": "방이2동",
+          "board": "송파구 동 소식",
+          "list_url": "https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=36&key=2619&searchCtgry=%EB%B0%A9%EC%9D%B42%EB%8F%99",
+          "method": "html_list",
+          "status": "ok",
+          "count": 10,
+          "notices": [
+            {
+              "title": "주민등록 무단전출자 직권조치 공고 (거주불명등록)",
+              "category": "life",
+              "date": "2026-11-18",
+              "region": "서울 송파구 방이2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280458&&pageUnit=10&searchCtgry=%EB%B0%A9%EC%9D%B42%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "방이2동"
+            },
+            {
+              "title": "2026 주민등록 사실조사 주민등록 신고의무 위반자 최고공고",
+              "category": "life",
+              "date": "2026-11-12",
+              "region": "서울 송파구 방이2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280356&&pageUnit=10&searchCtgry=%EB%B0%A9%EC%9D%B42%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "방이2동"
+            },
+            {
+              "title": "2026. 4분기 방이2동 자치회관 프로그램 수강생 모집 안내",
+              "category": "life",
+              "date": "2026-08-18",
+              "region": "서울 송파구 방이2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19278541&&pageUnit=10&searchCtgry=%EB%B0%A9%EC%9D%B42%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "방이2동"
+            },
+            {
+              "title": "송파구 방이2동 주민자치위원회 위원 인적사항 공고",
+              "category": "life",
+              "date": "2026-07-06",
+              "region": "서울 송파구 방이2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19277667&&pageUnit=10&searchCtgry=%EB%B0%A9%EC%9D%B42%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "방이2동"
+            },
+            {
+              "title": "2026년 2분기 방이2동 자치회관 프로그램 수강생 모집 안내",
+              "category": "life",
+              "date": "2026-03-11",
+              "region": "서울 송파구 방이2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19275092&&pageUnit=10&searchCtgry=%EB%B0%A9%EC%9D%B42%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "방이2동"
+            },
+            {
+              "title": "2026년 1분기 방이2동 자치회관 프로그램 수강생 모집 안내",
+              "category": "life",
+              "date": "2025-12-02",
+              "region": "서울 송파구 방이2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19271374&&pageUnit=10&searchCtgry=%EB%B0%A9%EC%9D%B42%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "방이2동"
+            },
+            {
+              "title": "방이2동 청소 대행 업체 변경 안내",
+              "category": "life",
+              "date": "2024-02-27",
+              "region": "서울 송파구 방이2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19255523&&pageUnit=10&searchCtgry=%EB%B0%A9%EC%9D%B42%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "방이2동"
+            },
+            {
+              "title": "내손으로 뚝딱 만드는 나만의 장난감 수강생 모집",
+              "category": "life",
+              "date": "2022-11-04",
+              "region": "서울 송파구 방이2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19242753&&pageUnit=10&searchCtgry=%EB%B0%A9%EC%9D%B42%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "방이2동"
+            },
+            {
+              "title": "주민등록 직권조치 결과 공고",
+              "category": "life",
+              "date": "2022-11-01",
+              "region": "서울 송파구 방이2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19242633&&pageUnit=10&searchCtgry=%EB%B0%A9%EC%9D%B42%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "방이2동"
+            },
+            {
+              "title": "행정상 관리주소 이전 공고(2차)",
+              "category": "life",
+              "date": "2022-10-28",
+              "region": "서울 송파구 방이2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19242541&&pageUnit=10&searchCtgry=%EB%B0%A9%EC%9D%B42%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "방이2동"
+            }
+          ]
+        },
+        {
+          "dong": "삼전동",
+          "board": "송파구 동 소식",
+          "list_url": "https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=36&key=2619&searchCtgry=%EC%82%BC%EC%A0%84%EB%8F%99",
+          "method": "html_list",
+          "status": "ok",
+          "count": 10,
+          "notices": [
+            {
+              "title": "2026년 주민등록 사실조사에 따른 주민등록 미이행자 최고공고",
+              "category": "life",
+              "date": "2026-11-18",
+              "region": "서울 송파구 삼전동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280452&&pageUnit=10&searchCtgry=%EC%82%BC%EC%A0%84%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "삼전동"
+            },
+            {
+              "title": "삼전동 통장 선정결과 공고(22통)",
+              "category": "life",
+              "date": "2026-11-12",
+              "region": "서울 송파구 삼전동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280358&&pageUnit=10&searchCtgry=%EC%82%BC%EC%A0%84%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "삼전동"
+            },
+            {
+              "title": "2026년 주민등록 장기거주불명자 최고 공고(윤O숙 외 2인)",
+              "category": "life",
+              "date": "2026-11-10",
+              "region": "서울 송파구 삼전동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280276&&pageUnit=10&searchCtgry=%EC%82%BC%EC%A0%84%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "삼전동"
+            },
+            {
+              "title": "주민등록 신고의무 지연자 직권조치(전0태, 원0빈)",
+              "category": "life",
+              "date": "2026-11-10",
+              "region": "서울 송파구 삼전동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280272&&pageUnit=10&searchCtgry=%EC%82%BC%EC%A0%84%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "삼전동"
+            },
+            {
+              "title": "거주불명등록자 행정상 관리주소 이전공고(1차)",
+              "category": "life",
+              "date": "2022-11-10",
+              "region": "서울 송파구 삼전동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19242930&&pageUnit=10&searchCtgry=%EC%82%BC%EC%A0%84%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "삼전동"
+            },
+            {
+              "title": "거주불명자 직권조치 결과 공고",
+              "category": "life",
+              "date": "2022-10-27",
+              "region": "서울 송파구 삼전동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19242512&&pageUnit=10&searchCtgry=%EC%82%BC%EC%A0%84%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "삼전동"
+            },
+            {
+              "title": "주민등록 신고 미이행자 최고 공고",
+              "category": "life",
+              "date": "2022-10-19",
+              "region": "서울 송파구 삼전동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19242347&&pageUnit=10&searchCtgry=%EC%82%BC%EC%A0%84%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "삼전동"
+            },
+            {
+              "title": "거주불명등록자 행정상 관리주소 직권조치 결과 공고",
+              "category": "life",
+              "date": "2022-09-30",
+              "region": "서울 송파구 삼전동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19241699&&pageUnit=10&searchCtgry=%EC%82%BC%EC%A0%84%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "삼전동"
+            },
+            {
+              "title": "거주불명자 직권조치 결과 공고",
+              "category": "life",
+              "date": "2022-09-14",
+              "region": "서울 송파구 삼전동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19241336&&pageUnit=10&searchCtgry=%EC%82%BC%EC%A0%84%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "삼전동"
+            },
+            {
+              "title": "2022년 4분기 자치회관 프로그램 수강생 모집 안내",
+              "category": "life",
+              "date": "2022-09-13",
+              "region": "서울 송파구 삼전동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19241300&&pageUnit=10&searchCtgry=%EC%82%BC%EC%A0%84%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "삼전동"
+            }
+          ]
+        },
+        {
+          "dong": "석촌동",
+          "board": "송파구 동 소식",
+          "list_url": "https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=36&key=2619&searchCtgry=%EC%84%9D%EC%B4%8C%EB%8F%99",
+          "method": "html_list",
+          "status": "ok",
+          "count": 10,
+          "notices": [
+            {
+              "title": "2026년 주민등록 사실조사에 따른 신고의무 지연자 최고공고",
+              "category": "life",
+              "date": "2026-11-18",
+              "region": "서울 송파구 석촌동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280457&&pageUnit=10&searchCtgry=%EC%84%9D%EC%B4%8C%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "석촌동"
+            },
+            {
+              "title": "거주불명등록자 행정상 관리주소 이전 1차 공고",
+              "category": "life",
+              "date": "2026-11-17",
+              "region": "서울 송파구 석촌동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280432&&pageUnit=10&searchCtgry=%EC%84%9D%EC%B4%8C%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "석촌동"
+            },
+            {
+              "title": "2026년 주민등록 장기거주불명자 직권조치 결과 공고",
+              "category": "life",
+              "date": "2026-11-17",
+              "region": "서울 송파구 석촌동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280424&&pageUnit=10&searchCtgry=%EC%84%9D%EC%B4%8C%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "석촌동"
+            },
+            {
+              "title": "주민자치위원회 위원 인적사항 공고",
+              "category": "life",
+              "date": "2026-11-16",
+              "region": "서울 송파구 석촌동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280411&&pageUnit=10&searchCtgry=%EC%84%9D%EC%B4%8C%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "석촌동"
+            },
+            {
+              "title": "송파구 석촌동 통장 모집 공고(제1통)",
+              "category": "life",
+              "date": "2026-11-16",
+              "region": "서울 송파구 석촌동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280407&&pageUnit=10&searchCtgry=%EC%84%9D%EC%B4%8C%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "석촌동"
+            },
+            {
+              "title": "거주불명등록자 행정상 관리주소 이전 2차 공고",
+              "category": "life",
+              "date": "2026-11-09",
+              "region": "서울 송파구 석촌동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280169&&pageUnit=10&searchCtgry=%EC%84%9D%EC%B4%8C%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "석촌동"
+            },
+            {
+              "title": "2026년 주민등록 장기거주불명자 최고 공고",
+              "category": "life",
+              "date": "2026-11-05",
+              "region": "서울 송파구 석촌동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280084&&pageUnit=10&searchCtgry=%EC%84%9D%EC%B4%8C%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "석촌동"
+            },
+            {
+              "title": "거주불명등록자 행정상 관리주소 이전 1차 공고",
+              "category": "life",
+              "date": "2026-10-27",
+              "region": "서울 송파구 석촌동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19279889&&pageUnit=10&searchCtgry=%EC%84%9D%EC%B4%8C%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "석촌동"
+            },
+            {
+              "title": "석촌동 자치회관 프로그램 강사 모집 공고",
+              "category": "life",
+              "date": "2026-09-17",
+              "region": "서울 송파구 석촌동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19279191&&pageUnit=10&searchCtgry=%EC%84%9D%EC%B4%8C%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "석촌동"
+            },
+            {
+              "title": "2026년 4분기 석촌동 자치회관 프로그램 접수 안내",
+              "category": "life",
+              "date": "2026-08-24",
+              "region": "서울 송파구 석촌동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19278617&&pageUnit=10&searchCtgry=%EC%84%9D%EC%B4%8C%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "석촌동"
+            }
+          ]
+        },
+        {
+          "dong": "송파1동",
+          "board": "송파구 동 소식",
+          "list_url": "https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=36&key=2619&searchCtgry=%EC%86%A1%ED%8C%8C1%EB%8F%99",
+          "method": "html_list",
+          "status": "ok",
+          "count": 10,
+          "notices": [
+            {
+              "title": "2026년 3분기 송파1동 자치회관 수강 신청 접수 안내",
+              "category": "welfare",
+              "date": "2026-05-27",
+              "region": "서울 송파구 송파1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19276730&&pageUnit=10&searchCtgry=%EC%86%A1%ED%8C%8C1%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "송파1동"
+            },
+            {
+              "title": "2026년 2분기 송파1동 자치회관 신규 프로그램 안내",
+              "category": "life",
+              "date": "2026-02-25",
+              "region": "서울 송파구 송파1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19274787&&pageUnit=10&searchCtgry=%EC%86%A1%ED%8C%8C1%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "송파1동"
+            },
+            {
+              "title": "2026년 2분기 송파1동 자치회관 수강 신청 접수 안내",
+              "category": "welfare",
+              "date": "2026-02-25",
+              "region": "서울 송파구 송파1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19274784&&pageUnit=10&searchCtgry=%EC%86%A1%ED%8C%8C1%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "송파1동"
+            },
+            {
+              "title": "송파1동 자치회관 프로그램 강사 모집(성인 발레)",
+              "category": "life",
+              "date": "2026-01-13",
+              "region": "서울 송파구 송파1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19272206&&pageUnit=10&searchCtgry=%EC%86%A1%ED%8C%8C1%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "송파1동"
+            },
+            {
+              "title": "2025년 하반기 송파1동 자치회관 수입 및 지출 내용 공고",
+              "category": "life",
+              "date": "2026-01-09",
+              "region": "서울 송파구 송파1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19272150&&pageUnit=10&searchCtgry=%EC%86%A1%ED%8C%8C1%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "송파1동"
+            },
+            {
+              "title": "2026년 1분기 송파1동 자치회관 프로그램 수강신청 안내",
+              "category": "welfare",
+              "date": "2025-12-01",
+              "region": "서울 송파구 송파1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19271344&&pageUnit=10&searchCtgry=%EC%86%A1%ED%8C%8C1%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "송파1동"
+            },
+            {
+              "title": "2025년 4분기 송파1동 자치회관 프로그램 수강 신청",
+              "category": "welfare",
+              "date": "2025-09-08",
+              "region": "서울 송파구 송파1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19269557&&pageUnit=10&searchCtgry=%EC%86%A1%ED%8C%8C1%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "송파1동"
+            },
+            {
+              "title": "2025년 상반기 송파1동 자치회관 수입 및 지출 내역 공고",
+              "category": "life",
+              "date": "2025-07-09",
+              "region": "서울 송파구 송파1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19267487&&pageUnit=10&searchCtgry=%EC%86%A1%ED%8C%8C1%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "송파1동"
+            },
+            {
+              "title": "2025년 3분기 송파1동 자치회관 프로그램 수강 신청",
+              "category": "welfare",
+              "date": "2025-05-28",
+              "region": "서울 송파구 송파1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19266365&&pageUnit=10&searchCtgry=%EC%86%A1%ED%8C%8C1%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "송파1동"
+            },
+            {
+              "title": "송파1동 자치회관 프로그램 강사 모집(손뜨개 공예)",
+              "category": "life",
+              "date": "2025-02-11",
+              "region": "서울 송파구 송파1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19264018&&pageUnit=10&searchCtgry=%EC%86%A1%ED%8C%8C1%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "송파1동"
+            }
+          ]
+        },
+        {
+          "dong": "송파2동",
+          "board": "송파구 동 소식",
+          "list_url": "https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=36&key=2619&searchCtgry=%EC%86%A1%ED%8C%8C2%EB%8F%99",
+          "method": "html_list",
+          "status": "ok",
+          "count": 10,
+          "notices": [
+            {
+              "title": "[공고 제2026-36호]장기 거주불명자 최고공고",
+              "category": "life",
+              "date": "2026-11-10",
+              "region": "서울 송파구 송파2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280279&&pageUnit=10&searchCtgry=%EC%86%A1%ED%8C%8C2%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "송파2동"
+            },
+            {
+              "title": "[공고 제2026-28호] 자치회관 프로그램 강사 모집 공고",
+              "category": "life",
+              "date": "2026-07-28",
+              "region": "서울 송파구 송파2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19278171&&pageUnit=10&searchCtgry=%EC%86%A1%ED%8C%8C2%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "송파2동"
+            },
+            {
+              "title": "[공고 제2025-35호]직권조치 결과 공고",
+              "category": "life",
+              "date": "2025-12-22",
+              "region": "서울 송파구 송파2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19271756&&pageUnit=10&searchCtgry=%EC%86%A1%ED%8C%8C2%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "송파2동"
+            },
+            {
+              "title": "[공고 제2025-34호]직권조치 결과 공고",
+              "category": "life",
+              "date": "2025-12-22",
+              "region": "서울 송파구 송파2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19271755&&pageUnit=10&searchCtgry=%EC%86%A1%ED%8C%8C2%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "송파2동"
+            },
+            {
+              "title": "[공고 제2025-33호]주민등록신고 의무지연자에 대한 공고",
+              "category": "life",
+              "date": "2025-12-11",
+              "region": "서울 송파구 송파2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19271575&&pageUnit=10&searchCtgry=%EC%86%A1%ED%8C%8C2%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "송파2동"
+            },
+            {
+              "title": "[공고 제2025-32호]주민등록신고 의무지연자에 대한 공고",
+              "category": "life",
+              "date": "2025-12-11",
+              "region": "서울 송파구 송파2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19271574&&pageUnit=10&searchCtgry=%EC%86%A1%ED%8C%8C2%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "송파2동"
+            },
+            {
+              "title": "[공고 제2025-29호]2025년 주민등록 사실조사에 따른 무단전출자 직권조치결과 공고",
+              "category": "life",
+              "date": "2025-11-18",
+              "region": "서울 송파구 송파2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19271021&&pageUnit=10&searchCtgry=%EC%86%A1%ED%8C%8C2%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "송파2동"
+            },
+            {
+              "title": "[공고 제2025-28호]장기 거주불명자 직권조치결과 공고",
+              "category": "life",
+              "date": "2025-11-07",
+              "region": "서울 송파구 송파2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19270754&&pageUnit=10&searchCtgry=%EC%86%A1%ED%8C%8C2%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "송파2동"
+            },
+            {
+              "title": "[공고 제2025-27호]주민등록신고 의무지연자에 대한 공고",
+              "category": "life",
+              "date": "2025-11-07",
+              "region": "서울 송파구 송파2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19270746&&pageUnit=10&searchCtgry=%EC%86%A1%ED%8C%8C2%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "송파2동"
+            },
+            {
+              "title": "[공고 제2025-26호]장기 거주불명자 최고공고",
+              "category": "life",
+              "date": "2025-10-28",
+              "region": "서울 송파구 송파2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19270492&&pageUnit=10&searchCtgry=%EC%86%A1%ED%8C%8C2%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "송파2동"
+            }
+          ]
+        },
+        {
+          "dong": "오금동",
+          "board": "송파구 동 소식",
+          "list_url": "https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=36&key=2619&searchCtgry=%EC%98%A4%EA%B8%88%EB%8F%99",
+          "method": "html_list",
+          "status": "ok",
+          "count": 10,
+          "notices": [
+            {
+              "title": "2026년 주민등록 장기거주불명자 최고 공고",
+              "category": "life",
+              "date": "2026-11-18",
+              "region": "서울 송파구 오금동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280450&&pageUnit=10&searchCtgry=%EC%98%A4%EA%B8%88%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "오금동"
+            },
+            {
+              "title": "주민등록 신고의무 지연자 최고 공고(황0지 외 1인)",
+              "category": "life",
+              "date": "2026-11-17",
+              "region": "서울 송파구 오금동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280420&&pageUnit=10&searchCtgry=%EC%98%A4%EA%B8%88%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "오금동"
+            },
+            {
+              "title": "주민등록 무단전출자 직권조치 공고(윤0길, 김0현)",
+              "category": "life",
+              "date": "2026-11-16",
+              "region": "서울 송파구 오금동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280395&&pageUnit=10&searchCtgry=%EC%98%A4%EA%B8%88%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "오금동"
+            },
+            {
+              "title": "통장모집 공고(25통)",
+              "category": "life",
+              "date": "2026-11-06",
+              "region": "서울 송파구 오금동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280122&&pageUnit=10&searchCtgry=%EC%98%A4%EA%B8%88%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "오금동"
+            },
+            {
+              "title": "2026년 4분기 오금동 자치회관 프로그램 모집 안내",
+              "category": "life",
+              "date": "2026-08-26",
+              "region": "서울 송파구 오금동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19278693&&pageUnit=10&searchCtgry=%EC%98%A4%EA%B8%88%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "오금동"
+            },
+            {
+              "title": "신속통합기획 주택재개발사업 추진을 위한 동의서 번호부여 알림 및 구역 공개(오금동 70-1번지 일대)",
+              "category": "work",
+              "date": "2026-08-12",
+              "region": "서울 송파구 오금동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19278477&&pageUnit=10&searchCtgry=%EC%98%A4%EA%B8%88%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "오금동"
+            },
+            {
+              "title": "통장 위촉 공고(19통)",
+              "category": "life",
+              "date": "2022-11-14",
+              "region": "서울 송파구 오금동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19243054&&pageUnit=10&searchCtgry=%EC%98%A4%EA%B8%88%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "오금동"
+            },
+            {
+              "title": "주택 내 녹에 취약한 급수관 교체 지원사업 홍보(강동수도사업소)",
+              "category": "welfare",
+              "date": "2022-11-14",
+              "region": "서울 송파구 오금동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19243038&&pageUnit=10&searchCtgry=%EC%98%A4%EA%B8%88%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "오금동"
+            },
+            {
+              "title": "2023년 서울특별시 하수도 요금 양변기 누수 감면 제외 홍보",
+              "category": "life",
+              "date": "2022-11-14",
+              "region": "서울 송파구 오금동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19243016&&pageUnit=10&searchCtgry=%EC%98%A4%EA%B8%88%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "오금동"
+            },
+            {
+              "title": "아이스팩 수거함 운영 중단 안내",
+              "category": "life",
+              "date": "2022-11-13",
+              "region": "서울 송파구 오금동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19242990&&pageUnit=10&searchCtgry=%EC%98%A4%EA%B8%88%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "오금동"
+            }
+          ]
+        },
+        {
+          "dong": "오륜동",
+          "board": "송파구 동 소식",
+          "list_url": "https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=36&key=2619&searchCtgry=%EC%98%A4%EB%A5%9C%EB%8F%99",
+          "method": "html_list",
+          "status": "ok",
+          "count": 10,
+          "notices": [
+            {
+              "title": "2026년 주민등록 사실조사에 따른 장기거주불명자 최고 공고",
+              "category": "life",
+              "date": "2026-11-17",
+              "region": "서울 송파구 오륜동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280433&&pageUnit=10&searchCtgry=%EC%98%A4%EB%A5%9C%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "오륜동"
+            },
+            {
+              "title": "제5회 오륜동 주민나눔축제 행사안내",
+              "category": "event",
+              "date": "2026-11-04",
+              "region": "서울 송파구 오륜동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280064&&pageUnit=10&searchCtgry=%EC%98%A4%EB%A5%9C%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "오륜동"
+            },
+            {
+              "title": "2026년 10월 구정 및 동정현황 홍보자료",
+              "category": "life",
+              "date": "2026-10-30",
+              "region": "서울 송파구 오륜동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19279957&&pageUnit=10&searchCtgry=%EC%98%A4%EB%A5%9C%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "오륜동"
+            },
+            {
+              "title": "2026년 9월 구정 및 동정현황 홍보자료",
+              "category": "life",
+              "date": "2026-09-23",
+              "region": "서울 송파구 오륜동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19279290&&pageUnit=10&searchCtgry=%EC%98%A4%EB%A5%9C%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "오륜동"
+            },
+            {
+              "title": "수도요금 전자고지 신청 안내",
+              "category": "welfare",
+              "date": "2024-05-31",
+              "region": "서울 송파구 오륜동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19258094&&pageUnit=10&searchCtgry=%EC%98%A4%EB%A5%9C%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "오륜동"
+            },
+            {
+              "title": "내손으로 뚝딱 만드는 나만의 장난감 수강생 모집",
+              "category": "life",
+              "date": "2022-11-04",
+              "region": "서울 송파구 오륜동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19242761&&pageUnit=10&searchCtgry=%EC%98%A4%EB%A5%9C%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "오륜동"
+            },
+            {
+              "title": "제1회 오륜동 주민나눔 축제 홍보 및 참가자 모집 안내",
+              "category": "event",
+              "date": "2022-09-29",
+              "region": "서울 송파구 오륜동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19241682&&pageUnit=10&searchCtgry=%EC%98%A4%EB%A5%9C%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "오륜동"
+            },
+            {
+              "title": "오륜동주민센터 통장 모집공고(4통)",
+              "category": "life",
+              "date": "2022-09-28",
+              "region": "서울 송파구 오륜동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19241652&&pageUnit=10&searchCtgry=%EC%98%A4%EB%A5%9C%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "오륜동"
+            },
+            {
+              "title": "2022. 장기 거주불명자 직권조치 결과공고",
+              "category": "life",
+              "date": "2022-09-14",
+              "region": "서울 송파구 오륜동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19241333&&pageUnit=10&searchCtgry=%EC%98%A4%EB%A5%9C%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "오륜동"
+            },
+            {
+              "title": "2022년 오륜동 통장 선정결과 공고",
+              "category": "life",
+              "date": "2022-09-08",
+              "region": "서울 송파구 오륜동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19241241&&pageUnit=10&searchCtgry=%EC%98%A4%EB%A5%9C%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "오륜동"
+            }
+          ]
+        },
+        {
+          "dong": "위례동",
+          "board": "송파구 동 소식",
+          "list_url": "https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=36&key=2619&searchCtgry=%EC%9C%84%EB%A1%80%EB%8F%99",
+          "method": "html_list",
+          "status": "ok",
+          "count": 10,
+          "notices": [
+            {
+              "title": "거주불명등록자 행정상 관리주소 이전 직권조치 결과 공고",
+              "category": "life",
+              "date": "2026-11-19",
+              "region": "서울 송파구 위례동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280484&&pageUnit=10&searchCtgry=%EC%9C%84%EB%A1%80%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "위례동"
+            },
+            {
+              "title": "2026년 주민등록 사실조사에 따른 장기거주불명자 직권조치 결과 공고",
+              "category": "life",
+              "date": "2026-11-18",
+              "region": "서울 송파구 위례동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280466&&pageUnit=10&searchCtgry=%EC%9C%84%EB%A1%80%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "위례동"
+            },
+            {
+              "title": "2026년 주민등록 사실조사에 따른 신고의무지연자 최고공고",
+              "category": "life",
+              "date": "2026-11-17",
+              "region": "서울 송파구 위례동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280429&&pageUnit=10&searchCtgry=%EC%9C%84%EB%A1%80%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "위례동"
+            },
+            {
+              "title": "주민등록 무단전출자 직권조치결과 공고",
+              "category": "life",
+              "date": "2026-11-06",
+              "region": "서울 송파구 위례동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280114&&pageUnit=10&searchCtgry=%EC%9C%84%EB%A1%80%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "위례동"
+            },
+            {
+              "title": "(송파구) 2027년 상반기 서울 동행일자리 사업 참여자 모집",
+              "category": "life",
+              "date": "2026-11-05",
+              "region": "서울 송파구 위례동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280105&&pageUnit=10&searchCtgry=%EC%9C%84%EB%A1%80%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "위례동"
+            },
+            {
+              "title": "(서울시) 2027년 상반기 서울 동행일자리 사업 참여자 모집 공고",
+              "category": "life",
+              "date": "2026-11-05",
+              "region": "서울 송파구 위례동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280104&&pageUnit=10&searchCtgry=%EC%9C%84%EB%A1%80%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "위례동"
+            },
+            {
+              "title": "2026년 주민등록사실조사에 따른 장기거주불명자 최고공고",
+              "category": "life",
+              "date": "2026-11-05",
+              "region": "서울 송파구 위례동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280088&&pageUnit=10&searchCtgry=%EC%9C%84%EB%A1%80%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "위례동"
+            },
+            {
+              "title": "거주불명등록자 행정상 관리주소 이전 공고(2차)",
+              "category": "life",
+              "date": "2026-11-03",
+              "region": "서울 송파구 위례동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280036&&pageUnit=10&searchCtgry=%EC%9C%84%EB%A1%80%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "위례동"
+            },
+            {
+              "title": "위례동 무료법률상담 사업 ＇이웃집변호사＇ 운영",
+              "category": "life",
+              "date": "2026-06-16",
+              "region": "서울 송파구 위례동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19277203&&pageUnit=10&searchCtgry=%EC%9C%84%EB%A1%80%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "위례동"
+            },
+            {
+              "title": "신설 (가칭)산빛초등학교 준공ㆍ개교 지연 안내",
+              "category": "life",
+              "date": "2024-12-23",
+              "region": "서울 송파구 위례동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19262762&&pageUnit=10&searchCtgry=%EC%9C%84%EB%A1%80%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "위례동"
+            }
+          ]
+        },
+        {
+          "dong": "잠실2동",
+          "board": "송파구 동 소식",
+          "list_url": "https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=36&key=2619&searchCtgry=%EC%9E%A0%EC%8B%A42%EB%8F%99",
+          "method": "html_list",
+          "status": "ok",
+          "count": 10,
+          "notices": [
+            {
+              "title": "2026. 4분기 잠실2동 자치회관 프로그램 수강생 모집",
+              "category": "life",
+              "date": "2026-08-26",
+              "region": "서울 송파구 잠실2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19278686&&pageUnit=10&searchCtgry=%EC%9E%A0%EC%8B%A42%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "잠실2동"
+            },
+            {
+              "title": "2026. 2분기 잠실2동 자치회관 프로그램 수강생 모집",
+              "category": "life",
+              "date": "2026-02-24",
+              "region": "서울 송파구 잠실2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19274765&&pageUnit=10&searchCtgry=%EC%9E%A0%EC%8B%A42%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "잠실2동"
+            },
+            {
+              "title": "2026. 1분기 잠실2동 자치회관 프로그램 수강생 모집",
+              "category": "life",
+              "date": "2025-11-24",
+              "region": "서울 송파구 잠실2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19271187&&pageUnit=10&searchCtgry=%EC%9E%A0%EC%8B%A42%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "잠실2동"
+            },
+            {
+              "title": "제21대 대통령 선거 관련 잠실2동주민센터 주차장 폐쇄 안내",
+              "category": "work",
+              "date": "2025-05-28",
+              "region": "서울 송파구 잠실2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19266371&&pageUnit=10&searchCtgry=%EC%9E%A0%EC%8B%A42%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "잠실2동"
+            },
+            {
+              "title": "내손으로 뚝딱 만드는 나만의 장난감 수강생 모집",
+              "category": "life",
+              "date": "2022-11-04",
+              "region": "서울 송파구 잠실2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19242763&&pageUnit=10&searchCtgry=%EC%9E%A0%EC%8B%A42%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "잠실2동"
+            },
+            {
+              "title": "2022년 주민등록 사실조사 실시 안내",
+              "category": "life",
+              "date": "2022-10-13",
+              "region": "서울 송파구 잠실2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19242116&&pageUnit=10&searchCtgry=%EC%9E%A0%EC%8B%A42%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "잠실2동"
+            },
+            {
+              "title": "제1회 엘센츠시화전 수상자 심사결과 공지",
+              "category": "life",
+              "date": "2022-10-07",
+              "region": "서울 송파구 잠실2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19241850&&pageUnit=10&searchCtgry=%EC%9E%A0%EC%8B%A42%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "잠실2동"
+            },
+            {
+              "title": "주민등록 신고지연자 직권조치 결과 공고",
+              "category": "life",
+              "date": "2022-10-04",
+              "region": "서울 송파구 잠실2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19241752&&pageUnit=10&searchCtgry=%EC%9E%A0%EC%8B%A42%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "잠실2동"
+            },
+            {
+              "title": "주민등록 신고지연자 직권조치 결과 공고",
+              "category": "life",
+              "date": "2022-10-04",
+              "region": "서울 송파구 잠실2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19241750&&pageUnit=10&searchCtgry=%EC%9E%A0%EC%8B%A42%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "잠실2동"
+            },
+            {
+              "title": "주민등록신고지연자 최고 공고",
+              "category": "life",
+              "date": "2022-09-22",
+              "region": "서울 송파구 잠실2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19241534&&pageUnit=10&searchCtgry=%EC%9E%A0%EC%8B%A42%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "잠실2동"
+            }
+          ]
+        },
+        {
+          "dong": "잠실3동",
+          "board": "송파구 동 소식",
+          "list_url": "https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=36&key=2619&searchCtgry=%EC%9E%A0%EC%8B%A43%EB%8F%99",
+          "method": "html_list",
+          "status": "ok",
+          "count": 10,
+          "notices": [
+            {
+              "title": "잠실3동 자치회관 프로그램(기초회화 드로잉) 강사 모집",
+              "category": "life",
+              "date": "2026-11-19",
+              "region": "서울 송파구 잠실3동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280486&&pageUnit=10&searchCtgry=%EC%9E%A0%EC%8B%A43%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "잠실3동"
+            },
+            {
+              "title": "「2027년 상반기 서울 동행일자리사업(송파구)」 참여자 모집 안내",
+              "category": "life",
+              "date": "2026-11-19",
+              "region": "서울 송파구 잠실3동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280485&&pageUnit=10&searchCtgry=%EC%9E%A0%EC%8B%A43%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "잠실3동"
+            },
+            {
+              "title": "2026년 4분기 잠실3동 자치회관 2관 프로그램 수강생 모집",
+              "category": "life",
+              "date": "2026-09-16",
+              "region": "서울 송파구 잠실3동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19279181&&pageUnit=10&searchCtgry=%EC%9E%A0%EC%8B%A43%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "잠실3동"
+            },
+            {
+              "title": "2026년 4분기 잠실3동 자치회관 1관 프로그램 수강생 모집",
+              "category": "life",
+              "date": "2026-09-16",
+              "region": "서울 송파구 잠실3동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19279180&&pageUnit=10&searchCtgry=%EC%9E%A0%EC%8B%A43%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "잠실3동"
+            },
+            {
+              "title": "주민등록 장기 거주불명자 직권조치 및 결과 공고",
+              "category": "life",
+              "date": "2025-12-15",
+              "region": "서울 송파구 잠실3동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19271644&&pageUnit=10&searchCtgry=%EC%9E%A0%EC%8B%A43%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "잠실3동"
+            },
+            {
+              "title": "주민등록 장기 거주불명자(5년이상) 최고 공고",
+              "category": "life",
+              "date": "2025-12-03",
+              "region": "서울 송파구 잠실3동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19271400&&pageUnit=10&searchCtgry=%EC%9E%A0%EC%8B%A43%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "잠실3동"
+            },
+            {
+              "title": "탄천변 동측도로 광평교 하부 통과도로 영구폐쇄 안내",
+              "category": "work",
+              "date": "2025-10-23",
+              "region": "서울 송파구 잠실3동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19270371&&pageUnit=10&searchCtgry=%EC%9E%A0%EC%8B%A43%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "잠실3동"
+            },
+            {
+              "title": "커피찌꺼기 재활용사업 참여 안내",
+              "category": "life",
+              "date": "2025-10-02",
+              "region": "서울 송파구 잠실3동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19270025&&pageUnit=10&searchCtgry=%EC%9E%A0%EC%8B%A43%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "잠실3동"
+            },
+            {
+              "title": "시내버스 정류소 명칭 변경 안내",
+              "category": "life",
+              "date": "2025-09-05",
+              "region": "서울 송파구 잠실3동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19269517&&pageUnit=10&searchCtgry=%EC%9E%A0%EC%8B%A43%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "잠실3동"
+            },
+            {
+              "title": "탄천동로 시점부(정신여고) 전면통제 및 우회안내(수정)",
+              "category": "urgent",
+              "date": "2025-08-11",
+              "region": "서울 송파구 잠실3동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19268966&&pageUnit=10&searchCtgry=%EC%9E%A0%EC%8B%A43%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "잠실3동"
+            }
+          ]
+        },
+        {
+          "dong": "잠실4동",
+          "board": "송파구 동 소식",
+          "list_url": "https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=36&key=2619&searchCtgry=%EC%9E%A0%EC%8B%A44%EB%8F%99",
+          "method": "html_list",
+          "status": "ok",
+          "count": 10,
+          "notices": [
+            {
+              "title": "잠실4동 2026년 4분기(10~12월) 자치회관 프로그램 수강생 모집",
+              "category": "life",
+              "date": "2026-09-01",
+              "region": "서울 송파구 잠실4동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19278766&&pageUnit=10&searchCtgry=%EC%9E%A0%EC%8B%A44%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "잠실4동"
+            },
+            {
+              "title": "2021년 1분기 행정상 관리주소 이전 공고(2차)",
+              "category": "life",
+              "date": "2022-11-04",
+              "region": "서울 송파구 잠실4동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19242779&&pageUnit=10&searchCtgry=%EC%9E%A0%EC%8B%A44%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "잠실4동"
+            },
+            {
+              "title": "내손으로 뚝딱 만드는 나만의 장난감 수강생 모집",
+              "category": "life",
+              "date": "2022-11-04",
+              "region": "서울 송파구 잠실4동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19242766&&pageUnit=10&searchCtgry=%EC%9E%A0%EC%8B%A44%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "잠실4동"
+            },
+            {
+              "title": "돌봄SOS 안내",
+              "category": "welfare",
+              "date": "2022-11-02",
+              "region": "서울 송파구 잠실4동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19242643&&pageUnit=10&searchCtgry=%EC%9E%A0%EC%8B%A44%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "잠실4동"
+            },
+            {
+              "title": "2021년 1분기 행정상 관리주소 이전 공고(1차)",
+              "category": "life",
+              "date": "2022-10-27",
+              "region": "서울 송파구 잠실4동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19242498&&pageUnit=10&searchCtgry=%EC%9E%A0%EC%8B%A44%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "잠실4동"
+            },
+            {
+              "title": "주민등록 신고지연 공고",
+              "category": "life",
+              "date": "2022-10-24",
+              "region": "서울 송파구 잠실4동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19242436&&pageUnit=10&searchCtgry=%EC%9E%A0%EC%8B%A44%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "잠실4동"
+            },
+            {
+              "title": "2022년 잠실4동 한마음 탁구대회 개최",
+              "category": "life",
+              "date": "2022-10-19",
+              "region": "서울 송파구 잠실4동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19242346&&pageUnit=10&searchCtgry=%EC%9E%A0%EC%8B%A44%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "잠실4동"
+            },
+            {
+              "title": "장기거주불명자 직권조치 결과공고",
+              "category": "life",
+              "date": "2022-09-13",
+              "region": "서울 송파구 잠실4동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19241310&&pageUnit=10&searchCtgry=%EC%9E%A0%EC%8B%A44%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "잠실4동"
+            },
+            {
+              "title": "2022년 4분기(10월~12월) 잠실4동 자치회관 프로그램 수강생 모집 안내",
+              "category": "life",
+              "date": "2022-09-13",
+              "region": "서울 송파구 잠실4동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19241288&&pageUnit=10&searchCtgry=%EC%9E%A0%EC%8B%A44%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "잠실4동"
+            },
+            {
+              "title": "장기거주불명자 최고공고",
+              "category": "life",
+              "date": "2022-08-16",
+              "region": "서울 송파구 잠실4동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19240669&&pageUnit=10&searchCtgry=%EC%9E%A0%EC%8B%A44%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "잠실4동"
+            }
+          ]
+        },
+        {
+          "dong": "잠실6동",
+          "board": "송파구 동 소식",
+          "list_url": "https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=36&key=2619&searchCtgry=%EC%9E%A0%EC%8B%A46%EB%8F%99",
+          "method": "html_list",
+          "status": "ok",
+          "count": 10,
+          "notices": [
+            {
+              "title": "주민등록 신고의무 지연자 최고공고",
+              "category": "life",
+              "date": "2026-11-19",
+              "region": "서울 송파구 잠실6동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280492&&pageUnit=10&searchCtgry=%EC%9E%A0%EC%8B%A46%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "잠실6동"
+            },
+            {
+              "title": "거주불명등록자 행정상 관리주소 이전 공고(1차)",
+              "category": "life",
+              "date": "2026-11-19",
+              "region": "서울 송파구 잠실6동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280490&&pageUnit=10&searchCtgry=%EC%9E%A0%EC%8B%A46%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "잠실6동"
+            },
+            {
+              "title": "2026년 4분기 잠실6동 자치회관 수강생 모집 안내",
+              "category": "life",
+              "date": "2026-09-02",
+              "region": "서울 송파구 잠실6동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19278835&&pageUnit=10&searchCtgry=%EC%9E%A0%EC%8B%A46%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "잠실6동"
+            },
+            {
+              "title": "내손으로 뚝딱 만드는 나만의 장난감 수강생 모집",
+              "category": "life",
+              "date": "2022-11-04",
+              "region": "서울 송파구 잠실6동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19242768&&pageUnit=10&searchCtgry=%EC%9E%A0%EC%8B%A46%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "잠실6동"
+            },
+            {
+              "title": "주택 내 녹에 취약한 급수관 교체 지원사업 안내",
+              "category": "welfare",
+              "date": "2022-06-23",
+              "region": "서울 송파구 잠실6동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19238759&&pageUnit=10&searchCtgry=%EC%9E%A0%EC%8B%A46%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "잠실6동"
+            },
+            {
+              "title": "2022년 3분기 잠실6동 자치회관 프로그램 및 수강생 모집 안내",
+              "category": "life",
+              "date": "2022-06-20",
+              "region": "서울 송파구 잠실6동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19238641&&pageUnit=10&searchCtgry=%EC%9E%A0%EC%8B%A46%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "잠실6동"
+            },
+            {
+              "title": "잠실6동 자치회관 2022년 2분기 수강생 모집 안내",
+              "category": "life",
+              "date": "2022-03-31",
+              "region": "서울 송파구 잠실6동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19236405&&pageUnit=10&searchCtgry=%EC%9E%A0%EC%8B%A46%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "잠실6동"
+            },
+            {
+              "title": "송파구 새활용센터(구 재활용센터) 운영 안내",
+              "category": "life",
+              "date": "2022-02-25",
+              "region": "서울 송파구 잠실6동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19235153&&pageUnit=10&searchCtgry=%EC%9E%A0%EC%8B%A46%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "잠실6동"
+            },
+            {
+              "title": "제20대 대통령선거 거소투표신고 안내",
+              "category": "life",
+              "date": "2022-01-26",
+              "region": "서울 송파구 잠실6동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19234457&&pageUnit=10&searchCtgry=%EC%9E%A0%EC%8B%A46%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "잠실6동"
+            },
+            {
+              "title": "자치회관 강사모집\"실버(노래)\" 강사 모집",
+              "category": "life",
+              "date": "2021-11-03",
+              "region": "서울 송파구 잠실6동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19231228&&pageUnit=10&searchCtgry=%EC%9E%A0%EC%8B%A46%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "잠실6동"
+            }
+          ]
+        },
+        {
+          "dong": "잠실7동",
+          "board": "송파구 동 소식",
+          "list_url": "https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=36&key=2619&searchCtgry=%EC%9E%A0%EC%8B%A47%EB%8F%99",
+          "method": "html_list",
+          "status": "ok",
+          "count": 10,
+          "notices": [
+            {
+              "title": "주민등록 무단전출자 직권조치 결과 공고",
+              "category": "life",
+              "date": "2026-11-16",
+              "region": "서울 송파구 잠실7동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280401&&pageUnit=10&searchCtgry=%EC%9E%A0%EC%8B%A47%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "잠실7동"
+            },
+            {
+              "title": "주민등록 무단전출자 직권조치 결과 공고",
+              "category": "life",
+              "date": "2026-11-06",
+              "region": "서울 송파구 잠실7동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280113&&pageUnit=10&searchCtgry=%EC%9E%A0%EC%8B%A47%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "잠실7동"
+            },
+            {
+              "title": "2026년 10월 찾아가는 우산수리센터 잠실7동 방문 일정 안내",
+              "category": "life",
+              "date": "2026-09-23",
+              "region": "서울 송파구 잠실7동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19279302&&pageUnit=10&searchCtgry=%EC%9E%A0%EC%8B%A47%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "잠실7동"
+            },
+            {
+              "title": "2026년 4분기(10~12월) 잠실7동 자치회관 프로그램 접수 모집",
+              "category": "life",
+              "date": "2026-09-11",
+              "region": "서울 송파구 잠실7동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19279013&&pageUnit=10&searchCtgry=%EC%9E%A0%EC%8B%A47%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "잠실7동"
+            },
+            {
+              "title": "내손으로 뚝딱 만드는 나만의 장난감",
+              "category": "life",
+              "date": "2022-11-04",
+              "region": "서울 송파구 잠실7동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19242767&&pageUnit=10&searchCtgry=%EC%9E%A0%EC%8B%A47%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "잠실7동"
+            },
+            {
+              "title": "2022 상반기 자치회관 프로그램 수강료 수입 및 지출내역 공고",
+              "category": "life",
+              "date": "2022-07-15",
+              "region": "서울 송파구 잠실7동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19239872&&pageUnit=10&searchCtgry=%EC%9E%A0%EC%8B%A47%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "잠실7동"
+            },
+            {
+              "title": "통장 모집 재공고(8통)",
+              "category": "life",
+              "date": "2022-04-18",
+              "region": "서울 송파구 잠실7동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19237146&&pageUnit=10&searchCtgry=%EC%9E%A0%EC%8B%A47%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "잠실7동"
+            },
+            {
+              "title": "주민등록 직권조치결과 공고",
+              "category": "life",
+              "date": "2022-04-13",
+              "region": "서울 송파구 잠실7동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19237057&&pageUnit=10&searchCtgry=%EC%9E%A0%EC%8B%A47%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "잠실7동"
+            },
+            {
+              "title": "통장 모집 공고(8통)",
+              "category": "life",
+              "date": "2022-04-03",
+              "region": "서울 송파구 잠실7동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19236607&&pageUnit=10&searchCtgry=%EC%9E%A0%EC%8B%A47%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "잠실7동"
+            },
+            {
+              "title": "송파구 새활용센터(구 재활용센터) 운영 안내",
+              "category": "life",
+              "date": "2022-02-25",
+              "region": "서울 송파구 잠실7동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19235154&&pageUnit=10&searchCtgry=%EC%9E%A0%EC%8B%A47%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "잠실7동"
+            }
+          ]
+        },
+        {
+          "dong": "잠실본동",
+          "board": "송파구 동 소식",
+          "list_url": "https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=36&key=2619&searchCtgry=%EC%9E%A0%EC%8B%A4%EB%B3%B8%EB%8F%99",
+          "method": "html_list",
+          "status": "ok",
+          "count": 10,
+          "notices": [
+            {
+              "title": "주민등록 신고의무 지연자 최고 공고",
+              "category": "life",
+              "date": "2026-11-16",
+              "region": "서울 송파구 잠실본동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280410&&pageUnit=10&searchCtgry=%EC%9E%A0%EC%8B%A4%EB%B3%B8%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "잠실본동"
+            },
+            {
+              "title": "주민등록신고의무 지연자 행정상 관리주소 이전 2차 공고",
+              "category": "life",
+              "date": "2026-11-11",
+              "region": "서울 송파구 잠실본동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280326&&pageUnit=10&searchCtgry=%EC%9E%A0%EC%8B%A4%EB%B3%B8%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "잠실본동"
+            },
+            {
+              "title": "주민등록신고의무 지연자 최고공고",
+              "category": "life",
+              "date": "2026-11-11",
+              "region": "서울 송파구 잠실본동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280325&&pageUnit=10&searchCtgry=%EC%9E%A0%EC%8B%A4%EB%B3%B8%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "잠실본동"
+            },
+            {
+              "title": "2026년 4분기 자치회관 접수안내",
+              "category": "life",
+              "date": "2026-09-16",
+              "region": "서울 송파구 잠실본동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19279168&&pageUnit=10&searchCtgry=%EC%9E%A0%EC%8B%A4%EB%B3%B8%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "잠실본동"
+            },
+            {
+              "title": "추석명절 재활용품 분리배출 캠페인 참여 안내",
+              "category": "life",
+              "date": "2026-09-16",
+              "region": "서울 송파구 잠실본동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19279166&&pageUnit=10&searchCtgry=%EC%9E%A0%EC%8B%A4%EB%B3%B8%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "잠실본동"
+            },
+            {
+              "title": "서울시 「2026년 대시민 정비사업 아카데미」 안내",
+              "category": "life",
+              "date": "2026-07-31",
+              "region": "서울 송파구 잠실본동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19278244&&pageUnit=10&searchCtgry=%EC%9E%A0%EC%8B%A4%EB%B3%B8%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "잠실본동"
+            },
+            {
+              "title": "2026년 담장허물기 사업 안내",
+              "category": "life",
+              "date": "2026-02-27",
+              "region": "서울 송파구 잠실본동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19274835&&pageUnit=10&searchCtgry=%EC%9E%A0%EC%8B%A4%EB%B3%B8%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "잠실본동"
+            },
+            {
+              "title": "잠실본동 폐기물 배출 안내",
+              "category": "life",
+              "date": "2025-03-12",
+              "region": "서울 송파구 잠실본동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19264760&&pageUnit=10&searchCtgry=%EC%9E%A0%EC%8B%A4%EB%B3%B8%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "잠실본동"
+            },
+            {
+              "title": "2024년 3분기 잠실본동 자치회관 수강생 모집 안내",
+              "category": "life",
+              "date": "2024-06-03",
+              "region": "서울 송파구 잠실본동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19258138&&pageUnit=10&searchCtgry=%EC%9E%A0%EC%8B%A4%EB%B3%B8%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "잠실본동"
+            },
+            {
+              "title": "주민자치위원회 위원 인적사항 공고",
+              "category": "life",
+              "date": "2024-01-18",
+              "region": "서울 송파구 잠실본동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19254516&&pageUnit=10&searchCtgry=%EC%9E%A0%EC%8B%A4%EB%B3%B8%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "잠실본동"
+            }
+          ]
+        },
+        {
+          "dong": "장지동",
+          "board": "송파구 동 소식",
+          "list_url": "https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=36&key=2619&searchCtgry=%EC%9E%A5%EC%A7%80%EB%8F%99",
+          "method": "html_list",
+          "status": "ok",
+          "count": 10,
+          "notices": [
+            {
+              "title": "[공고}장지동 자치회관 프로그램 강사 모집 공고",
+              "category": "life",
+              "date": "2026-11-18",
+              "region": "서울 송파구 장지동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280461&&pageUnit=10&searchCtgry=%EC%9E%A5%EC%A7%80%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "장지동"
+            },
+            {
+              "title": "(공고)거주불명 등록자 행정상 관리주소 이전 공고(1차)",
+              "category": "life",
+              "date": "2026-11-18",
+              "region": "서울 송파구 장지동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280459&&pageUnit=10&searchCtgry=%EC%9E%A5%EC%A7%80%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "장지동"
+            },
+            {
+              "title": "(공고)장지동 자치회관 운영세칙 일부 개정 공고",
+              "category": "life",
+              "date": "2026-11-17",
+              "region": "서울 송파구 장지동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280441&&pageUnit=10&searchCtgry=%EC%9E%A5%EC%A7%80%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "장지동"
+            },
+            {
+              "title": "(공고)장기 거주불명자 직권조치 및 결과 공고",
+              "category": "life",
+              "date": "2026-10-29",
+              "region": "서울 송파구 장지동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19279932&&pageUnit=10&searchCtgry=%EC%9E%A5%EC%A7%80%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "장지동"
+            },
+            {
+              "title": "2026년 2분기(4월~6월) 장지동 자치회관 프로그램 접수 안내",
+              "category": "life",
+              "date": "2026-02-20",
+              "region": "서울 송파구 장지동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19274685&&pageUnit=10&searchCtgry=%EC%9E%A5%EC%A7%80%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "장지동"
+            },
+            {
+              "title": "2025년 장지동주민센터 식당운영 기간제근로자 채용 공고",
+              "category": "life",
+              "date": "2024-12-06",
+              "region": "서울 송파구 장지동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19262396&&pageUnit=10&searchCtgry=%EC%9E%A5%EC%A7%80%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "장지동"
+            },
+            {
+              "title": "2023년 장지동주민센터 구내식당 운영 기간제근로자 채용 공고",
+              "category": "life",
+              "date": "2022-12-08",
+              "region": "서울 송파구 장지동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19243775&&pageUnit=10&searchCtgry=%EC%9E%A5%EC%A7%80%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "장지동"
+            },
+            {
+              "title": "내손으로 뚝딱 만드는 나만의 장난감 수강생 모집",
+              "category": "life",
+              "date": "2022-11-04",
+              "region": "서울 송파구 장지동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19242770&&pageUnit=10&searchCtgry=%EC%9E%A5%EC%A7%80%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "장지동"
+            },
+            {
+              "title": "[공고] 신규 주민등록증 발급 통지 공고",
+              "category": "life",
+              "date": "2022-11-03",
+              "region": "서울 송파구 장지동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19242709&&pageUnit=10&searchCtgry=%EC%9E%A5%EC%A7%80%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "장지동"
+            },
+            {
+              "title": "[공고] 주민등록 무단전출자 최고 공고",
+              "category": "life",
+              "date": "2022-10-27",
+              "region": "서울 송파구 장지동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19242507&&pageUnit=10&searchCtgry=%EC%9E%A5%EC%A7%80%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "장지동"
+            }
+          ]
+        },
+        {
+          "dong": "풍납1동",
+          "board": "송파구 동 소식",
+          "list_url": "https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=36&key=2619&searchCtgry=%ED%92%8D%EB%82%A91%EB%8F%99",
+          "method": "html_list",
+          "status": "ok",
+          "count": 10,
+          "notices": [
+            {
+              "title": "[ 공고]주민등록 무단전출자 직권조치 결과 공고",
+              "category": "life",
+              "date": "2026-11-18",
+              "region": "서울 송파구 풍납1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280453&&pageUnit=10&searchCtgry=%ED%92%8D%EB%82%A91%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "풍납1동"
+            },
+            {
+              "title": "풍납1동 13통장 모집 공고",
+              "category": "life",
+              "date": "2026-11-17",
+              "region": "서울 송파구 풍납1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280449&&pageUnit=10&searchCtgry=%ED%92%8D%EB%82%A91%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "풍납1동"
+            },
+            {
+              "title": "풍납1동 자치회관 프로그램(어르신 스마트폰 활용) 강사 모집 공고",
+              "category": "life",
+              "date": "2026-11-11",
+              "region": "서울 송파구 풍납1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280305&&pageUnit=10&searchCtgry=%ED%92%8D%EB%82%A91%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "풍납1동"
+            },
+            {
+              "title": "[자치회관] 2026년 4분기 자치회관 프로그램 수강생 모집",
+              "category": "life",
+              "date": "2026-09-03",
+              "region": "서울 송파구 풍납1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19278847&&pageUnit=10&searchCtgry=%ED%92%8D%EB%82%A91%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "풍납1동"
+            },
+            {
+              "title": "2026년 상반기 자치회관 프로그램 수강료 수입 및 지출내역 공고",
+              "category": "life",
+              "date": "2026-07-15",
+              "region": "서울 송파구 풍납1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19277925&&pageUnit=10&searchCtgry=%ED%92%8D%EB%82%A91%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "풍납1동"
+            },
+            {
+              "title": "새마을문고 회원 모집 공고",
+              "category": "life",
+              "date": "2025-05-08",
+              "region": "서울 송파구 풍납1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19265970&&pageUnit=10&searchCtgry=%ED%92%8D%EB%82%A91%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "풍납1동"
+            },
+            {
+              "title": "내손으로 뚝딱 만드는 나만의 장난감 수강생 모집",
+              "category": "life",
+              "date": "2022-11-04",
+              "region": "서울 송파구 풍납1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19242771&&pageUnit=10&searchCtgry=%ED%92%8D%EB%82%A91%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "풍납1동"
+            },
+            {
+              "title": "송파구 새활용센터(구 재활용센터) 운영 안내",
+              "category": "life",
+              "date": "2022-02-25",
+              "region": "서울 송파구 풍납1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19235156&&pageUnit=10&searchCtgry=%ED%92%8D%EB%82%A91%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "풍납1동"
+            },
+            {
+              "title": "2022년 풍납1동주민센터 식당운영 기간제근로자 채용공고",
+              "category": "life",
+              "date": "2021-12-14",
+              "region": "서울 송파구 풍납1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19233395&&pageUnit=10&searchCtgry=%ED%92%8D%EB%82%A91%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "풍납1동"
+            },
+            {
+              "title": "통장모집공고(12, 16, 18, 19, 21통)",
+              "category": "life",
+              "date": "2021-12-02",
+              "region": "서울 송파구 풍납1동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19233133&&pageUnit=10&searchCtgry=%ED%92%8D%EB%82%A91%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "풍납1동"
+            }
+          ]
+        },
+        {
+          "dong": "풍납2동",
+          "board": "송파구 동 소식",
+          "list_url": "https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=36&key=2619&searchCtgry=%ED%92%8D%EB%82%A92%EB%8F%99",
+          "method": "html_list",
+          "status": "ok",
+          "count": 10,
+          "notices": [
+            {
+              "title": "2026년 주민등록 장기거주불명자 직권조치 결과 공고",
+              "category": "life",
+              "date": "2026-11-17",
+              "region": "서울 송파구 풍납2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280435&&pageUnit=10&searchCtgry=%ED%92%8D%EB%82%A92%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "풍납2동"
+            },
+            {
+              "title": "신고의무지연자에 대한 최고공고",
+              "category": "life",
+              "date": "2026-11-17",
+              "region": "서울 송파구 풍납2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280434&&pageUnit=10&searchCtgry=%ED%92%8D%EB%82%A92%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "풍납2동"
+            },
+            {
+              "title": "송파 그냥드림사업 안내",
+              "category": "life",
+              "date": "2026-11-09",
+              "region": "서울 송파구 풍납2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19280167&&pageUnit=10&searchCtgry=%ED%92%8D%EB%82%A92%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "풍납2동"
+            },
+            {
+              "title": "신규주민등록증 발급통지 공고",
+              "category": "life",
+              "date": "2026-10-30",
+              "region": "서울 송파구 풍납2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19279959&&pageUnit=10&searchCtgry=%ED%92%8D%EB%82%A92%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "풍납2동"
+            },
+            {
+              "title": "[공고제2022-26호]행정상 관리주소 이전 공고(2차)",
+              "category": "life",
+              "date": "2022-11-09",
+              "region": "서울 송파구 풍납2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19242902&&pageUnit=10&searchCtgry=%ED%92%8D%EB%82%A92%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "풍납2동"
+            },
+            {
+              "title": "내손으로 뚝딱 만드는 나만의 장난감 수강생 모집",
+              "category": "life",
+              "date": "2022-11-04",
+              "region": "서울 송파구 풍납2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19242772&&pageUnit=10&searchCtgry=%ED%92%8D%EB%82%A92%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "풍납2동"
+            },
+            {
+              "title": "[공고제2022-25호]행정상 관리주소 이전 공고(1차)",
+              "category": "life",
+              "date": "2022-10-06",
+              "region": "서울 송파구 풍납2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19241818&&pageUnit=10&searchCtgry=%ED%92%8D%EB%82%A92%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "풍납2동"
+            },
+            {
+              "title": "통장 공개모집 공고(13통, 19통)",
+              "category": "life",
+              "date": "2022-10-04",
+              "region": "서울 송파구 풍납2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19241761&&pageUnit=10&searchCtgry=%ED%92%8D%EB%82%A92%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "풍납2동"
+            },
+            {
+              "title": "[공고제2022-23호]주민등록 무단전출자 직권조지 결과 공고",
+              "category": "life",
+              "date": "2022-09-20",
+              "region": "서울 송파구 풍납2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19241479&&pageUnit=10&searchCtgry=%ED%92%8D%EB%82%A92%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "풍납2동"
+            },
+            {
+              "title": "[공고제2022-22호]주민등록 무단전출 대상자에 대한 공고",
+              "category": "life",
+              "date": "2022-09-07",
+              "region": "서울 송파구 풍납2동",
+              "source": "송파구 동 소식",
+              "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=36&nttNo=19241214&&pageUnit=10&searchCtgry=%ED%92%8D%EB%82%A92%EB%8F%99&key=2619&pageIndex=1",
+              "gu": "서울 송파구",
+              "dong": "풍납2동"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "total_dongs": 44,
+  "total_notices": 270,
+  "note": "동 행정복지센터 소식이다. 제목·날짜·원문 링크만 저장하고 본문은 복사하지 않는다. 한 동 가져오기가 실패하면 그 동의 기존 소식을 유지한다. 성동구는 이 서버에서 직접 가져오기가 끊겨 브라우저 경유가 필요하다. 동 소식은 주민등록 공시송달·최고공고 비중이 높아 선별이 필요할 수 있다."
+}
