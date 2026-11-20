@@ -1,7 +1,7 @@
 {
   "service": "udong",
-  "generated_at_kst": "2026-11-19 17:58 KST",
-  "generated_at": "2026-11-19T17:58:09.504190+09:00",
+  "generated_at_kst": "2026-11-20 11:15 KST",
+  "generated_at": "2026-11-20T11:15:56.645655+09:00",
   "regions": [
     {
       "region": "서울 강남구",
@@ -102,6 +102,30 @@
       "count": 10,
       "notices": [
         {
+          "title": "2026년 주민등록 장기 거주불명자 최고공고(추가)",
+          "category": "life",
+          "date": "2026-11-20",
+          "region": "서울 서초구",
+          "source": "서초구청 공지사항",
+          "url": "https://www.seocho.go.kr/site/seocho/ex/bbs/View.do?cbIdx=57&bcIdx=412768"
+        },
+        {
+          "title": "2026 주민등록 사실조사 무단전출자 및 주민등록 정정대상자 최고공고",
+          "category": "life",
+          "date": "2026-11-20",
+          "region": "서울 서초구",
+          "source": "서초구청 공지사항",
+          "url": "https://www.seocho.go.kr/site/seocho/ex/bbs/View.do?cbIdx=57&bcIdx=412767"
+        },
+        {
+          "title": "2026년 서초복지돌봄재단 직원[대리_4급] 채용 공고",
+          "category": "welfare",
+          "date": "2026-11-19",
+          "region": "서울 서초구",
+          "source": "서초구청 공지사항",
+          "url": "https://www.seocho.go.kr/site/seocho/ex/bbs/View.do?cbIdx=57&bcIdx=412761"
+        },
+        {
           "title": "2026년 4분기 화물자동차 유가보조금 서면신청 접수 안내(12/1-12/4)",
           "category": "welfare",
           "date": "2026-11-19",
@@ -156,30 +180,6 @@
           "region": "서울 서초구",
           "source": "서초구청 공지사항",
           "url": "https://www.seocho.go.kr/site/seocho/ex/bbs/View.do?cbIdx=57&bcIdx=412738"
-        },
-        {
-          "title": "2026년 서초구보건소 모자보건팀 기간제근로자 채용 공고-변경",
-          "category": "life",
-          "date": "2026-11-18",
-          "region": "서울 서초구",
-          "source": "서초구청 공지사항",
-          "url": "https://www.seocho.go.kr/site/seocho/ex/bbs/View.do?cbIdx=57&bcIdx=412735"
-        },
-        {
-          "title": "2026년 성범죄 경력자 취업 점검 확인 결과 공개",
-          "category": "life",
-          "date": "2026-11-18",
-          "region": "서울 서초구",
-          "source": "서초구청 공지사항",
-          "url": "https://www.seocho.go.kr/site/seocho/ex/bbs/View.do?cbIdx=57&bcIdx=412729"
-        },
-        {
-          "title": "2026년 제1회 서초구 분양가심사위원회 심사위원 명단 공개",
-          "category": "life",
-          "date": "2026-11-18",
-          "region": "서울 서초구",
-          "source": "서초구청 공지사항",
-          "url": "https://www.seocho.go.kr/site/seocho/ex/bbs/View.do?cbIdx=57&bcIdx=412726"
         }
       ]
     },
@@ -188,9 +188,25 @@
       "board": "노원구청 공지사항",
       "rss": "https://www.nowon.kr/www/user/bbs/ND_selectRssList.do?q_bbsCode=1001&q_estnColumn1=11",
       "list_url": "",
-      "status": "fetch_failed:IncompleteRead",
+      "status": "ok",
       "count": 10,
       "notices": [
+        {
+          "title": "2027학년도 초등학교 취학통지서 온라인 발급 안내",
+          "category": "life",
+          "date": "2026-11-20",
+          "region": "서울 노원구",
+          "source": "노원구청 공지사항",
+          "url": "https://www.nowon.kr/www/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_estnColumn1=11&q_bbscttSn=20261120095359171"
+        },
+        {
+          "title": "제4회 노원연희마당놀이극 <마들골 흥부 떴다!> 공연 개최 안내",
+          "category": "event",
+          "date": "2026-11-19",
+          "region": "서울 노원구",
+          "source": "노원구청 공지사항",
+          "url": "https://www.nowon.kr/www/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_estnColumn1=11&q_bbscttSn=20261119190421968"
+        },
         {
           "title": "[ 2026년 영구임대주택 예비입주자 모집 안내 ]",
           "category": "life",
@@ -214,14 +230,6 @@
           "region": "서울 노원구",
           "source": "노원구청 공지사항",
           "url": "https://www.nowon.kr/www/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_estnColumn1=11&q_bbscttSn=20261118091235954"
-        },
-        {
-          "title": "[2026 건강도시 이벤트] 우리는 함께 한다:식생활편 이벤트 당첨자 발표",
-          "category": "life",
-          "date": "2026-11-17",
-          "region": "서울 노원구",
-          "source": "노원구청 공지사항",
-          "url": "https://www.nowon.kr/www/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_estnColumn1=11&q_bbscttSn=20261117154327497"
         },
         {
           "title": "불암산아트포레 갤러리   「파란:마음으로 그리고, 예술로 꿈꾸다」개최 안내",
@@ -262,14 +270,6 @@
           "region": "서울 노원구",
           "source": "노원구청 공지사항",
           "url": "https://www.nowon.kr/www/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_estnColumn1=11&q_bbscttSn=20261116132318774"
-        },
-        {
-          "title": "민간임대주택 협동조합형 회원모집 관련 유의사항 안내",
-          "category": "life",
-          "date": "2026-11-12",
-          "region": "서울 노원구",
-          "source": "노원구청 공지사항",
-          "url": "https://www.nowon.kr/www/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_estnColumn1=11&q_bbscttSn=20261112141438446"
         }
       ]
     },
@@ -465,7 +465,7 @@
         {
           "title": "상수도 동결·동파 예방 안내",
           "category": "life",
-          "date": "2026-11-19",
+          "date": "2026-11-20",
           "region": "대구광역시",
           "source": "대구시 공지사항",
           "url": "https://www.daegu.go.kr/index.do?menu_id=00000854&menu_link=/icms/bbs/selectBoardArticle.do&bbsId=BBS_00029&nttId=832667"
@@ -473,7 +473,7 @@
         {
           "title": "대구광역시 악취관리지역에 대한 엄격한 배출허용기준 설정을 위한 의견수렴 공고",
           "category": "life",
-          "date": "2026-11-19",
+          "date": "2026-11-20",
           "region": "대구광역시",
           "source": "대구시 공지사항",
           "url": "https://www.daegu.go.kr/index.do?menu_id=00000854&menu_link=/icms/bbs/selectBoardArticle.do&bbsId=BBS_00029&nttId=832492"
@@ -481,7 +481,7 @@
         {
           "title": "「달성2차·테크노폴리스·대구국가산업단지 공공폐수처리시설 운영 및 비용부담규정」 개정(안) 의견 조회",
           "category": "life",
-          "date": "2026-11-19",
+          "date": "2026-11-20",
           "region": "대구광역시",
           "source": "대구시 공지사항",
           "url": "https://www.daegu.go.kr/index.do?menu_id=00000854&menu_link=/icms/bbs/selectBoardArticle.do&bbsId=BBS_00029&nttId=832575"
@@ -489,7 +489,7 @@
         {
           "title": "2027학년도 수능 당일 위급재난문자 발송 안내",
           "category": "urgent",
-          "date": "2026-11-19",
+          "date": "2026-11-20",
           "region": "대구광역시",
           "source": "대구시 공지사항",
           "url": "https://www.daegu.go.kr/index.do?menu_id=00000854&menu_link=/icms/bbs/selectBoardArticle.do&bbsId=BBS_00029&nttId=832380"
@@ -497,7 +497,7 @@
         {
           "title": "2026 대구 미래놀이포럼 개최",
           "category": "life",
-          "date": "2026-11-19",
+          "date": "2026-11-20",
           "region": "대구광역시",
           "source": "대구시 공지사항",
           "url": "https://www.daegu.go.kr/index.do?menu_id=00000854&menu_link=/icms/bbs/selectBoardArticle.do&bbsId=BBS_00029&nttId=832235"
@@ -505,7 +505,7 @@
         {
           "title": "일일재난종합상황(11.17.)",
           "category": "urgent",
-          "date": "2026-11-19",
+          "date": "2026-11-20",
           "region": "대구광역시",
           "source": "대구시 공지사항",
           "url": "https://www.daegu.go.kr/index.do?menu_id=00000854&menu_link=/icms/bbs/selectBoardArticle.do&bbsId=BBS_00029&nttId=832377"
@@ -513,7 +513,7 @@
         {
           "title": "시 대표 홈페이지 서비스 일시 중단 안내(2026.11.17.(화) 18:00~23:00)",
           "category": "life",
-          "date": "2026-11-19",
+          "date": "2026-11-20",
           "region": "대구광역시",
           "source": "대구시 공지사항",
           "url": "https://www.daegu.go.kr/index.do?menu_id=00000854&menu_link=/icms/bbs/selectBoardArticle.do&bbsId=BBS_00029&nttId=832309"
@@ -521,7 +521,7 @@
         {
           "title": "2027년 지역대표예술단체 지원사업 공모(대구시 자체 공모) 알림",
           "category": "welfare",
-          "date": "2026-11-19",
+          "date": "2026-11-20",
           "region": "대구광역시",
           "source": "대구시 공지사항",
           "url": "https://www.daegu.go.kr/index.do?menu_id=00000854&menu_link=/icms/bbs/selectBoardArticle.do&bbsId=BBS_00029&nttId=832296"
@@ -529,7 +529,7 @@
         {
           "title": "2026년 제2회 대구시 정책제안 공모 심사 온라인 시민투표 안내",
           "category": "life",
-          "date": "2026-11-19",
+          "date": "2026-11-20",
           "region": "대구광역시",
           "source": "대구시 공지사항",
           "url": "https://www.daegu.go.kr/index.do?menu_id=00000854&menu_link=/icms/bbs/selectBoardArticle.do&bbsId=BBS_00029&nttId=832038"
@@ -537,7 +537,7 @@
         {
           "title": "「2026 대구 창의도시재생위크」 행사 안내",
           "category": "event",
-          "date": "2026-11-19",
+          "date": "2026-11-20",
           "region": "대구광역시",
           "source": "대구시 공지사항",
           "url": "https://www.daegu.go.kr/index.do?menu_id=00000854&menu_link=/icms/bbs/selectBoardArticle.do&bbsId=BBS_00029&nttId=831934"
@@ -643,6 +643,14 @@
       "count": 10,
       "notices": [
         {
+          "title": "방학1동 통장모집 공고(제33통)",
+          "category": "life",
+          "date": "2026-11-20",
+          "region": "서울 도봉구",
+          "source": "도봉구 동 게시판(방학1동)",
+          "url": "https://www.dobong.go.kr/dong/bbs.asp?bmode=D&pcode=12748026&code=10009682"
+        },
+        {
           "title": "방학1동 자치회관 교양강좌 강사 선정 결과 발표",
           "category": "event",
           "date": "2026-11-12",
@@ -713,14 +721,6 @@
           "region": "서울 도봉구",
           "source": "도봉구 동 게시판(방학1동)",
           "url": "https://www.dobong.go.kr/dong/bbs.asp?bmode=D&pcode=12745918&code=10009682"
-        },
-        {
-          "title": "도봉구 주요 구정사업 안내【2026년 8월 넷째 주】",
-          "category": "life",
-          "date": "2026-08-26",
-          "region": "서울 도봉구",
-          "source": "도봉구 동 게시판(방학1동)",
-          "url": "https://www.dobong.go.kr/dong/bbs.asp?bmode=D&pcode=12745695&code=10009682"
         }
       ],
       "board_note": "동 게시판이다. 본청 공지 게시판이 아니다. 최신이 2026-11-12로 일주일 전이다."
@@ -733,6 +733,14 @@
       "status": "ok",
       "count": 10,
       "notices": [
+        {
+          "title": "경기도 청년참여기구 제6기 모집 안내",
+          "category": "life",
+          "date": "2026-11-20",
+          "region": "경기 하남시",
+          "source": "하남시청 공지사항",
+          "url": "https://www.hanam.go.kr/www/selectBbsNttView.do?key=170&bbsNo=30&nttNo=504312&searchCtgry=&searchCnd=all&searchKrwd=&pageIndex=1&integrDeptCode=&selectPageUnit="
+        },
         {
           "title": "2026년 하반기 학교체육시설 사용료 지원 신청 안내",
           "category": "welfare",
@@ -804,14 +812,6 @@
           "region": "경기 하남시",
           "source": "하남시청 공지사항",
           "url": "https://www.hanam.go.kr/www/selectBbsNttView.do?key=170&bbsNo=30&nttNo=503857&searchCtgry=&searchCnd=all&searchKrwd=&pageIndex=1&integrDeptCode=&selectPageUnit="
-        },
-        {
-          "title": "[학습자모집] 하남시 평생학습관 지식나눔학교 하반기 2차 정규강좌 개설",
-          "category": "event",
-          "date": "2026-11-03",
-          "region": "경기 하남시",
-          "source": "하남시청 공지사항",
-          "url": "https://www.hanam.go.kr/www/selectBbsNttView.do?key=170&bbsNo=30&nttNo=503851&searchCtgry=&searchCnd=all&searchKrwd=&pageIndex=1&integrDeptCode=&selectPageUnit="
         }
       ]
     },
@@ -820,9 +820,17 @@
       "board": "가평군청 공지사항",
       "list_url": "https://www.gp.go.kr/portal/selectBbsNttList.do?key=501&bbsNo=150",
       "method": "html_list",
-      "status": "fetch_failed:RemoteDisconnected",
+      "status": "ok",
       "count": 10,
       "notices": [
+        {
+          "title": "2027년 농촌융복합산업 자금(융자) 지원사업 시행지침",
+          "category": "welfare",
+          "date": "2026-11-19",
+          "region": "경기 가평군",
+          "source": "가평군청 공지사항",
+          "url": "https://www.gp.go.kr/portal/selectBbsNttView.do?key=501&bbsNo=150&nttNo=290601&searchCtgry=&searchCnd=all&searchKrwd=&pageIndex=1&integrDeptCode="
+        },
         {
           "title": "2027년 동계 군정체험활동 참여자 모집 공고",
           "category": "life",
@@ -894,14 +902,6 @@
           "region": "경기 가평군",
           "source": "가평군청 공지사항",
           "url": "https://www.gp.go.kr/portal/selectBbsNttView.do?key=501&bbsNo=150&nttNo=290394&searchCtgry=&searchCnd=all&searchKrwd=&pageIndex=1&integrDeptCode="
-        },
-        {
-          "title": "제5차 국가철도망 구축계획 관련 군민 의견수렴 안내",
-          "category": "life",
-          "date": "2026-11-09",
-          "region": "경기 가평군",
-          "source": "가평군청 공지사항",
-          "url": "https://www.gp.go.kr/portal/selectBbsNttView.do?key=501&bbsNo=150&nttNo=290384&searchCtgry=&searchCnd=all&searchKrwd=&pageIndex=1&integrDeptCode="
         }
       ]
     },
@@ -913,6 +913,22 @@
       "status": "ok",
       "count": 10,
       "notices": [
+        {
+          "title": "2026년 군포시 숏폼영상 공모전 「군포숏폼」수상작 선정 결과 안내",
+          "category": "life",
+          "date": "2026-11-20",
+          "region": "경기 군포시",
+          "source": "군포시청 공지사항",
+          "url": "https://www.gunpo.go.kr/www/selectBbsNttView.do?key=3890&bbsNo=675&nttNo=330538&searchCtgry=&searchCnd=all&searchKrwd=&pageIndex=1&integrDeptCode="
+        },
+        {
+          "title": "2027년 군포시립소년소녀합창단(청소년실내관현악단) 단원 공개모집 안내",
+          "category": "life",
+          "date": "2026-11-19",
+          "region": "경기 군포시",
+          "source": "군포시청 공지사항",
+          "url": "https://www.gunpo.go.kr/www/selectBbsNttView.do?key=3890&bbsNo=675&nttNo=330462&searchCtgry=&searchCnd=all&searchKrwd=&pageIndex=1&integrDeptCode="
+        },
         {
           "title": "2027년 노인일자리 참여자 모집안내",
           "category": "life",
@@ -976,22 +992,6 @@
           "region": "경기 군포시",
           "source": "군포시청 공지사항",
           "url": "https://www.gunpo.go.kr/www/selectBbsNttView.do?key=3890&bbsNo=675&nttNo=330362&searchCtgry=&searchCnd=all&searchKrwd=&pageIndex=1&integrDeptCode="
-        },
-        {
-          "title": "「시민ON 군포LIVE」 11월 확대간부회의 유튜브 생중계",
-          "category": "life",
-          "date": "2026-11-17",
-          "region": "경기 군포시",
-          "source": "군포시청 공지사항",
-          "url": "https://www.gunpo.go.kr/www/selectBbsNttView.do?key=3890&bbsNo=675&nttNo=330328&searchCtgry=&searchCnd=all&searchKrwd=&pageIndex=1&integrDeptCode="
-        },
-        {
-          "title": "2026년 하반기 국무조정실 청년인재 DB 프로필 등록 안내(2차)",
-          "category": "life",
-          "date": "2026-11-17",
-          "region": "경기 군포시",
-          "source": "군포시청 공지사항",
-          "url": "https://www.gunpo.go.kr/www/selectBbsNttView.do?key=3890&bbsNo=675&nttNo=330327&searchCtgry=&searchCnd=all&searchKrwd=&pageIndex=1&integrDeptCode="
         }
       ]
     },
@@ -1094,6 +1094,14 @@
       "count": 8,
       "notices": [
         {
+          "title": "2026. 11. 21. 민주노총 집회에 따른 교통 통제 안내",
+          "category": "urgent",
+          "date": "2026-11-20",
+          "region": "경기 파주시",
+          "source": "파주시청 새소식",
+          "url": "https://www.paju.go.kr/user/plan_news/board/BD_board.view.do?bbsCd=2001&seq=20261120095418072"
+        },
+        {
           "title": "2026년 자동심장충격기(AED) 설치기관 서면점검 안내",
           "category": "life",
           "date": "2026-11-19",
@@ -1148,14 +1156,6 @@
           "region": "경기 파주시",
           "source": "파주시청 새소식",
           "url": "https://www.paju.go.kr/user/plan_news/board/BD_board.view.do?bbsCd=2001&seq=20261116155427919"
-        },
-        {
-          "title": "민통선 북상 정책 여론조사 참여 안내",
-          "category": "life",
-          "date": "2026-11-13",
-          "region": "경기 파주시",
-          "source": "파주시청 새소식",
-          "url": "https://www.paju.go.kr/user/plan_news/board/BD_board.view.do?bbsCd=2001&seq=20261113174119448"
         }
       ]
     },
@@ -1349,6 +1349,14 @@
       "count": 10,
       "notices": [
         {
+          "title": "공군 야간 비행 훈련 안내 (11월 4주)",
+          "category": "life",
+          "date": "2026-11-20",
+          "region": "서울 송파구",
+          "source": "송파구청 공지사항",
+          "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=92&nttNo=19280516&&pageUnit=10&key=2775&pageIndex=1"
+        },
+        {
           "title": "맞춤형 직무교육 『실무에서 바로 쓰는 엑셀활용법(활용반)』 안내",
           "category": "life",
           "date": "2026-11-17",
@@ -1373,7 +1381,7 @@
           "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=92&nttNo=19280419&&pageUnit=10&key=2775&pageIndex=1"
         },
         {
-          "title": "송파청년 취향 소통 클래스(와인/러닝) 참여자 모집 (모집 마감)",
+          "title": "송파청년 취향 소통 클래스(와인/러닝) 참여자 모집(송파구민 우선선발) - 모집마감",
           "category": "life",
           "date": "2026-11-13",
           "region": "서울 송파구",
@@ -1419,14 +1427,6 @@
           "region": "서울 송파구",
           "source": "송파구청 공지사항",
           "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=92&nttNo=19280124&&pageUnit=10&key=2775&pageIndex=1"
-        },
-        {
-          "title": "공군 야간 비행 훈련 안내 (11월 2주)",
-          "category": "life",
-          "date": "2026-11-04",
-          "region": "서울 송파구",
-          "source": "송파구청 공지사항",
-          "url": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=92&nttNo=19280080&&pageUnit=10&key=2775&pageIndex=1"
         }
       ],
       "board_note": "http는 리다이렉트 페이지만 반환하므로 https로 가져온다."
@@ -1439,6 +1439,22 @@
       "status": "ok",
       "count": 10,
       "notices": [
+        {
+          "title": "영등포 K-POP 댄스 아카데미(실전반) 수강생 모집(신길책마루문화센터)",
+          "category": "life",
+          "date": "2026-11-20",
+          "region": "서울 영등포구",
+          "source": "영등포구청 공지사항",
+          "url": "https://www.ydp.go.kr/www/selectBbsNttView.do?bbsNo=40&nttNo=421658&&pageUnit=10&key=2848&pageIndex=1"
+        },
+        {
+          "title": "[12월 신청] 2026년 청년 1인가구 급식 지원 사업 참여자 모집 안내(11. 23.(월) ~ 11. 27.(금)까지)",
+          "category": "welfare",
+          "date": "2026-11-20",
+          "region": "서울 영등포구",
+          "source": "영등포구청 공지사항",
+          "url": "https://www.ydp.go.kr/www/selectBbsNttView.do?bbsNo=40&nttNo=421653&&pageUnit=10&key=2848&pageIndex=1"
+        },
         {
           "title": "2026 영등포구 민회 사전토론회 유튜브 생중계 실시(11.20.(금) 13:30부터 라이브 방송 연결)",
           "category": "life",
@@ -1502,22 +1518,6 @@
           "region": "서울 영등포구",
           "source": "영등포구청 공지사항",
           "url": "https://www.ydp.go.kr/www/selectBbsNttView.do?bbsNo=40&nttNo=421565&&pageUnit=10&key=2848&pageIndex=1"
-        },
-        {
-          "title": "(오늘 오후3시!!) ★초대가수 심신, 송서아★ 제11회 천하제일 영등포 시니어 노래자랑 안내",
-          "category": "life",
-          "date": "2026-11-17",
-          "region": "서울 영등포구",
-          "source": "영등포구청 공지사항",
-          "url": "https://www.ydp.go.kr/www/selectBbsNttView.do?bbsNo=40&nttNo=421552&&pageUnit=10&key=2848&pageIndex=1"
-        },
-        {
-          "title": "영등포땡겨요상품권 이벤트 종료 안내",
-          "category": "life",
-          "date": "2026-11-16",
-          "region": "서울 영등포구",
-          "source": "영등포구청 공지사항",
-          "url": "https://www.ydp.go.kr/www/selectBbsNttView.do?bbsNo=40&nttNo=421541&&pageUnit=10&key=2848&pageIndex=1"
         }
       ]
     },
@@ -1526,7 +1526,7 @@
       "board": "종로구청 공지사항",
       "list_url": "http://jongno.go.kr/portal/bbs/selectBoardList.do?bbsId=BBSMSTR_000000000201&menuId=1752&menuNo=1752",
       "method": "html_list",
-      "status": "ok",
+      "status": "fetch_failed:RemoteDisconnected",
       "count": 10,
       "notices": [
         {
@@ -1620,6 +1620,14 @@
       "count": 10,
       "notices": [
         {
+          "title": "2026년 12월 토요일·공휴일 난지천 인조잔디 축구장 당첨 현황 안내",
+          "category": "life",
+          "date": "2026-11-20",
+          "region": "서울 마포구",
+          "source": "마포구청 공지사항",
+          "url": "https://www.mapo.go.kr/site/main/board/notice/279385?cp=1&sortOrder=BA_REGDATE&sortDirection=DESC&listType=list&bcId=notice&baNotice=false&baCommSelec=false&baOpenDay=false&baUse=true"
+        },
+        {
           "title": "축제거리(상상마당) 행사일정 2026. 11. 13. - 2026. 11. 15.",
           "category": "event",
           "date": "2026-11-13",
@@ -1684,14 +1692,6 @@
           "url": "https://www.mapo.go.kr/site/main/board/notice/279197?cp=1&sortOrder=BA_REGDATE&sortDirection=DESC&listType=list&bcId=notice&baNotice=false&baCommSelec=false&baOpenDay=false&baUse=true"
         },
         {
-          "title": "2026년 성범죄 경력자 취업 점검․확인 결과 공개(마포구 청소년상담복지센터, 학교밖청소년지원센터)",
-          "category": "welfare",
-          "date": "2026-11-09",
-          "region": "서울 마포구",
-          "source": "마포구청 공지사항",
-          "url": "https://www.mapo.go.kr/site/main/board/notice/279143?cp=1&sortOrder=BA_REGDATE&sortDirection=DESC&listType=list&bcId=notice&baNotice=false&baCommSelec=false&baOpenDay=false&baUse=true"
-        },
-        {
           "title": "2026년 제3기 생활과학교실 참가자 모집",
           "category": "life",
           "date": "2026-08-24",
@@ -1709,6 +1709,30 @@
       "status": "ok",
       "count": 10,
       "notices": [
+        {
+          "title": "세종시직장맘지원센터 직장맘·직장대디 지원프로그램 'AI로 여유 더하기' 교육 참여 홍보",
+          "category": "welfare",
+          "date": "2026-11-20",
+          "region": "세종특별자치시",
+          "source": "세종시청 공지사항",
+          "url": "https://www.sejong.go.kr/bbs/R0071/view.do?nttId=B000000165358At1zX8r&mno=sub02_01&cmsNoStr=&pageIndex=1&kind="
+        },
+        {
+          "title": "2026년 1388청소년지원단 양성교육 안내",
+          "category": "welfare",
+          "date": "2026-11-20",
+          "region": "세종특별자치시",
+          "source": "세종시청 공지사항",
+          "url": "https://www.sejong.go.kr/bbs/R0071/view.do?nttId=B000000165356Qj7uN2q&mno=sub02_01&cmsNoStr=&pageIndex=1&kind="
+        },
+        {
+          "title": "2026년 동절기 급수공사 중지 알림",
+          "category": "urgent",
+          "date": "2026-11-20",
+          "region": "세종특별자치시",
+          "source": "세종시청 공지사항",
+          "url": "https://www.sejong.go.kr/bbs/R0071/view.do?nttId=B000000165350Us3hJ3f&mno=sub02_01&cmsNoStr=&pageIndex=1&kind="
+        },
         {
           "title": "세종특별자치시아동보호전문기관 직원 채용 공고",
           "category": "life",
@@ -1764,30 +1788,6 @@
           "region": "세종특별자치시",
           "source": "세종시청 공지사항",
           "url": "https://www.sejong.go.kr/bbs/R0071/view.do?nttId=B000000165227Hv1sD9x&mno=sub02_01&cmsNoStr=&pageIndex=1&kind="
-        },
-        {
-          "title": "세종장애인주간이용센터 직원 채용공고",
-          "category": "life",
-          "date": "2026-11-18",
-          "region": "세종특별자치시",
-          "source": "세종시청 공지사항",
-          "url": "https://www.sejong.go.kr/bbs/R0071/view.do?nttId=B000000165225Da0wE7z&mno=sub02_01&cmsNoStr=&pageIndex=1&kind="
-        },
-        {
-          "title": "세종특별자치시육아종합지원센터 장애아통합어린이집 비상근 치료사 채용 공고",
-          "category": "welfare",
-          "date": "2026-11-18",
-          "region": "세종특별자치시",
-          "source": "세종시청 공지사항",
-          "url": "https://www.sejong.go.kr/bbs/R0071/view.do?nttId=B000000165220Es2cH4m&mno=sub02_01&cmsNoStr=&pageIndex=1&kind="
-        },
-        {
-          "title": "대학수학능력시험장 주변 공공와이파이 서비스 차단 안내(11.18~11.19)",
-          "category": "life",
-          "date": "2026-11-18",
-          "region": "세종특별자치시",
-          "source": "세종시청 공지사항",
-          "url": "https://www.sejong.go.kr/bbs/R0071/view.do?nttId=B000000165196Kc0nP3z&mno=sub02_01&cmsNoStr=&pageIndex=1&kind="
         }
       ]
     },
@@ -1806,14 +1806,6 @@
           "region": "대전 동구",
           "source": "대전 동구청 공지사항",
           "url": "https://donggu.go.kr/dg/kor/article/newsNotice/144094"
-        },
-        {
-          "title": "2026년 근교농업육성사업(포도 비파괴 당도측정기) 추가모집 공고",
-          "category": "life",
-          "date": "2026-11-19",
-          "region": "대전 동구",
-          "source": "대전 동구청 공지사항",
-          "url": "https://donggu.go.kr/dg/kor/article/newsNotice/144093"
         },
         {
           "title": "2026년 지방세 고액·상습체납자 명단공개",
@@ -1878,6 +1870,14 @@
           "region": "대전 동구",
           "source": "대전 동구청 공지사항",
           "url": "https://donggu.go.kr/dg/kor/article/newsNotice/143463"
+        },
+        {
+          "title": "2026년 임산부 친환경농산물 지원사업 추가모집 안내",
+          "category": "welfare",
+          "date": "2026-09-11",
+          "region": "대전 동구",
+          "source": "대전 동구청 공지사항",
+          "url": "https://donggu.go.kr/dg/kor/article/newsNotice/143387"
         }
       ]
     }

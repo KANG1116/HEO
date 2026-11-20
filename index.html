@@ -101,6 +101,17 @@
       <div id="nw-notices"></div>
     </section>
 
+    <section aria-labelledby="dongnews-title">
+      <h2 id="dongnews-title">동 소식 (행정복지센터)</h2>
+      <div class="card" id="dong-status"><p class="desc">동 소식을 불러오는 중이에요…</p></div>
+      <div class="controls">
+        <label for="dong-gu" style="position:absolute;left:-9999px">구 선택</label><select id="dong-gu"></select>
+        <label for="dong-dong" style="position:absolute;left:-9999px">동 선택</label><select id="dong-dong"></select>
+      </div>
+      <div id="dong-meta"></div>
+      <div id="dong-notices"></div>
+    </section>
+
     <section id="notices" aria-labelledby="notice-title">
       <h2 id="notice-title">오늘 공지 (샘플)</h2>
       <div class="chips" role="group" aria-label="공지 분류">
@@ -161,7 +172,7 @@
         <strong>샘플 데이터 안내</strong>
         <p style="margin:6px 0 0">이 첫 버전은 화면 구조를 확인하기 위한 샘플이에요. 공지와 빈자리 내용은 실제 공공기관 데이터가 아니라 예시이고, 실제 연동은 다음 단계에서 출처를 달고 붙일 예정이에요.</p>
       </div>
-      <p>우동 · 오늘 우리 동네 한눈에 · 웹 v0.4 (전국 7개 지역 자동 수집, 성동구 포함 8개 지역)</p>
+      <p>우동 · 오늘 우리 동네 한눈에 · 웹 v0.10 (전국 21개 지역 + 동 358개)</p>
     </footer>
   </main>
 </div>
@@ -225,6 +236,71 @@
     render();
   }).catch(() => {
     document.getElementById('nw-status').innerHTML = '<p class="desc">전국 수집 파일(data_nationwide.json)을 불러오지 못했어요.</p>';
+  });
+  // 동 소식: data_dong.json -> 구 선택 -> 동 선택 -> 그 동 소식 목록
+  fetch('data_dong.json').then(r => r.json()).then(data => {
+    const status = document.getElementById('dong-status');
+    const guSel = document.getElementById('dong-gu');
+    const dongSel = document.getElementById('dong-dong');
+    const meta = document.getElementById('dong-meta');
+    const box = document.getElementById('dong-notices');
+    const gus = data.gus || [];
+    const catLabel = { life: '생활', welfare: '복지', work: '공사·교통', event: '행사', urgent: '긴급' };
+    function daysAgo(dateStr) {
+      const d = new Date(dateStr + 'T00:00:00');
+      const now = new Date(); now.setHours(0, 0, 0, 0);
+      return Math.round((now - d) / 86400000);
+    }
+    function latestDate(dong) {
+      const ns = dong.notices || [];
+      if (!ns.length) return null;
+      return ns.map(n => n.date).sort().pop();
+    }
+    function dongLabel(dong) {
+      const latest = latestDate(dong);
+      if (!latest) return dong.dong + ' (소식 없음)';
+      const days = daysAgo(latest);
+      return days > 30 ? dong.dong + ' · 최신 글 ' + days + '일 전' : dong.dong;
+    }
+    function currentDong() {
+      const gu = gus.find(g => g.gu === guSel.value) || gus[0];
+      if (!gu) return null;
+      return gu.dongs.find(d => d.dong === dongSel.value) || gu.dongs[0];
+    }
+    function fillDongs() {
+      const gu = gus.find(g => g.gu === guSel.value) || gus[0];
+      if (!gu) return;
+      dongSel.innerHTML = gu.dongs.map(d => '<option value="' + d.dong + '">' + dongLabel(d) + '</option>').join('');
+      render();
+    }
+    function render() {
+      const dong = currentDong();
+      if (!dong) { box.innerHTML = '<div class="card"><p class="desc">동 소식이 아직 없어요.</p></div>'; return; }
+      const ns = dong.notices || [];
+      const latest = latestDate(dong);
+      if (!ns.length) {
+        const why = (dong.status || '').indexOf('fetch_failed') === 0 ? ' 가져오기가 끊겨 브라우저로 채우는 중이에요.' : '';
+        meta.innerHTML = '';
+        box.innerHTML = '<div class="card"><p class="desc">이 동 소식이 아직 없어요.' + why + '</p></div>';
+        return;
+      }
+      const days = daysAgo(latest);
+      if (days > 30) {
+        meta.innerHTML = '<p class="meta">이 동의 최신 글은 ' + latest + ' (' + days + '일 전)이에요. 요즘 소식이 잘 안 올라오는 동이에요.</p>';
+      } else {
+        meta.innerHTML = '<p class="meta">최신 글: ' + latest + (days === 0 ? ' (오늘)' : ' (' + days + '일 전)') + '</p>';
+      }
+      box.innerHTML = ns.map(n => '<article class="card"><span class="badge">' + (catLabel[n.category] || n.category || '') + '</span><p class="title"></p><p class="desc">' + (n.date || '') + '</p><p class="meta"><a href="' + (n.url || '#') + '" target="_blank" rel="noopener">원문 보기</a> · ' + (n.source || '') + '</p></article>').join('');
+      // 제목은 textContent로 넣어 XSS를 막는다
+      box.querySelectorAll('article').forEach((el, i) => { el.querySelector('.title').textContent = ns[i].title; });
+    }
+    status.innerHTML = '<p class="desc">마지막 자동 수집: ' + (data.generated_at_kst || '-') + ' · 구 ' + gus.length + '곳, 동 ' + (data.total_dongs || 0) + '개 동, 소식 ' + (data.total_notices || 0) + '개 · 동 소식은 주민등록 공시송달 비중이 높아요.</p>';
+    guSel.innerHTML = gus.map(g => '<option value="' + g.gu + '">' + g.gu + ' (' + g.dongs.length + '개 동)</option>').join('');
+    guSel.addEventListener('change', fillDongs);
+    dongSel.addEventListener('change', render);
+    fillDongs();
+  }).catch(() => {
+    document.getElementById('dong-status').innerHTML = '<p class="desc">동 소식 파일(data_dong.json)을 불러오지 못했어요.</p>';
   });
 </script>
 </body>

@@ -1,9 +1,8 @@
-version: '0.1'
-updated: '2026-11-19'
-note: 동 행정복지센터 '우리동 소식' 레지스트리. fetch.py v0.6이 이 파일을 읽는 것이 아니라 같은 내용을 코드에 갖고 있다. 이
-  파일은 확인된 출처 기록이다. 성동구는 이 서버에서 직접 가져오기가 끊겨 브라우저 경유가 필요하고, 크롤 복사본이 수일 낡을 수 있다. 송파구는
-  서버 직접 가져오기가 된다(HTTP 200). 송파구는 26개가 아니라 27개 동이다(위례동 포함. 잠실1동·잠실5동은 없음). 동 소식은 주민등록
-  공시송달·최고공고·직권조치 비중이 높아 선별이 필요할 수 있다.
+version: '0.5'
+updated: '2026-11-20'
+note: 동 행정복지센터 '우리동 소식' 레지스트리. fetch.py v0.9가 이 파일을 읽는 것이 아니라 같은 내용을 코드에 갖고 있다. 이 파일은 확인된 출처 기록이다. 21개 구 358개 동(2026-11-20
+  기준). 성동구는 이 서버에서 직접 가져오기가 끊겨 브라우저 경유가 필요하고, 크롤 복사본이 수일 낡을 수 있다. 송파구는 26개가 아니라 27개 동이다(위례동 포함. 잠실1동·잠실5동은 없음). 동 소식은 주민등록
+  공시송달·최고공고·직권조치 비중이 높아 선별이 필요할 수 있다. 용산구·강서구는 동 게시판 목록 URL 미확인으로 제외했고, 종로구·중랑구는 목록 URL 확인됐으나 라이브 소식 채우기가 대기 중이라 아래 pending에 기록했다. 사유는 아래 excluded·pending에 기록돼 있다.
 gus:
 - gu: 서울 성동구
   board: 우리동 소식
@@ -421,4 +420,3057 @@ gus:
     total_posts: 51
     verified_latest:
       title: 2026년 주민등록 장기거주불명자 직권조치 결과 공고
+- gu: 서울 노원구
+  board: 부서·동 소식
+  direct_fetch: ok
+  direct_fetch_note: 서버 직접 가져오기가 된다. 목록 1개를 페이지 순회(q_currPage)하며 담당부서로 동을 나눈다. 날짜는 q_bbscttSn 앞 8자리(YYYYMMDD)에서 파생한다. 제목 앞
+    '[ 동명 ]' 태그만 믿으면 안 되고 담당부서를 기준으로 삼는다.
+  list_url: https://www.nowon.kr/www/user/bbs/BD_selectBbsList.do?q_bbsCode=1103
+  dongs:
+  - dong: 월계1동
+    verified_latest:
+      title: 월계1동, 장석 교회와 손잡고 '사랑의 바자회 상품권' 나눔 실천
+      date: '2026-10-27'
+  - dong: 월계2동
+    verified_latest:
+      title: 손가락 꾹~ 디지털 쏙! (키오스크 배움)
+      date: '2026-11-16'
+  - dong: 월계3동
+    verified_latest:
+      title: 월계3동, 고독·고립 위험 어르신과 함께하는 '우리집 작은정원, 반려식물 만들기' 추진
+      date: '2026-11-13'
+  - dong: 공릉1동
+    verified_latest:
+      title: 2026년 '행복한 나눔밥상' 행사 실시
+      date: '2026-11-13'
+  - dong: 공릉2동
+    verified_latest:
+      title: 공릉2동, 이웃과 마음을 잇는 '안부 담은 장바구니' 2회차 진행
+      date: '2026-10-27'
+  - dong: 하계1동
+    verified_latest:
+      title: 하계1동 주민복지협의회와 함께하는 “불암산 산림치유센터 체험 행사”
+      date: '2026-10-30'
+  - dong: 하계2동
+    verified_latest:
+      title: 『무더위 입맛돋움 열무김치 나눔』 행사
+      date: '2026-08-04'
+  - dong: 중계본동
+    verified_latest:
+      title: 중계본동, 「이웃 愛 한 끼」로 전하는 따뜻한 이웃의 정
+      date: '2026-11-13'
+  - dong: 중계1동
+    verified_latest:
+      title: 중계1동, 추석 맞아 취약계층 40세대에 '송편꾸러미' 전달
+      date: '2026-09-28'
+  - dong: 중계2·3동
+    verified_latest:
+      title: 고립고독위험 이웃의 관계회복과 마음돌봄 프로젝트 ”마음 쉼표, 함께 걷는 계절“
+      date: '2026-10-30'
+  - dong: 중계4동
+    verified_latest:
+      title: 중계4동, '햇살 가득, 안부' 화창한 가을 날씨 아래 홀몸 어르신께 네 번째 마음을 전하다
+      date: '2026-10-30'
+  - dong: 상계1동
+    verified_latest:
+      title: 상계1동, 이웃 사랑의 손길로 흙을 빚다
+      date: '2026-11-13'
+  - dong: 상계2동
+    verified_latest:
+      title: 인생의 오후, 홀로 걷는 길에 만난 따뜻한 연결고리
+      date: '2026-11-16'
+  - dong: 상계3·4동
+    verified_latest:
+      title: 상계3·4동 자원봉사캠프·이웃사랑봉사단, 독거 어르신과 함께하는 '은빛 청춘 효(孝) 나들이' 행사 진행
+      date: '2026-11-13'
+  - dong: 상계5동
+    verified_latest:
+      title: 상계5동 자원봉사캠프 문화 소외계층을 위한 『우리 같이 영화보고 식사해요』 행사 가져
+      date: '2026-10-30'
+  - dong: 상계6·7동
+    verified_latest:
+      title: 상계6·7동, 고립감 높은 어르신과 함께하는 「동행 장보기」 4차 진행
+      date: '2026-10-30'
+  - dong: 상계8동
+    verified_latest:
+      title: “상계8동 새마을부녀회·새마을지도자협의회, 어르신께 따뜻한 갈비탕 한끼 대접“
+      date: '2026-10-27'
+  - dong: 상계9동
+    verified_latest:
+      title: 상계9동, 함께 장보며 중장년 1인 가구의 마음을 잇다
+      date: '2026-11-16'
+  - dong: 상계10동
+    verified_latest:
+      title: 상계10동주민센터(신청사) 주차장 유료화 안내
+      date: '2026-09-18'
+- gu: 서울 강남구
+  board: 우리동이야기 새소식(B_000282)
+  direct_fetch: ok
+  direct_fetch_note: 서버 직접 가져오기가 된다. 목록 URL은 office-only 형태(list.do?office=...)로, 서버가 표준 URL로 302 리다이렉트한다. 게시판명은 '우리동이야기 >
+    새소식'이다.
+  list_url_pattern: https://www.gangnam.go.kr/center/board/B_000282/list.do?office={office}
+  dongs:
+  - dong: 개포1동
+    office: '3220057'
+    list_url: https://www.gangnam.go.kr/center/board/B_000282/list.do?mid=MC011301&office=3220057
+    verified_latest:
+      title: 2026년 영구임대주택 예비입주자 모집계획 안내
+      date: '2026-11-19'
+  - dong: 개포2동
+    office: '3220058'
+    list_url: https://www.gangnam.go.kr/center/board/B_000282/list.do?mid=MC021301&office=3220058
+    verified_latest:
+      title: 2026년 강남구 아동학대예방 기획전
+      date: '2026-11-19'
+  - dong: 개포3동
+    office: '3220272'
+    list_url: https://www.gangnam.go.kr/center/board/B_000282/list.do?mid=MC211301&office=3220272
+    verified_latest:
+      title: 종이팩 별도 분리배출제 시행 안내
+      date: '2026-11-18'
+  - dong: 개포4동
+    office: '3220060'
+    list_url: https://www.gangnam.go.kr/center/board/B_000282/list.do?mid=MC031301&office=3220060
+    verified_latest:
+      title: 민간개방화장실 개보수 및 비상벨 설치 등 지원 안내
+      date: '2026-11-16'
+  - dong: 논현1동
+    office: '3220041'
+    list_url: https://www.gangnam.go.kr/center/board/B_000282/list.do?mid=MC041301&office=3220041
+    verified_latest:
+      title: 서수원 제일풍경채 C-4BL 서울시 장애인 특별공급 기관추천 안내
+      date: '2026-11-12'
+  - dong: 논현2동
+    office: '3220042'
+    list_url: https://www.gangnam.go.kr/center/board/B_000282/list.do?mid=MC051301&office=3220042
+    verified_latest:
+      title: 민간 개방화장실 참여 안내
+      date: '2026-11-16'
+  - dong: 대치1동
+    office: '3220049'
+    list_url: https://www.gangnam.go.kr/center/board/B_000282/list.do?mid=MC061301&office=3220049
+    verified_latest:
+      title: 2026 강남구 청년 부동산 중개보수비 및 이사비 지원사업 ★기간 재연장★ 안내 (~12.4)
+      date: '2026-11-19'
+  - dong: 대치2동
+    office: '3220050'
+    list_url: https://www.gangnam.go.kr/center/board/B_000282/list.do?mid=MC071301&office=3220050
+    verified_latest:
+      title: 대치2동 통장 선정결과 공고
+      date: '2026-11-16'
+  - dong: 대치4동
+    office: '3220052'
+    list_url: https://www.gangnam.go.kr/center/board/B_000282/list.do?mid=MC081301&office=3220052
+    verified_latest:
+      title: 「2026년 강남구 아동학대예방 기획전」 개최 안내
+      date: '2026-11-19'
+  - dong: 도곡1동
+    office: '3220055'
+    list_url: https://www.gangnam.go.kr/center/board/B_000282/list.do?mid=MC091301&office=3220055
+    verified_latest:
+      title: 2027년 노인 일자리 및 사회활동 지원사업 안내
+      date: '2026-11-16'
+  - dong: 도곡2동
+    office: '3220056'
+    list_url: https://www.gangnam.go.kr/center/board/B_000282/list.do?mid=MC101301&office=3220056
+    verified_latest:
+      title: 2026년 강남구 청년작가초대전 개최
+      date: '2026-11-19'
+  - dong: 삼성1동
+    office: '3220047'
+    list_url: https://www.gangnam.go.kr/center/board/B_000282/list.do?mid=MC111301&office=3220047
+    verified_latest:
+      title: 장애인등록 취소 관련 청문조서 열람 안내문 반송에 따른 공시송달 공고
+      date: '2026-11-18'
+  - dong: 삼성2동
+    office: '3220048'
+    list_url: https://www.gangnam.go.kr/center/board/B_000282/list.do?mid=MC121301&office=3220048
+    verified_latest:
+      title: 해치와 눈 치우기 함께해요!
+      date: '2026-11-16'
+  - dong: 세곡동
+    office: '3220061'
+    list_url: https://www.gangnam.go.kr/center/board/B_000282/list.do?mid=MC131301&office=3220061
+    verified_latest:
+      title: 2027년 스포츠강좌이용권 사업계획 알림 및 이용자 모집 안내
+      date: '2026-11-11'
+  - dong: 수서동
+    office: '3220065'
+    list_url: https://www.gangnam.go.kr/center/board/B_000282/list.do?mid=MC141301&office=3220065
+    verified_latest:
+      title: 2026 강남구 청년 부동산 중개보수비 및 이사비 지원사업 신청기간 연장 안내 (2026.12.4까지 신청)
+      date: '2026-11-19'
+  - dong: 신사동
+    office: '3220040'
+    list_url: https://www.gangnam.go.kr/center/board/B_000282/list.do?mid=MC151301&office=3220040
+    verified_latest:
+      title: 「2026년 강남구 청년작가초대전」 개최 안내
+      date: '2026-11-18'
+  - dong: 압구정동
+    office: '3220141'
+    list_url: https://www.gangnam.go.kr/center/board/B_000282/list.do?mid=MC161301&office=3220141
+    verified_latest:
+      title: 2026년 강남구 아동학대예방 기획전 개최 안내
+      date: '2026-11-19'
+  - dong: 역삼1동
+    office: '3220053'
+    list_url: https://www.gangnam.go.kr/center/board/B_000282/list.do?mid=MC171301&office=3220053
+    verified_latest:
+      title: 2026년 영구임대주택 예비입주자 모집계획
+      date: '2026-11-19'
+  - dong: 역삼2동
+    office: '3220054'
+    list_url: https://www.gangnam.go.kr/center/board/B_000282/list.do?mid=MC181301&office=3220054
+    verified_latest:
+      title: 「2026년 강남구 청년작가초대전」개최 안내
+      date: '2026-11-18'
+  - dong: 일원본동
+    office: '3220062'
+    list_url: https://www.gangnam.go.kr/center/board/B_000282/list.do?mid=MC191301&office=3220062
+    verified_latest:
+      title: 일원본동 통장모집 공고
+      date: '2026-11-16'
+  - dong: 일원1동
+    office: '3220063'
+    list_url: https://www.gangnam.go.kr/center/board/B_000282/list.do?mid=MC201301&office=3220063
+    verified_latest:
+      title: 2026년 강남구 청년작가초대전 개최 안내
+      date: '2026-11-19'
+  - dong: 청담동
+    office: '3220142'
+    list_url: https://www.gangnam.go.kr/center/board/B_000282/list.do?mid=MC221301&office=3220142
+    verified_latest:
+      title: 환경영향평가서(초안) 주민 공람 및 설명회 개최 공고(압구정아파트지구 특별계획구역4 재건축정비사업)
+      date: '2026-11-11'
+- gu: 서울 관악구
+  board: 우리동소식
+  direct_fetch: ok
+  direct_fetch_note: 서버 직접 가져오기 HTTP 200. 게시판 1개(cbIdx=366)를 공유하고 deptCode(부서코드)로 동을 나눈다.
+  list_url_pattern: https://www.gwanak.go.kr/site/gwanak/ex/bbs/List.do?cbIdx=366&deptCode={dept_code}
+  detail_url_pattern: https://www.gwanak.go.kr/site/gwanak/ex/bbs/View.do?cbIdx=366&bcIdx={bc_idx}&deptCode={dept_code}&parentSeq={parent_seq}
+  detail_note: 상세 URL은 목록 행의 onclick doBbsFView('366','<bcIdx>','16010100','<parentSeq>')에서 확인했다. 중앙동 1건(에코마일리지 신청까지 실천하세요,
+    bcIdx=214545)은 상세 페이지를 직접 열어 제목을 확인했다. 수집 시점 기준 bcIdx와 parentSeq는 같았다.
+  dongs:
+  - dong: 낙성대동
+    dept_code: D3200157
+    list_url: https://www.gwanak.go.kr/site/gwanak/ex/bbs/List.do?cbIdx=366&deptCode=D3200157
+    board: 우리동소식
+    verified_latest:
+      title: 주민등록 장기거주불명자 직권말소 최고 공고
+      date: '2026-11-18'
+  - dong: 난곡동
+    dept_code: D3200169
+    list_url: https://www.gwanak.go.kr/site/gwanak/ex/bbs/List.do?cbIdx=366&deptCode=D3200169
+    board: 우리동소식
+    verified_latest:
+      title: 2026년 민방위 사이버교육 통지서(보충2차)반송에 따른 공시송달 공고
+      date: '2026-11-05'
+  - dong: 난향동
+    dept_code: D3200163
+    list_url: https://www.gwanak.go.kr/site/gwanak/ex/bbs/List.do?cbIdx=366&deptCode=D3200163
+    board: 우리동소식
+    verified_latest:
+      title: 주민등록신고의무 지연자 최고공고
+      date: '2026-11-18'
+  - dong: 남현동
+    dept_code: D3200052
+    list_url: https://www.gwanak.go.kr/site/gwanak/ex/bbs/List.do?cbIdx=366&deptCode=D3200052
+    board: 우리동소식
+    verified_latest:
+      title: 다중이용시설 화재 발생 시 행동요령
+      date: '2026-11-18'
+  - dong: 대학동
+    dept_code: D3200168
+    list_url: https://www.gwanak.go.kr/site/gwanak/ex/bbs/List.do?cbIdx=366&deptCode=D3200168
+    board: 우리동소식
+    verified_latest:
+      title: 2026년 에코마일리지 가입 안내
+      date: '2026-11-18'
+  - dong: 미성동
+    dept_code: D3200162
+    list_url: https://www.gwanak.go.kr/site/gwanak/ex/bbs/List.do?cbIdx=366&deptCode=D3200162
+    board: 우리동소식
+    verified_latest:
+      title: 미성동 자치회관 프로그램 강사 모집 공고(스포츠댄스, 노래교실A)
+      date: '2026-11-16'
+  - dong: 보라매동
+    dept_code: D3200150
+    list_url: https://www.gwanak.go.kr/site/gwanak/ex/bbs/List.do?cbIdx=366&deptCode=D3200150
+    board: 우리동소식
+    verified_latest:
+      title: 「2026년 건축물 부설주차장 개방 공유 사업」참여 안내
+      date: '2026-11-13'
+  - dong: 삼성동
+    dept_code: D3200167
+    list_url: https://www.gwanak.go.kr/site/gwanak/ex/bbs/List.do?cbIdx=366&deptCode=D3200167
+    board: 우리동소식
+    verified_latest:
+      title: 2026년 건축물 부설주차장 개방 공유 사업 참여 안내
+      date: '2026-11-16'
+  - dong: 서림동
+    dept_code: D3200166
+    list_url: https://www.gwanak.go.kr/site/gwanak/ex/bbs/List.do?cbIdx=366&deptCode=D3200166
+    board: 우리동소식
+    verified_latest:
+      title: 2026년 주민등록 사실조사에 따른 장기거주불명자 최고공고
+      date: '2026-11-18'
+  - dong: 서원동
+    dept_code: D3200164
+    list_url: https://www.gwanak.go.kr/site/gwanak/ex/bbs/List.do?cbIdx=366&deptCode=D3200164
+    board: 우리동소식
+    verified_latest:
+      title: 주민등록 신고의무 지연자 최고공고
+      date: '2026-11-13'
+  - dong: 성현동
+    dept_code: D3200152
+    list_url: https://www.gwanak.go.kr/site/gwanak/ex/bbs/List.do?cbIdx=366&deptCode=D3200152
+    board: 우리동소식
+    verified_latest:
+      title: 2026년 건축물 부설주차장 개방 공유 사업 참여 안내
+      date: '2026-11-18'
+  - dong: 신림동
+    dept_code: D3200159
+    list_url: https://www.gwanak.go.kr/site/gwanak/ex/bbs/List.do?cbIdx=366&deptCode=D3200159
+    board: 우리동소식
+    verified_latest:
+      title: 탄소중립 녹색생활 실천 이벤트(4차) 홍보 및 안내
       date: '2026-11-17'
+  - dong: 신사동
+    dept_code: D3200160
+    list_url: https://www.gwanak.go.kr/site/gwanak/ex/bbs/List.do?cbIdx=366&deptCode=D3200160
+    board: 우리동소식
+    verified_latest:
+      title: 신규 주민등록증 발급통지서 반송자 공고(2009년 11월생)
+      date: '2026-11-17'
+  - dong: 신원동
+    dept_code: D3200165
+    list_url: https://www.gwanak.go.kr/site/gwanak/ex/bbs/List.do?cbIdx=366&deptCode=D3200165
+    board: 우리동소식
+    verified_latest:
+      title: 「2026년 건축물 부설주차장 개방 공유 사업」참여 안내
+      date: '2026-11-18'
+  - dong: 은천동
+    dept_code: D3200151
+    list_url: https://www.gwanak.go.kr/site/gwanak/ex/bbs/List.do?cbIdx=366&deptCode=D3200151
+    board: 우리동소식
+    verified_latest:
+      title: 행정상 관리주소 이전 직권조치결과 공고
+      date: '2026-11-06'
+  - dong: 인헌동
+    dept_code: D3200158
+    list_url: https://www.gwanak.go.kr/site/gwanak/ex/bbs/List.do?cbIdx=366&deptCode=D3200158
+    board: 우리동소식
+    verified_latest:
+      title: 행정상 관리주소 이전 공고(1차)
+      date: '2026-11-10'
+  - dong: 조원동
+    dept_code: D3200161
+    list_url: https://www.gwanak.go.kr/site/gwanak/ex/bbs/List.do?cbIdx=366&deptCode=D3200161
+    board: 우리동소식
+    verified_latest:
+      title: 2026년 민방위 집합교육(보충2차) 통지서 반송에 따른 공시송달 공고
+      date: '2026-11-11'
+  - dong: 중앙동
+    dept_code: D3200153
+    list_url: https://www.gwanak.go.kr/site/gwanak/ex/bbs/List.do?cbIdx=366&deptCode=D3200153
+    board: 우리동소식
+    verified_latest:
+      title: 에코마일리지 신청까지 실천하세요
+      date: '2026-11-19'
+  - dong: 청룡동
+    dept_code: D3200156
+    list_url: https://www.gwanak.go.kr/site/gwanak/ex/bbs/List.do?cbIdx=366&deptCode=D3200156
+    board: 우리동소식
+    verified_latest:
+      title: 2026년 민방위 사이버교육(보충2차) 통지서 반송에 따른 공시송달 공고
+      date: '2026-11-13'
+  - dong: 청림동
+    dept_code: D3200154
+    list_url: https://www.gwanak.go.kr/site/gwanak/ex/bbs/List.do?cbIdx=366&deptCode=D3200154
+    board: 우리동소식
+    verified_latest:
+      title: 에코마일리지! 신청까지 실천하세요!!
+      date: '2026-11-04'
+  - dong: 행운동
+    dept_code: D3200155
+    list_url: https://www.gwanak.go.kr/site/gwanak/ex/bbs/List.do?cbIdx=366&deptCode=D3200155
+    board: 우리동소식
+    verified_latest:
+      title: 건축물 부설주차장 개방 공유 사업 참여 안내
+      date: '2026-11-19'
+- gu: 서울 강동구
+  board: 새소식
+  direct_fetch: ok
+  direct_fetch_note: 서버 직접 가져오기 HTTP 200. 구청 메인(www.gangdong.go.kr)은 newportal로 메타 리다이렉트한다. 동별 서브사이트 /web/dongrenew/{slug}/main
+    아래 '우리동소식' 섹션의 새소식 게시판을 쓴다. 구버전 호스트 welfare.gangdong.go.kr는 죽어 있다.
+  list_url_pattern: https://www.gangdong.go.kr/web/dongrenew/bbs{slug}/news_{slug}
+  detail_note: 상세 URL은 목록 행의 <a class="art" href="/web/dongrenew/bbs{slug}/news_{slug}/{id}?cp=1&pageSize=10&...">를 그대로 쓴다.
+    둔촌2동 1건(2027년 둔촌2동 주민자치회 위원 공개모집 안내, id 46895)은 상세 페이지를 직접 열어 제목을 확인했다. 별도 '고시공고' 게시판(noticedunchon2/01 등)은 동 소식 대상이 아니라
+    제외했다.
+  dongs:
+  - dong: 강일동
+    slug: gangil
+    list_url: https://www.gangdong.go.kr/web/dongrenew/bbsgangil/news_gangil
+    board: 새소식
+    verified_latest:
+      title: 취학통지 관련 주요내용 안내
+      date: '2026-11-19'
+  - dong: 고덕1동
+    slug: godeog1
+    list_url: https://www.gangdong.go.kr/web/dongrenew/bbsgodeog1/news_godeog1
+    board: 새소식
+    verified_latest:
+      title: 내 점포 앞 눈 치우기
+      date: '2026-11-19'
+  - dong: 고덕2동
+    slug: godeog2
+    list_url: https://www.gangdong.go.kr/web/dongrenew/bbsgodeog2/news_godeog2
+    board: 새소식
+    verified_latest:
+      title: 11월 건조기, 화재예방을 위한 안전점검
+      date: '2026-11-09'
+  - dong: 길동
+    slug: gil
+    list_url: https://www.gangdong.go.kr/web/dongrenew/bbsgil/news_gil
+    board: 새소식
+    verified_latest:
+      title: 2026. 12월 길동 자치회관 프로그램 안내
+      date: '2026-11-16'
+  - dong: 둔촌1동
+    slug: dunchon1
+    list_url: https://www.gangdong.go.kr/web/dongrenew/bbsdunchon1/news_dunchon1
+    board: 새소식
+    verified_latest:
+      title: (긴급) 수능 당일 위급재난문자가 발송됩니다!
+      date: '2026-11-18'
+  - dong: 둔촌2동
+    slug: dunchon2
+    list_url: https://www.gangdong.go.kr/web/dongrenew/bbsdunchon2/news_dunchon2
+    board: 새소식
+    verified_latest:
+      title: 2027년 둔촌2동 주민자치회 위원 공개모집 안내
+      date: '2026-11-16'
+  - dong: 명일1동
+    slug: myeongil1
+    list_url: https://www.gangdong.go.kr/web/dongrenew/bbsmyeongil1/news_myeongil1
+    board: 새소식
+    verified_latest:
+      title: 2026 한파 영향예보 직접 전달 서비스 안내
+      date: '2026-11-18'
+  - dong: 명일2동
+    slug: myeongil2
+    list_url: https://www.gangdong.go.kr/web/dongrenew/bbsmyeongil2/news_myeongil2
+    board: 새소식
+    verified_latest:
+      title: 다중이용시설에서 화재발생시 이렇게 행동하세요!
+      date: '2026-11-12'
+  - dong: 상일1동
+    slug: sangil
+    list_url: https://www.gangdong.go.kr/web/dongrenew/bbssangil/news_sangil
+    board: 새소식
+    verified_latest:
+      title: 상일1동 주민자치회 위원 공개 모집
+      date: '2026-11-16'
+  - dong: 상일2동
+    slug: sangil2
+    list_url: https://www.gangdong.go.kr/web/dongrenew/bbssangil2/news_sangil2
+    board: 새소식
+    verified_latest:
+      title: 2026년 영구임대주택 예비입주자 모집계획 안내
+      date: '2026-11-19'
+  - dong: 성내1동
+    slug: seongnae1
+    list_url: https://www.gangdong.go.kr/web/dongrenew/bbsseongnae1/news_seongnae1
+    board: 새소식
+    verified_latest:
+      title: 한파 영향예보 직접 전달 서비스 안내
+      date: '2026-11-18'
+  - dong: 성내2동
+    slug: seongnae2
+    list_url: https://www.gangdong.go.kr/web/dongrenew/bbsseongnae2/news_seongnae2
+    board: 새소식
+    verified_latest:
+      title: 서울특별시 강동구 공무원 인사규칙 일부개정규칙안 입법예고
+      date: '2026-11-13'
+  - dong: 성내3동
+    slug: seongnae3
+    list_url: https://www.gangdong.go.kr/web/dongrenew/bbsseongnae3/news_seongnae3
+    board: 새소식
+    verified_latest:
+      title: 2026년 10월 성내3동 주민자치회 정기회의 회의록
+      date: '2026-11-05'
+  - dong: 암사1동
+    slug: amsa1
+    list_url: https://www.gangdong.go.kr/web/dongrenew/bbsamsa1/news_amsa1
+    board: 새소식
+    verified_latest:
+      title: 암사1동 자치회관 2026년 12월 ~ 2027년 2월 운영프로그램 및 접수기간 등 안내
+      date: '2026-11-02'
+  - dong: 암사2동
+    slug: amsa2
+    list_url: https://www.gangdong.go.kr/web/dongrenew/bbsamsa2/news_amsa2
+    board: 새소식
+    verified_latest:
+      title: 2027년 녹색교통안전지킴이 사업 참여자 모집 공고
+      date: '2026-11-16'
+  - dong: 암사3동
+    slug: amsa3
+    list_url: https://www.gangdong.go.kr/web/dongrenew/bbsamsa3/news_amsa3
+    board: 새소식
+    verified_latest:
+      title: 임대차보증금 반환보증 보증료 지원사업
+      date: '2026-11-06'
+  - dong: 천호1동
+    slug: cheonho1
+    list_url: https://www.gangdong.go.kr/web/dongrenew/bbscheonho1/news_cheonho1
+    board: 새소식
+    verified_latest:
+      title: 한파 영향예보 직접 전달 서비스 안내
+      date: '2026-11-18'
+  - dong: 천호2동
+    slug: cheonho2
+    list_url: https://www.gangdong.go.kr/web/dongrenew/bbscheonho2/news_cheonho2
+    board: 새소식
+    verified_latest:
+      title: 천호2동 2026년 12월 자치회관 프로그램 운영 안내
+      date: '2026-11-19'
+  - dong: 천호3동
+    slug: cheonho3
+    list_url: https://www.gangdong.go.kr/web/dongrenew/bbscheonho3/news_cheonho3
+    board: 새소식
+    verified_latest:
+      title: 2026년 4분기 12월 천호3동 자치회관 프로그램 대기 추첨 선정자 안내
+      date: '2026-11-17'
+- gu: 서울 광진구
+  board: 우리마을소식
+  direct_fetch: ok
+  direct_fetch_note: 서버 직접 가져오기 HTTP 200. 동별 서브사이트 + 동별 게시판(B0000127).
+  dongs:
+  - dong: 중곡1동
+    dong_cd: '01'
+    menu_no: '600009'
+    list_url: https://www.gwangjin.go.kr/dong/bbs/B0000127/list.do?menuNo=600009&dongCd=01
+    board: 우리마을소식
+    total_posts: 393
+    verified_latest:
+      title: 신규주민등록증 발급공고(2009년 11월생)
+      date: '2026-11-16'
+  - dong: 중곡2동
+    dong_cd: '02'
+    menu_no: '600209'
+    list_url: https://www.gwangjin.go.kr/dong/bbs/B0000127/list.do?menuNo=600209&dongCd=02
+    board: 우리마을소식
+    total_posts: 358
+    verified_latest:
+      title: 본인서명사실 확인제도 이용 안내
+      date: '2026-11-17'
+  - dong: 중곡3동
+    dong_cd: '03'
+    menu_no: '600309'
+    list_url: https://www.gwangjin.go.kr/dong/bbs/B0000127/list.do?menuNo=600309&dongCd=03
+    board: 우리마을소식
+    total_posts: 598
+    verified_latest:
+      title: 주민등록신고지연대상 최고장반송에 따른 공고(김O민)
+      date: '2026-11-17'
+  - dong: 중곡4동
+    dong_cd: '04'
+    menu_no: '600409'
+    list_url: https://www.gwangjin.go.kr/dong/bbs/B0000127/list.do?menuNo=600409&dongCd=04
+    board: 우리마을소식
+    total_posts: 448
+    verified_latest:
+      title: 2026년 주민등록 사실조사 장기 거주불명자 최고공고
+      date: '2026-11-11'
+  - dong: 능동
+    dong_cd: '05'
+    menu_no: '600509'
+    list_url: https://www.gwangjin.go.kr/dong/bbs/B0000127/list.do?menuNo=600509&dongCd=05
+    board: 우리마을소식
+    total_posts: 554
+    verified_latest:
+      title: 거주불명자 행정상 관리주소 이전 직권조치결과 공고
+      date: '2026-11-18'
+  - dong: 구의1동
+    dong_cd: '06'
+    menu_no: '600609'
+    list_url: https://www.gwangjin.go.kr/dong/bbs/B0000127/list.do?menuNo=600609&dongCd=06
+    board: 우리마을소식
+    total_posts: 1112
+    verified_latest:
+      title: 아나바다 나눔장터 개최 안내
+      date: '2026-11-16'
+  - dong: 구의2동
+    dong_cd: '07'
+    menu_no: '600709'
+    list_url: https://www.gwangjin.go.kr/dong/bbs/B0000127/list.do?menuNo=600709&dongCd=07
+    board: 우리마을소식
+    total_posts: 377
+    verified_latest:
+      title: 2027년 구의2동 자치회관 프로그램(노래교실, 스포츠댄스, 요가C) 강사 모집 재공고
+      date: '2026-11-12'
+  - dong: 구의3동
+    dong_cd: 08
+    menu_no: '600809'
+    list_url: https://www.gwangjin.go.kr/dong/bbs/B0000127/list.do?menuNo=600809&dongCd=08
+    board: 우리마을소식
+    total_posts: 460
+    verified_latest:
+      title: 신규주민등록증 발급 공고(11월)
+      date: '2026-11-17'
+  - dong: 광장동
+    dong_cd: 09
+    menu_no: '600909'
+    list_url: https://www.gwangjin.go.kr/dong/bbs/B0000127/list.do?menuNo=600909&dongCd=09
+    board: 우리마을소식
+    total_posts: 819
+    verified_latest:
+      title: 2027 상반기 광진구 행복일자리 사업 참여자 모집 알림
+      date: '2026-11-17'
+  - dong: 자양1동
+    dong_cd: '10'
+    menu_no: '601009'
+    list_url: https://www.gwangjin.go.kr/dong/bbs/B0000127/list.do?menuNo=601009&dongCd=10
+    board: 우리마을소식
+    total_posts: 421
+    verified_latest:
+      title: 광진구민이 시작하는 「1인 1일 30g」 쓰레기 다이어트 캠페인 안내
+      date: '2026-11-19'
+  - dong: 자양2동
+    dong_cd: '11'
+    menu_no: '601109'
+    list_url: https://www.gwangjin.go.kr/dong/bbs/B0000127/list.do?menuNo=601109&dongCd=11
+    board: 우리마을소식
+    total_posts: 452
+    verified_latest:
+      title: 2027년 공원‧조경‧생태‧여가 분야 기간제근로자 공개채용 안내
+      date: '2026-11-17'
+  - dong: 자양3동
+    dong_cd: '12'
+    menu_no: '601209'
+    list_url: https://www.gwangjin.go.kr/dong/bbs/B0000127/list.do?menuNo=601209&dongCd=12
+    board: 우리마을소식
+    total_posts: 503
+    verified_latest:
+      title: 2026년도 사실조사 관련 주민등록 신고지연자 최고공고 (김O호 등 2명)
+      date: '2026-11-18'
+  - dong: 자양4동
+    dong_cd: '13'
+    menu_no: '601309'
+    list_url: https://www.gwangjin.go.kr/dong/bbs/B0000127/list.do?menuNo=601309&dongCd=13
+    board: 우리마을소식
+    total_posts: 512
+    verified_latest:
+      title: 2026 겨울방학 초등학생 영어캠프 모집 안내
+      date: '2026-11-13'
+  - dong: 화양동
+    dong_cd: '14'
+    menu_no: '601409'
+    list_url: https://www.gwangjin.go.kr/dong/bbs/B0000127/list.do?menuNo=601409&dongCd=14
+    board: 우리마을소식
+    total_posts: 267
+    verified_latest:
+      title: 화양동 공구대여소 운영 안내
+      date: '2026-11-19'
+  - dong: 군자동
+    dong_cd: '15'
+    menu_no: '601509'
+    list_url: https://www.gwangjin.go.kr/dong/bbs/B0000127/list.do?menuNo=601509&dongCd=15
+    board: 우리마을소식
+    total_posts: 351
+    verified_latest:
+      title: 신규 주민등록증 발급 신청 공고(2009년 11월생)
+      date: '2026-11-12'
+- gu: 서울 동대문구
+  board: 동주민센터 공지사항
+  direct_fetch: ok
+  direct_fetch_note: 서버 직접 가져오기 HTTP 200. 공유 게시판 1개 + 동 카테고리 필터.
+  list_url_base: https://www.ddm.go.kr/www/selectBbsNttList.do?bbsNo=72&key=390
+  dongs:
+  - dong: 신설동
+    search_ctgry: '%EC%8B%A0%EC%84%A4%EB%8F%99'
+    list_url: https://www.ddm.go.kr/www/selectBbsNttList.do?bbsNo=72&key=390&searchCtgry=%EC%8B%A0%EC%84%A4%EB%8F%99
+    board: 동주민센터 공지사항
+    total_posts: 35
+    verified_latest:
+      title: 신설동 통장추천선정위원회 개최 결과 공고(3통)
+      date: '2026-11-19'
+  - dong: 용두동
+    search_ctgry: '%EC%9A%A9%EB%91%90%EB%8F%99'
+    list_url: https://www.ddm.go.kr/www/selectBbsNttList.do?bbsNo=72&key=390&searchCtgry=%EC%9A%A9%EB%91%90%EB%8F%99
+    board: 동주민센터 공지사항
+    total_posts: 1302
+    verified_latest:
+      title: 디에이치 반포124 서울시 장애인 특별공급 기관추천 안내
+      date: '2026-11-05'
+  - dong: 제기동
+    search_ctgry: '%EC%A0%9C%EA%B8%B0%EB%8F%99'
+    list_url: https://www.ddm.go.kr/www/selectBbsNttList.do?bbsNo=72&key=390&searchCtgry=%EC%A0%9C%EA%B8%B0%EB%8F%99
+    board: 동주민센터 공지사항
+    total_posts: 1426
+    verified_latest:
+      title: 2027년 제기동 자치회관 프로그램 강사 모집 공고
+      date: '2026-11-18'
+  - dong: 전농1동
+    search_ctgry: '%EC%A0%84%EB%86%8D1%EB%8F%99'
+    list_url: https://www.ddm.go.kr/www/selectBbsNttList.do?bbsNo=72&key=390&searchCtgry=%EC%A0%84%EB%86%8D1%EB%8F%99
+    board: 동주민센터 공지사항
+    total_posts: 2327
+    verified_latest:
+      title: 신규 주민등록증 발급 공고(2009년 11월생)
+      date: '2026-11-13'
+  - dong: 전농2동
+    search_ctgry: '%EC%A0%84%EB%86%8D2%EB%8F%99'
+    list_url: https://www.ddm.go.kr/www/selectBbsNttList.do?bbsNo=72&key=390&searchCtgry=%EC%A0%84%EB%86%8D2%EB%8F%99
+    board: 동주민센터 공지사항
+    total_posts: 1529
+    verified_latest:
+      title: 신규 주민등록증 발급 공고(2009년 11월생)
+      date: '2026-11-17'
+  - dong: 답십리1동
+    search_ctgry: '%EB%8B%B5%EC%8B%AD%EB%A6%AC1%EB%8F%99'
+    list_url: https://www.ddm.go.kr/www/selectBbsNttList.do?bbsNo=72&key=390&searchCtgry=%EB%8B%B5%EC%8B%AD%EB%A6%AC1%EB%8F%99
+    board: 동주민센터 공지사항
+    total_posts: 2041
+    verified_latest:
+      title: 신규 주민등록증 발급 공고
+      date: '2026-11-13'
+  - dong: 답십리2동
+    search_ctgry: '%EB%8B%B5%EC%8B%AD%EB%A6%AC2%EB%8F%99'
+    list_url: https://www.ddm.go.kr/www/selectBbsNttList.do?bbsNo=72&key=390&searchCtgry=%EB%8B%B5%EC%8B%AD%EB%A6%AC2%EB%8F%99
+    board: 동주민센터 공지사항
+    total_posts: 2670
+    verified_latest:
+      title: 장기 거주불명자 주민등록 직권조치 결과 공고
+      date: '2026-11-18'
+  - dong: 장안1동
+    search_ctgry: '%EC%9E%A5%EC%95%881%EB%8F%99'
+    list_url: https://www.ddm.go.kr/www/selectBbsNttList.do?bbsNo=72&key=390&searchCtgry=%EC%9E%A5%EC%95%881%EB%8F%99
+    board: 동주민센터 공지사항
+    total_posts: 3046
+    verified_latest:
+      title: 2026년 영구임대주택(LH, SH) 예비입주자 모집 공고문 안내
+      date: '2026-11-19'
+  - dong: 장안2동
+    search_ctgry: '%EC%9E%A5%EC%95%882%EB%8F%99'
+    list_url: https://www.ddm.go.kr/www/selectBbsNttList.do?bbsNo=72&key=390&searchCtgry=%EC%9E%A5%EC%95%882%EB%8F%99
+    board: 동주민센터 공지사항
+    total_posts: 2458
+    verified_latest:
+      title: 주민등록증(신규) 발급 공고(2009. 10월생)
+      date: '2026-11-13'
+  - dong: 청량리동
+    search_ctgry: '%EC%B2%AD%EB%9F%89%EB%A6%AC%EB%8F%99'
+    list_url: https://www.ddm.go.kr/www/selectBbsNttList.do?bbsNo=72&key=390&searchCtgry=%EC%B2%AD%EB%9F%89%EB%A6%AC%EB%8F%99
+    board: 동주민센터 공지사항
+    total_posts: 1740
+    verified_latest:
+      title: 주민등록 불이행자 최고공고
+      date: '2026-11-16'
+  - dong: 회기동
+    search_ctgry: '%ED%9A%8C%EA%B8%B0%EB%8F%99'
+    list_url: https://www.ddm.go.kr/www/selectBbsNttList.do?bbsNo=72&key=390&searchCtgry=%ED%9A%8C%EA%B8%B0%EB%8F%99
+    board: 동주민센터 공지사항
+    total_posts: 1583
+    verified_latest:
+      title: '''해링턴 플레이스 장위포레'' 서울시 장애인 특별공급 일정 1차 변경'
+      date: '2026-11-18'
+  - dong: 휘경1동
+    search_ctgry: '%ED%9C%98%EA%B2%BD1%EB%8F%99'
+    list_url: https://www.ddm.go.kr/www/selectBbsNttList.do?bbsNo=72&key=390&searchCtgry=%ED%9C%98%EA%B2%BD1%EB%8F%99
+    board: 동주민센터 공지사항
+    total_posts: 1325
+    verified_latest:
+      title: 주민등록 신고의무 불이행자 거주불명등록 최고 공고
+      date: '2026-11-17'
+  - dong: 휘경2동
+    search_ctgry: '%ED%9C%98%EA%B2%BD2%EB%8F%99'
+    list_url: https://www.ddm.go.kr/www/selectBbsNttList.do?bbsNo=72&key=390&searchCtgry=%ED%9C%98%EA%B2%BD2%EB%8F%99
+    board: 동주민센터 공지사항
+    total_posts: 2528
+    verified_latest:
+      title: 주민등록 장기거주불명자 최고공고
+      date: '2026-11-16'
+  - dong: 이문1동
+    search_ctgry: '%EC%9D%B4%EB%AC%B81%EB%8F%99'
+    list_url: https://www.ddm.go.kr/www/selectBbsNttList.do?bbsNo=72&key=390&searchCtgry=%EC%9D%B4%EB%AC%B81%EB%8F%99
+    board: 동주민센터 공지사항
+    total_posts: 1289
+    verified_latest:
+      title: 주민등록 장기거주불명자 최고 공고
+      date: '2026-11-11'
+  - dong: 이문2동
+    search_ctgry: '%EC%9D%B4%EB%AC%B82%EB%8F%99'
+    list_url: https://www.ddm.go.kr/www/selectBbsNttList.do?bbsNo=72&key=390&searchCtgry=%EC%9D%B4%EB%AC%B82%EB%8F%99
+    board: 동주민센터 공지사항
+    total_posts: 884
+    verified_latest:
+      title: 신규 주민등록증 발급 공고(2009년 11월생)
+      date: '2026-11-12'
+- gu: 서울 동작구
+  board: 동네소식
+  direct_fetch: ok
+  direct_fetch_note: 서버 직접 가져오기 HTTP 200. 동별 서브사이트 + 동별 게시판(B0000301).
+  dongs:
+  - dong: 노량진1동
+    dong_cd: '01'
+    menu_no: '800107'
+    list_url: https://www.dongjak.go.kr/dong/bbs/B0000301/list.do?menuNo=800107&dongCd=01
+    board: 동네소식
+    verified_latest:
+      title: 2026년 하반기 민방위 기본교육(보충2차) 통지서 반송에 따른 공시송달 공고(추가)
+      date: '2026-11-04'
+  - dong: 노량진2동
+    dong_cd: '02'
+    menu_no: '800207'
+    list_url: https://www.dongjak.go.kr/dong/bbs/B0000301/list.do?menuNo=800207&dongCd=02
+    board: 동네소식
+    verified_latest:
+      title: 통장 공개모집 공고(제5통)
+      date: '2026-11-17'
+  - dong: 상도1동
+    dong_cd: '03'
+    menu_no: '800307'
+    list_url: https://www.dongjak.go.kr/dong/bbs/B0000301/list.do?menuNo=800307&dongCd=03
+    board: 동네소식
+    verified_latest:
+      title: '''민선9기 주민소통의 날'' 관련 건의사항 처리결과 공개'
+      date: '2026-09-29'
+  - dong: 상도2동
+    dong_cd: '04'
+    menu_no: '800407'
+    list_url: https://www.dongjak.go.kr/dong/bbs/B0000301/list.do?menuNo=800407&dongCd=04
+    board: 동네소식
+    verified_latest:
+      title: 상도2동 통장 모집 공고(23통,39통)
+      date: '2026-11-16'
+  - dong: 상도3동
+    dong_cd: '05'
+    menu_no: '800507'
+    list_url: https://www.dongjak.go.kr/dong/bbs/B0000301/list.do?menuNo=800507&dongCd=05
+    board: 동네소식
+    verified_latest:
+      title: 주민등록 거주불명등록자 행정상 관리주소 이전 1차 공고
+      date: '2026-11-18'
+  - dong: 상도4동
+    dong_cd: '06'
+    menu_no: '800607'
+    list_url: https://www.dongjak.go.kr/dong/bbs/B0000301/list.do?menuNo=800607&dongCd=06
+    board: 동네소식
+    verified_latest:
+      title: 민선9기 주민소통의 날 건의사항 처리결과 공개
+      date: '2026-09-30'
+  - dong: 흑석동
+    dong_cd: '07'
+    menu_no: '800707'
+    list_url: https://www.dongjak.go.kr/dong/bbs/B0000301/list.do?menuNo=800707&dongCd=07
+    board: 동네소식
+    verified_latest:
+      title: 장기 거주불명자 주민등록 신고의무 최고 공고
+      date: '2026-11-19'
+  - dong: 사당1동
+    dong_cd: 08
+    menu_no: '800807'
+    list_url: https://www.dongjak.go.kr/dong/bbs/B0000301/list.do?menuNo=800807&dongCd=08
+    board: 동네소식
+    verified_latest:
+      title: 동작구 출산장려지원 사업 안내
+      date: '2026-11-02'
+  - dong: 사당2동
+    dong_cd: 09
+    menu_no: '800907'
+    list_url: https://www.dongjak.go.kr/dong/bbs/B0000301/list.do?menuNo=800907&dongCd=09
+    board: 동네소식
+    verified_latest:
+      title: 의료·요양 통합돌봄사업 안내
+      date: '2026-11-19'
+  - dong: 사당3동
+    dong_cd: '10'
+    menu_no: '801007'
+    list_url: https://www.dongjak.go.kr/dong/bbs/B0000301/list.do?menuNo=801007&dongCd=10
+    board: 동네소식
+    verified_latest:
+      title: 동작구 출산지원 사업 안내
+      date: '2026-10-12'
+  - dong: 사당4동
+    dong_cd: '11'
+    menu_no: '801107'
+    list_url: https://www.dongjak.go.kr/dong/bbs/B0000301/list.do?menuNo=801107&dongCd=11
+    board: 동네소식
+    verified_latest:
+      title: 사당4동 화단정비 공사 시행
+      date: '2026-11-18'
+  - dong: 사당5동
+    dong_cd: '12'
+    menu_no: '801207'
+    list_url: https://www.dongjak.go.kr/dong/bbs/B0000301/list.do?menuNo=801207&dongCd=12
+    board: 동네소식
+    verified_latest:
+      title: 2026년 민방위집합교육(보충2차)통지서 반송분 공시송달 공고
+      date: '2026-10-28'
+  - dong: 대방동
+    dong_cd: '13'
+    menu_no: '801307'
+    list_url: https://www.dongjak.go.kr/dong/bbs/B0000301/list.do?menuNo=801307&dongCd=13
+    board: 동네소식
+    verified_latest:
+      title: 동작구 임신,출산지원 서비스 신청 안내
+      date: '2026-10-19'
+  - dong: 신대방1동
+    dong_cd: '14'
+    menu_no: '801407'
+    list_url: https://www.dongjak.go.kr/dong/bbs/B0000301/list.do?menuNo=801407&dongCd=14
+    board: 동네소식
+    verified_latest:
+      title: 통장 공개모집 재공고 2차 (7통)
+      date: '2026-11-19'
+  - dong: 신대방2동
+    dong_cd: '15'
+    menu_no: '801507'
+    list_url: https://www.dongjak.go.kr/dong/bbs/B0000301/list.do?menuNo=801507&dongCd=15
+    board: 동네소식
+    verified_latest:
+      title: 주민등록 장기 거주불명자 직권조치 및 공고
+      date: '2026-11-19'
+- gu: 서울 서대문구
+  board: 우리동소식
+  direct_fetch: ok
+  direct_fetch_note: 서버 직접 가져오기 HTTP 200. 동별 서브사이트 시민게시판(EUC-KR).
+  list_url_pattern: https://www.sdm.go.kr/dong/{slug}/citizen/notice.do
+  dongs:
+  - dong: 충현동
+    slug: ch
+    list_url: https://www.sdm.go.kr/dong/ch/citizen/notice.do
+    board: 우리동소식
+    total_posts: 789
+    verified_latest:
+      title: 초등학교 입학할 자녀가 있다면
+      date: '2026-11-19'
+  - dong: 천연동
+    slug: cy
+    list_url: https://www.sdm.go.kr/dong/cy/citizen/notice.do
+    board: 우리동소식
+    total_posts: 888
+    verified_latest:
+      title: 공동주택 명칭변경에 따른 주민등록 일괄정정 시행 공고
+      date: '2026-11-17'
+  - dong: 북아현동
+    slug: bah
+    list_url: https://www.sdm.go.kr/dong/bah/citizen/notice.do
+    board: 우리동소식
+    total_posts: 695
+    verified_latest:
+      title: 신규주민등록증 발급통지 공고(09년 11월생)
+      date: '2026-11-19'
+  - dong: 신촌동
+    slug: sc
+    list_url: https://www.sdm.go.kr/dong/sc/citizen/notice.do
+    board: 우리동소식
+    total_posts: 1081
+    verified_latest:
+      title: 주민등록 거주불명등록자 직권조치(행정상 주소이전) 결과 공고
+      date: '2026-10-28'
+  - dong: 연희동
+    slug: yh
+    list_url: https://www.sdm.go.kr/dong/yh/citizen/notice.do
+    board: 우리동소식
+    total_posts: 1004
+    verified_latest:
+      title: 연희동 주민자치회 2026년 11월 정기회의 개최공고
+      date: '2026-11-18'
+  - dong: 홍제1동
+    slug: hj1
+    list_url: https://www.sdm.go.kr/dong/hj1/citizen/notice.do
+    board: 우리동소식
+    total_posts: 795
+    verified_latest:
+      title: 주민등록 거주불명자 행정상 관리주소 이전 공고(2차)
+      date: '2026-11-19'
+  - dong: 홍제2동
+    slug: hj2
+    list_url: https://www.sdm.go.kr/dong/hj2/citizen/notice.do
+    board: 우리동소식
+    total_posts: 688
+    verified_latest:
+      title: 주민등록 신고의무 불이행자 직권조치 결과 공고
+      date: '2026-11-13'
+  - dong: 홍제3동
+    slug: hj3
+    list_url: https://www.sdm.go.kr/dong/hj3/citizen/notice.do
+    board: 우리동소식
+    total_posts: 971
+    verified_latest:
+      title: 주민등록 직권조치 결과 공고
+      date: '2026-11-18'
+  - dong: 홍은1동
+    slug: he1
+    list_url: https://www.sdm.go.kr/dong/he1/citizen/notice.do
+    board: 우리동소식
+    total_posts: 1439
+    verified_latest:
+      title: 장기거주불명자 주민등록 최고공고(제30호)
+      date: '2026-11-19'
+  - dong: 홍은2동
+    slug: he2
+    list_url: https://www.sdm.go.kr/dong/he2/citizen/notice.do
+    board: 우리동소식
+    total_posts: 1017
+    verified_latest:
+      title: 홍은2동 주민자치회 위원 선정결과 공고
+      date: '2026-11-16'
+  - dong: 남가좌1동
+    slug: ngj1
+    list_url: https://www.sdm.go.kr/dong/ngj1/citizen/notice.do
+    board: 우리동소식
+    total_posts: 721
+    verified_latest:
+      title: 2026년 주민등록 사실조사에 따른 장기거주불명자 최고 공고(공고 제2026-13호)
+      date: '2026-11-18'
+  - dong: 남가좌2동
+    slug: ngj2
+    list_url: https://www.sdm.go.kr/dong/ngj2/citizen/notice.do
+    board: 우리동소식
+    total_posts: 1156
+    verified_latest:
+      title: 2026년 남가좌제2동 주민자치회 11월 정기회의 개최 공고
+      date: '2026-11-12'
+  - dong: 북가좌1동
+    slug: bgj1
+    list_url: https://www.sdm.go.kr/dong/bgj1/citizen/notice.do
+    board: 우리동소식
+    total_posts: 695
+    verified_latest:
+      title: 장기 거주불명자 주민등록 최고 공고
+      date: '2026-11-18'
+  - dong: 북가좌2동
+    slug: bgj2
+    list_url: https://www.sdm.go.kr/dong/bgj2/citizen/notice.do
+    board: 우리동소식
+    total_posts: 1259
+    verified_latest:
+      title: 주민등록 직권조치 결과 공고(유OO 외 1)
+      date: '2026-11-10'
+- gu: 서울 성북구
+  board: 우리 동 소식
+  direct_fetch: ok
+  direct_fetch_note: 서버 직접 가져오기 HTTP 200. 20개 동 연속 요청 시 0.5초 간격을 둔다.
+  list_url_pattern: https://sb.go.kr/www/selectBbsNttList.do?key=6171&bbsNo=90&searchCtgry={dong_urlencoded}
+  bbs_no: 90
+  key: 6171
+  dongs:
+  - dong: 성북동
+    search_ctgry: '%EC%84%B1%EB%B6%81%EB%8F%99'
+    list_url: https://sb.go.kr/www/selectBbsNttList.do?key=6171&bbsNo=90&searchCtgry=%EC%84%B1%EB%B6%81%EB%8F%99
+    board: 우리 동 소식
+    total_posts_on_page: 10
+    verified_latest:
+      title: 2026 성북구 생활안전보험
+      date: '2026-10-28'
+  - dong: 삼선동
+    search_ctgry: '%EC%82%BC%EC%84%A0%EB%8F%99'
+    list_url: https://sb.go.kr/www/selectBbsNttList.do?key=6171&bbsNo=90&searchCtgry=%EC%82%BC%EC%84%A0%EB%8F%99
+    board: 우리 동 소식
+    total_posts_on_page: 10
+    verified_latest:
+      title: 삼선동 공구대여소 안내
+      date: '2026-11-19'
+  - dong: 동선동
+    search_ctgry: '%EB%8F%99%EC%84%A0%EB%8F%99'
+    list_url: https://sb.go.kr/www/selectBbsNttList.do?key=6171&bbsNo=90&searchCtgry=%EB%8F%99%EC%84%A0%EB%8F%99
+    board: 우리 동 소식
+    total_posts_on_page: 10
+    verified_latest:
+      title: 2026년 차 없는 거리 동선나누장 자원봉사자 모집
+      date: '2026-10-19'
+  - dong: 돈암1동
+    search_ctgry: '%EB%8F%88%EC%95%941%EB%8F%99'
+    list_url: https://sb.go.kr/www/selectBbsNttList.do?key=6171&bbsNo=90&searchCtgry=%EB%8F%88%EC%95%941%EB%8F%99
+    board: 우리 동 소식
+    total_posts_on_page: 10
+    verified_latest:
+      title: 에코마일리지 참여 안내
+      date: '2026-11-18'
+  - dong: 돈암2동
+    search_ctgry: '%EB%8F%88%EC%95%942%EB%8F%99'
+    list_url: https://sb.go.kr/www/selectBbsNttList.do?key=6171&bbsNo=90&searchCtgry=%EB%8F%88%EC%95%942%EB%8F%99
+    board: 우리 동 소식
+    total_posts_on_page: 10
+    verified_latest:
+      title: 2026년 성북구민안전보험 안내
+      date: '2026-11-19'
+  - dong: 안암동
+    search_ctgry: '%EC%95%88%EC%95%94%EB%8F%99'
+    list_url: https://sb.go.kr/www/selectBbsNttList.do?key=6171&bbsNo=90&searchCtgry=%EC%95%88%EC%95%94%EB%8F%99
+    board: 우리 동 소식
+    total_posts_on_page: 10
+    verified_latest:
+      title: 폐배터리류 분리배출 안내
+      date: '2026-11-07'
+  - dong: 보문동
+    search_ctgry: '%EB%B3%B4%EB%AC%B8%EB%8F%99'
+    list_url: https://sb.go.kr/www/selectBbsNttList.do?key=6171&bbsNo=90&searchCtgry=%EB%B3%B4%EB%AC%B8%EB%8F%99
+    board: 우리 동 소식
+    total_posts_on_page: 9
+    verified_latest:
+      title: 2026년 11월 성북구민 걷기대회
+      date: '2026-11-18'
+  - dong: 정릉1동
+    search_ctgry: '%EC%A0%95%EB%A6%891%EB%8F%99'
+    list_url: https://sb.go.kr/www/selectBbsNttList.do?key=6171&bbsNo=90&searchCtgry=%EC%A0%95%EB%A6%891%EB%8F%99
+    board: 우리 동 소식
+    total_posts_on_page: 10
+    verified_latest:
+      title: 2026년 안전한국훈련 안내
+      date: '2026-10-27'
+  - dong: 정릉2동
+    search_ctgry: '%EC%A0%95%EB%A6%892%EB%8F%99'
+    list_url: https://sb.go.kr/www/selectBbsNttList.do?key=6171&bbsNo=90&searchCtgry=%EC%A0%95%EB%A6%892%EB%8F%99
+    board: 우리 동 소식
+    total_posts_on_page: 10
+    verified_latest:
+      title: 2026 가정형(베란다)태양광 보급사업 안내
+      date: '2026-11-11'
+  - dong: 정릉3동
+    search_ctgry: '%EC%A0%95%EB%A6%893%EB%8F%99'
+    list_url: https://sb.go.kr/www/selectBbsNttList.do?key=6171&bbsNo=90&searchCtgry=%EC%A0%95%EB%A6%893%EB%8F%99
+    board: 우리 동 소식
+    total_posts_on_page: 10
+    verified_latest:
+      title: 정릉3동 공구대여소 안내
+      date: '2026-11-17'
+  - dong: 정릉4동
+    search_ctgry: '%EC%A0%95%EB%A6%894%EB%8F%99'
+    list_url: https://sb.go.kr/www/selectBbsNttList.do?key=6171&bbsNo=90&searchCtgry=%EC%A0%95%EB%A6%894%EB%8F%99
+    board: 우리 동 소식
+    total_posts_on_page: 10
+    verified_latest:
+      title: 제35회 한산대동산신제
+      date: '2026-10-26'
+  - dong: 길음1동
+    search_ctgry: '%EA%B8%B8%EC%9D%8C1%EB%8F%99'
+    list_url: https://sb.go.kr/www/selectBbsNttList.do?key=6171&bbsNo=90&searchCtgry=%EA%B8%B8%EC%9D%8C1%EB%8F%99
+    board: 우리 동 소식
+    total_posts_on_page: 10
+    verified_latest:
+      title: 성인 AI 리터러시 교육 안내
+      date: '2026-11-19'
+  - dong: 길음2동
+    search_ctgry: '%EA%B8%B8%EC%9D%8C2%EB%8F%99'
+    list_url: https://sb.go.kr/www/selectBbsNttList.do?key=6171&bbsNo=90&searchCtgry=%EA%B8%B8%EC%9D%8C2%EB%8F%99
+    board: 우리 동 소식
+    total_posts_on_page: 10
+    verified_latest:
+      title: 2026년 4분기 길음제2동 자치회관 프로그램 수강생 모집 안내
+      date: '2026-09-07'
+  - dong: 월곡1동
+    search_ctgry: '%EC%9B%94%EA%B3%A11%EB%8F%99'
+    list_url: https://sb.go.kr/www/selectBbsNttList.do?key=6171&bbsNo=90&searchCtgry=%EC%9B%94%EA%B3%A11%EB%8F%99
+    board: 우리 동 소식
+    total_posts_on_page: 9
+    verified_latest:
+      title: 겨울철 가스안전 관리 요령
+      date: '2026-11-11'
+  - dong: 월곡2동
+    search_ctgry: '%EC%9B%94%EA%B3%A12%EB%8F%99'
+    list_url: https://sb.go.kr/www/selectBbsNttList.do?key=6171&bbsNo=90&searchCtgry=%EC%9B%94%EA%B3%A12%EB%8F%99
+    board: 우리 동 소식
+    total_posts_on_page: 10
+    verified_latest:
+      title: 월곡2동 주민자치회 뜨개교실 모집안내
+      date: '2026-10-08'
+  - dong: 장위1동
+    search_ctgry: '%EC%9E%A5%EC%9C%841%EB%8F%99'
+    list_url: https://sb.go.kr/www/selectBbsNttList.do?key=6171&bbsNo=90&searchCtgry=%EC%9E%A5%EC%9C%841%EB%8F%99
+    board: 우리 동 소식
+    total_posts_on_page: 10
+    verified_latest:
+      title: 알아두면 유용한 성북구 공공데이터 이야기
+      date: '2026-11-06'
+  - dong: 장위2동
+    search_ctgry: '%EC%9E%A5%EC%9C%842%EB%8F%99'
+    list_url: https://sb.go.kr/www/selectBbsNttList.do?key=6171&bbsNo=90&searchCtgry=%EC%9E%A5%EC%9C%842%EB%8F%99
+    board: 우리 동 소식
+    total_posts_on_page: 10
+    verified_latest:
+      title: 2026년 에코마일리지 안내
+      date: '2026-09-29'
+  - dong: 장위3동
+    search_ctgry: '%EC%9E%A5%EC%9C%843%EB%8F%99'
+    list_url: https://sb.go.kr/www/selectBbsNttList.do?key=6171&bbsNo=90&searchCtgry=%EC%9E%A5%EC%9C%843%EB%8F%99
+    board: 우리 동 소식
+    total_posts_on_page: 10
+    verified_latest:
+      title: 2027년 주민참여예산 사업선정을 위한 '주민투표(엠보팅)' 안내
+      date: '2026-09-15'
+  - dong: 석관동
+    search_ctgry: '%EC%84%9D%EA%B4%80%EB%8F%99'
+    list_url: https://sb.go.kr/www/selectBbsNttList.do?key=6171&bbsNo=90&searchCtgry=%EC%84%9D%EA%B4%80%EB%8F%99
+    board: 우리 동 소식
+    total_posts_on_page: 10
+    verified_latest:
+      title: 2027년 1분기 자치회관 프로그램 접수 안내
+      date: '2026-11-18'
+  - dong: 종암동
+    search_ctgry: '%EC%A2%85%EC%95%94%EB%8F%99'
+    list_url: https://sb.go.kr/www/selectBbsNttList.do?key=6171&bbsNo=90&searchCtgry=%EC%A2%85%EC%95%94%EB%8F%99
+    board: 우리 동 소식
+    total_posts_on_page: 10
+    verified_latest:
+      title: 안내
+      date: '2026-11-13'
+- gu: 서울 양천구
+  board: 우리동소식
+  direct_fetch: ok
+  direct_fetch_note: 서버 직접 가져오기 HTTP 200. 동 메인 페이지에서 cbIdx를 먼저 읽고 목록을 가져온다. 상세 URL은 목록 행의 onclick doBbsFView(cbIdx, bcIdx,
+    ...) 패턴으로 구성한다.
+  list_url_pattern: https://www.yangcheon.go.kr/site/{slug}/ex/bbs/List.do?cbIdx={cb_idx}
+  dongs:
+  - dong: 목1동
+    slug: mok01
+    cb_idx: 423
+    list_url: https://www.yangcheon.go.kr/site/mok01/ex/bbs/List.do?cbIdx=423
+    board: 우리동소식
+    total_posts_on_page: 10
+    verified_latest:
+      title: '[내 집, 내점포 앞 눈치우기] 안내'
+      date: '2026-11-19'
+  - dong: 목2동
+    slug: mok02
+    cb_idx: 431
+    list_url: https://www.yangcheon.go.kr/site/mok02/ex/bbs/List.do?cbIdx=431
+    board: 우리동소식
+    total_posts_on_page: 10
+    verified_latest:
+      title: 신규 주민등록증 발급공고
+      date: '2026-11-18'
+  - dong: 목3동
+    slug: mok03
+    cb_idx: 438
+    list_url: https://www.yangcheon.go.kr/site/mok03/ex/bbs/List.do?cbIdx=438
+    board: 우리동소식
+    total_posts_on_page: 10
+    verified_latest:
+      title: 2027년 서울특별시 양천구 환경공무관 신규 채용 공고
+      date: '2026-11-06'
+  - dong: 목4동
+    slug: mok04
+    cb_idx: 445
+    list_url: https://www.yangcheon.go.kr/site/mok04/ex/bbs/List.do?cbIdx=445
+    board: 우리동소식
+    total_posts_on_page: 10
+    verified_latest:
+      title: 2027년도 환경공무관 신규 채용 공개모집
+      date: '2026-11-06'
+  - dong: 목5동
+    slug: mok05
+    cb_idx: 452
+    list_url: https://www.yangcheon.go.kr/site/mok05/ex/bbs/List.do?cbIdx=452
+    board: 우리동소식
+    total_posts_on_page: 10
+    verified_latest:
+      title: '"27년 육군 상비예비군 정기모집'
+      date: '2026-11-02'
+  - dong: 신월1동
+    slug: sinwol01
+    cb_idx: 508
+    list_url: https://www.yangcheon.go.kr/site/sinwol01/ex/bbs/List.do?cbIdx=508
+    board: 우리동소식
+    total_posts_on_page: 10
+    verified_latest:
+      title: 내 집, 내 점포 앞 눈 치우기 안내
+      date: '2026-11-16'
+  - dong: 신월2동
+    slug: sinwol02
+    cb_idx: 515
+    list_url: https://www.yangcheon.go.kr/site/sinwol02/ex/bbs/List.do?cbIdx=515
+    board: 우리동소식
+    total_posts_on_page: 10
+    verified_latest:
+      title: 내집, 내점포앞 눈치우기 함께해요
+      date: '2026-11-19'
+  - dong: 신월3동
+    slug: sinwol03
+    cb_idx: 522
+    list_url: https://www.yangcheon.go.kr/site/sinwol03/ex/bbs/List.do?cbIdx=522
+    board: 우리동소식
+    total_posts_on_page: 10
+    verified_latest:
+      title: 2027년 서울특별시 양천구 환경공무관 신규 채용 공고
+      date: '2026-11-06'
+  - dong: 신월4동
+    slug: sinwol04
+    cb_idx: 529
+    list_url: https://www.yangcheon.go.kr/site/sinwol04/ex/bbs/List.do?cbIdx=529
+    board: 우리동소식
+    total_posts_on_page: 10
+    verified_latest:
+      title: 주민등록 무단전출자 최고 공고(박O환)
+      date: '2026-11-16'
+  - dong: 신월5동
+    slug: sinwol05
+    cb_idx: 536
+    list_url: https://www.yangcheon.go.kr/site/sinwol05/ex/bbs/List.do?cbIdx=536
+    board: 우리동소식
+    total_posts_on_page: 10
+    verified_latest:
+      title: 내 집, 내 점포 앞 눈 치우기 안내
+      date: '2026-11-19'
+  - dong: 신월6동
+    slug: sinwol06
+    cb_idx: 543
+    list_url: https://www.yangcheon.go.kr/site/sinwol06/ex/bbs/List.do?cbIdx=543
+    board: 우리동소식
+    total_posts_on_page: 10
+    verified_latest:
+      title: 주민등록표 등·초본 표기방법 개선 안내
+      date: '2026-10-23'
+  - dong: 신월7동
+    slug: sinwol07
+    cb_idx: 550
+    list_url: https://www.yangcheon.go.kr/site/sinwol07/ex/bbs/List.do?cbIdx=550
+    board: 우리동소식
+    total_posts_on_page: 10
+    verified_latest:
+      title: 2026년 4분기 자치회관 프로그램 안내
+      date: '2026-11-17'
+  - dong: 신정1동
+    slug: sinjeong01
+    cb_idx: 459
+    list_url: https://www.yangcheon.go.kr/site/sinjeong01/ex/bbs/List.do?cbIdx=459
+    board: 우리동소식
+    total_posts_on_page: 10
+    verified_latest:
+      title: 주민등록 무단전출자에 대한 직권조치 결과 통지 및 공고
+      date: '2026-11-13'
+  - dong: 신정2동
+    slug: sinjeong02
+    cb_idx: 466
+    list_url: https://www.yangcheon.go.kr/site/sinjeong02/ex/bbs/List.do?cbIdx=466
+    board: 우리동소식
+    total_posts_on_page: 10
+    verified_latest:
+      title: 신정2동 주민자치회 위원(신규위촉) 인적사항 공고
+      date: '2026-11-18'
+  - dong: 신정3동
+    slug: sinjeong03
+    cb_idx: 473
+    list_url: https://www.yangcheon.go.kr/site/sinjeong03/ex/bbs/List.do?cbIdx=473
+    board: 우리동소식
+    total_posts_on_page: 10
+    verified_latest:
+      title: 제5기 주민자치회 위원 인적사항 공고
+      date: '2026-11-19'
+  - dong: 신정4동
+    slug: sinjeong04
+    cb_idx: 480
+    list_url: https://www.yangcheon.go.kr/site/sinjeong04/ex/bbs/List.do?cbIdx=480
+    board: 우리동소식
+    total_posts_on_page: 10
+    verified_latest:
+      title: 신정4동 제5기 주민자치회 위원 인적사항 공고
+      date: '2026-11-17'
+  - dong: 신정6동
+    slug: sinjeong06
+    cb_idx: 494
+    list_url: https://www.yangcheon.go.kr/site/sinjeong06/ex/bbs/List.do?cbIdx=494
+    board: 우리동소식
+    total_posts_on_page: 10
+    verified_latest:
+      title: 2026년 주민등록 사실조사결과 신고 미이행자 직권조치결과 공고
+      date: '2026-11-13'
+  - dong: 신정7동
+    slug: sinjeong07
+    cb_idx: 501
+    list_url: https://www.yangcheon.go.kr/site/sinjeong07/ex/bbs/List.do?cbIdx=501
+    board: 우리동소식
+    total_posts_on_page: 10
+    verified_latest:
+      title: 올바른 쓰레기 분리배출 안내자료
+      date: '2026-10-26'
+- gu: 서울 은평구
+  board: 동주민센터 공지사항
+  direct_fetch: ok
+  direct_fetch_note: 서버 직접 가져오기가 되나 간헐적으로 타임아웃이 난다(2026-11-19 수집 중 16개 동 중 5개 동이 한 번씩 TimeoutError, 재시도하면 성공). 재시도 3회 + 요청
+    간 0.8초 간격을 둘 것. 호스트는 반드시 ep.go.kr(www 없음)로 할 것. www.ep.go.kr로는 417 Expectation Failed가 나서 가져오기가 안 된다.
+  list_url_pattern: https://ep.go.kr/www/selectBbsNttList.do?key=745&bbsNo=43&searchCtgry={dong_urlencoded}
+  bbs_no: 43
+  key: 745
+  dongs:
+  - dong: 녹번동
+    search_ctgry: '%EB%85%B9%EB%B2%88%EB%8F%99'
+    list_url: https://ep.go.kr/www/selectBbsNttList.do?key=745&bbsNo=43&searchCtgry=%EB%85%B9%EB%B2%88%EB%8F%99
+    board: 동주민센터 공지사항
+    total_posts_on_page: 10
+    verified_latest:
+      title: 제4기 녹번동 주민자치회 위원 모집 공고
+      date: '2026-11-02'
+  - dong: 불광1동
+    search_ctgry: '%EB%B6%88%EA%B4%911%EB%8F%99'
+    list_url: https://ep.go.kr/www/selectBbsNttList.do?key=745&bbsNo=43&searchCtgry=%EB%B6%88%EA%B4%911%EB%8F%99
+    board: 동주민센터 공지사항
+    total_posts_on_page: 10
+    verified_latest:
+      title: 불광제1동 통장 모집 공고(제8통, 제16통,제22통, 제24통,제48통)
+      date: '2026-10-16'
+  - dong: 불광2동
+    search_ctgry: '%EB%B6%88%EA%B4%912%EB%8F%99'
+    list_url: https://ep.go.kr/www/selectBbsNttList.do?key=745&bbsNo=43&searchCtgry=%EB%B6%88%EA%B4%912%EB%8F%99
+    board: 동주민센터 공지사항
+    total_posts_on_page: 10
+    verified_latest:
+      title: 제5기 불광2동 주민자치회 위원 공개모집 공고
+      date: '2026-11-09'
+  - dong: 갈현1동
+    search_ctgry: '%EA%B0%88%ED%98%841%EB%8F%99'
+    list_url: https://ep.go.kr/www/selectBbsNttList.do?key=745&bbsNo=43&searchCtgry=%EA%B0%88%ED%98%841%EB%8F%99
+    board: 동주민센터 공지사항
+    total_posts_on_page: 10
+    verified_latest:
+      title: 제5기 갈현1동 주민자치회 위원 모집 공고
+      date: '2026-10-30'
+  - dong: 갈현2동
+    search_ctgry: '%EA%B0%88%ED%98%842%EB%8F%99'
+    list_url: https://ep.go.kr/www/selectBbsNttList.do?key=745&bbsNo=43&searchCtgry=%EA%B0%88%ED%98%842%EB%8F%99
+    board: 동주민센터 공지사항
+    total_posts_on_page: 10
+    verified_latest:
+      title: 제5기 갈현2동 주민자치회 위원 모집 공고
+      date: '2026-10-22'
+  - dong: 구산동
+    search_ctgry: '%EA%B5%AC%EC%82%B0%EB%8F%99'
+    list_url: https://ep.go.kr/www/selectBbsNttList.do?key=745&bbsNo=43&searchCtgry=%EA%B5%AC%EC%82%B0%EB%8F%99
+    board: 동주민센터 공지사항
+    total_posts_on_page: 10
+    verified_latest:
+      title: 수도요금 전자고지 및 자동납부 신규가입
+      date: '2026-11-19'
+  - dong: 대조동
+    search_ctgry: '%EB%8C%80%EC%A1%B0%EB%8F%99'
+    list_url: https://ep.go.kr/www/selectBbsNttList.do?key=745&bbsNo=43&searchCtgry=%EB%8C%80%EC%A1%B0%EB%8F%99
+    board: 동주민센터 공지사항
+    total_posts_on_page: 10
+    verified_latest:
+      title: 제4기 대조동 주민자치회 위원 모집 공고
+      date: '2026-11-05'
+  - dong: 응암1동
+    search_ctgry: '%EC%9D%91%EC%95%941%EB%8F%99'
+    list_url: https://ep.go.kr/www/selectBbsNttList.do?key=745&bbsNo=43&searchCtgry=%EC%9D%91%EC%95%941%EB%8F%99
+    board: 동주민센터 공지사항
+    total_posts_on_page: 10
+    verified_latest:
+      title: 응암제1동 통장 모집 공고(제7통)
+      date: '2026-11-18'
+  - dong: 응암2동
+    search_ctgry: '%EC%9D%91%EC%95%942%EB%8F%99'
+    list_url: https://ep.go.kr/www/selectBbsNttList.do?key=745&bbsNo=43&searchCtgry=%EC%9D%91%EC%95%942%EB%8F%99
+    board: 동주민센터 공지사항
+    total_posts_on_page: 10
+    verified_latest:
+      title: 한파 영향예보 직접전달 서비스 안내
+      date: '2026-11-11'
+  - dong: 응암3동
+    search_ctgry: '%EC%9D%91%EC%95%943%EB%8F%99'
+    list_url: https://ep.go.kr/www/selectBbsNttList.do?key=745&bbsNo=43&searchCtgry=%EC%9D%91%EC%95%943%EB%8F%99
+    board: 동주민센터 공지사항
+    total_posts_on_page: 10
+    verified_latest:
+      title: 제4기 응암3동 주민자치회 위원 모집 공고
+      date: '2026-10-28'
+  - dong: 역촌동
+    search_ctgry: '%EC%97%AD%EC%B4%8C%EB%8F%99'
+    list_url: https://ep.go.kr/www/selectBbsNttList.do?key=745&bbsNo=43&searchCtgry=%EC%97%AD%EC%B4%8C%EB%8F%99
+    board: 동주민센터 공지사항
+    total_posts_on_page: 10
+    verified_latest:
+      title: 역촌동 주민자치회 5기 위원 공개모집 공고
+      date: '2026-10-16'
+  - dong: 신사1동
+    search_ctgry: '%EC%8B%A0%EC%82%AC1%EB%8F%99'
+    list_url: https://ep.go.kr/www/selectBbsNttList.do?key=745&bbsNo=43&searchCtgry=%EC%8B%A0%EC%82%AC1%EB%8F%99
+    board: 동주민센터 공지사항
+    total_posts_on_page: 10
+    verified_latest:
+      title: 2026년 제6회 신사1동 주민총회 결과 공고
+      date: '2026-09-21'
+  - dong: 신사2동
+    search_ctgry: '%EC%8B%A0%EC%82%AC2%EB%8F%99'
+    list_url: https://ep.go.kr/www/selectBbsNttList.do?key=745&bbsNo=43&searchCtgry=%EC%8B%A0%EC%82%AC2%EB%8F%99
+    board: 동주민센터 공지사항
+    total_posts_on_page: 10
+    verified_latest:
+      title: 제4기 신사2동 주민자치회 위원 모집 공고
+      date: '2026-10-27'
+  - dong: 증산동
+    search_ctgry: '%EC%A6%9D%EC%82%B0%EB%8F%99'
+    list_url: https://ep.go.kr/www/selectBbsNttList.do?key=745&bbsNo=43&searchCtgry=%EC%A6%9D%EC%82%B0%EB%8F%99
+    board: 동주민센터 공지사항
+    total_posts_on_page: 10
+    verified_latest:
+      title: 2026년 제6회 증산동 주민총회 결과공고
+      date: '2026-09-16'
+  - dong: 수색동
+    search_ctgry: '%EC%88%98%EC%83%89%EB%8F%99'
+    list_url: https://ep.go.kr/www/selectBbsNttList.do?key=745&bbsNo=43&searchCtgry=%EC%88%98%EC%83%89%EB%8F%99
+    board: 동주민센터 공지사항
+    total_posts_on_page: 10
+    verified_latest:
+      title: 전자고지 가입하면 수도요금 3천원 감면 혜택 연장
+      date: '2026-11-19'
+  - dong: 진관동
+    search_ctgry: '%EC%A7%84%EA%B4%80%EB%8F%99'
+    list_url: https://ep.go.kr/www/selectBbsNttList.do?key=745&bbsNo=43&searchCtgry=%EC%A7%84%EA%B4%80%EB%8F%99
+    board: 동주민센터 공지사항
+    total_posts_on_page: 10
+    verified_latest:
+      title: 제4기 진관동 주민자치회 위원 모집 공고
+      date: '2026-11-02'
+- gu: 서울 서초구
+  board: 공지사항
+  direct_fetch: ok
+  direct_fetch_note: 서버 직접 가져오기 HTTP 200. 동별 공지사항은 구 공지 게시판(cbIdx=57)을 dongCode로 필터한
+    DongList이다. 동 목록·dongCode는 구청 메인(/site/seocho/main.do)의 동주민센터 메뉴에서 확인했다. 서초1동만
+    별도 '1동 소식' 게시판(cbIdx=442)이 있고 다른 17개 동에는 없어 균일하게 DongList를 쓴다. 상세 URL은 DongMain에
+    나온 형태(/site/seocho/ex/bbs/DongView.do?cbIdx=57&bcIdx={id}&dongCode={code})로, bcIdx
+    412276을 직접 열어 200·제목 일치로 검증했다. 목록 href 자체는 /site//ex/bbs/DongView.do?cbIdx=57&bcidx={id}
+    형태(소문자 bcidx, dongCode 없음)라 그대로 쓰지 않는다.
+  list_url_pattern: https://www.seocho.go.kr/site/seocho/ex/bbs/DongList.do?cbIdx=57&dongCode={dong_code}
+  detail_url_pattern: https://www.seocho.go.kr/site/seocho/ex/bbs/DongView.do?cbIdx=57&bcIdx={bc_idx}&dongCode={dong_code}
+  dongs:
+  - dong: 서초1동
+    dong_code: v0
+    list_url: https://www.seocho.go.kr/site/seocho/ex/bbs/DongList.do?cbIdx=57&dongCode=v0
+    board: 공지사항
+    total_posts: 181
+    verified_latest:
+      title: 「2026 AI로 만드는 나만의 네컷만화」공모전 결과 발표 ★유치부 수정★
+      date: '2026-10-27'
+    note: 동 공지사항(DongList) 최신은 2026-10-27이다. 별도 '1동 소식' 게시판(cbIdx=442) 최신은 2026-11-13이나
+      다른 17개 동에는 없어 균일하게 DongList를 쓴다.
+  - dong: 서초2동
+    dong_code: v1
+    list_url: https://www.seocho.go.kr/site/seocho/ex/bbs/DongList.do?cbIdx=57&dongCode=v1
+    board: 공지사항
+    total_posts: 365
+    verified_latest:
+      title: 서초2동 통장 모집 공고(1,2,7,8,11,20통)
+      date: '2026-11-16'
+  - dong: 서초3동
+    dong_code: v2
+    list_url: https://www.seocho.go.kr/site/seocho/ex/bbs/DongList.do?cbIdx=57&dongCode=v2
+    board: 공지사항
+    total_posts: 295
+    verified_latest:
+      title: 2026 문화누리카드 보조금 소멸 안내
+      date: '2026-11-10'
+  - dong: 서초4동
+    dong_code: v3
+    list_url: https://www.seocho.go.kr/site/seocho/ex/bbs/DongList.do?cbIdx=57&dongCode=v3
+    board: 공지사항
+    total_posts: 319
+    verified_latest:
+      title: 서초4동 통장 공개모집 공고
+      date: '2026-10-26'
+  - dong: 잠원동
+    dong_code: v4
+    list_url: https://www.seocho.go.kr/site/seocho/ex/bbs/DongList.do?cbIdx=57&dongCode=v4
+    board: 공지사항
+    total_posts: 233
+    verified_latest:
+      title: 2026년 제3회 잠원동 통장심사위원회 회의록 공개
+      date: '2026-09-03'
+    note: 최신 글이 2026-09-03으로 낡았다. 사실상 휴면 게시판에 가깝다.
+  - dong: 반포본동
+    dong_code: v5
+    list_url: https://www.seocho.go.kr/site/seocho/ex/bbs/DongList.do?cbIdx=57&dongCode=v5
+    board: 공지사항
+    total_posts: 86
+    verified_latest:
+      title: 2026년 서리풀페스티벌 축제-'서초 is the Music'
+      date: '2026-08-25'
+    note: 최신 글이 2026-08-25로 낡았다. 게시판 전체가 86건뿐이고 10번째 글이 2023-12-19이다. 사실상 휴면 게시판에
+      가깝다.
+  - dong: 반포1동
+    dong_code: v6
+    list_url: https://www.seocho.go.kr/site/seocho/ex/bbs/DongList.do?cbIdx=57&dongCode=v6
+    board: 공지사항
+    total_posts: 184
+    verified_latest:
+      title: 2026년 제6회 반포1동 통장심사위원회 회의록 공개
+      date: '2026-11-12'
+  - dong: 반포2동
+    dong_code: v7
+    list_url: https://www.seocho.go.kr/site/seocho/ex/bbs/DongList.do?cbIdx=57&dongCode=v7
+    board: 공지사항
+    total_posts: 183
+    verified_latest:
+      title: 2026 가을 서리풀 도보여행 안내
+      date: '2026-10-02'
+  - dong: 반포3동
+    dong_code: v8
+    list_url: https://www.seocho.go.kr/site/seocho/ex/bbs/DongList.do?cbIdx=57&dongCode=v8
+    board: 공지사항
+    total_posts: 203
+    verified_latest:
+      title: 반포3동 통장 모집 공고(8통, 14통, 18통, 24통, 29통)
+      date: '2026-10-19'
+  - dong: 반포4동
+    dong_code: v9
+    list_url: https://www.seocho.go.kr/site/seocho/ex/bbs/DongList.do?cbIdx=57&dongCode=v9
+    board: 공지사항
+    total_posts: 306
+    verified_latest:
+      title: 💌 2026년 11월 서래음악회 개최 안내
+      date: '2026-11-16'
+  - dong: 방배본동
+    dong_code: va
+    list_url: https://www.seocho.go.kr/site/seocho/ex/bbs/DongList.do?cbIdx=57&dongCode=va
+    board: 공지사항
+    total_posts: 288
+    verified_latest:
+      title: 방배본동 통장 모집 공고(6통, 8통)
+      date: '2026-11-15'
+  - dong: 방배1동
+    dong_code: vb
+    list_url: https://www.seocho.go.kr/site/seocho/ex/bbs/DongList.do?cbIdx=57&dongCode=vb
+    board: 공지사항
+    total_posts: 181
+    verified_latest:
+      title: 2026년 제4회 방배1동 통장심사위원회 회의록 공개
+      date: '2026-11-05'
+  - dong: 방배2동
+    dong_code: vc
+    list_url: https://www.seocho.go.kr/site/seocho/ex/bbs/DongList.do?cbIdx=57&dongCode=vc
+    board: 공지사항
+    total_posts: 260
+    verified_latest:
+      title: 방배2동 통장 공개모집 공고(8통)
+      date: '2026-11-05'
+  - dong: 방배3동
+    dong_code: vd
+    list_url: https://www.seocho.go.kr/site/seocho/ex/bbs/DongList.do?cbIdx=57&dongCode=vd
+    board: 공지사항
+    total_posts: 374
+    verified_latest:
+      title: 주민등록 무단전출자 최고공고
+      date: '2026-11-18'
+  - dong: 방배4동
+    dong_code: ve
+    list_url: https://www.seocho.go.kr/site/seocho/ex/bbs/DongList.do?cbIdx=57&dongCode=ve
+    board: 공지사항
+    total_posts: 225
+    verified_latest:
+      title: <2026년 문화누리카드 전화결제 가맹점 안내>
+      date: '2026-11-12'
+  - dong: 양재1동
+    dong_code: vf
+    list_url: https://www.seocho.go.kr/site/seocho/ex/bbs/DongList.do?cbIdx=57&dongCode=vf
+    board: 공지사항
+    total_posts: 425
+    verified_latest:
+      title: 2026년 제6회 양재1동 통장심사위원회 회의록 공개
+      date: '2026-11-06'
+  - dong: 양재2동
+    dong_code: vg
+    list_url: https://www.seocho.go.kr/site/seocho/ex/bbs/DongList.do?cbIdx=57&dongCode=vg
+    board: 공지사항
+    total_posts: 223
+    verified_latest:
+      title: 2026년 제2회 · 제3회 양재2동 통장심사위원회 회의록 공개
+      date: '2026-11-16'
+  - dong: 내곡동
+    dong_code: vh
+    list_url: https://www.seocho.go.kr/site/seocho/ex/bbs/DongList.do?cbIdx=57&dongCode=vh
+    board: 공지사항
+    total_posts: 209
+    verified_latest:
+      title: '''10월 나라사랑태극기 달기 운동'' 협조 요청'
+      date: '2026-09-23'
+    note: 최신 글이 2026-09-23으로 낡았다.
+- gu: 서울 영등포구
+  board: 우리동소식
+  direct_fetch: ok
+  direct_fetch_note: 서버 직접 가져오기 HTTP 200. 동마다 bbsNo·key가 다른 동별 게시판이다. 각 동 목록 페이지의
+    <title> 브레드크럼('우리동소식 < {동} < 동주민센터')으로 동을 확정했다. bbsNo=60 공유 게시판은 별개 게시판(동별 16~68건,
+    여의동 최신 2026-07-30으로 낡음)이라 쓰지 않는다. parse_bbs_list를 재사용한다.
+  list_url_pattern: https://www.ydp.go.kr/www/selectBbsNttList.do?bbsNo={bbs_no}&key={key}
+  dongs:
+  - dong: 영등포본동
+    bbs_no: 56
+    key: 4914
+    list_url: https://www.ydp.go.kr/www/selectBbsNttList.do?bbsNo=56&key=4914
+    board: 우리동소식
+    total_posts: 2388
+    verified_latest:
+      title: 영등포본동 자치회관 프로그램 요가교실 강사 모집
+      date: '2026-11-18'
+  - dong: 영등포동
+    bbs_no: 61
+    key: 2966
+    list_url: https://www.ydp.go.kr/www/selectBbsNttList.do?bbsNo=61&key=2966
+    board: 우리동소식
+    total_posts: 2536
+    verified_latest:
+      title: 제4회 포동포동 소풍길 안내
+      date: '2026-11-18'
+  - dong: 여의동
+    bbs_no: 66
+    key: 2983
+    list_url: https://www.ydp.go.kr/www/selectBbsNttList.do?bbsNo=66&key=2983
+    board: 우리동소식
+    total_posts: 2982
+    verified_latest:
+      title: 2027학년도 초등학교 취학통지서 발급 안내
+      date: '2026-11-18'
+  - dong: 당산1동
+    bbs_no: 71
+    key: 3000
+    list_url: https://www.ydp.go.kr/www/selectBbsNttList.do?bbsNo=71&key=3000
+    board: 우리동소식
+    total_posts: 4335
+    verified_latest:
+      title: 당산제1동 주민자치위원회 위원 모집 공고
+      date: '2026-11-18'
+  - dong: 당산2동
+    bbs_no: 76
+    key: 3017
+    list_url: https://www.ydp.go.kr/www/selectBbsNttList.do?bbsNo=76&key=3017
+    board: 우리동소식
+    total_posts: 2511
+    verified_latest:
+      title: 2026년 제3회 강변 당산마을 축제 개최
+      date: '2026-10-15'
+  - dong: 도림동
+    bbs_no: 81
+    key: 3034
+    list_url: https://www.ydp.go.kr/www/selectBbsNttList.do?bbsNo=81&key=3034
+    board: 우리동소식
+    total_posts: 2804
+    verified_latest:
+      title: 2027 희망온돌 따뜻한 겨울나기 <천하제일 도림 나눔 대전> 에 초대합니다.
+      date: '2026-11-18'
+  - dong: 문래동
+    bbs_no: 86
+    key: 3051
+    list_url: https://www.ydp.go.kr/www/selectBbsNttList.do?bbsNo=86&key=3051
+    board: 우리동소식
+    total_posts: 5486
+    verified_latest:
+      title: 겨울철 제설안내(내 집 내 점포 앞 눈치우기)
+      date: '2026-11-15'
+  - dong: 양평1동
+    bbs_no: 91
+    key: 3068
+    list_url: https://www.ydp.go.kr/www/selectBbsNttList.do?bbsNo=91&key=3068
+    board: 우리동소식
+    total_posts: 3321
+    verified_latest:
+      title: 내 집 앞, 내 점포 앞 눈치우기에 함께해주세요.
+      date: '2026-11-17'
+  - dong: 양평2동
+    bbs_no: 96
+    key: 3085
+    list_url: https://www.ydp.go.kr/www/selectBbsNttList.do?bbsNo=96&key=3085
+    board: 우리동소식
+    total_posts: 3115
+    verified_latest:
+      title: 주간 일자리 정보(11.16)
+      date: '2026-11-16'
+  - dong: 신길1동
+    bbs_no: 101
+    key: 3102
+    list_url: https://www.ydp.go.kr/www/selectBbsNttList.do?bbsNo=101&key=3102
+    board: 우리동소식
+    total_posts: 1939
+    verified_latest:
+      title: 신길1동 제31통 통장 모집 공고
+      date: '2026-11-17'
+  - dong: 신길3동
+    bbs_no: 106
+    key: 3119
+    list_url: https://www.ydp.go.kr/www/selectBbsNttList.do?bbsNo=106&key=3119
+    board: 우리동소식
+    total_posts: 2700
+    verified_latest:
+      title: 「동 주민센터 종합감사」예고 및 구민의견 제출 안내(대림1동, 대림2동, 대림3동)
+      date: '2026-11-16'
+  - dong: 신길4동
+    bbs_no: 111
+    key: 3136
+    list_url: https://www.ydp.go.kr/www/selectBbsNttList.do?bbsNo=111&key=3136
+    board: 우리동소식
+    total_posts: 3657
+    verified_latest:
+      title: YDP창의예술센터 2026 창의예술주간 둥둥제 행사 안내
+      date: '2026-11-12'
+  - dong: 신길5동
+    bbs_no: 116
+    key: 3153
+    list_url: https://www.ydp.go.kr/www/selectBbsNttList.do?bbsNo=116&key=3153
+    board: 우리동소식
+    total_posts: 3052
+    verified_latest:
+      title: 「동 주민센터 종합감사」예고 및 구민의견 제출 안내
+      date: '2026-11-16'
+  - dong: 신길6동
+    bbs_no: 121
+    key: 3170
+    list_url: https://www.ydp.go.kr/www/selectBbsNttList.do?bbsNo=121&key=3170
+    board: 우리동소식
+    total_posts: 2936
+    verified_latest:
+      title: 통장 모집 공고(신길제6동 제9통, 17통)
+      date: '2026-11-12'
+  - dong: 신길7동
+    bbs_no: 126
+    key: 3187
+    list_url: https://www.ydp.go.kr/www/selectBbsNttList.do?bbsNo=126&key=3187
+    board: 우리동소식
+    total_posts: 3382
+    verified_latest:
+      title: 영등포 소식(11월 세번째)
+      date: '2026-11-18'
+  - dong: 대림1동
+    bbs_no: 131
+    key: 3204
+    list_url: https://www.ydp.go.kr/www/selectBbsNttList.do?bbsNo=131&key=3204
+    board: 우리동소식
+    total_posts: 3102
+    verified_latest:
+      title: 동 주민센터 종합감사」예고 및 구민의견 제출 안내
+      date: '2026-11-16'
+  - dong: 대림2동
+    bbs_no: 136
+    key: 3221
+    list_url: https://www.ydp.go.kr/www/selectBbsNttList.do?bbsNo=136&key=3221
+    board: 우리동소식
+    total_posts: 2478
+    verified_latest:
+      title: 동 주민센터 종합감사 예고 및 구민 의견 제출 안내
+      date: '2026-11-16'
+  - dong: 대림3동
+    bbs_no: 141
+    key: 3238
+    list_url: https://www.ydp.go.kr/www/selectBbsNttList.do?bbsNo=141&key=3238
+    board: 우리동소식
+    total_posts: 2955
+    verified_latest:
+      title: 대림3동 24통 통장후보자 모집공고
+      date: '2026-11-19'
+- gu: 서울 마포구
+  board: 우리동네소식
+  direct_fetch: ok
+  direct_fetch_note: 서버 직접 가져오기 HTTP 200. 동별 서브사이트(/site/{slug}/home, <title>로 동 확정)
+    아래 '우리동네소식' 게시판(board/townnews)이다. 염리동 슬러그는 yeomni이다(yeomri는 구청 대표사이트로 리다이렉트된다).
+    total_posts는 목록 첫 행의 순번 기준이다(목록에 총 게시글 수 표기가 없어 삭제글이 있으면 실제보다 클 수 있음). 상세 URL은
+    bare 형태(/site/{slug}/board/townnews/{id})로, 공덕동 3265번을 직접 열어 200·제목 일치로 검증했다.
+  list_url_pattern: https://www.mapo.go.kr/site/{slug}/board/townnews/list
+  detail_url_pattern: https://www.mapo.go.kr/site/{slug}/board/townnews/{id}
+  dongs:
+  - dong: 공덕동
+    slug: gongdeok
+    list_url: https://www.mapo.go.kr/site/gongdeok/board/townnews/list
+    board: 우리동네소식
+    total_posts: 979
+    verified_latest:
+      title: 주민등록 신고의무지연자(사망)에 대한 최고 공고
+      date: '2026-11-10'
+  - dong: 아현동
+    slug: ahyeon
+    list_url: https://www.mapo.go.kr/site/ahyeon/board/townnews/list
+    board: 우리동네소식
+    total_posts: 1830
+    verified_latest:
+      title: 2027년 상반기 마포구 서울 동행일자리 사업 참여자 모집 공고
+      date: '2026-11-15'
+  - dong: 도화동
+    slug: dohwa
+    list_url: https://www.mapo.go.kr/site/dohwa/board/townnews/list
+    board: 우리동네소식
+    total_posts: 1174
+    verified_latest:
+      title: 주민등록 신고의무 지연자(무단전출)에 대한 최고 공고(김○○)
+      date: '2026-11-19'
+  - dong: 용강동
+    slug: yonggang
+    list_url: https://www.mapo.go.kr/site/yonggang/board/townnews/list
+    board: 우리동네소식
+    total_posts: 971
+    verified_latest:
+      title: 용강동 제11통장 모집 공고[제2026-56호]
+      date: '2026-11-18'
+  - dong: 대흥동
+    slug: daeheung
+    list_url: https://www.mapo.go.kr/site/daeheung/board/townnews/list
+    board: 우리동네소식
+    total_posts: 421
+    verified_latest:
+      title: 주민등록 장기 거주불명자 직권조치 결과 공고
+      date: '2026-11-19'
+  - dong: 염리동
+    slug: yeomni
+    list_url: https://www.mapo.go.kr/site/yeomni/board/townnews/list
+    board: 우리동네소식
+    total_posts: 1227
+    verified_latest:
+      title: 2026년 주민등록 사실조사에 따른 장기 거주불명자에 대한 최고공고(무단전출)
+      date: '2026-11-11'
+  - dong: 신수동
+    slug: sinsu
+    list_url: https://www.mapo.go.kr/site/sinsu/board/townnews/list
+    board: 우리동네소식
+    total_posts: 828
+    verified_latest:
+      title: 신수동 제12통장 모집 공고
+      date: '2026-11-17'
+  - dong: 서강동
+    slug: seogang
+    list_url: https://www.mapo.go.kr/site/seogang/board/townnews/list
+    board: 우리동네소식
+    total_posts: 1280
+    verified_latest:
+      title: 주민등록 신고 의무 지연자에 대한 최고 공고
+      date: '2026-11-17'
+  - dong: 서교동
+    slug: seogyo
+    list_url: https://www.mapo.go.kr/site/seogyo/board/townnews/list
+    board: 우리동네소식
+    total_posts: 2455
+    verified_latest:
+      title: “전자고지·자동납부 가입하면 수도요금 3천원 감면”…서울시, 혜택 3년 연장
+      date: '2026-11-19'
+  - dong: 합정동
+    slug: hapjeong
+    list_url: https://www.mapo.go.kr/site/hapjeong/board/townnews/list
+    board: 우리동네소식
+    total_posts: 891
+    verified_latest:
+      title: 주민등록 신고의무 지연자에 대한 직권조치 결과 공고
+      date: '2026-11-18'
+  - dong: 망원1동
+    slug: mangwon1
+    list_url: https://www.mapo.go.kr/site/mangwon1/board/townnews/list
+    board: 우리동네소식
+    total_posts: 2518
+    verified_latest:
+      title: 주민등록 장기 거주불명자에 대한 직권조치 결과(직권말소) 공고
+      date: '2026-11-17'
+  - dong: 망원2동
+    slug: mangwon2
+    list_url: https://www.mapo.go.kr/site/mangwon2/board/townnews/list
+    board: 우리동네소식
+    total_posts: 797
+    verified_latest:
+      title: 주민등록에 관한 신고의무 지연자 최고 공고(2026년 10월 수시)
+      date: '2026-11-17'
+  - dong: 연남동
+    slug: yeonnam
+    list_url: https://www.mapo.go.kr/site/yeonnam/board/townnews/list
+    board: 우리동네소식
+    total_posts: 1226
+    verified_latest:
+      title: 연남동 통장 공개모집 공고(제19통장)
+      date: '2026-08-28'
+    note: 최신 글이 2026-08-28로 낡았다. 사실상 휴면 게시판에 가깝다.
+  - dong: 성산1동
+    slug: seongsan1
+    list_url: https://www.mapo.go.kr/site/seongsan1/board/townnews/list
+    board: 우리동네소식
+    total_posts: 872
+    verified_latest:
+      title: 주민등록 신고의무지연자에 대한 직권조치 결과 공고
+      date: '2026-11-16'
+  - dong: 성산2동
+    slug: seongsan2
+    list_url: https://www.mapo.go.kr/site/seongsan2/board/townnews/list
+    board: 우리동네소식
+    total_posts: 914
+    verified_latest:
+      title: (공고 제27호) 2026년 주민등록 사실조사 관련 장기거주불명자 최고 공고
+      date: '2026-11-19'
+  - dong: 상암동
+    slug: sangam
+    list_url: https://www.mapo.go.kr/site/sangam/board/townnews/list
+    board: 우리동네소식
+    total_posts: 1076
+    verified_latest:
+      title: 2026년 주민등록사실조사 결과에 따른 장기거주불명자 최고공고
+      date: '2026-11-13'
+- gu: 서울 도봉구
+  board: 동 소식 공지사항
+  direct_fetch: ok
+  direct_fetch_note: 서버 직접 가져오기 HTTP 200. 동별 bbs.asp?code={code} 목록, 상세는 bbs.asp?bmode=D&pcode={pcode}&code={code}.
+    방학1동 RSS(code=10009682)는 data_nationwide.json의 구청급 게시판과 별개이다.
+  list_url_pattern: https://www.dobong.go.kr/dong/bbs.asp?code={code}
+  detail_url_pattern: https://www.dobong.go.kr/dong/bbs.asp?bmode=D&pcode={pcode}&code={code}
+  dongs:
+  - dong: 쌍문1동
+    code: '10009626'
+    list_url: https://www.dobong.go.kr/dong/bbs.asp?code=10009626
+    board: 동 소식 공지사항
+    total_posts: 634
+    verified_latest:
+      title: 2026년 쌍문1동 주민총회 개최 결과 공고
+      date: '2026-10-07'
+  - dong: 쌍문2동
+    code: '10009640'
+    list_url: https://www.dobong.go.kr/dong/bbs.asp?code=10009640
+    board: 동 소식 공지사항
+    total_posts: 606
+    verified_latest:
+      title: 「도봉구 스마트혁신지원단」
+      date: '2026-11-19'
+  - dong: 쌍문3동
+    code: '10009654'
+    list_url: https://www.dobong.go.kr/dong/bbs.asp?code=10009654
+    board: 동 소식 공지사항
+    total_posts: 738
+    verified_latest:
+      title: 본인서명사실확인제도 안내
+      date: '2026-11-18'
+  - dong: 쌍문4동
+    code: '10009668'
+    list_url: https://www.dobong.go.kr/dong/bbs.asp?code=10009668
+    board: 동 소식 공지사항
+    total_posts: 849
+    verified_latest:
+      title: 쌍문4동 통장 공개모집 공고 (10통,17통)
+      date: '2026-11-02'
+  - dong: 방학1동
+    code: '10009682'
+    list_url: https://www.dobong.go.kr/dong/bbs.asp?code=10009682
+    board: 동 소식 공지사항
+    total_posts: 1264
+    verified_latest:
+      title: 방학1동 자치회관 교양강좌 강사 선정 결과 발표
+      date: '2026-11-12'
+  - dong: 방학2동
+    code: '10009696'
+    list_url: https://www.dobong.go.kr/dong/bbs.asp?code=10009696
+    board: 동 소식 공지사항
+    total_posts: 566
+    verified_latest:
+      title: 방학2동 주민자치회 위원 모집 공고
+      date: '2026-11-13'
+  - dong: 방학3동
+    code: '10009710'
+    list_url: https://www.dobong.go.kr/dong/bbs.asp?code=10009710
+    board: 동 소식 공지사항
+    total_posts: 679
+    verified_latest:
+      title: 방학3동 통장 공개모집(29통)
+      date: '2026-10-06'
+  - dong: 창1동
+    code: '10009724'
+    list_url: https://www.dobong.go.kr/dong/bbs.asp?code=10009724
+    board: 동 소식 공지사항
+    total_posts: 800
+    verified_latest:
+      title: 2026년 주민등록 사실조사에 따른 장기거주불명자 최고 공고
+      date: '2026-11-17'
+  - dong: 창2동
+    code: '10009738'
+    list_url: https://www.dobong.go.kr/dong/bbs.asp?code=10009738
+    board: 동 소식 공지사항
+    total_posts: 853
+    verified_latest:
+      title: 서울시 도봉구 창2동 22통, 25통, 32통 통장 공개모집
+      date: '2026-11-09'
+  - dong: 창3동
+    code: '10009752'
+    list_url: https://www.dobong.go.kr/dong/bbs.asp?code=10009752
+    board: 동 소식 공지사항
+    total_posts: 534
+    verified_latest:
+      title: 2026년 창3동 제6회 주민총회 주민투표 결과 공고
+      date: '2026-11-10'
+  - dong: 창4동
+    code: '10009766'
+    list_url: https://www.dobong.go.kr/dong/bbs.asp?code=10009766
+    board: 동 소식 공지사항
+    total_posts: 681
+    verified_latest:
+      title: 창동역 1번출구 광장확장계획 관련 주민의견 수렴 안내
+      date: '2026-11-18'
+  - dong: 창5동
+    code: '10009780'
+    list_url: https://www.dobong.go.kr/dong/bbs.asp?code=10009780
+    board: 동 소식 공지사항
+    total_posts: 698
+    verified_latest:
+      title: 창5동 주민자치회 위원 모집 공고
+      date: '2026-10-30'
+  - dong: 도봉1동
+    code: '10009794'
+    list_url: https://www.dobong.go.kr/dong/bbs.asp?code=10009794
+    board: 동 소식 공지사항
+    total_posts: 625
+    verified_latest:
+      title: 도봉1동 자치회관 교양강좌[요가(초, 중급), 예쁜손글씨] 강사 모집
+      date: '2026-11-16'
+  - dong: 도봉2동
+    code: '10009808'
+    list_url: https://www.dobong.go.kr/dong/bbs.asp?code=10009808
+    board: 동 소식 공지사항
+    total_posts: 555
+    verified_latest:
+      title: 2026년 도봉2동 주민총회 개최 결과 공고
+      date: '2026-11-09'
+- gu: 서울 강북구
+  board: 우리동소식
+  direct_fetch: ok
+  direct_fetch_note: 서버 직접 가져오기 HTTP 200. 호스트는 gangbuk.go.kr:18000(포트 18000). www.gangbuk.go.kr
+    메인은 지문 JS 챌린지가 있어 직접 가져오기가 안 된다.
+  list_url_pattern: https://gangbuk.go.kr:18000/dong/bbs/B0000199/list.do?menuNo={menu_no}&dongCd={dong_cd}
+  detail_url_pattern: https://gangbuk.go.kr:18000/dong/bbs/B0000199/view.do?menuNo={menu_no}&nttId={ntt_id}&dongCd={dong_cd}
+  dongs:
+  - dong: 삼양동
+    dong_cd: '01'
+    menu_no: '600042'
+    list_url: https://gangbuk.go.kr:18000/dong/bbs/B0000199/list.do?menuNo=600042&dongCd=01
+    board: 우리동소식
+    total_posts: 1064
+    verified_latest:
+      title: 주민등록 무단전출자 최고 공고
+      date: '2026-11-18'
+  - dong: 미아동
+    dong_cd: '02'
+    menu_no: '600016'
+    list_url: https://gangbuk.go.kr:18000/dong/bbs/B0000199/list.do?menuNo=600016&dongCd=02
+    board: 우리동소식
+    total_posts: 1192
+    verified_latest:
+      title: 2027 희망온돌 따뜻한겨울나기사업 참여 안내
+      date: '2026-11-11'
+  - dong: 송중동
+    dong_cd: '03'
+    menu_no: '600040'
+    list_url: https://gangbuk.go.kr:18000/dong/bbs/B0000199/list.do?menuNo=600040&dongCd=03
+    board: 우리동소식
+    total_posts: 962
+    verified_latest:
+      title: 통장모집 5차 공고(제8통)
+      date: '2026-11-17'
+  - dong: 송천동
+    dong_cd: '04'
+    menu_no: '600060'
+    list_url: https://gangbuk.go.kr:18000/dong/bbs/B0000199/list.do?menuNo=600060&dongCd=04
+    board: 우리동소식
+    total_posts: 1155
+    verified_latest:
+      title: 2026년 10월 송천 주민자치회 회의록 게시
+      date: '2026-11-19'
+  - dong: 삼각산동
+    dong_cd: '05'
+    menu_no: '600092'
+    list_url: https://gangbuk.go.kr:18000/dong/bbs/B0000199/list.do?menuNo=600092&dongCd=05
+    board: 우리동소식
+    total_posts: 937
+    verified_latest:
+      title: 의무 취학아동 조기입학·입학연기 신청안내
+      date: '2026-11-17'
+  - dong: 번1동
+    dong_cd: '06'
+    menu_no: '600109'
+    list_url: https://gangbuk.go.kr:18000/dong/bbs/B0000199/list.do?menuNo=600109&dongCd=06
+    board: 우리동소식
+    total_posts: 1001
+    verified_latest:
+      title: 2026년 11월 번1동 주민자치회 정기 회의록 게시
+      date: '2026-11-13'
+  - dong: 번2동
+    dong_cd: '07'
+    menu_no: '600126'
+    list_url: https://gangbuk.go.kr:18000/dong/bbs/B0000199/list.do?menuNo=600126&dongCd=07
+    board: 우리동소식
+    total_posts: 874
+    verified_latest:
+      title: 2026년 주민등록 사실조사 장기 거주불명자 최고 공고
+      date: '2026-11-13'
+  - dong: 번3동
+    dong_cd: 08
+    menu_no: '600143'
+    list_url: https://gangbuk.go.kr:18000/dong/bbs/B0000199/list.do?menuNo=600143&dongCd=08
+    board: 우리동소식
+    total_posts: 1013
+    verified_latest:
+      title: 2027 희망온돌 따뜻한겨울나기 사업 실시
+      date: '2026-11-16'
+  - dong: 수유1동
+    dong_cd: 09
+    menu_no: '600160'
+    list_url: https://gangbuk.go.kr:18000/dong/bbs/B0000199/list.do?menuNo=600160&dongCd=09
+    board: 우리동소식
+    total_posts: 1678
+    verified_latest:
+      title: 주민등록 장기 거주불명자 최고 공고
+      date: '2026-11-03'
+  - dong: 수유2동
+    dong_cd: '10'
+    menu_no: '600177'
+    list_url: https://gangbuk.go.kr:18000/dong/bbs/B0000199/list.do?menuNo=600177&dongCd=10
+    board: 우리동소식
+    total_posts: 930
+    verified_latest:
+      title: 주민등록 장기거주불명자 신고의무 이행 최고 공고
+      date: '2026-11-13'
+  - dong: 수유3동
+    dong_cd: '11'
+    menu_no: '600194'
+    list_url: https://gangbuk.go.kr:18000/dong/bbs/B0000199/list.do?menuNo=600194&dongCd=11
+    board: 우리동소식
+    total_posts: 922
+    verified_latest:
+      title: 주민등록 신고의무 미이행자 직권조치 결과 공고(2026-51호)
+      date: '2026-11-18'
+  - dong: 우이동
+    dong_cd: '12'
+    menu_no: '600211'
+    list_url: https://gangbuk.go.kr:18000/dong/bbs/B0000199/list.do?menuNo=600211&dongCd=12
+    board: 우리동소식
+    total_posts: 1412
+    verified_latest:
+      title: 주민등록 직권조치(거주불명등록) 결과 공고
+      date: '2026-11-16'
+  - dong: 인수동
+    dong_cd: '13'
+    menu_no: '600228'
+    list_url: https://gangbuk.go.kr:18000/dong/bbs/B0000199/list.do?menuNo=600228&dongCd=13
+    board: 우리동소식
+    total_posts: 1802
+    verified_latest:
+      title: 거주불명등록 직권조치 결과 공고
+      date: '2026-11-16'
+- gu: 서울 구로구
+  board: 우리동 소식
+  direct_fetch: ok
+  direct_fetch_note: 서버 직접 가져오기 HTTP 200. 공유 게시판 1개(bbsNo=794) + 동 이름 카테고리(searchCtgry)
+    필터. 송파구(bbsNo=36)·동대문구(bbsNo=72)·성북구(bbsNo=90)·은평구(bbsNo=43) 패턴과 동일해 parse_bbs_list를
+    재사용한다. 동별 key는 각 동 서브페이지(sub.do)의 '우리동 소식' 메뉴 링크에서 확인한 값이다. 16개 동 연속 요청 시 0.5초
+    간격을 둔다.
+  list_url_base: https://www.guro.go.kr/www/selectBbsNttList.do?bbsNo=794
+  dong_sub_base: https://www.guro.go.kr/www/sub.do?key={sub_key}
+  dongs:
+  - dong: 신도림동
+    sub_key: 1942
+    key: 3049
+    bbs_no: 794
+    dong_code: D3160041
+    search_ctgry: '%EC%8B%A0%EB%8F%84%EB%A6%BC%EB%8F%99'
+    list_url: https://www.guro.go.kr/www/selectBbsNttList.do?bbsNo=794&key=3049&searchCtgry=%EC%8B%A0%EB%8F%84%EB%A6%BC%EB%8F%99
+    board: 우리동 소식
+    verified_latest:
+      title: 2026년 4분기 신도림동 통장 심사 결과 공고
+      date: '2026-09-23'
+    note: 최신 글이 2026-09-23으로 두 달 가까이 낡았다. 상위 10건 중 1건이 2025년 글이다.
+  - dong: 구로1동
+    sub_key: 1951
+    key: 1955
+    bbs_no: 794
+    dong_code: D3160042
+    search_ctgry: '%EA%B5%AC%EB%A1%9C1%EB%8F%99'
+    list_url: https://www.guro.go.kr/www/selectBbsNttList.do?bbsNo=794&key=1955&searchCtgry=%EA%B5%AC%EB%A1%9C1%EB%8F%99
+    board: 우리동 소식
+    verified_latest:
+      title: 2027년 1분기 구로제1동 다문화명예통장 공개모집 공고
+      date: '2026-10-26'
+  - dong: 구로2동
+    sub_key: 1960
+    key: 1964
+    bbs_no: 794
+    dong_code: D3160043
+    search_ctgry: '%EA%B5%AC%EB%A1%9C2%EB%8F%99'
+    list_url: https://www.guro.go.kr/www/selectBbsNttList.do?bbsNo=794&key=1964&searchCtgry=%EA%B5%AC%EB%A1%9C2%EB%8F%99
+    board: 우리동 소식
+    verified_latest:
+      title: 2026년 구로2동장학회 장학생 모집
+      date: '2026-11-12'
+  - dong: 구로3동
+    sub_key: 1969
+    key: 1973
+    bbs_no: 794
+    dong_code: D3160044
+    search_ctgry: '%EA%B5%AC%EB%A1%9C3%EB%8F%99'
+    list_url: https://www.guro.go.kr/www/selectBbsNttList.do?bbsNo=794&key=1973&searchCtgry=%EA%B5%AC%EB%A1%9C3%EB%8F%99
+    board: 우리동 소식
+    verified_latest:
+      title: 2026년 4분기 구로3동 통장위촉현황
+      date: '2026-10-01'
+    note: 최신 글이 2026-10-01이다.
+  - dong: 구로4동
+    sub_key: 1978
+    key: 1983
+    bbs_no: 794
+    dong_code: D3160045
+    search_ctgry: '%EA%B5%AC%EB%A1%9C4%EB%8F%99'
+    list_url: https://www.guro.go.kr/www/selectBbsNttList.do?bbsNo=794&key=1983&searchCtgry=%EA%B5%AC%EB%A1%9C4%EB%8F%99
+    board: 우리동 소식
+    verified_latest:
+      title: 2027년 상반기 구로4동 자치회관 프로그램 프리랜서 강사 공개모집 공고
+      date: '2026-11-16'
+  - dong: 구로5동
+    sub_key: 1987
+    key: 1992
+    bbs_no: 794
+    dong_code: D3160046
+    search_ctgry: '%EA%B5%AC%EB%A1%9C5%EB%8F%99'
+    list_url: https://www.guro.go.kr/www/selectBbsNttList.do?bbsNo=794&key=1992&searchCtgry=%EA%B5%AC%EB%A1%9C5%EB%8F%99
+    board: 우리동 소식
+    verified_latest:
+      title: 2027년 1분기 구로제5동 다문화 명예통장 모집 공고
+      date: '2026-10-22'
+  - dong: 가리봉동
+    sub_key: 1996
+    key: 2001
+    bbs_no: 794
+    dong_code: D3160144
+    search_ctgry: '%EA%B0%80%EB%A6%AC%EB%B4%89%EB%8F%99'
+    list_url: https://www.guro.go.kr/www/selectBbsNttList.do?bbsNo=794&key=2001&searchCtgry=%EA%B0%80%EB%A6%AC%EB%B4%89%EB%8F%99
+    board: 우리동 소식
+    verified_latest:
+      title: 2026년 3분기 가리봉동 다문화명예통장 공개모집 공고
+      date: '2026-05-04'
+    note: 최신 글이 2026-05-04로 낡았다. 사실상 휴면 게시판에 가깝다. 상위 10건 중 6건이 2026년 이전 글이다.
+  - dong: 고척1동
+    sub_key: 2005
+    key: 2010
+    bbs_no: 794
+    dong_code: D3160051
+    search_ctgry: '%EA%B3%A0%EC%B2%991%EB%8F%99'
+    list_url: https://www.guro.go.kr/www/selectBbsNttList.do?bbsNo=794&key=2010&searchCtgry=%EA%B3%A0%EC%B2%991%EB%8F%99
+    board: 우리동 소식
+    verified_latest:
+      title: 2027년 1분기 고척1동 통장모집 공고
+      date: '2026-10-30'
+  - dong: 고척2동
+    sub_key: 2014
+    key: 2019
+    bbs_no: 794
+    dong_code: D3160052
+    search_ctgry: '%EA%B3%A0%EC%B2%992%EB%8F%99'
+    list_url: https://www.guro.go.kr/www/selectBbsNttList.do?bbsNo=794&key=2019&searchCtgry=%EA%B3%A0%EC%B2%992%EB%8F%99
+    board: 우리동 소식
+    verified_latest:
+      title: 「고척2동 우리동네 마을지도」 배포
+      date: '2026-11-16'
+  - dong: 개봉1동
+    sub_key: 2023
+    key: 2028
+    bbs_no: 794
+    dong_code: D3160053
+    search_ctgry: '%EA%B0%9C%EB%B4%891%EB%8F%99'
+    list_url: https://www.guro.go.kr/www/selectBbsNttList.do?bbsNo=794&key=2028&searchCtgry=%EA%B0%9C%EB%B4%891%EB%8F%99
+    board: 우리동 소식
+    verified_latest:
+      title: 개봉1동 자치회관 프로그램 강사 모집 공고[요가필라테스(야간1]]
+      date: '2026-11-16'
+  - dong: 개봉2동
+    sub_key: 2032
+    key: 2037
+    bbs_no: 794
+    dong_code: D3160054
+    search_ctgry: '%EA%B0%9C%EB%B4%892%EB%8F%99'
+    list_url: https://www.guro.go.kr/www/selectBbsNttList.do?bbsNo=794&key=2037&searchCtgry=%EA%B0%9C%EB%B4%892%EB%8F%99
+    board: 우리동 소식
+    verified_latest:
+      title: 2027년 1분기 개봉2동 다문화 명예통장 모집 공고
+      date: '2026-10-26'
+  - dong: 개봉3동
+    sub_key: 2041
+    key: 2046
+    bbs_no: 794
+    dong_code: D3160055
+    search_ctgry: '%EA%B0%9C%EB%B4%893%EB%8F%99'
+    list_url: https://www.guro.go.kr/www/selectBbsNttList.do?bbsNo=794&key=2046&searchCtgry=%EA%B0%9C%EB%B4%893%EB%8F%99
+    board: 우리동 소식
+    verified_latest:
+      title: 2027년 1분기 개봉3동 다문화 명예통장 모집 공고
+      date: '2026-11-06'
+  - dong: 오류1동
+    sub_key: 2050
+    key: 2055
+    bbs_no: 794
+    dong_code: D3160057
+    search_ctgry: '%EC%98%A4%EB%A5%981%EB%8F%99'
+    list_url: https://www.guro.go.kr/www/selectBbsNttList.do?bbsNo=794&key=2055&searchCtgry=%EC%98%A4%EB%A5%981%EB%8F%99
+    board: 우리동 소식
+    verified_latest:
+      title: 2027년 1분기 오류1동 통장 공개모집 공고
+      date: '2026-11-02'
+  - dong: 오류2동
+    sub_key: 2059
+    key: 2064
+    bbs_no: 794
+    dong_code: D3160058
+    search_ctgry: '%EC%98%A4%EB%A5%982%EB%8F%99'
+    list_url: https://www.guro.go.kr/www/selectBbsNttList.do?bbsNo=794&key=2064&searchCtgry=%EC%98%A4%EB%A5%982%EB%8F%99
+    board: 우리동 소식
+    verified_latest:
+      title: 2027년 1분기 오류2동 다문화명예통장 모집 공고
+      date: '2026-11-04'
+  - dong: 수궁동
+    sub_key: 2068
+    key: 2073
+    bbs_no: 794
+    dong_code: D3160059
+    search_ctgry: '%EC%88%98%EA%B6%81%EB%8F%99'
+    list_url: https://www.guro.go.kr/www/selectBbsNttList.do?bbsNo=794&key=2073&searchCtgry=%EC%88%98%EA%B6%81%EB%8F%99
+    board: 우리동 소식
+    verified_latest:
+      title: 2026년 제11회 수궁동 마을축제 공연팀 모집 공고
+      date: '2026-09-30'
+    note: 최신 글이 2026-09-30(수궁동)/2026-09-23(항동)으로 두 달 가까이 낡았다.
+  - dong: 항동
+    sub_key: 2077
+    key: 2082
+    bbs_no: 794
+    dong_code: D3160252
+    search_ctgry: '%ED%95%AD%EB%8F%99'
+    list_url: https://www.guro.go.kr/www/selectBbsNttList.do?bbsNo=794&key=2082&searchCtgry=%ED%95%AD%EB%8F%99
+    board: 우리동 소식
+    verified_latest:
+      title: 2026년 4분기 항동 통장모집 결과 공고
+      date: '2026-09-23'
+    note: 최신 글이 2026-09-30(수궁동)/2026-09-23(항동)으로 두 달 가까이 낡았다.
+- gu: 서울 금천구
+  board: 공지사항
+  direct_fetch: ok
+  direct_fetch_note: 서버 직접 가져오기 HTTP 200. 공유 게시판 1개(bbsNo=4, '금천소식') + 동 주민센터 부서코드(searchDeptCode)
+    필터. 동별 key와 부서코드는 각 동 소개 페이지(contents.do)의 '공지사항' 탭 링크에서 확인한 값이다. parse_bbs_list를
+    재사용한다(bbs_no=4). 10개 동 연속 요청 시 0.5초 간격을 둔다.
+  list_url_pattern: https://www.geumcheon.go.kr/portal/selectBbsNttList.do?bbsNo=4&key={key}&searchDeptCode={dept_code}
+  contents_base: https://www.geumcheon.go.kr/portal/contents.do?key={contents_key}
+  secondary_board: 골목회의(bbsNo=150128, searchCtgry=동명). 가산동·독산1~4동·시흥1동·시흥5동에서만 탭이
+    확인되고 시흥2·3·4동은 미확인이라 이번 단계에서는 수집하지 않았다.
+  dongs:
+  - dong: 가산동
+    contents_key: 651
+    key: 653
+    bbs_no: 4
+    dept_code: '31700420000'
+    list_url: https://www.geumcheon.go.kr/portal/selectBbsNttList.do?bbsNo=4&key=653&searchDeptCode=31700420000
+    board: 공지사항
+    golmok_key: 2222
+    golmok_list_url: https://www.geumcheon.go.kr/portal/selectBbsNttList.do?bbsNo=150128&key=2222&searchCtgry=%EA%B0%80%EC%82%B0%EB%8F%99
+    verified_latest:
+      title: 2026년 10월 가산동 주민자치회 재정(수입·지출) 현황 공개
+      date: '2026-11-09'
+  - dong: 독산1동
+    contents_key: 661
+    key: 663
+    bbs_no: 4
+    dept_code: '31700430000'
+    list_url: https://www.geumcheon.go.kr/portal/selectBbsNttList.do?bbsNo=4&key=663&searchDeptCode=31700430000
+    board: 공지사항
+    golmok_key: 2223
+    golmok_list_url: https://www.geumcheon.go.kr/portal/selectBbsNttList.do?bbsNo=150128&key=2223&searchCtgry=%EB%8F%85%EC%82%B01%EB%8F%99
+    verified_latest:
+      title: 2026년 10월 독산1동 주민자치회 재정(수입·지출)현황 공개
+      date: '2026-11-10'
+  - dong: 독산2동
+    contents_key: 669
+    key: 671
+    bbs_no: 4
+    dept_code: '31700440000'
+    list_url: https://www.geumcheon.go.kr/portal/selectBbsNttList.do?bbsNo=4&key=671&searchDeptCode=31700440000
+    board: 공지사항
+    golmok_key: 2224
+    golmok_list_url: https://www.geumcheon.go.kr/portal/selectBbsNttList.do?bbsNo=150128&key=2224&searchCtgry=%EB%8F%85%EC%82%B02%EB%8F%99
+    verified_latest:
+      title: 2026년 10월 독산2동 주민자치회 정기회의 자료 및 회의록 공개
+      date: '2026-11-13'
+  - dong: 독산3동
+    contents_key: 677
+    key: 679
+    bbs_no: 4
+    dept_code: '31700450000'
+    list_url: https://www.geumcheon.go.kr/portal/selectBbsNttList.do?bbsNo=4&key=679&searchDeptCode=31700450000
+    board: 공지사항
+    golmok_key: 2225
+    golmok_list_url: https://www.geumcheon.go.kr/portal/selectBbsNttList.do?bbsNo=150128&key=2225&searchCtgry=%EB%8F%85%EC%82%B03%EB%8F%99
+    verified_latest:
+      title: 2026년 11월 독산3동 주민자치회 정기회의 자료 및 회의록 공개
+      date: '2026-11-17'
+  - dong: 독산4동
+    contents_key: 685
+    key: 687
+    bbs_no: 4
+    dept_code: '31700460000'
+    list_url: https://www.geumcheon.go.kr/portal/selectBbsNttList.do?bbsNo=4&key=687&searchDeptCode=31700460000
+    board: 공지사항
+    golmok_key: 2226
+    golmok_list_url: https://www.geumcheon.go.kr/portal/selectBbsNttList.do?bbsNo=150128&key=2226&searchCtgry=%EB%8F%85%EC%82%B04%EB%8F%99
+    verified_latest:
+      title: 2026년 10월 독산4동 주민자치회 정기회의 자료 및 회의록 공개
+      date: '2026-11-09'
+  - dong: 시흥1동
+    contents_key: 693
+    key: 695
+    bbs_no: 4
+    dept_code: '31700490000'
+    list_url: https://www.geumcheon.go.kr/portal/selectBbsNttList.do?bbsNo=4&key=695&searchDeptCode=31700490000
+    board: 공지사항
+    golmok_key: 2227
+    golmok_list_url: https://www.geumcheon.go.kr/portal/selectBbsNttList.do?bbsNo=150128&key=2227&searchCtgry=%EC%8B%9C%ED%9D%A51%EB%8F%99
+    verified_latest:
+      title: 시흥1동 자치회관 프로그램 강사모집 공고
+      date: '2026-11-18'
+  - dong: 시흥2동
+    contents_key: 701
+    key: 703
+    bbs_no: 4
+    dept_code: '31700500000'
+    list_url: https://www.geumcheon.go.kr/portal/selectBbsNttList.do?bbsNo=4&key=703&searchDeptCode=31700500000
+    board: 공지사항
+    verified_latest:
+      title: 새마을지도자협의회 시흥2동 부녀회 신규 회원 모집 및 홍보 계획
+      date: '2026-11-10'
+  - dong: 시흥3동
+    contents_key: 709
+    key: 711
+    bbs_no: 4
+    dept_code: '31700510000'
+    list_url: https://www.geumcheon.go.kr/portal/selectBbsNttList.do?bbsNo=4&key=711&searchDeptCode=31700510000
+    board: 공지사항
+    verified_latest:
+      title: 2026년 10월 시흥3동 주민자치회 재정(수입, 지출)현황 공고
+      date: '2026-11-09'
+  - dong: 시흥4동
+    contents_key: 717
+    key: 719
+    bbs_no: 4
+    dept_code: '31700520000'
+    list_url: https://www.geumcheon.go.kr/portal/selectBbsNttList.do?bbsNo=4&key=719&searchDeptCode=31700520000
+    board: 공지사항
+    verified_latest:
+      title: 2026년 11월 시흥4동 주민자치회 정기회의 개최 안내
+      date: '2026-11-11'
+  - dong: 시흥5동
+    contents_key: 726
+    key: 728
+    bbs_no: 4
+    dept_code: '31700530000'
+    list_url: https://www.geumcheon.go.kr/portal/selectBbsNttList.do?bbsNo=4&key=728&searchDeptCode=31700530000
+    board: 공지사항
+    golmok_key: 2231
+    golmok_list_url: https://www.geumcheon.go.kr/portal/selectBbsNttList.do?bbsNo=150128&key=2231&searchCtgry=%EC%8B%9C%ED%9D%A55%EB%8F%99
+    verified_latest:
+      title: 2026년 9월 시흥5동주민자치회 재정(수입지출) 현황 공고
+      date: '2026-10-08'
+    note: 최신 글이 2026-10-08로 한 달 이상 낡았다.
+- gu: 서울 중구
+  board: 우리동 소식
+  direct_fetch: blocked
+  direct_fetch_note: 이 서버에서 junggu.seoul.kr로 직접 가져오면 연결이 끊긴다(RemoteDisconnected, curl
+    000). browser.open 스냅샷은 열람 가능하다.
+  gu_board:
+    board: 공지사항(구청)
+    list_url: https://www.junggu.seoul.kr/content.do?cmsid=14231
+    detail_url_pattern: https://www.junggu.seoul.kr/content.do?cmsid=14231&mode=view&cid=<9~10자리
+      숫자>
+    detail_pattern_verified_by: '실링크 3건(2026-11-20 검색 확인): cid=1406662926, cid=1197468790,
+      cid=779358392'
+    note: 구청 공지사항이지 동 소식이 아니다. 목록 1페이지에 동주민센터 담당부서 글 없음.
+  dongs:
+  - dong: 소공동
+    slug: sogong
+    cmsid: 13300
+    list_url: https://www.junggu.seoul.kr/dong/sogong/content.do?cmsid=13300
+    page_unit: 10
+    board: 우리동 소식
+    total_posts: 365
+    verified_latest:
+      title: 자치회관 프로그램 강사 최종 합격자 공고
+      date: '2026-11-18'
+  - dong: 회현동
+    slug: hoehyeon
+    cmsid: 13318
+    sf_dept: 30100420000
+    list_url: https://www.junggu.seoul.kr/dong/hoehyeon/content.do?cmsid=13318
+    page_unit: 10
+    board: 우리동 소식
+    total_posts: 567
+    verified_latest:
+      title: 시정촉구 공시송달 공고(신당동 333-81 외 3필지)
+      date: '2026-11-18'
+    note: 과거 검색 스냅샷(2025-11 글, 번호 648)보다 최신 번호가 작아 게시판이 재구성됐을 가능성이 있다.
+  - dong: 명동
+    slug: myeong
+    cmsid: 13319
+    sf_dept: 30100430000
+    list_url: https://www.junggu.seoul.kr/dong/myeong/content.do?cmsid=13319
+    page_unit: 10
+    board: 우리동 소식
+    total_posts: 622
+    verified_latest:
+      title: 주민등록 무단전출자 최고 공고
+      date: '2026-11-18'
+  - dong: 필동
+    slug: pil
+    cmsid: 13320
+    list_url: https://www.junggu.seoul.kr/dong/pil/content.do?cmsid=13320
+    page_unit: 10
+    board: 우리동 소식
+    total_posts: 370
+    verified_latest:
+      title: 주민등록 장기 거주불명등록자 직권조치(말소) 공고
+      date: '2026-11-13'
+  - dong: 장충동
+    slug: jangchung
+    cmsid: 13321
+    sf_dept: 30100460000
+    list_url: https://www.junggu.seoul.kr/dong/jangchung/content.do?cmsid=13321
+    page_unit: 10
+    board: 우리동 소식
+    total_posts: 270
+    verified_latest:
+      title: '[공고2026-23]장기거주불명자 행정상 관리주소 이전 공고'
+      date: '2026-11-18'
+  - dong: 광희동
+    slug: gwanghui
+    cmsid: 13322
+    sf_dept: 30100470000
+    list_url: https://www.junggu.seoul.kr/dong/gwanghui/content.do?cmsid=13322
+    page_unit: 10
+    board: 우리동 소식
+    total_posts: 381
+    verified_latest:
+      title: 본인서명사실확인서 안내 절차
+      date: '2026-11-04'
+    note: 과거 검색 스냅샷(2026-04 글, 번호 545)보다 최신 번호가 작아 게시판이 재구성됐을 가능성이 있다. 광희동 최신 글 날짜(2026-11-04)가
+      다른 동보다 오래됐다.
+  - dong: 을지로동
+    slug: euljiro
+    cmsid: 13323
+    list_url: https://www.junggu.seoul.kr/dong/euljiro/content.do?cmsid=13323
+    page_unit: 10
+    board: 우리동 소식
+    total_posts: 472
+    verified_latest:
+      title: 을지로동 통장 공개모집 재공고(제7통)
+      date: '2026-11-13'
+  - dong: 신당동
+    slug: sindang
+    cmsid: 13324
+    sf_dept: 30101410000
+    list_url: https://www.junggu.seoul.kr/dong/sindang/content.do?cmsid=13324
+    page_unit: 10
+    board: 우리동 소식
+    total_posts: 587
+    verified_latest:
+      title: 주민등록신고의무지연자에 대한 최고 공고
+      date: '2026-11-13'
+  - dong: 다산동
+    slug: dasan
+    cmsid: 13325
+    sf_dept: 30101420000
+    list_url: https://www.junggu.seoul.kr/dong/dasan/content.do?cmsid=13325
+    page_unit: 10
+    board: 우리동 소식
+    total_posts: 536
+    verified_latest:
+      title: 2027년도 초등학교 취학통지서 안내
+      date: '2026-11-17'
+  - dong: 약수동
+    slug: yaksoo
+    cmsid: 13326
+    sf_dept: 30101430000
+    list_url: https://www.junggu.seoul.kr/dong/yaksoo/content.do?cmsid=13326
+    page_unit: 10
+    board: 우리동 소식
+    total_posts: 525
+    verified_latest:
+      title: 거주불명자 행정상 관리주소 이전 직권조치 결과 공고
+      date: '2026-11-16'
+  - dong: 청구동
+    slug: cheonggu
+    cmsid: 13327
+    sf_dept: 30101440000
+    list_url: https://www.junggu.seoul.kr/dong/cheonggu/content.do?cmsid=13327
+    page_unit: 10
+    board: 우리동 소식
+    total_posts: 599
+    verified_latest:
+      title: 겨울철 수도계량기 동파 예방 TIP 홍보·안내
+      date: '2026-11-18'
+  - dong: 신당제5동
+    alias: 신당5동
+    slug: sindang5
+    cmsid: 13328
+    sf_dept: 30100530000
+    list_url: https://www.junggu.seoul.kr/dong/sindang5/content.do?cmsid=13328
+    page_unit: 10
+    board: 우리동 소식
+    total_posts: 548
+    verified_latest:
+      title: <공고 제2026-35호>거주불명등록자 행정상 관리주소 이전 1차 공고
+      date: '2026-11-13'
+  - dong: 동화동
+    slug: donghwa
+    cmsid: 13329
+    sf_dept: 30101450000
+    list_url: https://www.junggu.seoul.kr/dong/donghwa/content.do?cmsid=13329
+    page_unit: 10
+    board: 우리동 소식
+    total_posts: 400
+    verified_latest:
+      title: 2027년 상반기 중구 동행일자리 사업 참여자 모집
+      date: '2026-11-12'
+  - dong: 황학동
+    slug: hwanghak
+    cmsid: 13330
+    sf_dept: 30100550000
+    list_url: https://www.junggu.seoul.kr/dong/hwanghak/content.do?cmsid=13330
+    page_unit: 10
+    board: 우리동 소식
+    total_posts: 438
+    verified_latest:
+      title: 장기거주불명자 주민등록 재등록 최고 공고
+      date: '2026-11-11'
+  - dong: 중림동
+    slug: jungnim
+    cmsid: 13331
+    list_url: https://www.junggu.seoul.kr/dong/jungnim/content.do?cmsid=13331
+    page_unit: 10
+    board: 우리동 소식
+    total_posts: 492
+    verified_latest:
+      title: 2026년 민방위 집합교육 보충2차 통지서 반송분 공시송달 공고
+      date: '2026-11-16'
+pending:
+- gu: 서울 종로구
+  board: 동주민센터소식
+  direct_fetch: blocked
+  direct_fetch_note: 이 서버에서 jongno.go.kr로 직접 가져오면 연결이 끊긴다(curl Empty reply, HTTP 000).
+    2026-11-19 21:00경 ERR_EMPTY_RESPONSE와 같은 상태이다. 브라우저 경유가 필요하다.
+  dong_board_menu: 행정정보 > 구정소식 > 동주민센터소식
+  dong_split: dept_column
+  dong_split_note: 통합 게시판 1개 + 담당부서 열로 동을 구분하는 노원구형 구조이다. 동별 게시판이 아니고, 목록에 동 카테고리
+    필터도 확인되지 않았다(스냅샷의 필터 옵션은 구분 항목 공지/행사만 있다). 동별 최신 10건을 모으려면 목록을 페이지 순회하며 담당부서로
+    나눠야 한다(노원구 fetch_nowon 방식).
+  bbs_id: BBSMSTR_000000000911
+  menu_no: 400222
+  list_url: http://jongno.go.kr/portal/bbs/selectBoardList.do?bbsId=BBSMSTR_000000000911&menuId=400222&menuNo=400222
+  detail_url_pattern: https://www.jongno.go.kr/portal/bbs/selectBoardArticle.do?bbsId=BBSMSTR_000000000911&menuNo=400222&menuId=400222&nttId=<nttId>
+  detail_url_verified: nttId=255500 상세 페이지 1건이 동주민센터소식 게시판으로 열람됨(2026-04-02 크롤). 단,
+    해당 글의 제목은 스냅샷 본문에서 확인되지 않아 어느 글인지 특정하지 않았다.
+  list_columns: 번호 | 제목 | 구분(공지/행사) | 첨부파일 | 담당부서 | 등록일(YYYY년MM월DD일) | 조회수
+  snapshot_crawled: '2026-05-27'
+  snapshot_age_days: 176
+  snapshot_note: browser.open 목록 스냅샷이 2026-05-27 크롤이라 최신 행은 2026-05-21~27이다. 더 새로운
+    스냅샷은 검색에서 찾지 못했다.
+  dept_note: '담당부서 열 표기는 공식 동명과 다를 수 있다. 확인된 예: 창신제1동 → ''창신1동''. ''제'' 유무·공백·''·''
+    표기를 정규화해야 한다(노원구 _norm_dong_name 방식 참조). 종로1·2·3·4가동·종로5·6가동·창신제2동·창신제3동·숭인제1동·숭인제2동의
+    담당부서 표기는 미확인이다.'
+  gu_board_note: 구청 공지 게시판(bbsId=BBSMSTR_000000000201, menuNo=1752)은 별개 게시판이다. 동 소식이
+    아니므로 동 수집에 쓰지 않는다.
+  dongs:
+  - dong: 청운효자동
+    dept_verified: 청운효자동
+    snapshot_rows: 3
+    verified_latest:
+      title: 신규 주민등록증 발급 통지서 반송자 공고(2026년 5월)
+      date: '2026-05-27'
+  - dong: 사직동
+    dept_verified: 사직동
+    snapshot_rows: 2
+    verified_latest:
+      title: 주민등록 신고의무 지연자에 대한 최고 공고
+      date: '2026-05-27'
+  - dong: 삼청동
+    dept_verified: null
+    snapshot_rows: 0
+    note: 스냅샷 1페이지에 행 없음. 담당부서 표기 미확인.
+  - dong: 부암동
+    dept_verified: null
+    snapshot_rows: 0
+    note: 스냅샷 1페이지에 행 없음. 담당부서 표기 미확인.
+  - dong: 평창동
+    dept_verified: 평창동
+    snapshot_rows: 1
+    verified_latest:
+      title: 직권조치결과공고문
+      date: '2026-05-27'
+  - dong: 무악동
+    dept_verified: 무악동
+    snapshot_rows: 8
+    verified_latest:
+      title: 맞춤형 위반건축물 양성화 상담센터 운영 안내
+      date: '2026-05-27'
+  - dong: 교남동
+    dept_verified: 교남동
+    snapshot_rows: 1
+    verified_latest:
+      title: 국세청 체납관리단 기간제 근로자 채용
+      date: '2026-05-21'
+  - dong: 가회동
+    dept_verified: 가회동
+    snapshot_rows: 2
+    verified_latest:
+      title: 서울 동행일자리사업(빗물받이 전담관리자) 참여자 모집 재공고
+      date: '2026-05-27'
+  - dong: 종로1·2·3·4가동
+    dept_verified: null
+    snapshot_rows: 0
+    note: 스냅샷 1페이지에 행 없음. 담당부서 표기 미확인.
+  - dong: 종로5·6가동
+    dept_verified: null
+    snapshot_rows: 0
+    note: 스냅샷 1페이지에 행 없음. 담당부서 표기 미확인.
+  - dong: 이화동
+    dept_verified: 이화동
+    snapshot_rows: 2
+    verified_latest:
+      title: 주민등록 무단전출자 직권조치 결과 공고
+      date: '2026-05-27'
+  - dong: 혜화동
+    dept_verified: null
+    snapshot_rows: 0
+    note: 스냅샷 1페이지에 행 없음. 담당부서 표기 미확인.
+  - dong: 창신제1동
+    alias: 창신1동
+    dept_verified: 창신1동
+    snapshot_rows: 1
+    verified_latest:
+      title: 창신제1동주민센터 청사 이전 안내(2026.5.26.)
+      date: '2026-05-21'
+  - dong: 창신제2동
+    alias: 창신2동
+    dept_verified: null
+    snapshot_rows: 0
+    note: 스냅샷 1페이지에 행 없음. 담당부서 표기는 '창신2동'일 것으로 보이나 미확인이라 기록하지 않았다.
+  - dong: 창신제3동
+    alias: 창신3동
+    dept_verified: null
+    snapshot_rows: 0
+    note: 스냅샷 1페이지에 행 없음. 담당부서 표기는 '창신3동'일 것으로 보이나 미확인이라 기록하지 않았다.
+  - dong: 숭인제1동
+    alias: 숭인1동
+    dept_verified: null
+    snapshot_rows: 0
+    note: 스냅샷 1페이지에 행 없음. 담당부서 표기는 '숭인1동'일 것으로 보이나 미확인이라 기록하지 않았다.
+  - dong: 숭인제2동
+    alias: 숭인2동
+    dept_verified: null
+    snapshot_rows: 0
+    note: 스냅샷 1페이지에 행 없음. 담당부서 표기는 '숭인2동'일 것으로 보이나 미확인이라 기록하지 않았다.
+  status: pending_live_fill
+  pending_reason: 목록 URL(통합 게시판 1개 + 담당부서 구분)은 2026-05-27 크롤 스냅샷으로 확인됐으나 스냅샷이 176일
+    낡아 최신 소식이 아니다. 라이브 브라우저로 최신 목록을 다시 읽어 채워야 한다. 파서 초안은 work/jongno/parser_note.md에만
+    있고 실측 HTML 검증 전에는 fetch.py에 연결하지 않는다.
+- gu: 서울 중랑구
+  board: 우리동소식
+  bbs_no: B0000262
+  direct_fetch: blocked
+  direct_fetch_note: 이 서버에서 dong.jungnang.seoul.kr·jungnang.go.kr·community.jungnang.go.kr
+    모두 연결 실패(curl HTTP 000, jungnang.go.kr는 타임아웃). browser.open도 네트워크 오류로 실패. DNS는
+    198.18.101.161/162(CGNAT 대역)로 잡힌다. 라이브 브라우저 경유 확인 필요.
+  list_url_pattern: http://dong.jungnang.seoul.kr/dong/bbs/list/B0000262.do?menuNo={menu_no}&dong={dong_code}
+  detail_url_pattern: http://dong.jungnang.seoul.kr/dong/bbs/view/B0000262/{ntt_id}.do?menuNo={menu_no}&dong={dong_code}
+  menu_no_rule: '500011 + (동 코드 - 1) * 100. 예: dong=01 -> 500011, dong=14 -> 501311.
+    GNB 메뉴 링크는 이 값보다 1 작은 값(500010, 501310...)이나, 우리동소식 섹션 제목·상세 링크는 위 값을 쓴다. 목록 URL에는
+    위 값(…011)을 쓸 것.'
+  https_note: 스냅샷에 기록된 URL은 http이다. https 접속 여부는 라이브 브라우저에서 확인할 것.
+  dongs:
+  - dong: 면목본동
+    dong_code: '01'
+    menu_no: '500011'
+    list_url: http://dong.jungnang.seoul.kr/dong/bbs/list/B0000262.do?menuNo=500011&dong=01
+    board: 우리동소식
+    verified_latest:
+      title: 세대주 신고에 의한 주민등록 거주불명등록 공고
+      date: '2019-10-10'
+      note: 2025-08-05 스냅샷 기준(2019년 글). 라이브 미확인.
+  - dong: 면목제2동
+    dong_code: '02'
+    menu_no: '500111'
+    list_url: http://dong.jungnang.seoul.kr/dong/bbs/list/B0000262.do?menuNo=500111&dong=02
+    board: 우리동소식
+    verified_latest:
+      title: 주민등록 신고의무 지연자 최고공고
+      date: '2019-10-21'
+      note: 2025-08-05 스냅샷 기준(2019년 글). 라이브 미확인.
+  - dong: 면목제3.8동
+    dong_code: '03'
+    menu_no: '500211'
+    list_url: http://dong.jungnang.seoul.kr/dong/bbs/list/B0000262.do?menuNo=500211&dong=03
+    board: 우리동소식
+    verified_latest:
+      title: 도움이 필요한 복지위기가구를 알려주세요.
+      date: '2019-10-21'
+      note: 2025-08-05 스냅샷 기준(2019년 글). 라이브 미확인.
+  - dong: 면목제4동
+    dong_code: '04'
+    menu_no: '500311'
+    list_url: http://dong.jungnang.seoul.kr/dong/bbs/list/B0000262.do?menuNo=500311&dong=04
+    board: 우리동소식
+    verified_latest:
+      title: 거주불명등록자 행정상 관리주소 이전 공고(2차)
+      date: '2019-10-21'
+      note: 2025-08-05 스냅샷 기준(2019년 글). 라이브 미확인.
+  - dong: 면목제5동
+    dong_code: '05'
+    menu_no: '500411'
+    list_url: http://dong.jungnang.seoul.kr/dong/bbs/list/B0000262.do?menuNo=500411&dong=05
+    board: 우리동소식
+    verified_latest:
+      title: 주민등록 실거주 불일치자 최고 후 공고
+      date: '2019-10-18'
+      note: 2025-08-05 스냅샷 기준(2019년 글). 라이브 미확인.
+  - dong: 면목제7동
+    dong_code: '06'
+    menu_no: '500511'
+    list_url: http://dong.jungnang.seoul.kr/dong/bbs/list/B0000262.do?menuNo=500511&dong=06
+    board: 우리동소식
+    verified_latest:
+      title: 면목7동 직권조치결과 공고 27호
+      date: '2019-10-22'
+      note: 2025-08-05 스냅샷 기준(2019년 글). 라이브 미확인.
+  - dong: 상봉제1동
+    dong_code: '07'
+    menu_no: '500611'
+    list_url: http://dong.jungnang.seoul.kr/dong/bbs/list/B0000262.do?menuNo=500611&dong=07
+    board: 우리동소식
+    verified_latest:
+      title: 복지 사각지대 발굴
+      date: '2019-10-22'
+      note: 2025-08-05 스냅샷 기준(2019년 글). 라이브 미확인.
+  - dong: 상봉제2동
+    dong_code: 08
+    menu_no: '500711'
+    list_url: http://dong.jungnang.seoul.kr/dong/bbs/list/B0000262.do?menuNo=500711&dong=08
+    board: 우리동소식
+    verified_latest:
+      title: 2019년 제 23회 경로의달 행사 개최 안내
+      date: '2019-10-21'
+      note: 2025-08-05 스냅샷 기준(2019년 글). 라이브 미확인.
+  - dong: 중화제1동
+    dong_code: 09
+    menu_no: '500811'
+    list_url: http://dong.jungnang.seoul.kr/dong/bbs/list/B0000262.do?menuNo=500811&dong=09
+    board: 우리동소식
+    verified_latest:
+      title: 2019년 기초연금 미신청 대상을 위한 안내
+      date: '2019-10-15'
+      note: 2025-08-05 스냅샷 기준(2019년 글). 라이브 미확인.
+  - dong: 중화제2동
+    dong_code: '10'
+    menu_no: '500911'
+    list_url: http://dong.jungnang.seoul.kr/dong/bbs/list/B0000262.do?menuNo=500911&dong=10
+    board: 우리동소식
+    verified_latest:
+      title: 「중랑구 거리가게 상생정책위원회」주민대표 위원 모집계획
+      date: '2019-10-21'
+      note: 2025-08-05 스냅샷 기준(2019년 글). 라이브 미확인.
+  - dong: 묵제1동
+    dong_code: '11'
+    menu_no: '501011'
+    list_url: http://dong.jungnang.seoul.kr/dong/bbs/list/B0000262.do?menuNo=501011&dong=11
+    board: 우리동소식
+    verified_latest:
+      title: 새마을부녀회 사랑의 김장 나누기 행사 개최
+      date: '2019-11-18'
+      note: 2025-08-05 스냅샷 기준(2019년 글). 라이브 미확인.
+  - dong: 묵제2동
+    dong_code: '12'
+    menu_no: '501111'
+    list_url: http://dong.jungnang.seoul.kr/dong/bbs/list/B0000262.do?menuNo=501111&dong=12
+    board: 우리동소식
+    verified_latest:
+      title: 거주불명등록자 행정상 관리주소 이전 공고문(2차)
+      date: '2019-10-16'
+      note: 2025-08-05 스냅샷 기준(2019년 글). 라이브 미확인.
+  - dong: 망우본동
+    dong_code: '13'
+    menu_no: '501211'
+    list_url: http://dong.jungnang.seoul.kr/dong/bbs/list/B0000262.do?menuNo=501211&dong=13
+    board: 우리동소식
+    verified_latest:
+      title: 주민등록신고 불이행자 직권조치결과 공고
+      date: '2019-10-22'
+      note: 2025-08-05 스냅샷 기준(2019년 글). 라이브 미확인.
+  - dong: 망우제3동
+    dong_code: '14'
+    menu_no: '501311'
+    list_url: http://dong.jungnang.seoul.kr/dong/bbs/list/B0000262.do?menuNo=501311&dong=14
+    board: 우리동소식
+    verified_latest:
+      title: 신규주민등록증 발급 공고 (2002.9월생)
+      date: '2019-10-07'
+      note: 2025-08-05 스냅샷 기준(2019년 글). 라이브 미확인.
+  - dong: 신내1동
+    dong_code: '15'
+    menu_no: '501411'
+    list_url: http://dong.jungnang.seoul.kr/dong/bbs/list/B0000262.do?menuNo=501411&dong=15
+    board: 우리동소식
+    verified_latest:
+      title: 복지사각지대 발굴 및 지원
+      date: '2019-10-21'
+      note: 2025-08-05 스냅샷 기준(2019년 글). 라이브 미확인.
+  - dong: 신내2동
+    dong_code: '16'
+    menu_no: '501511'
+    list_url: http://dong.jungnang.seoul.kr/dong/bbs/list/B0000262.do?menuNo=501511&dong=16
+    board: 우리동소식
+    verified_latest:
+      title: 2019년도 4분기 거주불명등록자 행정상 관리주소 이전공고(1차)
+      date: '2019-10-07'
+      note: 2025-08-05 스냅샷 기준(2019년 글). 라이브 미확인.
+  status: pending_live_fill
+  pending_reason: 목록 URL(동별 우리동소식 B0000262)은 2025-08-05 Wayback 스냅샷으로 확인됐으나 소식은 2019년
+    글이라 최신이 아니다. 라이브 브라우저로 목록 1페이지 최신 10건을 읽어 채워야 한다. 파서 초안은 work/jungnang/parser_note.md에만
+    있고 실측 HTML 검증 전에는 fetch.py에 연결하지 않는다.
+
+excluded:
+- gu: 서울 강서구
+  status: excluded_board_unconfirmed
+  reason: 동 게시판(목록 URL)을 확인할 수 없어 동별 소식을 수집하지 않았다. 구청 메인 페이지의 '우리동 소식' 위젯 데이터 출처를 정적 파일에서 찾지 못했다. 2026-11-20 재확인에서도 직접 가져오기(curl HTTP 000)·browser.open(101일 된 캐시 복사본만 반환)·동 페이지 네트워크 오류로 같은 지점에서 막혔다. 마곡 통합신청사 이전 중이고 2026-11-05 서버 이관 중단 안내가 있어 이관 완료 후 재확인이 필요하다. 강서 자치회관 게시판은 프로그램 안내 위주라 이번 작업 대상이 아니다.
+  next_step: 라이브 브라우저로 구청 메인 페이지를 열어 '우리동 소식' 위젯의 네트워크 요청(데이터 endpoint)을 확인하거나, 동별 센터 게시판 URL을 구청 사이트 검색·사이트맵에서 찾는다. 서울시 열린데이터광장의
+    강서구 동 단위 데이터셋 유무도 재확인한다. 정부24 지자체 소식은 공고·고시 위주라 보조용으로만 기록한다.
+  dongs_confirmed:
+  - 가양1동
+  - 가양2동
+  - 가양3동
+  - 공항동
+  - 등촌1동
+  - 등촌2동
+  - 등촌3동
+  - 발산1동
+  - 방화1동
+  - 방화2동
+  - 방화3동
+  - 염창동
+  - 우장산동
+  - 화곡1동
+  - 화곡2동
+  - 화곡3동
+  - 화곡4동
+  - 화곡6동
+  - 화곡8동
+  - 화곡본동
+- gu: 서울 용산구
+  status: excluded_list_url_unverified
+  reason: 16개 행정동은 공식 출처로 대조 완료했고 동별 서브사이트 패턴(/site/dc/index.jsp?sitecdv=)과 7개 동의
+    sitecdv를 확인했으나, 서브사이트 안의 동별 게시판 목록 URL을 확인할 수 없어 동 소식 0건으로 제외한다. yongsan.go.kr은
+    이 서버 직접 가져오기와 browser.open fetch가 둘 다 실패해 목록 자체를 가져올 수 없었다(이전 기록의 '직접 가져오기 끊김,
+    스냅샷 66일 전'과 동일하게 재확인됨). B0000041 게시판은 구청 공지 게시판으로 확인돼 동 소식 경로가 아니다. 2026-11-20 재확인 결과, 확인된 sitecdv 7곳 서브사이트·구청 메인·B0000041 목록 전부 직접 가져오기 HTTP 000(서버 측 IP/대역 차단으로 보임), browser.open도 실패. 나머지 9개 동 sitecdv는 검색에서 나오지 않았다.
+  next_step: 라이브 브라우저로 동 서브사이트(확인된 sitecdv 7곳부터)를 열어 '우리동 소식/공지사항' 게시판의 목록 URL·목록
+    구조(제목 링크 형태)·직접 가져오기 가능 여부를 확인한다. 게시판 URL이 확인되면 yongsan_parser.py의 parse_yongsan_dong_list를
+    실측 HTML로 검증하고, 나머지 9개 동의 sitecdv도 구청 동 목록 페이지에서 확인한다.
+  administrative_dongs: 16
+  administrative_dong_list:
+  - 후암동
+  - 용산2가동
+  - 남영동
+  - 청파동
+  - 원효로제1동
+  - 원효로제2동
+  - 효창동
+  - 용문동
+  - 한강로동
+  - 이촌제1동
+  - 이촌제2동
+  - 이태원제1동
+  - 이태원제2동
+  - 한남동
+  - 서빙고동
+  - 보광동

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-우동 자동 수집 스크립트 v0.6 (핵심: 동네 소식 자동 보기)
+우동 자동 수집 스크립트 v0.10 (핵심: 동네 소식 자동 보기)
 
 시범 1곳 + RSS 확인된 8곳 + 목록 HTML 파싱 확인된 13곳, 총 22개 지역을 돈다.
 (성동구는 data.json에 따로 있다.)
@@ -27,6 +27,38 @@
     성동구는 이 서버에서 직접 가져오기가 끊겨 브라우저 경유가 필요하다.
     동 소식은 주민등록 공시송달·최고공고 비중이 높아 선별이 필요할 수 있다.
     동별 레지스트리는 sources_dong.yaml에도 기록돼 있다.
+  - 동 행정복지센터 (v0.8, 2026-11-19 확인): 13개 구 238개 동 -> data_dong.json.
+    관악구 21개 동(게시판 1개 cbIdx=366 공유, deptCode 필터), 강동구 19개 동
+    (동별 서브사이트 새소식), 광진구 15개 동(동별 게시판 B0000127, 1~3페이지 합산),
+    동대문구 15개 동(게시판 1개 bbsNo=72 공유, 동 카테고리 필터),
+    동작구 15개 동(동별 게시판 B0000301, 1~3페이지 합산),
+    서대문구 14개 동(동별 시민게시판, EUC-KR),
+    성북구 20개 동(게시판 1개 bbsNo=90 공유, 동 카테고리 필터),
+    양천구 18개 동(동별 게시판 cbIdx, 1~2페이지 합산),
+    은평구 16개 동(게시판 1개 bbsNo=43 공유, 동 카테고리 필터, ep.go.kr www 없음).
+    제외: 강북구(동 게시판 B0000199 확인, 목록 URL 미검증, gangbuk.go.kr:18000 직접
+    가져오기 타임아웃), 강서구(동 게시판 목록 URL 미확인), 중랑구(동 게시판 목록 URL
+    미확인, jungnang.go.kr 연결 실패). 제외 사유는 sources_dong.yaml excluded에 기록.
+    카테고리는 기존 classify() 그대로 공사·교통 글을 'work'로 묶는다.
+  - 동 행정복지센터 (v0.9, 2026-11-19 확인): 20개 구 343개 동 -> data_dong.json.
+    서초구 18개 동(동별 DongList cbIdx=57 + dongCode), 영등포구 18개 동
+    (동별 게시판 bbsNo·key, parse_bbs_list 재사용), 마포구 16개 동
+    (동별 서브사이트 우리동네소식), 도봉구 14개 동(동별 bbs.asp?code),
+    강북구 13개 동(동별 게시판 B0000199, menuNo·dongCd, gangbuk.go.kr:18000),
+    구로구 16개 동(게시판 1개 bbsNo=794 공유, 동 카테고리 필터),
+    금천구 10개 동(게시판 bbsNo=4 + 부서코드 필터).
+    강북구는 이 서버 urllib로는 :18000 포트가 프록시에서 막혀(403) fetch가
+    실패할 수 있고, 그 경우 기존 소식을 유지한다(curl로는 200 확인).
+    제외: 종로구·중구·용산구·강서구·중랑구(동 게시판 목록 URL 미확인).
+  - 동 행정복지센터 (v0.10, 2026-11-20 확인): 21개 구 358개 동 -> data_dong.json.
+    중구 15개 동(동별 CMS 게시판 content.do?cmsid, parse_junggu_dong_list 신규).
+    중구는 이 서버 직접 가져오기가 끊겨 브라우저 경유로 채웠다(150개).
+    목록 텍스트에 개별 글 cid가 노출되지 않아 원문 링크는 목록 URL이다.
+    종로구·중랑구는 목록 URL 확인됐으나 라이브 소식 채우기가 대기 중이다
+    (종로구: 통합 게시판 1개 + 담당부서 구분, bbsId BBSMSTR_000000000911;
+    중랑구: 동별 우리동소식 B0000262, menuNo 규칙 확인).
+    두 구 파서 초안은 work/*/parser_note.md에만 있고, 실측 HTML 검증 전에는
+    fetch.py 동 수집 루프에 연결하지 않는다. 제외: 용산구·강서구(목록 URL 미확인).
 
 출처 (2026-11-18 확인):
   - 성동구청 새소식 RSS: https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=
@@ -64,7 +96,7 @@
 실행:
   python3 scripts/fetch.py
   -> data.json (성동구, 기존과 동일), data_nationwide.json (성동 제외 21곳),
-     data_dong.json (성동구 17개 동 + 송파구 27개 동)
+     data_dong.json (20개 구 343개 동)
 """
 import html as html_lib
 import json
@@ -196,6 +228,310 @@ SONGPA_DONGS = [
     "잠실본동", "장지동", "풍납1동", "풍납2동",
 ]
 
+# 노원구 19개 동: 구청 통합 게시판 '부서·동 소식'(q_bbsCode=1103).
+#   2026-11-19 확인. 목록 URL 1개를 페이지 순회하며 담당부서로 동을 나눈다.
+#   제목 앞 '[ 동명 ]' 태그만 믿으면 안 된다. 담당부서(목록) ≒ 상세 태그 > 제목 접두사.
+#   동명 표기가 제각각이라(상계3.4동/상계3·4동/상계 3.4 동) 정규화해서 비교한다.
+#   날짜는 목록에 비어 있는 경우가 많아 q_bbscttSn 앞 8자리(YYYYMMDD)에서 파생한다.
+NOWON_DONGS = [
+    "월계1동", "월계2동", "월계3동", "공릉1동", "공릉2동",
+    "하계1동", "하계2동", "중계본동", "중계1동", "중계2·3동", "중계4동",
+    "상계1동", "상계2동", "상계3·4동", "상계5동", "상계6·7동",
+    "상계8동", "상계9동", "상계10동",
+]
+NOWON_LIST_URL = "https://www.nowon.kr/www/user/bbs/BD_selectBbsList.do?q_bbsCode=1103"
+
+# 강남구 22개 동: 동별 센터 게시판(B_000282), 동 식별은 office 코드.
+#   2026-11-19 확인. 목록 URL은 office-only 형태(list.do?office=...)로, 서버가
+#   표준 URL(list.do?mid=MC...&office=...)로 302 리다이렉트한다. 서버 직접 가져오기 된다.
+GANGNAM_DONGS = [
+    ("신사동", "3220040"), ("논현1동", "3220041"), ("논현2동", "3220042"),
+    ("삼성1동", "3220047"), ("삼성2동", "3220048"), ("대치1동", "3220049"),
+    ("대치2동", "3220050"), ("대치4동", "3220052"), ("역삼1동", "3220053"),
+    ("역삼2동", "3220054"), ("도곡1동", "3220055"), ("도곡2동", "3220056"),
+    ("개포1동", "3220057"), ("개포2동", "3220058"), ("개포4동", "3220060"),
+    ("세곡동", "3220061"), ("일원본동", "3220062"), ("일원1동", "3220063"),
+    ("수서동", "3220065"), ("압구정동", "3220141"), ("청담동", "3220142"),
+    ("개포3동", "3220272"),
+]
+
+# 관악구 21개 동: 게시판 1개(cbIdx=366, '우리동소식') 공유, deptCode로 동 구분.
+#   2026-11-19 확인. 서버 직접 가져오기 HTTP 200. deptCode는 구청 메인 페이지의
+#   동 선택 <option>에서 확인했고, 21개 동 목록을 전부 직접 가져와 페이지 제목으로 검증했다.
+#   상세 URL은 목록 행의 onclick doBbsFView('366','<bcIdx>','16010100','<parentSeq>')에서 확인.
+GWANAK_DONGS = [
+    ("낙성대동", "D3200157"), ("난곡동", "D3200169"), ("난향동", "D3200163"),
+    ("남현동", "D3200052"), ("대학동", "D3200168"), ("미성동", "D3200162"),
+    ("보라매동", "D3200150"), ("삼성동", "D3200167"), ("서림동", "D3200166"),
+    ("서원동", "D3200164"), ("성현동", "D3200152"), ("신림동", "D3200159"),
+    ("신사동", "D3200160"), ("신원동", "D3200165"), ("은천동", "D3200151"),
+    ("인헌동", "D3200158"), ("조원동", "D3200161"), ("중앙동", "D3200153"),
+    ("청룡동", "D3200156"), ("청림동", "D3200154"), ("행운동", "D3200155"),
+]
+
+# 강동구 19개 동: 동별 서브사이트(/web/dongrenew/{slug}/main) 아래 '우리동소식'
+#   섹션의 동별 '새소식' 게시판. 2026-11-19 확인. 서버 직접 가져오기 HTTP 200.
+#   상세 URL은 목록 행의 <a class="art" href="/web/dongrenew/bbs{slug}/news_{slug}/{id}?...">를 그대로 쓴다.
+GANGDONG_DONGS = [
+    ("강일동", "gangil"), ("고덕1동", "godeog1"), ("고덕2동", "godeog2"),
+    ("길동", "gil"), ("둔촌1동", "dunchon1"), ("둔촌2동", "dunchon2"),
+    ("명일1동", "myeongil1"), ("명일2동", "myeongil2"),
+    ("상일1동", "sangil"), ("상일2동", "sangil2"),
+    ("성내1동", "seongnae1"), ("성내2동", "seongnae2"), ("성내3동", "seongnae3"),
+    ("암사1동", "amsa1"), ("암사2동", "amsa2"), ("암사3동", "amsa3"),
+    ("천호1동", "cheonho1"), ("천호2동", "cheonho2"), ("천호3동", "cheonho3"),
+]
+
+# 광진구 15개 동: 동별 서브사이트 + 동별 게시판 B0000127 '우리마을소식'.
+#   2026-11-19 확인. 서버 직접 가져오기 HTTP 200. 목록은 <div class="bdList"> 구조.
+#   1페이지는 고정글만 나오고 최신 일반글이 2페이지에 섞여 있어 1~3페이지를 합쳐
+#   날짜 내림차순 상위 10개를 뽑는다. 고정글도 최신 실제 글이라 포함한다.
+GWANGJIN_DONGS = [
+    ("중곡1동", "01", "600009"), ("중곡2동", "02", "600209"), ("중곡3동", "03", "600309"),
+    ("중곡4동", "04", "600409"), ("능동", "05", "600509"), ("구의1동", "06", "600609"),
+    ("구의2동", "07", "600709"), ("구의3동", "08", "600809"), ("광장동", "09", "600909"),
+    ("자양1동", "10", "601009"), ("자양2동", "11", "601109"), ("자양3동", "12", "601209"),
+    ("자양4동", "13", "601309"), ("화양동", "14", "601409"), ("군자동", "15", "601509"),
+]
+
+# 동대문구 15개 동: 구청 공유 게시판 1개(bbsNo=72, key=390) + 동 이름 카테고리 필터.
+#   송파구(bbsNo=36) 패턴과 동일해 parse_bbs_list를 재사용한다. 2026-11-19 확인.
+#   서버 직접 가져오기 HTTP 200. 동 카테고리 15개는 목록 페이지의 '동 선택' 옵션에서 확인했다.
+DONGDAEMUN_DONGS = [
+    "신설동", "용두동", "제기동", "전농1동", "전농2동", "답십리1동", "답십리2동",
+    "장안1동", "장안2동", "청량리동", "회기동", "휘경1동", "휘경2동", "이문1동", "이문2동",
+]
+DONGDAEMUN_BBS_NO = 72
+DONGDAEMUN_KEY = 390
+
+# 동작구 15개 동: 동별 서브사이트 + 동별 게시판 B0000301 '동네소식'.
+#   2026-11-19 확인. 서버 직접 가져오기 HTTP 200. 목록은 <tr> 행
+#   [번호|공지, 제목, 동, 날짜, 조회수], 상세 링크는 view.do?nttId=... 이다.
+#   고정글(공지) 행도 최신 실제 글이라 포함하고 nttId로 중복을 제거한다.
+#   게시판 글 수가 적어 1페이지에 10개가 안 차는 동이 있어 1~3페이지를 합친다.
+#   동작동은 법정동이라 별도 동 페이지가 없다. 행정동 사당2동이 관할한다.
+DONGJAK_DONGS = [
+    ("노량진1동", "01", "800107"), ("노량진2동", "02", "800207"), ("상도1동", "03", "800307"),
+    ("상도2동", "04", "800407"), ("상도3동", "05", "800507"), ("상도4동", "06", "800607"),
+    ("흑석동", "07", "800707"), ("사당1동", "08", "800807"), ("사당2동", "09", "800907"),
+    ("사당3동", "10", "801007"), ("사당4동", "11", "801107"), ("사당5동", "12", "801207"),
+    ("대방동", "13", "801307"), ("신대방1동", "14", "801407"), ("신대방2동", "15", "801507"),
+]
+
+# 서대문구 14개 동: 동별 서브사이트 시민게시판 '우리동소식'.
+#   2026-11-19 확인. 서버 직접 가져오기 HTTP 200. 단, 페이지는 EUC-KR이다.
+#   meta에는 utf-8이 적혀 있어도 실제 바이트는 EUC-KR이라 fetch_html()을 그대로
+#   쓰면 한글이 깨진다. _fetch_euckr()로 바이트를 받아 euc-kr로 직접 디코드한다.
+#   제목 링크는 javascript:goView('{seq}') 형태라 상세 URL은
+#   .../notice.do?mode=view&sdmBoardSeq={seq} 패턴으로 구성한다(충현동 seq 317274로 검증).
+SEODAEMUN_DONGS = [
+    ("충현동", "ch"), ("천연동", "cy"), ("북아현동", "bah"), ("신촌동", "sc"),
+    ("연희동", "yh"), ("홍제1동", "hj1"), ("홍제2동", "hj2"), ("홍제3동", "hj3"),
+    ("홍은1동", "he1"), ("홍은2동", "he2"), ("남가좌1동", "ngj1"), ("남가좌2동", "ngj2"),
+    ("북가좌1동", "bgj1"), ("북가좌2동", "bgj2"),
+]
+
+# 성북구 20개 동: 구청 공유 게시판 1개(bbsNo=90, key=6171, '우리 동 소식') +
+#   동 이름 카테고리(searchCtgry) 필터. 송파구 패턴과 동일해 parse_bbs_list를 재사용한다.
+#   2026-11-19 확인. 서버 직접 가져오기 HTTP 200. 20개 동 연속 요청 시 0.5초 간격을 둔다.
+SEONGBUK_DONGS = [
+    "성북동", "삼선동", "동선동", "돈암1동", "돈암2동", "안암동", "보문동",
+    "정릉1동", "정릉2동", "정릉3동", "정릉4동", "길음1동", "길음2동",
+    "월곡1동", "월곡2동", "장위1동", "장위2동", "장위3동", "석관동", "종암동",
+]
+SEONGBUK_BBS_NO = 90
+SEONGBUK_KEY = 6171
+
+# 양천구 18개 동: 동별 서브사이트(/dong/<slug>/main.do) 안에 동별 게시판 '우리동소식'.
+#   게시판 식별자 cbIdx가 동마다 다르다. 2026-11-19 확인. 서버 직접 가져오기 HTTP 200.
+#   목록 1페이지에는 상단 고정글(동마다 0~4건)이 포함돼 일반글이 10건이 안 되므로
+#   2페이지까지 본다. 고정글은 <tr class="notice"> 행이라 건너뛴다.
+#   신정5동은 없다. 양천구 행정동은 18개이다.
+YANGCHEON_DONGS = [
+    ("목1동", "mok01", 423), ("목2동", "mok02", 431),
+    ("목3동", "mok03", 438), ("목4동", "mok04", 445),
+    ("목5동", "mok05", 452),
+    ("신월1동", "sinwol01", 508), ("신월2동", "sinwol02", 515),
+    ("신월3동", "sinwol03", 522), ("신월4동", "sinwol04", 529),
+    ("신월5동", "sinwol05", 536), ("신월6동", "sinwol06", 543),
+    ("신월7동", "sinwol07", 550),
+    ("신정1동", "sinjeong01", 459), ("신정2동", "sinjeong02", 466),
+    ("신정3동", "sinjeong03", 473), ("신정4동", "sinjeong04", 480),
+    ("신정6동", "sinjeong06", 494), ("신정7동", "sinjeong07", 501),
+]
+
+# 은평구 16개 동: 구청 공유 게시판 1개(bbsNo=43, key=745, '동주민센터 공지사항') +
+#   동 이름 카테고리(searchCtgry) 필터. 성북구·송파구와 같은 방식이라 parse_bbs_list를 재사용한다.
+#   2026-11-19 확인. 서버 직접 가져오기가 되나 간헐적으로 타임아웃이 난다(16개 동 중 5개 동이
+#   한 번씩 TimeoutError, 재시도하면 성공). 재시도 3회 + 요청 간 0.8초 간격을 둔다.
+#   호스트는 반드시 ep.go.kr(www 없음)로 할 것. www.ep.go.kr로는 417이 난다.
+EUNPYEONG_DONGS = [
+    "녹번동", "불광1동", "불광2동", "갈현1동", "갈현2동", "구산동", "대조동",
+    "응암1동", "응암2동", "응암3동", "역촌동", "신사1동", "신사2동",
+    "증산동", "수색동", "진관동",
+]
+EUNPYEONG_BBS_NO = 43
+EUNPYEONG_KEY = 745
+
+# 서초구 18개 동: 동별 공지사항은 구 공지 게시판(cbIdx=57)을 dongCode로 필터한 DongList.
+#   2026-11-19 확인. 서버 직접 가져오기 HTTP 200. 서초1동만 별도 '1동 소식'
+#   게시판(cbIdx=442)이 있으나 다른 17개 동에는 없어 균일하게 DongList를 쓴다.
+#   상세 URL은 목록 href의 소문자 bcidx를 DongMain 검증 형태
+#   DongView.do?cbIdx=57&bcIdx={id}&dongCode={code}로 구성한다(bcIdx 412276 검증).
+#   낡은 동: 반포본동 최신 2026-08-25, 잠원동 2026-09-03, 내곡동 2026-09-23.
+SEOCHO_DONGS = [
+    ("서초1동", "v0"), ("서초2동", "v1"), ("서초3동", "v2"), ("서초4동", "v3"),
+    ("잠원동", "v4"), ("반포본동", "v5"), ("반포1동", "v6"), ("반포2동", "v7"),
+    ("반포3동", "v8"), ("반포4동", "v9"), ("방배본동", "va"), ("방배1동", "vb"),
+    ("방배2동", "vc"), ("방배3동", "vd"), ("방배4동", "ve"), ("양재1동", "vf"),
+    ("양재2동", "vg"), ("내곡동", "vh"),
+]
+
+# 영등포구 18개 동: 동마다 bbsNo·key가 다른 동별 '우리동 소식' 게시판.
+#   2026-11-19 확인. 서버 직접 가져오기 HTTP 200. parse_bbs_list를 재사용한다.
+#   bbsNo=60 공유 게시판은 별개 게시판이라 쓰지 않는다. 18개 동 최신이 모두 2026-10-15~11-19.
+YEONGDEUNGPO_DONGS = [
+    ("영등포본동", 56, 4914), ("영등포동", 61, 2966),
+    ("여의동", 66, 2983), ("당산1동", 71, 3000),
+    ("당산2동", 76, 3017), ("도림동", 81, 3034),
+    ("문래동", 86, 3051), ("양평1동", 91, 3068),
+    ("양평2동", 96, 3085), ("신길1동", 101, 3102),
+    ("신길3동", 106, 3119), ("신길4동", 111, 3136),
+    ("신길5동", 116, 3153), ("신길6동", 121, 3170),
+    ("신길7동", 126, 3187), ("대림1동", 131, 3204),
+    ("대림2동", 136, 3221), ("대림3동", 141, 3238),
+]
+
+# 마포구 16개 동: 동별 서브사이트(/site/{slug}/home) 아래 '우리동네소식' 게시판.
+#   2026-11-19 확인. 서버 직접 가져오기 HTTP 200. 염리동 슬러그는 yeomni이다
+#   (yeomri는 구청 대표사이트로 리다이렉트된다). 상세 URL은 bare 형태
+#   /site/{slug}/board/townnews/{id}로 쓴다(공덕동 3265번 검증).
+#   낡은 동: 연남동 최신 2026-08-28.
+MAPO_DONGS = [
+    ("공덕동", "gongdeok"), ("아현동", "ahyeon"), ("도화동", "dohwa"),
+    ("용강동", "yonggang"), ("대흥동", "daeheung"), ("염리동", "yeomni"),
+    ("신수동", "sinsu"), ("서강동", "seogang"), ("서교동", "seogyo"),
+    ("합정동", "hapjeong"), ("망원1동", "mangwon1"), ("망원2동", "mangwon2"),
+    ("연남동", "yeonnam"), ("성산1동", "seongsan1"), ("성산2동", "seongsan2"),
+    ("상암동", "sangam"),
+]
+
+# 도봉구 14개 동: 동별 bbs.asp?code={code} '동 소식 공지사항' 게시판.
+#   2026-11-19 확인. 서버 직접 가져오기 HTTP 200. 상세 URL은
+#   bbs.asp?bmode=D&pcode={pcode}&code={code}이다. 방학1동 RSS(code=10009682)는
+#   data_nationwide.json의 구청급 게시판과 별개이다.
+DOBONG_DONGS = [
+    ("쌍문1동", "10009626"),
+    ("쌍문2동", "10009640"),
+    ("쌍문3동", "10009654"),
+    ("쌍문4동", "10009668"),
+    ("방학1동", "10009682"),
+    ("방학2동", "10009696"),
+    ("방학3동", "10009710"),
+    ("창1동", "10009724"),
+    ("창2동", "10009738"),
+    ("창3동", "10009752"),
+    ("창4동", "10009766"),
+    ("창5동", "10009780"),
+    ("도봉1동", "10009794"),
+    ("도봉2동", "10009808"),
+]
+
+# 강북구 13개 동: 동별 게시판 B0000199 '우리동소식', menuNo·dongCd로 동 구분.
+#   2026-11-19 확인. 목록 URL은 동 메인 페이지의 '우리동소식' 앵커에서 확인했다.
+#   curl로는 gangbuk.go.kr:18000 직접 가져오기 HTTP 200이나, 이 서버 urllib로는
+#   프록시에서 :18000이 막혀 실패할 수 있다. 실패 시 기존 소식을 유지한다.
+#   낡은 동: 수유1동 최신 2026-11-03.
+GANGBUK_DONGS = [
+    ("삼양동", "01", "600042"),
+    ("미아동", "02", "600016"),
+    ("송중동", "03", "600040"),
+    ("송천동", "04", "600060"),
+    ("삼각산동", "05", "600092"),
+    ("번1동", "06", "600109"),
+    ("번2동", "07", "600126"),
+    ("번3동", "08", "600143"),
+    ("수유1동", "09", "600160"),
+    ("수유2동", "10", "600177"),
+    ("수유3동", "11", "600194"),
+    ("우이동", "12", "600211"),
+    ("인수동", "13", "600228"),
+]
+
+# 구로구 16개 동: 구청 공유 게시판 1개(bbsNo=794, '우리동 소식') + 동 이름 카테고리 필터.
+#   2026-11-19 확인. 서버 직접 가져오기 HTTP 200. parse_bbs_list를 재사용한다.
+#   동별 key는 동 서브페이지의 '우리동 소식' 메뉴 링크에서 확인했다.
+#   구로구는 15개가 아니라 16개 동이다(신도림동 포함, 천왕동은 법정동).
+#   낡은 동: 가리봉동 최신 2026-05-04, 신도림동·수궁동·항동 2026-09-23~30.
+GURO_BBS_NO = 794
+
+# (동명, board key, 서브페이지 key, 동 코드)
+GURO_DONGS = [
+    ("신도림동", 3049, 1942, "D3160041"),
+    ("구로1동", 1955, 1951, "D3160042"),
+    ("구로2동", 1964, 1960, "D3160043"),
+    ("구로3동", 1973, 1969, "D3160044"),
+    ("구로4동", 1983, 1978, "D3160045"),
+    ("구로5동", 1992, 1987, "D3160046"),
+    ("가리봉동", 2001, 1996, "D3160144"),
+    ("고척1동", 2010, 2005, "D3160051"),
+    ("고척2동", 2019, 2014, "D3160052"),
+    ("개봉1동", 2028, 2023, "D3160053"),
+    ("개봉2동", 2037, 2032, "D3160054"),
+    ("개봉3동", 2046, 2041, "D3160055"),
+    ("오류1동", 2055, 2050, "D3160057"),
+    ("오류2동", 2064, 2059, "D3160058"),
+    ("수궁동", 2073, 2068, "D3160059"),
+    ("항동", 2082, 2077, "D3160252"),
+]
+
+# 금천구 10개 동: 구청 공유 게시판 1개(bbsNo=4) + 동 주민센터 부서코드(searchDeptCode) 필터.
+#   2026-11-19 확인. 서버 직접 가져오기 HTTP 200. parse_bbs_list를 재사용한다.
+#   동별 key·부서코드는 동 소개 페이지의 '공지사항' 탭 링크에서 확인했다.
+#   보조 게시판 '골목회의'(bbsNo=150128)는 일부 동에서만 확인돼 이번 단계에서는 수집하지 않는다.
+#   낡은 동: 시흥5동 최신 2026-10-08.
+GEUMCHEON_BBS_NO = 4
+
+# (동명, 소개 페이지 contents key, 공지사항 탭 key, 부서코드, 골목회의 key|None)
+GEUMCHEON_DONGS = [
+    ("가산동", 651, 653, "31700420000", 2222),
+    ("독산1동", 661, 663, "31700430000", 2223),
+    ("독산2동", 669, 671, "31700440000", 2224),
+    ("독산3동", 677, 679, "31700450000", 2225),
+    ("독산4동", 685, 687, "31700460000", 2226),
+    ("시흥1동", 693, 695, "31700490000", 2227),
+    ("시흥2동", 701, 703, "31700500000", None),
+    ("시흥3동", 709, 711, "31700510000", None),
+    ("시흥4동", 717, 719, "31700520000", None),
+    ("시흥5동", 726, 728, "31700530000", 2231),
+]
+
+# 중구 15개 동: 동별 CMS 게시판(content.do?cmsid, '우리동 소식').
+#   2026-11-20 확인. cmsid 13300(소공동)~13331(중림동) 연속.
+#   이 서버 직접 가져오기는 차단(RemoteDisconnected)이라 브라우저 경유로 채웠다.
+#   목록 텍스트에 개별 글 cid가 노출되지 않아 원문 링크는 목록 URL(url_kind=list).
+#   상세 URL 패턴 content.do?cmsid=<id>&mode=view&cid=<9~10자리>는 실링크로 확인됐으나
+#   cid 추출 정규식은 실측 HTML 미검증이라, 매칭될 때만 상세 URL을 쓰고 아니면 목록 URL이다.
+#   회현동·광희동은 게시판 번호가 재구성됐을 가능성이 있어 번호가 아닌 cid(또는 제목+날짜)로 중복 판정한다.
+# (동명, slug, cmsid)
+JUNGGU_DONGS = [
+    ("소공동", "sogong", "13300"),
+    ("회현동", "hoehyeon", "13318"),
+    ("명동", "myeong", "13319"),
+    ("필동", "pil", "13320"),
+    ("장충동", "jangchung", "13321"),
+    ("광희동", "gwanghui", "13322"),
+    ("을지로동", "euljiro", "13323"),
+    ("신당동", "sindang", "13324"),
+    ("다산동", "dasan", "13325"),
+    ("약수동", "yaksoo", "13326"),
+    ("청구동", "cheonggu", "13327"),
+    ("신당제5동", "sindang5", "13328"),
+    ("동화동", "donghwa", "13329"),
+    ("황학동", "hwanghak", "13330"),
+    ("중림동", "jungnim", "13331"),
+]
+
 
 def dong_sources():
     srcs = []
@@ -215,6 +551,99 @@ def dong_sources():
             "list_url": ("https://www.songpa.go.kr/www/selectBbsNttList.do?bbsNo=36&key=2619"
                          f"&searchCtgry={urllib.parse.quote(dong)}"),
             "timeout": 25, "sleep_before": 0.5,
+        })
+    for dong, office in GANGNAM_DONGS:
+        srcs.append({
+            "gu": "서울 강남구", "dong": dong, "office": office,
+            "region": f"서울 강남구 {dong}", "board": "우리동이야기 새소식",
+            "kind": "gangnam",
+            "list_url": ("https://www.gangnam.go.kr/center/board/B_000282/list.do"
+                         f"?office={office}"),
+            "timeout": 25,
+        })
+    for dong, dept_code in GWANAK_DONGS:
+        srcs.append({
+            "gu": "서울 관악구", "dong": dong, "dept_code": dept_code,
+            "region": f"서울 관악구 {dong}", "board": "우리동소식",
+            "kind": "gwanak",
+            "list_url": ("https://www.gwanak.go.kr/site/gwanak/ex/bbs/List.do"
+                         f"?cbIdx=366&deptCode={dept_code}"),
+            "timeout": 25,
+        })
+    for dong, slug in GANGDONG_DONGS:
+        srcs.append({
+            "gu": "서울 강동구", "dong": dong, "slug": slug,
+            "region": f"서울 강동구 {dong}", "board": "새소식",
+            "kind": "gangdong",
+            "list_url": (f"https://www.gangdong.go.kr/web/dongrenew/bbs{slug}"
+                         f"/news_{slug}"),
+            "timeout": 25,
+        })
+    for dong in DONGDAEMUN_DONGS:
+        srcs.append({
+            "gu": "서울 동대문구", "dong": dong,
+            "region": f"서울 동대문구 {dong}", "board": "동주민센터 공지사항",
+            "kind": "bbs", "bbs_no": DONGDAEMUN_BBS_NO, "key": DONGDAEMUN_KEY,
+            "list_url": ("https://www.ddm.go.kr/www/selectBbsNttList.do?bbsNo=72&key=390"
+                         f"&searchCtgry={urllib.parse.quote(dong)}"),
+            "timeout": 25, "sleep_before": 0.5,
+        })
+    for dong in SEONGBUK_DONGS:
+        srcs.append({
+            "gu": "서울 성북구", "dong": dong,
+            "region": f"서울 성북구 {dong}", "board": "우리 동 소식",
+            "kind": "bbs", "bbs_no": SEONGBUK_BBS_NO, "key": SEONGBUK_KEY,
+            "list_url": ("https://sb.go.kr/www/selectBbsNttList.do?key=6171&bbsNo=90"
+                         f"&searchCtgry={urllib.parse.quote(dong)}"),
+            "timeout": 25, "sleep_before": 0.5,
+        })
+    for dong in EUNPYEONG_DONGS:
+        srcs.append({
+            "gu": "서울 은평구", "dong": dong,
+            "region": f"서울 은평구 {dong}", "board": "동주민센터 공지사항",
+            "kind": "bbs", "bbs_no": EUNPYEONG_BBS_NO, "key": EUNPYEONG_KEY,
+            # 호스트 주의: www 없음(ep.go.kr). www.ep.go.kr은 417.
+            "list_url": ("https://ep.go.kr/www/selectBbsNttList.do?key=745&bbsNo=43"
+                         f"&searchCtgry={urllib.parse.quote(dong)}"),
+            "timeout": 60, "sleep_before": 0.8, "retries": 3,
+        })
+    for dong, bbs_no, key in YEONGDEUNGPO_DONGS:
+        srcs.append({
+            "gu": "서울 영등포구", "dong": dong,
+            "region": f"서울 영등포구 {dong}", "board": "우리동소식",
+            "kind": "bbs", "bbs_no": bbs_no, "key": key,
+            "list_url": ("https://www.ydp.go.kr/www/selectBbsNttList.do"
+                         f"?bbsNo={bbs_no}&key={key}"),
+            "timeout": 25, "sleep_before": 0.5,
+        })
+    for dong, key, sub_key, dong_code in GURO_DONGS:
+        srcs.append({
+            "gu": "서울 구로구", "dong": dong, "dong_cd": dong_code,
+            "sub_key": sub_key,
+            "region": f"서울 구로구 {dong}", "board": "우리동 소식",
+            "kind": "bbs", "bbs_no": GURO_BBS_NO, "key": key,
+            "list_url": ("https://www.guro.go.kr/www/selectBbsNttList.do?bbsNo=794"
+                         f"&key={key}&searchCtgry={urllib.parse.quote(dong)}"),
+            "timeout": 25, "sleep_before": 0.5,
+        })
+    for dong, contents_key, key, dept_code, _golmok_key in GEUMCHEON_DONGS:
+        srcs.append({
+            "gu": "서울 금천구", "dong": dong,
+            "region": f"서울 금천구 {dong}", "board": "공지사항",
+            "kind": "bbs", "bbs_no": GEUMCHEON_BBS_NO, "key": key,
+            "dept_code": dept_code, "contents_key": contents_key,
+            "list_url": ("https://www.geumcheon.go.kr/portal/selectBbsNttList.do"
+                         f"?bbsNo=4&key={key}&searchDeptCode={dept_code}"),
+            "timeout": 25, "sleep_before": 0.5,
+        })
+    for dong, slug, cmsid in JUNGGU_DONGS:
+        srcs.append({
+            "gu": "서울 중구", "dong": dong, "slug": slug, "cmsid": cmsid,
+            "region": f"서울 중구 {dong}", "board": "우리동 소식",
+            "kind": "junggu",
+            "list_url": (f"https://www.junggu.seoul.kr/dong/{slug}/content.do"
+                         f"?cmsid={cmsid}"),
+            "timeout": 25,
         })
     return srcs
 
@@ -417,7 +846,7 @@ def _is_fixed_row(row: str) -> bool:
     return False
 
 
-_DATE_FULL = re.compile(r"^(\d{4})[-./](\d{1,2})[-./](\d{1,2})(\([A-Za-z]+\))?$")
+_DATE_FULL = re.compile(r"^(\d{4})[-./](\d{1,2})[-./](\d{1,2})(\([^)]*\))?$")
 _DATE_KO = re.compile(r"^(\d{4})년\s*(\d{1,2})월\s*(\d{1,2})일$")
 
 
@@ -433,13 +862,16 @@ def _norm_date_cell(text: str) -> str:
 
 
 def _extract_date(row_html: str, cells=None) -> str:
-    """행에서 날짜를 찾아 YYYY-MM-DD로. 날짜 셀을 먼저 보고, 없으면 행 전체에서 찾는다."""
+    """행에서 날짜를 찾아 YYYY-MM-DD로. 셀 전체가 날짜 형식인 셀만 작성일로 취한다.
+    제목 안에 날짜가 들어 있어도(예: '현장구청장실(2026.10.13)...') 작성일로 오인하지 않는다.
+    셀 목록이 없으면(대전 동구 <li>형) 제목 링크를 뺀 나머지 텍스트에서 날짜를 찾는다."""
     if cells:
         for c in cells:
             d = _norm_date_cell(_strip_tags(c))
             if d:
                 return d
-    t = _strip_tags(row_html)
+        return ""
+    t = _strip_tags(re.sub(r"<a[^>]*>.*?</a>", " ", row_html, flags=re.S | re.I))
     m = re.search(r"(\d{4})년\s*(\d{1,2})월\s*(\d{1,2})일", t)
     if m:
         return f"{m.group(1)}-{int(m.group(2)):02d}-{int(m.group(3)):02d}"
@@ -628,19 +1060,698 @@ def parse_mapo(html_text: str, src: dict):
     return notices[:10]
 
 
+def parse_gangnam(html_text: str, src: dict):
+    """강남구 동별 센터 게시판(B_000282). 제목 <a>의 href에 게시글 id가 있다.
+    목록 1페이지에 최신 10개가 있다. 작성일은 행의 날짜 셀에서 읽는다."""
+    notices, seen = [], set()
+    for row in _tr_rows(html_text):
+        if _is_fixed_row(row):
+            continue
+        m = re.search(r'<a[^>]*href="(/center/board/B_000282/(\d+)/view\.do\?[^"]*)"[^>]*>(.*?)</a>',
+                      row, re.S | re.I)
+        if not m:
+            continue
+        href, num, atitle = m.group(1), m.group(2), m.group(3)
+        if num in seen:
+            continue
+        seen.add(num)
+        title = _clean_title(atitle)
+        if not title:
+            continue
+        date = _extract_date(row, _td_cells(row))
+        url = urllib.parse.urljoin(src["list_url"], html_lib.unescape(href))
+        notices.append(_notice(src["region"], src["board"], title, date, url))
+    return notices[:10]
+
+
+def parse_junggu_dong_list(html_text: str, src: dict):
+    """중구 동별 CMS 게시판(content.do?cmsid, '우리동 소식').
+    목록 1페이지에 최신 10개가 있다. 담당부서 셀은 동 이름 자체라 동별 필터가 필요 없다.
+    상세 URL 패턴(content.do?cmsid=<id>&mode=view&cid=<cid>)은 실링크로 확인됐으나,
+    cid 추출 정규식은 실측 HTML 미검증이다. cid를 읽지 못하면 목록 URL로 기록한다
+    (url_kind="list" — 성동구 방식). 회현동·광희동은 게시판 번호가 재구성됐을
+    가능성이 있어 번호가 아닌 cid(또는 제목+날짜)로 중복 판정한다."""
+    notices, seen = [], set()
+    cmsid = str(src["cmsid"])
+    for row in _tr_rows(html_text):
+        if _is_fixed_row(row):
+            continue
+        m = re.search(
+            r'<a[^>]*href="[^"]*content\.do\?cmsid=' + re.escape(cmsid) +
+            r'(?:&amp;|&)mode=view(?:&amp;|&)cid=(\d+)[^"]*"[^>]*>(.*?)</a>',
+            row, re.S | re.I)
+        title = ""
+        url = src["list_url"]
+        url_kind = "list"
+        if m:
+            cid, atitle = m.group(1), m.group(2)
+            if cid in seen:
+                continue
+            seen.add(cid)
+            title = _clean_title(atitle)
+            url = (f"https://www.junggu.seoul.kr/dong/{src['slug']}/content.do"
+                   f"?cmsid={cmsid}&mode=view&cid={cid}")
+            url_kind = "detail"
+        else:
+            # href에 cid가 없으면 제목 셀 텍스트만으로 기록한다.
+            cells = _td_cells(row)
+            if len(cells) < 2:
+                continue
+            title = _clean_title(cells[1])
+            key = (title, _extract_date(row, cells))
+            if key in seen:
+                continue
+            seen.add(key)
+        if not title:
+            continue
+        date = _extract_date(row, _td_cells(row))
+        item = _notice(src["region"], src["board"], title, date, url)
+        item["url_kind"] = url_kind
+        notices.append(item)
+    return notices[:10]
+
+
+def parse_gwanak(html_text: str, src: dict):
+    """관악구 우리동소식(cbIdx=366). 제목 링크는 onclick doBbsFView(...)이다.
+    목록 1페이지에 최신 10개가 있다. 작성일은 행의 날짜 셀(YYYY.MM.DD)에서 읽는다."""
+    notices, seen = [], set()
+    for row in _tr_rows(html_text):
+        if _is_fixed_row(row):
+            continue
+        m = re.search(
+            r"doBbsFView\('(\d+)','(\d+)','16010100','(\d+)'\)", row)
+        if not m:
+            continue
+        cb_idx, bc_idx, parent_seq = m.group(1), m.group(2), m.group(3)
+        if bc_idx in seen:
+            continue
+        seen.add(bc_idx)
+        am = re.search(r"<a[^>]*doBbsFView[^>]*>(.*?)</a>", row, re.S)
+        title = _clean_title(am.group(1)) if am else ""
+        if not title:
+            continue
+        date = _extract_date(row, _td_cells(row))
+        url = ("https://www.gwanak.go.kr/site/gwanak/ex/bbs/View.do"
+               f"?cbIdx=366&bcIdx={bc_idx}&deptCode={src['dept_code']}"
+               f"&parentSeq={parent_seq}")
+        notices.append(_notice(src["region"], src["board"], title, date, url))
+    return notices[:10]
+
+
+def parse_gangdong(html_text: str, src: dict):
+    """강동구 동별 새소식 게시판. 제목 <a class="art">의 href에 게시글 id가 있다.
+    목록 1페이지에 최신 10개가 있다(상일2동은 15개 반환 — 상위 10개만 쓴다).
+    번호 셀이 숫자가 아닌 행(상단 고정 공지)은 건너뛴다. 작성일은 행의 날짜 셀에서 읽는다."""
+    notices, seen = [], set()
+    for row in _tr_rows(html_text):
+        if _is_fixed_row(row):
+            continue
+        cells = _td_cells(row)
+        # 번호 셀이 숫자가 아니면 상단 고정 공지 행이라 건너뛴다.
+        if not cells or not _strip_tags(cells[0]).isdigit():
+            continue
+        m = re.search(
+            r'<a[^>]*class="art"[^>]*href="(/web/dongrenew/bbs[^"]*/news_[^"]*/(\d+)\?[^"]*)"[^>]*>(.*?)</a>',
+            row, re.S | re.I)
+        if not m:
+            continue
+        href, num, atitle = m.group(1), m.group(2), m.group(3)
+        if num in seen:
+            continue
+        seen.add(num)
+        title = _clean_title(atitle)
+        if not title:
+            continue
+        date = _extract_date(row, cells)
+        url = urllib.parse.urljoin(src["list_url"], html_lib.unescape(href))
+        notices.append(_notice(src["region"], src["board"], title, date, url))
+    return notices[:10]
+
+
+def parse_gwangjin_list(html_text: str, src: dict):
+    """광진구 우리마을소식 1페이지. {nttId: (title, date, url)}를 돌려준다.
+    목록은 <div class="bdList"> 구조라 기존 <tr> 파서는 안 맞는다.
+    날짜 <span class="date">는 첨부파일 블록 뒤에 있어, 다음 항목 앵커까지를
+    구간으로 잡아 그 안에서 찾는다."""
+    items = {}
+    anchors = list(re.finditer(
+        r'href="(/dong/bbs/B0000127/view\.do\?nttId=(\d+)&menuNo=\d+&dongCd=\d+&pageIndex=\d+)"[^>]*>\s*<span class="tit">(.*?)</span>',
+        html_text, re.S))
+    for i, a in enumerate(anchors):
+        ntt, title = a.group(2), _clean_title(a.group(3))
+        if not title or ntt in items:
+            continue
+        seg = html_text[a.end():anchors[i + 1].start() if i + 1 < len(anchors) else len(html_text)]
+        d = re.search(r'<span class="date">\s*(\d{4}-\d{2}-\d{2})\s*</span>', seg)
+        date = d.group(1) if d else ""
+        url = urllib.parse.urljoin(src["list_url"], html_lib.unescape(a.group(1)))
+        items[ntt] = (title, date, url)
+    return items
+
+
+def fetch_gwangjin(max_pages: int = 3):
+    """광진구 15개 동을 돌아 {dong: [notices]}와 상태를 돌려준다.
+    1페이지는 고정글만 나오고 최신 일반글이 2페이지에 섞여 있어 1~3페이지를
+    합쳐 날짜 내림차순 상위 10개를 뽑는다. 고정글도 최신 실제 글이라 포함한다.
+    날짜가 안 보이는 항목은 상세 페이지를 직접 확인한다(드물다)."""
+    base = "https://www.gwangjin.go.kr"
+    per_dong, status = {}, "ok"
+    for dong, cd, menu in GWANGJIN_DONGS:
+        list_url = f"{base}/dong/bbs/B0000127/list.do?menuNo={menu}&dongCd={cd}"
+        src = {"region": f"서울 광진구 {dong}", "board": "우리마을소식", "list_url": list_url}
+        merged = {}
+        for page in range(1, max_pages + 1):
+            html_text, st = fetch_html(f"{list_url}&pageIndex={page}", timeout=25)
+            if html_text is None:
+                status = st
+                continue
+            for ntt, (title, date, url) in parse_gwangjin_list(html_text, src).items():
+                if ntt not in merged:
+                    merged[ntt] = (title, date, url)
+            time.sleep(0.3)
+            if len(merged) >= 10 and page >= 2:
+                break
+        notices = []
+        for title, date, url in sorted(merged.values(), key=lambda x: x[1], reverse=True)[:10]:
+            if not date:
+                # 날짜가 목록에 없으면 상세 페이지에서 확인한다.
+                try:
+                    vt, _ = fetch_html(url, timeout=25)
+                    d = re.search(r'<span class="date">\s*(\d{4}-\d{2}-\d{2})\s*</span>', vt or "")
+                    date = d.group(1) if d else ""
+                except Exception:
+                    pass
+            notices.append({"title": title, "category": classify(title), "date": date,
+                            "region": f"서울 광진구 {dong}", "source": "우리마을소식",
+                            "url": url, "gu": "서울 광진구", "dong": dong, "url_kind": "detail"})
+        per_dong[dong] = notices
+        print(f"  서울 광진구 {dong}: ok notices={len(notices)}")
+    return per_dong, status
+
+
+def parse_dongjak_list(html_text: str, src: dict):
+    """동작구 동네소식 1페이지. 고정글(공지) 행도 최신 실제 글이라 포함한다.
+    nttId로 중복을 제거한다."""
+    notices, seen = [], set()
+    for row in _tr_rows(html_text):
+        m = re.search(
+            r'href="(/dong/bbs/B0000301/view\.do\?nttId=(\d+)&menuNo=\d+&dongCd=\d+&pageIndex=\d+)"',
+            row)
+        if not m or m.group(2) in seen:
+            continue
+        seen.add(m.group(2))
+        cells = _td_cells(row)
+        txt = [_strip_tags(c) for c in cells]
+        if len(txt) < 4:
+            continue
+        title = txt[1]
+        if not title:
+            continue
+        date = txt[3] if re.match(r"\d{4}-\d{2}-\d{2}", txt[3]) else ""
+        url = urllib.parse.urljoin(src["list_url"], html_lib.unescape(m.group(1)))
+        notices.append({"title": title, "category": classify(title), "date": date,
+                        "region": src["region"], "source": src["board"], "url": url,
+                        "gu": src["gu"], "dong": src["dong"], "url_kind": "detail"})
+    return notices
+
+
+def fetch_dongjak(max_pages: int = 3):
+    """동작구 15개 동을 돌아 {dong: [notices]}와 상태를 돌려준다.
+    1페이지에 10개가 안 차는 동이 있어 페이지 순회하며 nttId 중복을 제거하고
+    날짜 내림차순 상위 10개를 뽑는다."""
+    base = "https://www.dongjak.go.kr"
+    per_dong, status = {}, "ok"
+    for dong, cd, menu in DONGJAK_DONGS:
+        list_url = f"{base}/dong/bbs/B0000301/list.do?menuNo={menu}&dongCd={cd}"
+        src = {"gu": "서울 동작구", "dong": dong, "region": f"서울 동작구 {dong}",
+               "board": "동네소식", "list_url": list_url}
+        merged, seen = {}, set()
+        for page in range(1, max_pages + 1):
+            html_text, st = fetch_html(f"{list_url}&pageIndex={page}", timeout=25)
+            if html_text is None:
+                status = st
+                continue
+            for n in parse_dongjak_list(html_text, src):
+                key = re.search(r"nttId=(\d+)", n["url"])
+                key = key.group(1) if key else n["url"]
+                if key not in seen:
+                    seen.add(key)
+                    merged[key] = n
+            time.sleep(0.3)
+            if len(merged) >= 10:
+                break
+        lst = sorted(merged.values(), key=lambda n: n.get("date", ""), reverse=True)[:10]
+        per_dong[dong] = lst
+        print(f"  서울 동작구 {dong}: ok notices={len(lst)}")
+    return per_dong, status
+
+
+def _fetch_euckr(url: str, timeout: int = 25):
+    """서대문구 동 페이지는 EUC-KR이다. 바이트를 받아 euc-kr로 직접 디코드한다.
+    meta에는 utf-8이 적혀 있어도 실제 바이트는 EUC-KR이라 fetch_html()을 그대로
+    쓰면 한글이 깨진다. 실패하면 (None, 상태문자열)을 돌려준다."""
+    req = urllib.request.Request(
+        url,
+        headers={
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36",
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        },
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as resp:
+            raw = resp.read()
+    except Exception as e:
+        return None, f"fetch_failed:{type(e).__name__}"
+    return raw.decode("euc-kr", errors="replace"), "ok"
+
+
+def parse_seodaemun_list(html_text: str, slug: str, dong: str):
+    """서대문구 우리동소식 1페이지. 제목이 '...'으로 잘린 항목은
+    ('_truncated': True)로 표시해 호출자가 상세 페이지에서 채우게 한다."""
+    base = "https://www.sdm.go.kr"
+    list_url = f"{base}/dong/{slug}/citizen/notice.do"
+    items = []
+    for row in _tr_rows(html_text):
+        vm = re.search(r"goView\('(\d+)'\)", row)
+        if not vm:
+            continue
+        seq = vm.group(1)
+        cells = _td_cells(row)
+        txt = [_strip_tags(c) for c in cells]
+        if len(txt) < 4:
+            continue
+        title = txt[1]
+        date = ""
+        dm = re.search(r"(\d{4})\.(\d{1,2})\.(\d{1,2})", txt[3])
+        if dm:
+            date = f"{dm.group(1)}-{int(dm.group(2)):02d}-{int(dm.group(3)):02d}"
+        view_url = f"{list_url}?mode=view&sdmBoardSeq={seq}"
+        items.append({"title": title, "category": classify(title), "date": date,
+                      "region": f"서울 서대문구 {dong}", "source": "우리동소식",
+                      "url": view_url, "gu": "서울 서대문구", "dong": dong,
+                      "url_kind": "detail", "_seq": seq,
+                      "_truncated": title.endswith("...") or title.endswith("…")})
+    return items
+
+
+def fetch_seodaemun():
+    """서대문구 14개 동을 돌아 {dong: [notices]}와 상태를 돌려준다.
+    목록 제목이 잘린 글은 상세 페이지를 직접 가져와 전체 제목으로 바꾼다."""
+    per_dong, status = {}, "ok"
+    for dong, slug in SEODAEMUN_DONGS:
+        list_url = f"https://www.sdm.go.kr/dong/{slug}/citizen/notice.do"
+        html_text, st = _fetch_euckr(list_url, timeout=25)
+        if html_text is None:
+            status = st
+            per_dong[dong] = []
+            print(f"  서울 서대문구 {dong}: {st} notices=0")
+            continue
+        items = parse_seodaemun_list(html_text, slug, dong)
+        for n in items:
+            if n.pop("_truncated", False):
+                vt, vst = _fetch_euckr(n["url"], timeout=25)
+                if vt is not None:
+                    fm = re.search(r"<th[^>]*>제목</th>\s*<td[^>]*>(.*?)</td>", vt, re.S)
+                    if fm:
+                        n["title"] = _strip_tags(fm.group(1))
+                        n["category"] = classify(n["title"])
+                time.sleep(0.3)
+            n.pop("_seq", None)
+        items.sort(key=lambda n: n.get("date", ""), reverse=True)
+        per_dong[dong] = items[:10]
+        print(f"  서울 서대문구 {dong}: ok notices={len(per_dong[dong])}")
+        time.sleep(0.3)
+    return per_dong, status
+
+
+def parse_yangcheon(html_text: str, src: dict):
+    """양천구 동별 '우리동소식' 목록 1페이지.
+    고정글(<tr class="notice">)은 건너뛴다. 제목은 wdigm_title('...') 안에 있고,
+    상세 식별자는 onclick doBbsFView('cbIdx','bcIdx',...)에서 읽는다."""
+    notices, seen = [], set()
+    for row in _tr_rows(html_text):
+        if re.search(r'class="notice"', row) or "post-notice" in row:
+            continue
+        m = re.search(r"doBbsFView\('(\d+)','(\d+)'", row)
+        if not m:
+            continue
+        cb_idx, bc_idx = m.group(1), m.group(2)
+        if bc_idx in seen:
+            continue
+        seen.add(bc_idx)
+        tm = re.search(r"wdigm_title\('((?:[^'\\]|\\.)*)'\)", row)
+        if not tm:
+            continue
+        title = _clean_title(tm.group(1).replace("\\'", "'")
+                                     .replace('\\"', '"')
+                                     .replace("\\\\", "\\"))
+        if not title:
+            continue
+        date = _extract_date(row, _td_cells(row))
+        url = (f"https://www.yangcheon.go.kr/site/{src['slug']}/ex/bbs/View.do"
+               f"?cbIdx={cb_idx}&bcIdx={bc_idx}&parentSeq={bc_idx}")
+        notices.append(_notice(src["region"], src["board"], title, date, url))
+    return notices
+
+
+def fetch_yangcheon(max_pages: int = 2):
+    """양천구 18개 동을 돈다. {dong: [notices]}와 상태를 돌려준다.
+    cbIdx는 레지스트리(registry-yangcheon.yaml)에 이미 기록된 값을 쓴다.
+    목록 1페이지에 고정글이 섞여 일반글이 10건이 안 되므로 2페이지까지 본다."""
+    per_dong = {}
+    status = "ok"
+    for dong, slug, cb_idx in YANGCHEON_DONGS:
+        list_url = (f"https://www.yangcheon.go.kr/site/{slug}/ex/bbs/List.do"
+                    f"?cbIdx={cb_idx}")
+        src = {"gu": "서울 양천구", "dong": dong, "slug": slug,
+               "region": f"서울 양천구 {dong}", "board": "우리동소식",
+               "list_url": list_url}
+        collected, seen_urls = [], set()
+        for page in range(1, max_pages + 1):
+            html_text, st = fetch_html(f"{list_url}&pageIndex={page}", timeout=25)
+            if html_text is None:
+                status = st
+                break
+            for n in parse_yangcheon(html_text, src):
+                if n["url"] in seen_urls:
+                    continue
+                seen_urls.add(n["url"])
+                collected.append(n)
+            if len(collected) >= 10:
+                break
+            time.sleep(0.5)
+        collected.sort(key=lambda n: n.get("date", ""), reverse=True)
+        per_dong[dong] = collected[:10]
+        print(f"  서울 양천구 {dong}: {status} notices={len(per_dong[dong])}")
+    return per_dong, status
+
+def parse_seocho(html_text: str, gu: str, dong: str, code: str):
+    """서초구 동별 공지사항(DongList) 1페이지."""
+    notices, seen = [], set()
+    for row in _tr_rows(html_text):
+        if _is_fixed_row(row):
+            continue
+        m = re.search(r"DongView\.do\?cbIdx=57&(?:amp;)?bcidx=(\d+)", row, re.I)
+        if not m or m.group(1) in seen:
+            continue
+        seen.add(m.group(1))
+        am = re.search(r"<a[^>]*DongView[^>]*>(.*?)</a>", row, re.S | re.I)
+        title = _clean_title(am.group(1)) if am else ""
+        if not title:
+            continue
+        date = _extract_date(row, _td_cells(row))
+        url = (f"https://www.seocho.go.kr/site/seocho/ex/bbs/DongView.do"
+               f"?cbIdx=57&bcIdx={m.group(1)}&dongCode={code}")
+        notices.append({"title": title, "category": classify(title), "date": date,
+                        "region": f"{gu} {dong}", "source": "공지사항",
+                        "url": url, "gu": gu, "dong": dong, "url_kind": "detail"})
+    notices.sort(key=lambda n: n.get("date", ""), reverse=True)
+    return notices[:10]
+
+
+def fetch_seocho():
+    """서초구 18개 동을 돌아 {dong: [notices]}와 상태를 돌려준다.
+    목록 1페이지에 최신 10개가 있다. 실패한 동은 빈 리스트를 돌려주고
+    호출자(main)가 기존 소식을 유지한다."""
+    per_dong, status = {}, "ok"
+    for dong, code in SEOCHO_DONGS:
+        list_url = ("https://www.seocho.go.kr/site/seocho/ex/bbs/DongList.do"
+                    f"?cbIdx=57&dongCode={code}")
+        html_text, st = fetch_html(list_url, timeout=25)
+        if html_text is None:
+            status = st
+            per_dong[dong] = []
+            print(f"  서울 서초구 {dong}: {st} notices=0")
+            continue
+        per_dong[dong] = parse_seocho(html_text, "서울 서초구", dong, code)
+        print(f"  서울 서초구 {dong}: ok notices={len(per_dong[dong])}")
+        time.sleep(0.4)
+    return per_dong, status
+
+
+def parse_mapo_dong(html_text: str, gu: str, dong: str, slug: str):
+    """마포구 우리동네소식 1페이지. 제목 <a>의 townnews/{id}를 상세 식별자로 쓴다."""
+    notices, seen = [], set()
+    for row in _tr_rows(html_text):
+        if _is_fixed_row(row):
+            continue
+        m = re.search(rf"/site/{re.escape(slug)}/board/townnews/(\d+)", row)
+        if not m or m.group(1) in seen:
+            continue
+        seen.add(m.group(1))
+        am = re.search(r"<a[^>]*townnews/\d+[^>]*>(.*?)</a>", row, re.S)
+        title = _clean_title(am.group(1)) if am else ""
+        if not title:
+            continue
+        date = _extract_date(row, _td_cells(row))
+        url = f"https://www.mapo.go.kr/site/{slug}/board/townnews/{m.group(1)}"
+        notices.append({"title": title, "category": classify(title), "date": date,
+                        "region": f"{gu} {dong}", "source": "우리동네소식",
+                        "url": url, "gu": gu, "dong": dong, "url_kind": "detail"})
+    notices.sort(key=lambda n: n.get("date", ""), reverse=True)
+    return notices[:10]
+
+
+def fetch_mapo_dong():
+    """마포구 16개 동을 돌아 {dong: [notices]}와 상태를 돌려준다.
+    목록 1페이지에 최신 10개가 있다. 실패한 동은 빈 리스트를 돌려주고
+    호출자(main)가 기존 소식을 유지한다."""
+    per_dong, status = {}, "ok"
+    for dong, slug in MAPO_DONGS:
+        list_url = f"https://www.mapo.go.kr/site/{slug}/board/townnews/list"
+        html_text, st = fetch_html(list_url, timeout=25)
+        if html_text is None:
+            status = st
+            per_dong[dong] = []
+            print(f"  서울 마포구 {dong}: {st} notices=0")
+            continue
+        per_dong[dong] = parse_mapo_dong(html_text, "서울 마포구", dong, slug)
+        print(f"  서울 마포구 {dong}: ok notices={len(per_dong[dong])}")
+        time.sleep(0.4)
+    return per_dong, status
+
+
+
+def parse_dobong(html_text: str, gu: str, dong: str, code: str):
+    """도봉구 동별 '동 소식 공지사항'(bbs.asp) 1페이지.
+    제목 <a>의 bbs.asp?bmode=D&pcode=<id>&code=<code>를 상세 식별자로 쓴다."""
+    notices, seen = [], set()
+    for row in _tr_rows(html_text):
+        if _is_fixed_row(row):
+            continue
+        m = re.search(r"bbs\.asp\?bmode=D(?:&amp;|&)pcode=(\d+)(?:&amp;|&)code=(\d+)", row)
+        if not m or m.group(1) in seen:
+            continue
+        seen.add(m.group(1))
+        am = re.search(r"<a[^>]*bmode=D[^>]*>(.*?)</a>", row, re.S)
+        title = _clean_title(am.group(1)) if am else ""
+        if not title:
+            continue
+        date = _extract_date(row, _td_cells(row))
+        url = (f"https://www.dobong.go.kr/dong/bbs.asp"
+               f"?bmode=D&pcode={m.group(1)}&code={code}")
+        notices.append({"title": title, "category": classify(title), "date": date,
+                        "region": f"{gu} {dong}", "source": "동 소식 공지사항",
+                        "url": url, "gu": gu, "dong": dong, "url_kind": "detail"})
+    notices.sort(key=lambda n: n.get("date", ""), reverse=True)
+    return notices[:10]
+
+
+def fetch_dobong():
+    """도봉구 14개 동을 돌아 {dong: [notices]}와 상태를 돌려준다.
+    목록 1페이지에 최신 10개가 있다. 실패한 동은 빈 리스트를 돌려주고
+    호출자(main)가 기존 소식을 유지한다."""
+    per_dong, status = {}, "ok"
+    for dong, code in DOBONG_DONGS:
+        list_url = f"https://www.dobong.go.kr/dong/bbs.asp?code={code}"
+        html_text, st = fetch_html(list_url, timeout=25)
+        if html_text is None:
+            status = st
+            per_dong[dong] = []
+            print(f"  서울 도봉구 {dong}: {st} notices=0")
+            continue
+        per_dong[dong] = parse_dobong(html_text, "서울 도봉구", dong, code)
+        print(f"  서울 도봉구 {dong}: ok notices={len(per_dong[dong])}")
+        time.sleep(0.4)
+    return per_dong, status
+
+
+def parse_gangbuk(html_text: str, gu: str, dong: str, menu_no: str, dong_cd: str):
+    """강북구 동별 게시판 B0000199 '우리동소식' 1페이지.
+    제목 <a>의 view.do?nttId=<id>를 상세 식별자로 쓴다."""
+    notices, seen = [], set()
+    for row in _tr_rows(html_text):
+        if _is_fixed_row(row):
+            continue
+        m = re.search(r"/dong/bbs/B0000199/view\.do\?menuNo=(\d+)&(?:amp;)?nttId=(\d+)&(?:amp;)?dongCd=(\d+)", row)
+        if not m or m.group(2) in seen:
+            continue
+        seen.add(m.group(2))
+        am = re.search(r"<a[^>]*view\.do[^>]*>(.*?)</a>", row, re.S)
+        title = _clean_title(am.group(1)) if am else ""
+        if not title:
+            continue
+        date = _extract_date(row, _td_cells(row))
+        url = (f"https://gangbuk.go.kr:18000/dong/bbs/B0000199/view.do"
+               f"?menuNo={menu_no}&nttId={m.group(2)}&dongCd={dong_cd}")
+        notices.append({"title": title, "category": classify(title), "date": date,
+                        "region": f"{gu} {dong}", "source": "우리동소식",
+                        "url": url, "gu": gu, "dong": dong, "url_kind": "detail"})
+    notices.sort(key=lambda n: n.get("date", ""), reverse=True)
+    return notices[:10]
+
+
+def fetch_gangbuk():
+    """강북구 13개 동을 돌아 {dong: [notices]}와 상태를 돌려준다.
+    curl로는 gangbuk.go.kr:18000 직접 가져오기 HTTP 200이나, 이 서버 urllib로는
+    프록시에서 :18000이 막혀 실패할 수 있다. 실패한 동은 빈 리스트를 돌려주고
+    호출자(main)가 기존 소식을 유지한다."""
+    per_dong, status = {}, "ok"
+    for dong, dong_cd, menu_no in GANGBUK_DONGS:
+        list_url = (f"https://gangbuk.go.kr:18000/dong/bbs/B0000199/list.do"
+                    f"?menuNo={menu_no}&dongCd={dong_cd}")
+        html_text, st = fetch_html(list_url, timeout=25)
+        if html_text is None:
+            status = st
+            per_dong[dong] = []
+            print(f"  서울 강북구 {dong}: {st} notices=0")
+            continue
+        per_dong[dong] = parse_gangbuk(html_text, "서울 강북구", dong, menu_no, dong_cd)
+        print(f"  서울 강북구 {dong}: ok notices={len(per_dong[dong])}")
+        time.sleep(0.4)
+    return per_dong, status
+
+
+def _norm_dong_name(name: str) -> str:
+    """노원구 동명 표기 정규화: 공백·'.'·'·'를 통일한다. '상계3.4동' → '상계3·4동'."""
+    n = re.sub(r"\s+", "", name or "")
+    n = n.replace(".", "·")
+    return n
+
+
+def parse_nowon_page(html_text: str):
+    """노원구 통합 게시판 1페이지. 행 단위로 (담당부서, 제목, 날짜, URL)을 뽑는다.
+    날짜는 목록에 비어 있는 경우가 많아 q_bbscttSn 앞 8자리(YYYYMMDD)에서 파생한다.
+    담당부서가 노원구 동명이 아닌 행(구청 부서 글)은 제외한다."""
+    items = []
+    for row in _tr_rows(html_text):
+        if _is_fixed_row(row):
+            continue
+        m = re.search(
+            r'<a[^>]*href="BD_selectBbs\.do\?q_bbsCode=1103(?:&amp;|&)q_bbscttSn=(\d+)"[^>]*>(.*?)</a>',
+            row, re.S | re.I)
+        if not m:
+            continue
+        sn, atitle = m.group(1), m.group(2)
+        title = _clean_title(atitle)
+        # 제목 끝의 '등'은 한 게시글 안에 복수 소식이 묶였다는 뜻이라 떼고 기록한다.
+        title = re.sub(r"\s+등$", "", title)
+        if not title:
+            continue
+        cells = _td_cells(row)
+        dept = _strip_tags(cells[2]) if len(cells) > 2 else ""
+        dong = _norm_dong_name(dept)
+        if dong not in NOWON_DONGS:
+            continue
+        if len(sn) < 8 or not sn[:8].isdigit():
+            continue
+        date = f"{sn[0:4]}-{sn[4:6]}-{sn[6:8]}"
+        url = (f"https://www.nowon.kr/www/user/bbs/BD_selectBbs.do"
+               f"?q_bbsCode=1103&q_bbscttSn={sn}")
+        items.append({"dong": dong, "title": title, "date": date, "url": url, "sn": sn})
+    return items
+
+
+def fetch_nowon(max_pages: int = 30):
+    """노원구 통합 게시판을 페이지 순회하며 동별 최신 10개씩 모은다.
+    모든 동이 10개를 채우면 조기 종료한다. 페이지 한 번의 일시적 실패에는
+    3번까지 재시도하고, 그래도 안 되면 다음 페이지로 넘어간다(3페이지 연속
+    실패하면 중단 — 성공하면 연속 실패 카운터가 초기화된다). 스캔이 끝난 뒤
+    실패한 페이지는 한 번 더 재시도한다. {dong: [notices]}와 상태를 돌려준다.
+    실패 페이지가 있으면 status는 'ok'가 아니라 partial로 기록한다."""
+    per_dong = {d: [] for d in NOWON_DONGS}
+    seen_sn = set()
+    status = "ok"
+    pages = 0
+    failed_pages = []
+    consec_failed = 0
+
+    def _scan_page(page):
+        url = f"{NOWON_LIST_URL}&q_currPage={page}"
+        html_text, st = None, ""
+        for _attempt in range(3):
+            html_text, st = fetch_html(url, timeout=25)
+            if html_text is not None:
+                break
+            time.sleep(1)
+        if html_text is None:
+            return None, st
+        for item in parse_nowon_page(html_text):
+            if item["sn"] in seen_sn:
+                continue
+            seen_sn.add(item["sn"])
+            if len(per_dong[item["dong"]]) >= 10:
+                continue
+            per_dong[item["dong"]].append(_notice(
+                f"서울 노원구 {item['dong']}", "부서·동 소식",
+                item["title"], item["date"], item["url"]))
+        return True, "ok"
+
+    for page in range(1, max_pages + 1):
+        pages = page
+        got, st = _scan_page(page)
+        if got is None:
+            status = st
+            failed_pages.append(page)
+            consec_failed += 1
+            if consec_failed >= 3:
+                break
+            continue
+        consec_failed = 0
+        if all(len(v) >= 10 for v in per_dong.values()):
+            break
+    # 실패 페이지는 스캔 종료 후 한 번 더 재시도한다.
+    for page in list(failed_pages):
+        got, st = _scan_page(page)
+        if got is not None:
+            failed_pages.remove(page)
+    notices = {}
+    for dong, lst in per_dong.items():
+        lst.sort(key=lambda n: n.get("date", ""), reverse=True)
+        notices[dong] = lst[:10]
+    if failed_pages:
+        status = (f"partial:pages={pages}/{max_pages},"
+                  f"failed_pages={failed_pages}")
+    else:
+        status = "ok"
+    print(f"  nowon: pages={pages} status={status}")
+    return notices, status
+
+
 LIST_PARSERS = {
     "bbs": parse_bbs_list,
+    "gwanak": parse_gwanak,
+    "gangdong": parse_gangdong,
     "sejong": parse_sejong,
     "donggu": parse_donggu,
     "paju": parse_paju,
     "icheon": parse_icheon,
     "jongno": parse_jongno,
     "mapo": parse_mapo,
+    "gangnam": parse_gangnam,
+    "junggu": parse_junggu_dong_list,
 }
 
 
 def fetch_list(src: dict, timeout: int = 25):
-    html_text, status = fetch_html(src["list_url"], timeout=timeout)
+    attempts = max(1, src.get("retries", 1))
+    html_text, status = None, ""
+    for _try in range(attempts):
+        html_text, status = fetch_html(src["list_url"], timeout=timeout)
+        if html_text is not None:
+            break
+        if _try < attempts - 1:
+            time.sleep(0.8)
     if html_text is None:
         return [], {"region": src["region"], "source": src["board"],
                     "status": status, "url": src["list_url"],
@@ -654,6 +1765,19 @@ def fetch_list(src: dict, timeout: int = 25):
     notices.sort(key=lambda n: n.get("date", ""), reverse=True)
     return notices, {"region": src["region"], "source": src["board"],
                      "status": "ok", "url": src["list_url"], "count": len(notices)}
+
+
+def _merge_keep_old(new_items, old_items, limit=10):
+    """새 수집 결과와 기존 소식을 URL 기준으로 합집합해 날짜순 상위 limit개로 자른다.
+    부분 수집으로 새 건수가 기존보다 적어도 기존 글이 통째로 날아가지 않는다.
+    동별 상한 밖으로 밀린 오래된 글은 합집합에서도 잘린다."""
+    by_url = {}
+    for n in (old_items or []):
+        by_url[n.get("url") or n.get("title", "")] = n
+    for n in (new_items or []):
+        by_url[n.get("url") or n.get("title", "")] = n
+    merged = sorted(by_url.values(), key=lambda n: n.get("date", ""), reverse=True)
+    return merged[:limit]
 
 
 def main() -> int:
@@ -776,7 +1900,7 @@ def main() -> int:
     OUT_NATIONWIDE.write_text(json.dumps(nw, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"wrote {OUT_NATIONWIDE} regions={len(regions)} total_notices={total}")
 
-    # --- 동 행정복지센터 (data_dong.json, v0.6) ---
+    # --- 동 행정복지센터 (data_dong.json, v0.8) ---
     old_dong = {}
     if OUT_DONG.exists():
         try:
@@ -794,11 +1918,14 @@ def main() -> int:
         if src.get("sleep_before"):
             time.sleep(src["sleep_before"])
         items, status = fetch_list(src, timeout=src.get("timeout", 25))
+        old_items = old_dongs.get((src["gu"], src["dong"]), {}).get("notices", [])
         if items:
-            dong_notices = items[:10]
+            # 부분 수집으로 기존보다 적게 와도 기존 글을 통째로 버리지 않는다.
+            # 새 결과와 기존 소식을 합집합해 날짜순 상위 10개로 자른다.
+            dong_notices = _merge_keep_old(items[:10], old_items)
         else:
             # 실패 시 기존 소식을 유지하고, 새로 만든 가짜 소식은 넣지 않는다.
-            dong_notices = old_dongs.get((src["gu"], src["dong"]), {}).get("notices", [])
+            dong_notices = old_items
         for n in dong_notices:
             n.setdefault("gu", src["gu"])
             n.setdefault("dong", src["dong"])
@@ -814,10 +1941,231 @@ def main() -> int:
         }
         if src.get("slug"):
             entry["slug"] = src["slug"]
+        if src.get("bbs_no") is not None:
             entry["bbs_no"] = src["bbs_no"]
+        if src.get("key") is not None:
             entry["key"] = src["key"]
+        if src.get("dept_code"):
+            entry["dept_code"] = src["dept_code"]
+        if src.get("dong_cd"):
+            entry["dong_cd"] = src["dong_cd"]
+        if src.get("sub_key"):
+            entry["sub_key"] = src["sub_key"]
+        if src.get("contents_key"):
+            entry["contents_key"] = src["contents_key"]
+        if src.get("menu_no"):
+            entry["menu_no"] = src["menu_no"]
+        if src.get("cb_idx"):
+            entry["cb_idx"] = src["cb_idx"]
+        if src.get("office"):
+            entry["office"] = src["office"]
+        if src.get("cmsid"):
+            entry["cmsid"] = src["cmsid"]
+        # 브라우저 경유로 채운 동(성동구)은 확인 시점·URL 주의사항을 유지한다.
+        _old_entry = old_dongs.get((src["gu"], src["dong"]), {})
+        for _k in ("note", "url_note", "checked_at_kst", "crawled_at_kst"):
+            if _old_entry.get(_k):
+                entry[_k] = _old_entry[_k]
         gu_map.setdefault(src["gu"], []).append(entry)
         print(f"  {src['region']}: {status['status']} notices={len(dong_notices)}")
+
+    # --- 노원구 (통합 게시판 1개를 페이지 순회, 동별로 나눔) ---
+    nowon_notices, nowon_status = fetch_nowon()
+    nowon_entries = []
+    for dong in NOWON_DONGS:
+        old_items = old_dongs.get(("서울 노원구", dong), {}).get("notices", [])
+        items = nowon_notices.get(dong, [])
+        if items:
+            # 부분 스캔 결과로 통째로 덮지 않는다. 합집합 후 동별 top-10.
+            items = _merge_keep_old(items, old_items)
+        else:
+            items = old_items
+        for n in items:
+            n.setdefault("gu", "서울 노원구")
+            n.setdefault("dong", dong)
+        dong_total += len(items)
+        nowon_entries.append({
+            "dong": dong,
+            "board": "부서·동 소식",
+            "list_url": NOWON_LIST_URL,
+            "method": "html_list",
+            "status": nowon_status if items else f"no_items:{nowon_status}",
+            "count": len(items),
+            "notices": items,
+        })
+        print(f"  서울 노원구 {dong}: {nowon_status} notices={len(items)}")
+    gu_map["서울 노원구"] = nowon_entries
+
+    # --- 광진구 (1~3페이지 합쳐 날짜순 상위 10개) ---
+    gwangjin_notices, gwangjin_status = fetch_gwangjin()
+    gwangjin_entries = []
+    for dong, cd, menu in GWANGJIN_DONGS:
+        old_items = old_dongs.get(("서울 광진구", dong), {}).get("notices", [])
+        items = gwangjin_notices.get(dong, [])
+        items = _merge_keep_old(items, old_items) if items else old_items
+        for n in items:
+            n.setdefault("gu", "서울 광진구")
+            n.setdefault("dong", dong)
+        dong_total += len(items)
+        gwangjin_entries.append({
+            "dong": dong, "board": "우리마을소식",
+            "list_url": f"https://www.gwangjin.go.kr/dong/bbs/B0000127/list.do?menuNo={menu}&dongCd={cd}",
+            "method": "html_list",
+            "status": gwangjin_status if items else f"no_items:{gwangjin_status}",
+            "count": len(items), "notices": items,
+            "dong_cd": cd, "menu_no": menu,
+        })
+    gu_map["서울 광진구"] = gwangjin_entries
+
+    # --- 동작구 (1~3페이지 합쳐 날짜순 상위 10개) ---
+    dongjak_notices, dongjak_status = fetch_dongjak()
+    dongjak_entries = []
+    for dong, cd, menu in DONGJAK_DONGS:
+        old_items = old_dongs.get(("서울 동작구", dong), {}).get("notices", [])
+        items = dongjak_notices.get(dong, [])
+        items = _merge_keep_old(items, old_items) if items else old_items
+        for n in items:
+            n.setdefault("gu", "서울 동작구")
+            n.setdefault("dong", dong)
+        dong_total += len(items)
+        dongjak_entries.append({
+            "dong": dong, "board": "동네소식",
+            "list_url": f"https://www.dongjak.go.kr/dong/bbs/B0000301/list.do?menuNo={menu}&dongCd={cd}",
+            "method": "html_list",
+            "status": dongjak_status if items else f"no_items:{dongjak_status}",
+            "count": len(items), "notices": items,
+            "dong_cd": cd, "menu_no": menu,
+        })
+    gu_map["서울 동작구"] = dongjak_entries
+
+    # --- 서대문구 (EUC-KR, _fetch_euckr 경유) ---
+    seodaemun_notices, seodaemun_status = fetch_seodaemun()
+    seodaemun_entries = []
+    for dong, slug in SEODAEMUN_DONGS:
+        old_items = old_dongs.get(("서울 서대문구", dong), {}).get("notices", [])
+        items = seodaemun_notices.get(dong, [])
+        items = _merge_keep_old(items, old_items) if items else old_items
+        for n in items:
+            n.setdefault("gu", "서울 서대문구")
+            n.setdefault("dong", dong)
+        dong_total += len(items)
+        seodaemun_entries.append({
+            "dong": dong, "board": "우리동소식",
+            "list_url": f"https://www.sdm.go.kr/dong/{slug}/citizen/notice.do",
+            "method": "html_list",
+            "status": seodaemun_status if items else f"no_items:{seodaemun_status}",
+            "count": len(items), "notices": items,
+            "slug": slug,
+        })
+    gu_map["서울 서대문구"] = seodaemun_entries
+
+    # --- 양천구 (동별 cbIdx, 1~2페이지 합쳐 일반글 상위 10개) ---
+    yangcheon_notices, yangcheon_status = fetch_yangcheon()
+    yangcheon_entries = []
+    for dong, slug, cb_idx in YANGCHEON_DONGS:
+        old_items = old_dongs.get(("서울 양천구", dong), {}).get("notices", [])
+        items = yangcheon_notices.get(dong, [])
+        items = _merge_keep_old(items, old_items) if items else old_items
+        for n in items:
+            n.setdefault("gu", "서울 양천구")
+            n.setdefault("dong", dong)
+        dong_total += len(items)
+        yangcheon_entries.append({
+            "dong": dong, "board": "우리동소식",
+            "list_url": (f"https://www.yangcheon.go.kr/site/{slug}/ex/bbs/List.do"
+                         f"?cbIdx={cb_idx}"),
+            "method": "html_list",
+            "status": yangcheon_status if items else f"no_items:{yangcheon_status}",
+            "count": len(items), "notices": items,
+            "slug": slug, "cb_idx": cb_idx,
+        })
+    gu_map["서울 양천구"] = yangcheon_entries
+
+    # --- 서초구 (동별 DongList, cbIdx=57 + dongCode) ---
+    seocho_notices, seocho_status = fetch_seocho()
+    seocho_entries = []
+    for dong, code in SEOCHO_DONGS:
+        old_items = old_dongs.get(("서울 서초구", dong), {}).get("notices", [])
+        items = seocho_notices.get(dong, [])
+        items = _merge_keep_old(items, old_items) if items else old_items
+        for n in items:
+            n.setdefault("gu", "서울 서초구")
+            n.setdefault("dong", dong)
+        dong_total += len(items)
+        seocho_entries.append({
+            "dong": dong, "board": "공지사항",
+            "list_url": ("https://www.seocho.go.kr/site/seocho/ex/bbs/DongList.do"
+                         f"?cbIdx=57&dongCode={code}"),
+            "method": "html_list",
+            "status": seocho_status if items else f"no_items:{seocho_status}",
+            "count": len(items), "notices": items,
+            "dong_code": code,
+        })
+    gu_map["서울 서초구"] = seocho_entries
+
+    # --- 마포구 (동별 서브사이트 우리동네소식) ---
+    mapo_notices, mapo_status = fetch_mapo_dong()
+    mapo_entries = []
+    for dong, slug in MAPO_DONGS:
+        old_items = old_dongs.get(("서울 마포구", dong), {}).get("notices", [])
+        items = mapo_notices.get(dong, [])
+        items = _merge_keep_old(items, old_items) if items else old_items
+        for n in items:
+            n.setdefault("gu", "서울 마포구")
+            n.setdefault("dong", dong)
+        dong_total += len(items)
+        mapo_entries.append({
+            "dong": dong, "board": "우리동네소식",
+            "list_url": f"https://www.mapo.go.kr/site/{slug}/board/townnews/list",
+            "method": "html_list",
+            "status": mapo_status if items else f"no_items:{mapo_status}",
+            "count": len(items), "notices": items,
+            "slug": slug,
+        })
+    gu_map["서울 마포구"] = mapo_entries
+
+    # --- 도봉구 (동별 bbs.asp) ---
+    dobong_notices, dobong_status = fetch_dobong()
+    dobong_entries = []
+    for dong, code in DOBONG_DONGS:
+        old_items = old_dongs.get(("서울 도봉구", dong), {}).get("notices", [])
+        items = dobong_notices.get(dong, [])
+        items = _merge_keep_old(items, old_items) if items else old_items
+        for n in items:
+            n.setdefault("gu", "서울 도봉구")
+            n.setdefault("dong", dong)
+        dong_total += len(items)
+        dobong_entries.append({
+            "dong": dong, "board": "동 소식 공지사항",
+            "list_url": f"https://www.dobong.go.kr/dong/bbs.asp?code={code}",
+            "method": "html_list",
+            "status": dobong_status if items else f"no_items:{dobong_status}",
+            "count": len(items), "notices": items,
+            "code": code,
+        })
+    gu_map["서울 도봉구"] = dobong_entries
+
+    # --- 강북구 (동별 게시판 B0000199) ---
+    gangbuk_notices, gangbuk_status = fetch_gangbuk()
+    gangbuk_entries = []
+    for dong, dong_cd, menu_no in GANGBUK_DONGS:
+        old_items = old_dongs.get(("서울 강북구", dong), {}).get("notices", [])
+        items = gangbuk_notices.get(dong, [])
+        items = _merge_keep_old(items, old_items) if items else old_items
+        for n in items:
+            n.setdefault("gu", "서울 강북구")
+            n.setdefault("dong", dong)
+        dong_total += len(items)
+        gangbuk_entries.append({
+            "dong": dong, "board": "우리동소식",
+            "list_url": (f"https://gangbuk.go.kr:18000/dong/bbs/B0000199/list.do"
+                         f"?menuNo={menu_no}&dongCd={dong_cd}"),
+            "method": "html_list",
+            "status": gangbuk_status if items else f"no_items:{gangbuk_status}",
+            "count": len(items), "notices": items,
+            "dong_cd": dong_cd, "menu_no": menu_no,
+        })
+    gu_map["서울 강북구"] = gangbuk_entries
 
     gus = [{"gu": gu, "dongs": dongs} for gu, dongs in gu_map.items()]
     dong_data = {
@@ -830,7 +2178,9 @@ def main() -> int:
         "note": ("동 행정복지센터 소식이다. 제목·날짜·원문 링크만 저장하고 본문은 복사하지 않는다. "
                  "한 동 가져오기가 실패하면 그 동의 기존 소식을 유지한다. "
                  "성동구는 이 서버에서 직접 가져오기가 끊겨 브라우저 경유가 필요하다. "
-                 "동 소식은 주민등록 공시송달·최고공고 비중이 높아 선별이 필요할 수 있다."),
+                 "동 소식은 주민등록 공시송달·최고공고 비중이 높아 선별이 필요할 수 있다. "
+                 "종로구·중랑구는 목록 URL 확인됐으나 라이브 소식 채우기가 대기 중이고, "
+                 "용산구·강서구는 동 게시판 목록 URL 미확인으로 제외했다."),
     }
     OUT_DONG.write_text(json.dumps(dong_data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"wrote {OUT_DONG} dongs={dong_data['total_dongs']} total_notices={dong_total}")

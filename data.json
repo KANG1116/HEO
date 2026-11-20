@@ -1,8 +1,8 @@
 {
   "service": "udong",
   "area": "서울 성동구 성수동 (시범)",
-  "generated_at_kst": "2026-11-19 18:10 KST",
-  "generated_at": "2026-11-19T18:10:00.933342+09:00",
+  "generated_at_kst": "2026-11-20 11:15 KST",
+  "generated_at": "2026-11-20T11:15:56.645655+09:00",
   "sources": [
     {
       "source": "seongdong_rss",
@@ -72,6 +72,50 @@
       "checked_at_kst": "2026-11-19 18:07 KST",
       "count": 2,
       "note": "브라우저로 RSS를 직접 읽어 2026-11-19 새 공지 2건을 확인했다. 복지 관련 새 공지는 없었다."
+    },
+    {
+      "source": "seongdong_rss",
+      "status": "fetch_failed:RemoteDisconnected",
+      "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
+      "note": "이 서버에서 직접 가져오기가 끊겼다. 브라우저로는 읽힌다. 기존 소식을 유지한다."
+    },
+    {
+      "source": "seoul_reservation",
+      "status": "missing_key",
+      "note": "SEOUL_API_KEY가 없어서 예약 정보를 가져오지 않았다."
+    },
+    {
+      "source": "seongdong_rss",
+      "status": "fetch_failed:RemoteDisconnected",
+      "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
+      "note": "이 서버에서 직접 가져오기가 끊겼다. 브라우저로는 읽힌다. 기존 소식을 유지한다."
+    },
+    {
+      "source": "seoul_reservation",
+      "status": "missing_key",
+      "note": "SEOUL_API_KEY가 없어서 예약 정보를 가져오지 않았다."
+    },
+    {
+      "source": "seongdong_rss",
+      "status": "fetch_failed:RemoteDisconnected",
+      "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
+      "note": "이 서버에서 직접 가져오기가 끊겼다. 브라우저로는 읽힌다. 기존 소식을 유지한다."
+    },
+    {
+      "source": "seoul_reservation",
+      "status": "missing_key",
+      "note": "SEOUL_API_KEY가 없어서 예약 정보를 가져오지 않았다."
+    },
+    {
+      "source": "seongdong_rss",
+      "status": "fetch_failed:RemoteDisconnected",
+      "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
+      "note": "이 서버에서 직접 가져오기가 끊겼다. 브라우저로는 읽힌다. 기존 소식을 유지한다."
+    },
+    {
+      "source": "seoul_reservation",
+      "status": "missing_key",
+      "note": "SEOUL_API_KEY가 없어서 예약 정보를 가져오지 않았다."
     }
   ],
   "notices": [
