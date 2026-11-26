@@ -1,256 +1,639 @@
 {
-  "service": "udong",
-  "area": "서울 성동구 성수동 (시범)",
-  "generated_at_kst": "2026-11-20 11:15 KST",
-  "generated_at": "2026-11-20T11:15:56.645655+09:00",
-  "sources": [
-    {
-      "source": "seongdong_rss",
-      "status": "fetch_failed:RemoteDisconnected",
-      "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
-      "note": "이 서버에서 직접 가져오기가 끊겼다. 브라우저로는 읽힌다. 기존 소식을 유지한다."
-    },
-    {
-      "source": "seoul_reservation",
-      "status": "missing_key",
-      "note": "SEOUL_API_KEY가 없어서 예약 정보를 가져오지 않았다."
-    },
-    {
-      "source": "seongdong_rss",
-      "status": "ok_via_browser",
-      "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
-      "note": "2026-11-19 07:00 KST에 브라우저로 성동구청 새소식(bbsNo=183)을 직접 확인했다. 새 공지는 없었다(최신 2026-11-18 16:17 화물자동차 유가보조금 서면신청 안내). 복지 관련 새 제목은 없었다."
-    },
-    {
-      "source": "seongdong_rss",
-      "status": "fetch_failed:RemoteDisconnected",
-      "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
-      "note": "이 서버에서 직접 가져오기가 끊겼다. 브라우저로는 읽힌다. 기존 소식을 유지한다."
-    },
-    {
-      "source": "seoul_reservation",
-      "status": "missing_key",
-      "note": "SEOUL_API_KEY가 없어서 예약 정보를 가져오지 않았다."
-    },
-    {
-      "source": "seongdong_rss",
-      "status": "fetch_failed:RemoteDisconnected",
-      "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
-      "note": "이 서버에서 직접 가져오기가 끊겼다. 브라우저로는 읽힌다. 기존 소식을 유지한다."
-    },
-    {
-      "source": "seoul_reservation",
-      "status": "missing_key",
-      "note": "SEOUL_API_KEY가 없어서 예약 정보를 가져오지 않았다."
-    },
-    {
-      "source": "seongdong_rss",
-      "status": "fetch_failed:RemoteDisconnected",
-      "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
-      "note": "이 서버에서 직접 가져오기가 끊겼다. 브라우저로는 읽힌다. 기존 소식을 유지한다."
-    },
-    {
-      "source": "seoul_reservation",
-      "status": "missing_key",
-      "note": "SEOUL_API_KEY가 없어서 예약 정보를 가져오지 않았다."
-    },
-    {
-      "source": "seongdong_rss",
-      "status": "fetch_failed:RemoteDisconnected",
-      "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
-      "note": "이 서버에서 직접 가져오기가 끊겼다. 브라우저로는 읽힌다. 기존 소식을 유지한다."
-    },
-    {
-      "source": "seoul_reservation",
-      "status": "missing_key",
-      "note": "SEOUL_API_KEY가 없어서 예약 정보를 가져오지 않았다."
-    },
-    {
-      "source": "seongdong_rss",
-      "status": "ok_via_browser",
-      "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
-      "checked_at_kst": "2026-11-19 18:07 KST",
-      "count": 2,
-      "note": "브라우저로 RSS를 직접 읽어 2026-11-19 새 공지 2건을 확인했다. 복지 관련 새 공지는 없었다."
-    },
-    {
-      "source": "seongdong_rss",
-      "status": "fetch_failed:RemoteDisconnected",
-      "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
-      "note": "이 서버에서 직접 가져오기가 끊겼다. 브라우저로는 읽힌다. 기존 소식을 유지한다."
-    },
-    {
-      "source": "seoul_reservation",
-      "status": "missing_key",
-      "note": "SEOUL_API_KEY가 없어서 예약 정보를 가져오지 않았다."
-    },
-    {
-      "source": "seongdong_rss",
-      "status": "fetch_failed:RemoteDisconnected",
-      "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
-      "note": "이 서버에서 직접 가져오기가 끊겼다. 브라우저로는 읽힌다. 기존 소식을 유지한다."
-    },
-    {
-      "source": "seoul_reservation",
-      "status": "missing_key",
-      "note": "SEOUL_API_KEY가 없어서 예약 정보를 가져오지 않았다."
-    },
-    {
-      "source": "seongdong_rss",
-      "status": "fetch_failed:RemoteDisconnected",
-      "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
-      "note": "이 서버에서 직접 가져오기가 끊겼다. 브라우저로는 읽힌다. 기존 소식을 유지한다."
-    },
-    {
-      "source": "seoul_reservation",
-      "status": "missing_key",
-      "note": "SEOUL_API_KEY가 없어서 예약 정보를 가져오지 않았다."
-    },
-    {
-      "source": "seongdong_rss",
-      "status": "fetch_failed:RemoteDisconnected",
-      "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
-      "note": "이 서버에서 직접 가져오기가 끊겼다. 브라우저로는 읽힌다. 기존 소식을 유지한다."
-    },
-    {
-      "source": "seoul_reservation",
-      "status": "missing_key",
-      "note": "SEOUL_API_KEY가 없어서 예약 정보를 가져오지 않았다."
-    }
-  ],
-  "notices": [
-    {
-      "title": "2026 성동구 어린이 스키캠프 참가 안내",
-      "category": "life",
-      "date": "2026-11-19",
-      "region": "서울 성동구",
-      "source": "성동구청 새소식",
-      "url": "https://sd.go.kr/main/selectBbsNttView.do?key=1472&bbsNo=183&nttNo=363272"
-    },
-    {
-      "title": "\"성동 땡겨요 상품권\" 12월분 발행 알림",
-      "category": "life",
-      "date": "2026-11-19",
-      "region": "서울 성동구",
-      "source": "성동구청 새소식",
-      "url": "https://sd.go.kr/main/selectBbsNttView.do?key=1472&bbsNo=183&nttNo=363263"
-    },
-    {
-      "title": "2026년 4분기 화물자동차 유가보조금 서면신청 안내",
-      "category": "welfare",
-      "date": "2026-11-18",
-      "region": "서울 성동구",
-      "source": "성동구청 새소식",
-      "url": "https://sd.go.kr/main/selectBbsNttView.do?key=1472&bbsNo=183&nttNo=363228"
-    },
-    {
-      "title": "풍수해보험으로 재난에 대비하세요!",
-      "category": "urgent",
-      "date": "2026-11-18",
-      "region": "서울 성동구",
-      "source": "성동구청 새소식",
-      "url": "https://sd.go.kr/main/selectBbsNttView.do?key=1472&bbsNo=183&nttNo=363227"
-    },
-    {
-      "title": "공공와이파이 서비스 일시 중단 안내",
-      "category": "life",
-      "date": "2026-11-18",
-      "region": "서울 성동구",
-      "source": "성동구청 새소식",
-      "url": "https://sd.go.kr/main/selectBbsNttView.do?key=1472&bbsNo=183&nttNo=363226"
-    },
-    {
-      "title": "2026년 제26차 성동구 건축 전문위원회(굴토, 해체) 개최 알림",
-      "category": "work",
-      "date": "2026-11-18",
-      "source": "성동구청 새소식",
-      "url": "https://www.sd.go.kr/main/selectBbsNttView.do?key=1472&bbsNo=183&nttNo=363209"
-    },
-    {
-      "title": "제3회 중랑천 버드페스티벌, 2026년 성동원앙축제 개최 안내",
-      "category": "event",
-      "date": "2026-11-18",
-      "source": "성동구청 새소식",
-      "url": "https://www.sd.go.kr/main/selectBbsNttView.do?key=1472&bbsNo=183&nttNo=363208"
-    },
-    {
-      "title": "2026년 성동구 화학안전관리 보고서",
-      "category": "life",
-      "date": "2026-11-18",
-      "source": "성동구청 새소식",
-      "url": "https://www.sd.go.kr/main/selectBbsNttView.do?key=1472&bbsNo=183&nttNo=363207"
-    },
-    {
-      "title": "[마장 글로벌 체험센터] 12월 프로그램 수강생 모집",
-      "category": "event",
-      "date": "2026-11-18",
-      "source": "성동구청 새소식",
-      "url": "https://www.sd.go.kr/main/selectBbsNttView.do?key=1472&bbsNo=183&nttNo=363206"
-    },
-    {
-      "title": "화학물질 취급 사고 예방을 위한 안전관리 수칙",
-      "category": "life",
-      "date": "2026-11-18",
-      "source": "성동구청 새소식",
-      "url": "https://www.sd.go.kr/main/selectBbsNttView.do?key=1472&bbsNo=183&nttNo=363205"
-    },
-    {
-      "title": "2027년 상반기 성동문화재단 전시실 정기대관 모집 공고",
-      "category": "event",
-      "date": "2026-11-18",
-      "source": "성동구청 새소식",
-      "url": "https://www.sd.go.kr/main/selectBbsNttView.do?key=1472&bbsNo=183&nttNo=363196"
-    },
-    {
-      "title": "2026년 하반기 성동사랑상품권 부정유통 일제단속",
-      "category": "life",
-      "date": "2026-11-17",
-      "source": "성동구청 새소식",
-      "url": "https://www.sd.go.kr/main/selectBbsNttView.do?key=1472&bbsNo=183&nttNo=363158"
-    },
-    {
-      "title": "한파 영향예보 직접전달 서비스 홍보 안내",
-      "category": "urgent",
-      "date": "2026-11-16",
-      "source": "성동구청 새소식",
-      "url": "https://www.sd.go.kr/main/selectBbsNttView.do?key=1472&bbsNo=183&nttNo=363128"
-    },
-    {
-      "title": "[성동구청년지원센터] 성동 웰컴 이사 지원 신청 안내",
-      "category": "welfare",
-      "date": "2026-11-16",
-      "source": "성동구청 새소식",
-      "url": "https://www.sd.go.kr/main/selectBbsNttView.do?key=1472&bbsNo=183&nttNo=363123"
-    },
-    {
-      "title": "「통쾌한 한끼」 시민참여 이벤트 안내",
-      "category": "event",
-      "date": "2026-11-16",
-      "source": "성동구청 새소식",
-      "url": "https://www.sd.go.kr/main/selectBbsNttView.do?key=1472&bbsNo=183&nttNo=363099"
-    },
-    {
-      "title": "2026년 성범죄 경력자 취업제한 점검 확인결과 공개(성동구 종합사회복지관)",
-      "category": "welfare",
-      "date": "2026-11-04",
-      "source": "성동구청 새소식",
-      "url": "https://www.sd.go.kr/main/selectBbsNttView.do?key=1472&bbsNo=183&nttNo=362802"
-    },
-    {
-      "title": "성동종합사회복지관 9988 서울 활력충전소 '우리동네 책이음' 도서 기증 안내",
-      "category": "welfare",
-      "date": "2026-10-26",
-      "source": "성동구청 새소식",
-      "url": "https://www.sd.go.kr/main/selectBbsNttView.do?key=1472&bbsNo=183&nttNo=362451"
-    },
-    {
-      "title": "2026년 성동노인종합복지관 「낭만 잇는 내-일」 일자리 박람회",
-      "category": "welfare",
-      "date": "2026-10-22",
-      "source": "성동구청 새소식",
-      "url": "https://www.sd.go.kr/main/selectBbsNttView.do?key=1472&bbsNo=183&nttNo=362419"
-    }
-  ],
-  "spots": [],
-  "note": "동네 소식 중심이다. 제목·날짜·원문 링크만 저장하고 본문은 복사하지 않는다. RSS 가져오기가 실패하면 기존 소식을 유지한다."
+ "service": "udong",
+ "area": "서울 성동구 성수동 (시범)",
+ "generated_at_kst": "2026-11-26 06:56 KST",
+ "generated_at": "2026-11-26T06:56:56.834471+09:00",
+ "sources": [
+  {
+   "source": "seongdong_rss",
+   "status": "fetch_failed:RemoteDisconnected",
+   "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
+   "note": "이 서버에서 직접 가져오기가 끊겼다. 브라우저로는 읽힌다. 기존 소식을 유지한다."
+  },
+  {
+   "source": "seoul_reservation",
+   "status": "missing_key",
+   "note": "SEOUL_API_KEY가 없어서 예약 정보를 가져오지 않았다."
+  },
+  {
+   "source": "seongdong_rss",
+   "status": "ok_via_browser",
+   "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
+   "note": "2026-11-19 07:00 KST에 브라우저로 성동구청 새소식(bbsNo=183)을 직접 확인했다. 새 공지는 없었다(최신 2026-11-18 16:17 화물자동차 유가보조금 서면신청 안내). 복지 관련 새 제목은 없었다."
+  },
+  {
+   "source": "seongdong_rss",
+   "status": "fetch_failed:RemoteDisconnected",
+   "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
+   "note": "이 서버에서 직접 가져오기가 끊겼다. 브라우저로는 읽힌다. 기존 소식을 유지한다."
+  },
+  {
+   "source": "seoul_reservation",
+   "status": "missing_key",
+   "note": "SEOUL_API_KEY가 없어서 예약 정보를 가져오지 않았다."
+  },
+  {
+   "source": "seongdong_rss",
+   "status": "fetch_failed:RemoteDisconnected",
+   "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
+   "note": "이 서버에서 직접 가져오기가 끊겼다. 브라우저로는 읽힌다. 기존 소식을 유지한다."
+  },
+  {
+   "source": "seoul_reservation",
+   "status": "missing_key",
+   "note": "SEOUL_API_KEY가 없어서 예약 정보를 가져오지 않았다."
+  },
+  {
+   "source": "seongdong_rss",
+   "status": "fetch_failed:RemoteDisconnected",
+   "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
+   "note": "이 서버에서 직접 가져오기가 끊겼다. 브라우저로는 읽힌다. 기존 소식을 유지한다."
+  },
+  {
+   "source": "seoul_reservation",
+   "status": "missing_key",
+   "note": "SEOUL_API_KEY가 없어서 예약 정보를 가져오지 않았다."
+  },
+  {
+   "source": "seongdong_rss",
+   "status": "fetch_failed:RemoteDisconnected",
+   "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
+   "note": "이 서버에서 직접 가져오기가 끊겼다. 브라우저로는 읽힌다. 기존 소식을 유지한다."
+  },
+  {
+   "source": "seoul_reservation",
+   "status": "missing_key",
+   "note": "SEOUL_API_KEY가 없어서 예약 정보를 가져오지 않았다."
+  },
+  {
+   "source": "seongdong_rss",
+   "status": "ok_via_browser",
+   "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
+   "checked_at_kst": "2026-11-19 18:07 KST",
+   "count": 2,
+   "note": "브라우저로 RSS를 직접 읽어 2026-11-19 새 공지 2건을 확인했다. 복지 관련 새 공지는 없었다."
+  },
+  {
+   "source": "seongdong_rss",
+   "status": "fetch_failed:RemoteDisconnected",
+   "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
+   "note": "이 서버에서 직접 가져오기가 끊겼다. 브라우저로는 읽힌다. 기존 소식을 유지한다."
+  },
+  {
+   "source": "seoul_reservation",
+   "status": "missing_key",
+   "note": "SEOUL_API_KEY가 없어서 예약 정보를 가져오지 않았다."
+  },
+  {
+   "source": "seongdong_rss",
+   "status": "fetch_failed:RemoteDisconnected",
+   "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
+   "note": "이 서버에서 직접 가져오기가 끊겼다. 브라우저로는 읽힌다. 기존 소식을 유지한다."
+  },
+  {
+   "source": "seoul_reservation",
+   "status": "missing_key",
+   "note": "SEOUL_API_KEY가 없어서 예약 정보를 가져오지 않았다."
+  },
+  {
+   "source": "seongdong_rss",
+   "status": "fetch_failed:RemoteDisconnected",
+   "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
+   "note": "이 서버에서 직접 가져오기가 끊겼다. 브라우저로는 읽힌다. 기존 소식을 유지한다."
+  },
+  {
+   "source": "seoul_reservation",
+   "status": "missing_key",
+   "note": "SEOUL_API_KEY가 없어서 예약 정보를 가져오지 않았다."
+  },
+  {
+   "source": "seongdong_rss",
+   "status": "fetch_failed:RemoteDisconnected",
+   "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
+   "note": "이 서버에서 직접 가져오기가 끊겼다. 브라우저로는 읽힌다. 기존 소식을 유지한다."
+  },
+  {
+   "source": "seoul_reservation",
+   "status": "missing_key",
+   "note": "SEOUL_API_KEY가 없어서 예약 정보를 가져오지 않았다."
+  },
+  {
+   "source": "seongdong_rss",
+   "status": "fetch_failed:RemoteDisconnected",
+   "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
+   "note": "이 서버에서 직접 가져오기가 끊겼다. 브라우저로는 읽힌다. 기존 소식을 유지한다."
+  },
+  {
+   "source": "seoul_reservation",
+   "status": "missing_key",
+   "note": "SEOUL_API_KEY가 없어서 예약 정보를 가져오지 않았다."
+  },
+  {
+   "source": "seongdong_rss",
+   "status": "fetch_failed:RemoteDisconnected",
+   "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
+   "note": "이 서버에서 직접 가져오기가 끊겼다. 브라우저로는 읽힌다. 기존 소식을 유지한다."
+  },
+  {
+   "source": "seoul_reservation",
+   "status": "missing_key",
+   "note": "SEOUL_API_KEY가 없어서 예약 정보를 가져오지 않았다."
+  },
+  {
+   "source": "seongdong_rss",
+   "status": "ok_via_browser",
+   "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
+   "checked_at_kst": "2026-11-20 18:23 KST",
+   "count": 7,
+   "note": "브라우저로 RSS를 직접 읽어 2026-11-20 새 공지 7건을 확인했다. 복지 관련 새 공지 1건(빈용기 무인회수기 구매지원 사업 참여 신청 안내) 포함."
+  },
+  {
+   "source": "seongdong_rss",
+   "status": "fetch_failed:RemoteDisconnected",
+   "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
+   "note": "이 서버에서 직접 가져오기가 끊겼다. 브라우저로는 읽힌다. 기존 소식을 유지한다."
+  },
+  {
+   "source": "seoul_reservation",
+   "status": "missing_key",
+   "note": "SEOUL_API_KEY가 없어서 예약 정보를 가져오지 않았다."
+  },
+  {
+   "source": "seongdong_rss",
+   "status": "ok_via_browser",
+   "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
+   "checked_at_kst": "2026-11-21 07:24 KST",
+   "count": 0,
+   "note": "브라우저로 RSS를 직접 읽어 확인했다. 2026-11-20 18:30 이후 새 공지 없음(최신 2026-11-20 16:12 [성수 글로벌 체험센터] 12월 프로그램 수강생 모집). 복지 관련 새 제목은 없었다."
+  },
+  {
+   "source": "seongdong_rss",
+   "status": "fetch_failed:RemoteDisconnected",
+   "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
+   "note": "이 서버에서 직접 가져오기가 끊겼다. 브라우저로는 읽힌다. 기존 소식을 유지한다."
+  },
+  {
+   "source": "seoul_reservation",
+   "status": "missing_key",
+   "note": "SEOUL_API_KEY가 없어서 예약 정보를 가져오지 않았다."
+  },
+  {
+   "source": "seongdong_rss",
+   "status": "fetch_failed:RemoteDisconnected",
+   "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
+   "note": "이 서버에서 직접 가져오기가 끊겼다. 브라우저로는 읽힌다. 기존 소식을 유지한다."
+  },
+  {
+   "source": "seoul_reservation",
+   "status": "missing_key",
+   "note": "SEOUL_API_KEY가 없어서 예약 정보를 가져오지 않았다."
+  },
+  {
+   "source": "seongdong_rss",
+   "status": "fetch_failed:RemoteDisconnected",
+   "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
+   "note": "이 서버에서 직접 가져오기가 끊겼다. 브라우저로는 읽힌다. 기존 소식을 유지한다."
+  },
+  {
+   "source": "seoul_reservation",
+   "status": "missing_key",
+   "note": "SEOUL_API_KEY가 없어서 예약 정보를 가져오지 않았다."
+  },
+  {
+   "source": "seongdong_rss",
+   "status": "ok_via_browser",
+   "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
+   "checked_at_kst": "2026-11-21 18:30 KST",
+   "count": 0,
+   "note": "브라우저로 RSS를 직접 읽어 확인했다. 2026-11-20 16:12 이후 새 공지 없음(최신 2026-11-20 16:12 [성수 글로벌 체험센터] 12월 프로그램 수강생 모집). 복지 관련 새 제목은 없었다."
+  },
+  {
+   "source": "seongdong_rss",
+   "status": "fetch_failed:RemoteDisconnected",
+   "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
+   "note": "이 서버에서 직접 가져오기가 끊겼다. 브라우저로는 읽힌다. 기존 소식을 유지한다."
+  },
+  {
+   "source": "seoul_reservation",
+   "status": "missing_key",
+   "note": "SEOUL_API_KEY가 없어서 예약 정보를 가져오지 않았다."
+  },
+  {
+   "source": "seongdong_rss",
+   "status": "fetch_failed:RemoteDisconnected",
+   "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
+   "note": "이 서버에서 직접 가져오기가 끊겼다. 브라우저로는 읽힌다. 기존 소식을 유지한다."
+  },
+  {
+   "source": "seoul_reservation",
+   "status": "missing_key",
+   "note": "SEOUL_API_KEY가 없어서 예약 정보를 가져오지 않았다."
+  },
+  {
+   "source": "seongdong_rss",
+   "status": "ok_via_browser",
+   "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
+   "checked_at_kst": "2026-11-22 07:06 KST",
+   "count": 0,
+   "note": "브라우저로 RSS를 직접 읽어 확인했다. 2026-11-20 16:12 이후 새 공지 없음(최신 2026-11-20 16:12 [성수 글로벌 체험센터] 12월 프로그램 수강생 모집). 복지 관련 새 제목은 없었다."
+  },
+  {
+   "source": "seongdong_rss",
+   "status": "fetch_failed:RemoteDisconnected",
+   "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
+   "note": "이 서버에서 직접 가져오기가 끊겼다. 브라우저로는 읽힌다. 기존 소식을 유지한다."
+  },
+  {
+   "source": "seoul_reservation",
+   "status": "missing_key",
+   "note": "SEOUL_API_KEY가 없어서 예약 정보를 가져오지 않았다."
+  },
+  {
+   "source": "seongdong_rss",
+   "status": "fetch_failed:RemoteDisconnected",
+   "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
+   "note": "이 서버에서 직접 가져오기가 끊겼다. 브라우저로는 읽힌다. 기존 소식을 유지한다."
+  },
+  {
+   "source": "seoul_reservation",
+   "status": "missing_key",
+   "note": "SEOUL_API_KEY가 없어서 예약 정보를 가져오지 않았다."
+  },
+  {
+   "source": "seongdong_rss",
+   "status": "fetch_failed:RemoteDisconnected",
+   "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
+   "note": "이 서버에서 직접 가져오기가 끊겼다. 브라우저로는 읽힌다. 기존 소식을 유지한다."
+  },
+  {
+   "source": "seoul_reservation",
+   "status": "missing_key",
+   "note": "SEOUL_API_KEY가 없어서 예약 정보를 가져오지 않았다."
+  },
+  {
+   "source": "seongdong_rss",
+   "status": "fetch_failed:RemoteDisconnected",
+   "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
+   "note": "이 서버에서 직접 가져오기가 끊겼다. 브라우저로는 읽힌다. 기존 소식을 유지한다."
+  },
+  {
+   "source": "seoul_reservation",
+   "status": "missing_key",
+   "note": "SEOUL_API_KEY가 없어서 예약 정보를 가져오지 않았다."
+  },
+  {
+   "source": "seongdong_rss",
+   "status": "ok_via_browser",
+   "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
+   "note": "2026-11-22 18:42 KST에 브라우저로 성동구청 새소식(bbsNo=183)을 직접 확인했다. 새 공지는 없었다(최신 2026-11-20 16:12 [성수 글로벌 체험센터] 12월 프로그램 수강생 모집). 복지 관련 새 제목은 없었다."
+  },
+  {
+   "source": "seongdong_rss",
+   "status": "fetch_failed:RemoteDisconnected",
+   "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
+   "note": "이 서버에서 직접 가져오기가 끊겼다. 브라우저로는 읽힌다. 기존 소식을 유지한다."
+  },
+  {
+   "source": "seoul_reservation",
+   "status": "missing_key",
+   "note": "SEOUL_API_KEY가 없어서 예약 정보를 가져오지 않았다."
+  },
+  {
+   "source": "seongdong_rss",
+   "status": "ok_via_browser",
+   "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
+   "checked_at_kst": "2026-11-23 07:26 KST",
+   "count": 0,
+   "note": "브라우저로 RSS를 직접 읽어 확인했다. 2026-11-20 16:12 이후 새 공지 없음(최신 2026-11-20 16:12 [성수 글로벌 체험센터] 12월 프로그램 수강생 모집). 복지 관련 새 제목은 없었다."
+  },
+  {
+   "source": "seongdong_rss",
+   "status": "fetch_failed:RemoteDisconnected",
+   "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
+   "note": "이 서버에서 직접 가져오기가 끊겼다. 브라우저로는 읽힌다. 기존 소식을 유지한다."
+  },
+  {
+   "source": "seoul_reservation",
+   "status": "missing_key",
+   "note": "SEOUL_API_KEY가 없어서 예약 정보를 가져오지 않았다."
+  },
+  {
+   "source": "seongdong_rss",
+   "status": "fetch_failed:RemoteDisconnected",
+   "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
+   "note": "이 서버에서 직접 가져오기가 끊겼다. 브라우저로는 읽힌다. 기존 소식을 유지한다."
+  },
+  {
+   "source": "seoul_reservation",
+   "status": "missing_key",
+   "note": "SEOUL_API_KEY가 없어서 예약 정보를 가져오지 않았다."
+  },
+  {
+   "source": "seongdong_rss",
+   "status": "fetch_failed:RemoteDisconnected",
+   "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
+   "note": "이 서버에서 직접 가져오기가 끊겼다. 브라우저로는 읽힌다. 기존 소식을 유지한다."
+  },
+  {
+   "source": "seoul_reservation",
+   "status": "missing_key",
+   "note": "SEOUL_API_KEY가 없어서 예약 정보를 가져오지 않았다."
+  },
+  {
+   "source": "seongdong_rss",
+   "status": "fetch_failed:RemoteDisconnected",
+   "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
+   "note": "이 서버에서 직접 가져오기가 끊겼다. 브라우저로는 읽힌다. 기존 소식을 유지한다."
+  },
+  {
+   "source": "seoul_reservation",
+   "status": "missing_key",
+   "note": "SEOUL_API_KEY가 없어서 예약 정보를 가져오지 않았다."
+  },
+  {
+   "source": "seongdong_rss",
+   "status": "fetch_failed:RemoteDisconnected",
+   "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
+   "note": "이 서버에서 직접 가져오기가 끊겼다. 브라우저로는 읽힌다. 기존 소식을 유지한다."
+  },
+  {
+   "source": "seoul_reservation",
+   "status": "missing_key",
+   "note": "SEOUL_API_KEY가 없어서 예약 정보를 가져오지 않았다."
+  },
+  {
+   "source": "seongdong_rss",
+   "status": "fetch_failed:RemoteDisconnected",
+   "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
+   "note": "이 서버에서 직접 가져오기가 끊겼다. 브라우저로는 읽힌다. 기존 소식을 유지한다."
+  },
+  {
+   "source": "seoul_reservation",
+   "status": "missing_key",
+   "note": "SEOUL_API_KEY가 없어서 예약 정보를 가져오지 않았다."
+  },
+  {
+   "source": "seongdong_rss",
+   "status": "ok_via_browser",
+   "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
+   "checked_at_kst": "2026-11-23 18:36 KST",
+   "count": 7,
+   "note": "브라우저로 RSS를 직접 읽어 2026-11-23 새 공지 7건을 확인했다. 복지 관련 새 공지는 없었다."
+  },
+  {
+   "source": "seongdong_rss",
+   "status": "fetch_failed:RemoteDisconnected",
+   "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
+   "note": "이 서버에서 직접 가져오기가 끊겼다. 브라우저로는 읽힌다. 기존 소식을 유지한다."
+  },
+  {
+   "source": "seoul_reservation",
+   "status": "missing_key",
+   "note": "SEOUL_API_KEY가 없어서 예약 정보를 가져오지 않았다."
+  },
+  {
+   "source": "seongdong_rss",
+   "status": "ok_via_browser",
+   "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
+   "note": "2026-11-24 07:28 KST에 브라우저로 성동구청 새소식(bbsNo=183)을 직접 확인했다. 2026-11-23 18:36 KST 이후 새 공지 없음(최신 2026-11-23 15:09 성동구립도서관 11월 25일 뚝섬역 북토리지 서비스 개시, nttNo=363371). 복지 관련 새 제목은 없었다."
+  },
+  {
+   "source": "seongdong_rss",
+   "status": "fetch_failed:RemoteDisconnected",
+   "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
+   "note": "이 서버에서 직접 가져오기가 끊겼다. 브라우저로는 읽힌다. 기존 소식을 유지한다."
+  },
+  {
+   "source": "seoul_reservation",
+   "status": "missing_key",
+   "note": "SEOUL_API_KEY가 없어서 예약 정보를 가져오지 않았다."
+  },
+  {
+   "source": "seongdong_rss",
+   "status": "ok_via_browser",
+   "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
+   "checked_at_kst": "2026-11-24 18:06 KST",
+   "count": 1,
+   "note": "브라우저로 RSS를 직접 읽어 2026-11-24 새 공지 1건을 확인했다(2026년 대부(중개)업자 준법교육 교재 배포, 2026-11-24 13:48, nttNo=363411). 복지 관련 새 제목은 없었다."
+  },
+  {
+   "source": "seongdong_rss",
+   "status": "fetch_failed:RemoteDisconnected",
+   "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
+   "note": "이 서버에서 직접 가져오기가 끊겼다. 브라우저로는 읽힌다. 기존 소식을 유지한다."
+  },
+  {
+   "source": "seoul_reservation",
+   "status": "missing_key",
+   "note": "SEOUL_API_KEY가 없어서 예약 정보를 가져오지 않았다."
+  },
+  {
+   "source": "seongdong_rss",
+   "status": "ok_via_browser",
+   "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
+   "checked_at_kst": "2026-11-25 07:25 KST",
+   "count": 0,
+   "note": "브라우저로 RSS를 직접 읽어 확인했다. 2026-11-24 18:06 KST 이후 새 공지 없음(최신 2026-11-24 13:48 2026년 대부(중개)업자 준법교육 교재 배포, nttNo=363411). 복지 관련 새 제목은 없었다."
+  },
+  {
+   "source": "seongdong_rss",
+   "status": "fetch_failed:RemoteDisconnected",
+   "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
+   "note": "이 서버에서 직접 가져오기가 끊겼다. 브라우저로는 읽힌다. 기존 소식을 유지한다."
+  },
+  {
+   "source": "seoul_reservation",
+   "status": "missing_key",
+   "note": "SEOUL_API_KEY가 없어서 예약 정보를 가져오지 않았다."
+  },
+  {
+   "source": "seongdong_rss",
+   "status": "ok_via_browser",
+   "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
+   "checked_at_kst": "2026-11-25 18:26 KST",
+   "count": 2,
+   "note": "브라우저로 RSS를 직접 읽어 2026-11-25 새 공지 2건을 확인했다. 복지 관련 새 공지는 없었다."
+  },
+  {
+   "source": "seongdong_rss",
+   "status": "fetch_failed:RemoteDisconnected",
+   "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
+   "note": "이 서버에서 직접 가져오기가 끊겼다. 브라우저로는 읽힌다. 기존 소식을 유지한다."
+  },
+  {
+   "source": "seoul_reservation",
+   "status": "missing_key",
+   "note": "SEOUL_API_KEY가 없어서 예약 정보를 가져오지 않았다."
+  },
+  {
+   "source": "seongdong_rss",
+   "status": "ok_via_browser",
+   "url": "https://www.sd.go.kr/rssBbsNtt.do?bbsNo=183&integrDeptCode=",
+   "note": "2026-11-26 07:24 KST에 브라우저로 성동구청 새소식(bbsNo=183)을 직접 확인했다. 새 공지 1건(2026-11-25 19:15 제6회 성동구립 시니어합창단 정기연주회 개최 안내, 시니어 관련)을 추가하고, nttNo=363354 제목을 파업 철회 및 정상 운행으로 고쳤다."
+  }
+ ],
+ "notices": [
+  {
+   "title": "제6회 성동구립 시니어합창단 정기연주회 개최 안내",
+   "category": "life",
+   "date": "2026-11-25",
+   "region": "서울 성동구",
+   "source": "성동구청 새소식",
+   "url": "https://sd.go.kr/main/selectBbsNttView.do?key=1472&bbsNo=183&nttNo=363472"
+  },
+  {
+   "title": "2026년 12월! 건강걷기로 활기차게 마무리 하세요^^",
+   "category": "life",
+   "date": "2026-11-25",
+   "region": "서울 성동구",
+   "source": "성동구청 새소식",
+   "url": "https://sd.go.kr/main/selectBbsNttView.do?key=1472&bbsNo=183&nttNo=363463"
+  },
+  {
+   "title": "성동고향사랑기부제 기부 인증 이벤트",
+   "category": "life",
+   "date": "2026-11-25",
+   "region": "서울 성동구",
+   "source": "성동구청 새소식",
+   "url": "https://sd.go.kr/main/selectBbsNttView.do?key=1472&bbsNo=183&nttNo=363455"
+  },
+  {
+   "category": "life",
+   "date": "2026-11-24",
+   "region": "서울 성동구",
+   "source": "성동구청 새소식",
+   "title": "2026년 대부(중개)업자 준법교육 교재 배포",
+   "url": "https://sd.go.kr/main/selectBbsNttView.do?key=1472&bbsNo=183&nttNo=363411"
+  },
+  {
+   "category": "life",
+   "date": "2026-11-23",
+   "region": "서울 성동구",
+   "source": "성동구청 새소식",
+   "title": "성동구립도서관 11월 25일 뚝섬역 북토리지 서비스 개시",
+   "url": "https://sd.go.kr/main/selectBbsNttView.do?key=1472&bbsNo=183&nttNo=363371"
+  },
+  {
+   "category": "life",
+   "date": "2026-11-23",
+   "region": "서울 성동구",
+   "source": "성동구청 새소식",
+   "title": "2026년 정기 제4차 안전성조사 리콜대상 제품 안내",
+   "url": "https://sd.go.kr/main/selectBbsNttView.do?key=1472&bbsNo=183&nttNo=363369"
+  },
+  {
+   "category": "life",
+   "date": "2026-11-23",
+   "region": "서울 성동구",
+   "source": "성동구청 새소식",
+   "title": "'2026 AI 크리에이터 챌린지' 참가자 모집 안내",
+   "url": "https://sd.go.kr/main/selectBbsNttView.do?key=1472&bbsNo=183&nttNo=363362"
+  },
+  {
+   "category": "life",
+   "date": "2026-11-23",
+   "region": "서울 성동구",
+   "source": "성동구청 새소식",
+   "title": "2026년 독서동아리 연말 사업보고회 및 '김화진' 작가 초청 강연 개최 안내",
+   "url": "https://sd.go.kr/main/selectBbsNttView.do?key=1472&bbsNo=183&nttNo=363356"
+  },
+  {
+   "category": "work",
+   "date": "2026-11-23",
+   "region": "서울 성동구",
+   "source": "성동구청 새소식",
+   "title": "＜2026. 서울 지하철 파업 철회 및 정상 운행＞",
+   "url": "https://sd.go.kr/main/selectBbsNttView.do?key=1472&bbsNo=183&nttNo=363354"
+  },
+  {
+   "category": "life",
+   "date": "2026-11-23",
+   "region": "서울 성동구",
+   "source": "성동구청 새소식",
+   "title": "2027학년도 취학통지서 발급 안내",
+   "url": "https://sd.go.kr/main/selectBbsNttView.do?key=1472&bbsNo=183&nttNo=363344"
+  },
+  {
+   "category": "life",
+   "date": "2026-11-23",
+   "region": "서울 성동구",
+   "source": "성동구청 새소식",
+   "title": "2026년 성동 시니어모델 양성과정 성과공유회 개최",
+   "url": "https://sd.go.kr/main/selectBbsNttView.do?key=1472&bbsNo=183&nttNo=363338"
+  },
+  {
+   "category": "event",
+   "date": "2026-11-20",
+   "region": "서울 성동구",
+   "source": "성동구청 새소식",
+   "title": "[성수 글로벌 체험센터] 12월 프로그램 수강생 모집",
+   "url": "https://sd.go.kr/main/selectBbsNttView.do?key=1472&bbsNo=183&nttNo=363316"
+  },
+  {
+   "category": "event",
+   "date": "2026-11-20",
+   "region": "서울 성동구",
+   "source": "성동구청 새소식",
+   "title": "[금호 글로벌 체험센터] 12월 프로그램 수강생 모집",
+   "url": "https://sd.go.kr/main/selectBbsNttView.do?key=1472&bbsNo=183&nttNo=363315"
+  },
+  {
+   "category": "life",
+   "date": "2026-11-20",
+   "region": "서울 성동구",
+   "source": "성동구청 새소식",
+   "title": "2차전지는 폐배터리 수거함에 안전하게 버려요!",
+   "url": "https://sd.go.kr/main/selectBbsNttView.do?key=1472&bbsNo=183&nttNo=363311"
+  },
+  {
+   "category": "life",
+   "date": "2026-11-20",
+   "region": "서울 성동구",
+   "source": "성동구청 새소식",
+   "title": "청년취업사관학교 성동캠퍼스 「전Z전능 데이터 분석 실전 과정」 교육생 모집",
+   "url": "https://sd.go.kr/main/selectBbsNttView.do?key=1472&bbsNo=183&nttNo=363310"
+  },
+  {
+   "category": "event",
+   "date": "2026-11-20",
+   "region": "서울 성동구",
+   "source": "성동구청 새소식",
+   "title": "[용답 글로벌 체험센터] 12월 프로그램 모집안내",
+   "url": "https://sd.go.kr/main/selectBbsNttView.do?key=1472&bbsNo=183&nttNo=363295"
+  },
+  {
+   "category": "welfare",
+   "date": "2026-11-20",
+   "region": "서울 성동구",
+   "source": "성동구청 새소식",
+   "title": "2027년 빈용기 무인회수기 구매지원 사업 참여 신청 안내",
+   "url": "https://sd.go.kr/main/selectBbsNttView.do?key=1472&bbsNo=183&nttNo=363293"
+  },
+  {
+   "category": "work",
+   "date": "2026-11-19",
+   "region": "서울 성동구",
+   "source": "성동구청 새소식",
+   "title": "2026년 제18차 성동구 건축위원회 개최 알림",
+   "url": "https://sd.go.kr/main/selectBbsNttView.do?key=1472&bbsNo=183&nttNo=363286"
+  },
+  {
+   "title": "2026 성동구 어린이 스키캠프 참가 안내",
+   "category": "life",
+   "date": "2026-11-19",
+   "region": "서울 성동구",
+   "source": "성동구청 새소식",
+   "url": "https://sd.go.kr/main/selectBbsNttView.do?key=1472&bbsNo=183&nttNo=363272"
+  },
+  {
+   "title": "\"성동 땡겨요 상품권\" 12월분 발행 알림",
+   "category": "life",
+   "date": "2026-11-19",
+   "region": "서울 성동구",
+   "source": "성동구청 새소식",
+   "url": "https://sd.go.kr/main/selectBbsNttView.do?key=1472&bbsNo=183&nttNo=363263"
+  }
+ ],
+ "spots": [],
+ "note": "동네 소식 중심이다. 제목·날짜·원문 링크만 저장하고 본문은 복사하지 않는다. RSS 가져오기가 실패하면 기존 소식을 유지한다."
 }
